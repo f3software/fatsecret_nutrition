@@ -14,7 +14,7 @@ class ApiService {
   final String apiUrl;
 
   Future<Response<Map<String, dynamic>>?> fetchData(
-      String endpoint, Map<String, dynamic> queryParams) async {
+      String endpoint, Map<String, dynamic> queryParams,) async {
     try {
       final token = await authService.getAccessToken();
 

@@ -39,7 +39,7 @@ class AuthService {
       }
       final accessToken = response.data!['access_token'] as String;
       return accessToken;
-    } catch (e, s) {
+    } catch (e) {
       rethrow;
     }
   }

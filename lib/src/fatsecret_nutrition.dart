@@ -57,7 +57,7 @@ class FatSecretNutrition {
       if (response == null) return null;
       if (response.data == null) throw Exception('no data');
       return FoodSearchV3Response.fromJson(response.data!);
-    } catch (e, s) {
+    } catch (e) {
       return null;
     }
   }
@@ -83,7 +83,7 @@ class FatSecretNutrition {
       if (response == null) return null;
       if (response.data == null) throw Exception('no data');
       return FoodFindIdForBarcodeResponse.fromJson(response.data!);
-    } catch (e, s) {
+    } catch (e) {
       return null;
     }
   }
@@ -105,7 +105,7 @@ class FatSecretNutrition {
       if (response == null) return null;
       if (response.data == null) throw Exception('no data');
       return FoodGetByIdResponse.fromJson(response.data!);
-    } catch (e, s) {
+    } catch (e) {
       return null;
     }
   }
@@ -127,7 +127,7 @@ class FatSecretNutrition {
       if (response == null) return null;
       if (response.data == null) throw Exception('no data');
       return FoodAutoCompleteV2Response.fromJson(response.data!);
-    } catch (e, s) {
+    } catch (e) {
       return null;
     }
   }

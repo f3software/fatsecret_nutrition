@@ -18,9 +18,9 @@ void main() {
             'ham and cheese sandwich',
             'ham steak',
             'ham (whole, cured, roasted)',
-            'hamburger helper'
-          ]
-        }
+            'hamburger helper',
+          ],
+        },
       };
 
       final model = AutocompleteSuggestions.fromJson(json);
@@ -51,7 +51,7 @@ void main() {
             'ham and cheese sandwich',
             'ham steak',
             'ham (whole, cured, roasted)',
-            'hamburger helper'
+            'hamburger helper',
           ],
         ),
       );
@@ -68,7 +68,7 @@ void main() {
       expect(json['suggestions']['suggestion'][6], 'ham and cheese sandwich');
       expect(json['suggestions']['suggestion'][7], 'ham steak');
       expect(
-          json['suggestions']['suggestion'][8], 'ham (whole, cured, roasted)');
+          json['suggestions']['suggestion'][8], 'ham (whole, cured, roasted)',);
       expect(json['suggestions']['suggestion'][9], 'hamburger helper');
     });
   });

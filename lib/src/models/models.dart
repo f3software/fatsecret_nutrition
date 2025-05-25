@@ -1,6 +1,5 @@
 // ignore_for_file: invalid_annotation_target
 
-import 'dart:typed_data';
 
 import 'package:fatsecret_nutrition/src/converters/converters.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
