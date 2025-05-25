@@ -6,48 +6,41 @@ part of 'models.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$FoodFindIdForBarcodeResponseImpl _$$FoodFindIdForBarcodeResponseImplFromJson(
-  Map<String, dynamic> json,
-) =>
-    _$FoodFindIdForBarcodeResponseImpl(
+_FoodFindIdForBarcodeResponse _$FoodFindIdForBarcodeResponseFromJson(
+        Map<String, dynamic> json) =>
+    _FoodFindIdForBarcodeResponse(
       foodId: Value.fromJson(json['food_id'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$FoodFindIdForBarcodeResponseImplToJson(
-  _$FoodFindIdForBarcodeResponseImpl instance,
-) =>
+Map<String, dynamic> _$FoodFindIdForBarcodeResponseToJson(
+        _FoodFindIdForBarcodeResponse instance) =>
     <String, dynamic>{
       'food_id': instance.foodId.toJson(),
     };
 
-_$ValueImpl _$$ValueImplFromJson(Map<String, dynamic> json) => _$ValueImpl(
+_Value _$ValueFromJson(Map<String, dynamic> json) => _Value(
       value: json['value'] as String,
     );
 
-Map<String, dynamic> _$$ValueImplToJson(_$ValueImpl instance) =>
-    <String, dynamic>{
+Map<String, dynamic> _$ValueToJson(_Value instance) => <String, dynamic>{
       'value': instance.value,
     };
 
-_$AutocompleteSuggestionsImpl _$$AutocompleteSuggestionsImplFromJson(
-  Map<String, dynamic> json,
-) =>
-    _$AutocompleteSuggestionsImpl(
+_AutocompleteSuggestions _$AutocompleteSuggestionsFromJson(
+        Map<String, dynamic> json) =>
+    _AutocompleteSuggestions(
       suggestions:
           Suggestions.fromJson(json['suggestions'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$AutocompleteSuggestionsImplToJson(
-  _$AutocompleteSuggestionsImpl instance,
-) =>
+Map<String, dynamic> _$AutocompleteSuggestionsToJson(
+        _AutocompleteSuggestions instance) =>
     <String, dynamic>{
       'suggestions': instance.suggestions.toJson(),
     };
 
-_$FoodSearchV3PropsImpl _$$FoodSearchV3PropsImplFromJson(
-  Map<String, dynamic> json,
-) =>
-    _$FoodSearchV3PropsImpl(
+_FoodSearchV3Props _$FoodSearchV3PropsFromJson(Map<String, dynamic> json) =>
+    _FoodSearchV3Props(
       searchExpression: json['search_expression'] as String?,
       pageNumber: (json['page_number'] as num?)?.toInt(),
       maxResults: (json['max_results'] as num?)?.toInt(),
@@ -60,9 +53,7 @@ _$FoodSearchV3PropsImpl _$$FoodSearchV3PropsImplFromJson(
       format: json['format'] as String? ?? 'json',
     );
 
-Map<String, dynamic> _$$FoodSearchV3PropsImplToJson(
-  _$FoodSearchV3PropsImpl instance,
-) =>
+Map<String, dynamic> _$FoodSearchV3PropsToJson(_FoodSearchV3Props instance) =>
     <String, dynamic>{
       'search_expression': instance.searchExpression,
       'page_number': instance.pageNumber,
@@ -76,35 +67,29 @@ Map<String, dynamic> _$$FoodSearchV3PropsImplToJson(
       'format': instance.format,
     };
 
-_$FoodSearchV3ResponseImpl _$$FoodSearchV3ResponseImplFromJson(
-  Map<String, dynamic> json,
-) =>
-    _$FoodSearchV3ResponseImpl(
+_FoodSearchV3Response _$FoodSearchV3ResponseFromJson(
+        Map<String, dynamic> json) =>
+    _FoodSearchV3Response(
       foodsSearch: FoodsSearchResponse.fromJson(
-        json['foods_search'] as Map<String, dynamic>,
-      ),
+          json['foods_search'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$FoodSearchV3ResponseImplToJson(
-  _$FoodSearchV3ResponseImpl instance,
-) =>
+Map<String, dynamic> _$FoodSearchV3ResponseToJson(
+        _FoodSearchV3Response instance) =>
     <String, dynamic>{
       'foods_search': instance.foodsSearch.toJson(),
     };
 
-_$FoodsSearchResponseImpl _$$FoodsSearchResponseImplFromJson(
-  Map<String, dynamic> json,
-) =>
-    _$FoodsSearchResponseImpl(
+_FoodsSearchResponse _$FoodsSearchResponseFromJson(Map<String, dynamic> json) =>
+    _FoodsSearchResponse(
       maxResults: json['max_results'] as String,
       totalResults: json['total_results'] as String,
       pageNumber: json['page_number'] as String,
       results: FoodList.fromJson(json['results'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$FoodsSearchResponseImplToJson(
-  _$FoodsSearchResponseImpl instance,
-) =>
+Map<String, dynamic> _$FoodsSearchResponseToJson(
+        _FoodsSearchResponse instance) =>
     <String, dynamic>{
       'max_results': instance.maxResults,
       'total_results': instance.totalResults,
@@ -112,31 +97,26 @@ Map<String, dynamic> _$$FoodsSearchResponseImplToJson(
       'results': instance.results.toJson(),
     };
 
-_$FoodListImpl _$$FoodListImplFromJson(Map<String, dynamic> json) =>
-    _$FoodListImpl(
+_FoodList _$FoodListFromJson(Map<String, dynamic> json) => _FoodList(
       food: (json['food'] as List<dynamic>)
           .map((e) => Food.fromJson(e as Map<String, dynamic>))
           .toList(),
     );
 
-Map<String, dynamic> _$$FoodListImplToJson(_$FoodListImpl instance) =>
-    <String, dynamic>{
+Map<String, dynamic> _$FoodListToJson(_FoodList instance) => <String, dynamic>{
       'food': instance.food.map((e) => e.toJson()).toList(),
     };
 
-_$FoodForBarcodePropsImpl _$$FoodForBarcodePropsImplFromJson(
-  Map<String, dynamic> json,
-) =>
-    _$FoodForBarcodePropsImpl(
+_FoodForBarcodeProps _$FoodForBarcodePropsFromJson(Map<String, dynamic> json) =>
+    _FoodForBarcodeProps(
       barcode: json['barcode'] as String,
       region: json['region'] as String?,
       language: json['language'] as String?,
       format: json['format'] as String? ?? 'json',
     );
 
-Map<String, dynamic> _$$FoodForBarcodePropsImplToJson(
-  _$FoodForBarcodePropsImpl instance,
-) =>
+Map<String, dynamic> _$FoodForBarcodePropsToJson(
+        _FoodForBarcodeProps instance) =>
     <String, dynamic>{
       'barcode': instance.barcode,
       'region': instance.region,
@@ -144,24 +124,20 @@ Map<String, dynamic> _$$FoodForBarcodePropsImplToJson(
       'format': instance.format,
     };
 
-_$FoodForBarcodeResponseImpl _$$FoodForBarcodeResponseImplFromJson(
-  Map<String, dynamic> json,
-) =>
-    _$FoodForBarcodeResponseImpl(
+_FoodForBarcodeResponse _$FoodForBarcodeResponseFromJson(
+        Map<String, dynamic> json) =>
+    _FoodForBarcodeResponse(
       food: Food.fromJson(json['food'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$FoodForBarcodeResponseImplToJson(
-  _$FoodForBarcodeResponseImpl instance,
-) =>
+Map<String, dynamic> _$FoodForBarcodeResponseToJson(
+        _FoodForBarcodeResponse instance) =>
     <String, dynamic>{
       'food': instance.food.toJson(),
     };
 
-_$FoodGetByIdPropsImpl _$$FoodGetByIdPropsImplFromJson(
-  Map<String, dynamic> json,
-) =>
-    _$FoodGetByIdPropsImpl(
+_FoodGetByIdProps _$FoodGetByIdPropsFromJson(Map<String, dynamic> json) =>
+    _FoodGetByIdProps(
       foodId: json['food_id'] as String?,
       format: json['format'] as String? ?? 'json',
       includeSubCategories: json['include_sub_categories'] as bool?,
@@ -172,9 +148,7 @@ _$FoodGetByIdPropsImpl _$$FoodGetByIdPropsImplFromJson(
       language: json['language'] as String?,
     );
 
-Map<String, dynamic> _$$FoodGetByIdPropsImplToJson(
-  _$FoodGetByIdPropsImpl instance,
-) =>
+Map<String, dynamic> _$FoodGetByIdPropsToJson(_FoodGetByIdProps instance) =>
     <String, dynamic>{
       'food_id': instance.foodId,
       'format': instance.format,
@@ -186,21 +160,17 @@ Map<String, dynamic> _$$FoodGetByIdPropsImplToJson(
       'language': instance.language,
     };
 
-_$FoodGetV4ResponseImpl _$$FoodGetV4ResponseImplFromJson(
-  Map<String, dynamic> json,
-) =>
-    _$FoodGetV4ResponseImpl(
+_FoodGetV4Response _$FoodGetV4ResponseFromJson(Map<String, dynamic> json) =>
+    _FoodGetV4Response(
       food: Food.fromJson(json['food'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$FoodGetV4ResponseImplToJson(
-  _$FoodGetV4ResponseImpl instance,
-) =>
+Map<String, dynamic> _$FoodGetV4ResponseToJson(_FoodGetV4Response instance) =>
     <String, dynamic>{
       'food': instance.food.toJson(),
     };
 
-_$FoodImpl _$$FoodImplFromJson(Map<String, dynamic> json) => _$FoodImpl(
+_Food _$FoodFromJson(Map<String, dynamic> json) => _Food(
       foodId: const StringToIntConverter().fromJson(json['food_id'] as String?),
       foodName: json['food_name'] as String?,
       foodType: json['food_type'] as String?,
@@ -213,8 +183,7 @@ _$FoodImpl _$$FoodImplFromJson(Map<String, dynamic> json) => _$FoodImpl(
           : Servings.fromJson(json['servings'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$FoodImplToJson(_$FoodImpl instance) =>
-    <String, dynamic>{
+Map<String, dynamic> _$FoodToJson(_Food instance) => <String, dynamic>{
       'food_id': const StringToIntConverter().toJson(instance.foodId),
       'food_name': instance.foodName,
       'food_type': instance.foodType,
@@ -223,20 +192,17 @@ Map<String, dynamic> _$$FoodImplToJson(_$FoodImpl instance) =>
       'servings': instance.servings?.toJson(),
     };
 
-_$ServingsImpl _$$ServingsImplFromJson(Map<String, dynamic> json) =>
-    _$ServingsImpl(
+_Servings _$ServingsFromJson(Map<String, dynamic> json) => _Servings(
       serving: (json['serving'] as List<dynamic>)
           .map((e) => Serving.fromJson(e as Map<String, dynamic>))
           .toList(),
     );
 
-Map<String, dynamic> _$$ServingsImplToJson(_$ServingsImpl instance) =>
-    <String, dynamic>{
+Map<String, dynamic> _$ServingsToJson(_Servings instance) => <String, dynamic>{
       'serving': instance.serving.map((e) => e.toJson()).toList(),
     };
 
-_$ServingImpl _$$ServingImplFromJson(Map<String, dynamic> json) =>
-    _$ServingImpl(
+_Serving _$ServingFromJson(Map<String, dynamic> json) => _Serving(
       metricServingAmount: const StringToDoubleConverter()
           .fromJson(json['metric_serving_amount'] as String?),
       metricServingUnit: json['metric_serving_unit'] as String?,
@@ -277,8 +243,7 @@ _$ServingImpl _$$ServingImplFromJson(Map<String, dynamic> json) =>
           .fromJson(json['vitamin_c'] as String?),
     );
 
-Map<String, dynamic> _$$ServingImplToJson(_$ServingImpl instance) =>
-    <String, dynamic>{
+Map<String, dynamic> _$ServingToJson(_Serving instance) => <String, dynamic>{
       'metric_serving_amount':
           const StringToDoubleConverter().toJson(instance.metricServingAmount),
       'metric_serving_unit': instance.metricServingUnit,
@@ -312,43 +277,39 @@ Map<String, dynamic> _$$ServingImplToJson(_$ServingImpl instance) =>
       'vitamin_c': const StringToDoubleConverter().toJson(instance.vitaminC),
     };
 
-_$FoodImagesImpl _$$FoodImagesImplFromJson(Map<String, dynamic> json) =>
-    _$FoodImagesImpl(
+_FoodImages _$FoodImagesFromJson(Map<String, dynamic> json) => _FoodImages(
       foodImage: (json['food_image'] as List<dynamic>)
           .map((e) => FoodImage.fromJson(e as Map<String, dynamic>))
           .toList(),
     );
 
-Map<String, dynamic> _$$FoodImagesImplToJson(_$FoodImagesImpl instance) =>
+Map<String, dynamic> _$FoodImagesToJson(_FoodImages instance) =>
     <String, dynamic>{
       'food_image': instance.foodImage.map((e) => e.toJson()).toList(),
     };
 
-_$FoodImageImpl _$$FoodImageImplFromJson(Map<String, dynamic> json) =>
-    _$FoodImageImpl(
+_FoodImage _$FoodImageFromJson(Map<String, dynamic> json) => _FoodImage(
       imageUrl: json['image_url'] as String,
       imageType: json['image_type'] as String,
     );
 
-Map<String, dynamic> _$$FoodImageImplToJson(_$FoodImageImpl instance) =>
+Map<String, dynamic> _$FoodImageToJson(_FoodImage instance) =>
     <String, dynamic>{
       'image_url': instance.imageUrl,
       'image_type': instance.imageType,
     };
 
-_$FoodAutoCompleteV2PropsImpl _$$FoodAutoCompleteV2PropsImplFromJson(
-  Map<String, dynamic> json,
-) =>
-    _$FoodAutoCompleteV2PropsImpl(
+_FoodAutoCompleteV2Props _$FoodAutoCompleteV2PropsFromJson(
+        Map<String, dynamic> json) =>
+    _FoodAutoCompleteV2Props(
       expression: json['expression'] as String,
       maxResults: (json['max_results'] as num?)?.toInt(),
       region: json['region'] as String?,
       format: json['format'] as String? ?? 'json',
     );
 
-Map<String, dynamic> _$$FoodAutoCompleteV2PropsImplToJson(
-  _$FoodAutoCompleteV2PropsImpl instance,
-) =>
+Map<String, dynamic> _$FoodAutoCompleteV2PropsToJson(
+        _FoodAutoCompleteV2Props instance) =>
     <String, dynamic>{
       'expression': instance.expression,
       'max_results': instance.maxResults,
@@ -356,29 +317,26 @@ Map<String, dynamic> _$$FoodAutoCompleteV2PropsImplToJson(
       'format': instance.format,
     };
 
-_$FoodAutoCompleteV2ResponseImpl _$$FoodAutoCompleteV2ResponseImplFromJson(
-  Map<String, dynamic> json,
-) =>
-    _$FoodAutoCompleteV2ResponseImpl(
+_FoodAutoCompleteV2Response _$FoodAutoCompleteV2ResponseFromJson(
+        Map<String, dynamic> json) =>
+    _FoodAutoCompleteV2Response(
       suggestions:
           Suggestions.fromJson(json['suggestions'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$FoodAutoCompleteV2ResponseImplToJson(
-  _$FoodAutoCompleteV2ResponseImpl instance,
-) =>
+Map<String, dynamic> _$FoodAutoCompleteV2ResponseToJson(
+        _FoodAutoCompleteV2Response instance) =>
     <String, dynamic>{
       'suggestions': instance.suggestions.toJson(),
     };
 
-_$SuggestionsImpl _$$SuggestionsImplFromJson(Map<String, dynamic> json) =>
-    _$SuggestionsImpl(
+_Suggestions _$SuggestionsFromJson(Map<String, dynamic> json) => _Suggestions(
       suggestion: (json['suggestion'] as List<dynamic>)
           .map((e) => e as String)
           .toList(),
     );
 
-Map<String, dynamic> _$$SuggestionsImplToJson(_$SuggestionsImpl instance) =>
+Map<String, dynamic> _$SuggestionsToJson(_Suggestions instance) =>
     <String, dynamic>{
       'suggestion': instance.suggestion,
     };

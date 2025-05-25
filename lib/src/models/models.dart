@@ -1,6 +1,5 @@
 // ignore_for_file: invalid_annotation_target
 
-
 import 'package:fatsecret_nutrition/src/converters/converters.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
@@ -62,7 +61,8 @@ const ksuggestions = 'suggestions';
 
 /// FoodId
 @freezed
-class FoodFindIdForBarcodeResponse with _$FoodFindIdForBarcodeResponse {
+abstract class FoodFindIdForBarcodeResponse
+    with _$FoodFindIdForBarcodeResponse {
   const factory FoodFindIdForBarcodeResponse({
     @JsonKey(name: 'food_id') required Value foodId,
   }) = _FoodFindIdForBarcodeResponse;
@@ -73,7 +73,7 @@ class FoodFindIdForBarcodeResponse with _$FoodFindIdForBarcodeResponse {
 
 /// FoodId
 @freezed
-class Value with _$Value {
+abstract class Value with _$Value {
   const factory Value({
     @JsonKey(name: 'value') required String value,
   }) = _Value;
@@ -83,7 +83,7 @@ class Value with _$Value {
 
 /// AutocompleteSuggestion
 @freezed
-class AutocompleteSuggestions with _$AutocompleteSuggestions {
+abstract class AutocompleteSuggestions with _$AutocompleteSuggestions {
   const factory AutocompleteSuggestions({
     @JsonKey(name: 'suggestions') required Suggestions suggestions,
   }) = _AutocompleteSuggestions;
@@ -96,7 +96,7 @@ class AutocompleteSuggestions with _$AutocompleteSuggestions {
 /// https://platform.fatsecret.com/docs/v3/foods.search
 
 @freezed
-class FoodSearchV3Props with _$FoodSearchV3Props {
+abstract class FoodSearchV3Props with _$FoodSearchV3Props {
   const factory FoodSearchV3Props({
     @JsonKey(name: ksearchExpression) String? searchExpression,
     @JsonKey(name: kpageNumber) int? pageNumber,
@@ -116,7 +116,7 @@ class FoodSearchV3Props with _$FoodSearchV3Props {
 
 /// FoodSearchV3Response
 @freezed
-class FoodSearchV3Response with _$FoodSearchV3Response {
+abstract class FoodSearchV3Response with _$FoodSearchV3Response {
   const factory FoodSearchV3Response({
     @JsonKey(name: 'foods_search') required FoodsSearchResponse foodsSearch,
   }) = _FoodSearchV3Response;
@@ -127,7 +127,7 @@ class FoodSearchV3Response with _$FoodSearchV3Response {
 
 /// FoodsSearchResponse
 @freezed
-class FoodsSearchResponse with _$FoodsSearchResponse {
+abstract class FoodsSearchResponse with _$FoodsSearchResponse {
   const factory FoodsSearchResponse({
     @JsonKey(name: kmaxResults) required String maxResults,
     @JsonKey(name: ktotalResults) required String totalResults,
@@ -137,10 +137,12 @@ class FoodsSearchResponse with _$FoodsSearchResponse {
 
   factory FoodsSearchResponse.fromJson(Map<String, dynamic> json) =>
       _$FoodsSearchResponseFromJson(json);
+
+
 }
 
 @freezed
-class FoodList with _$FoodList {
+abstract class FoodList with _$FoodList {
   const factory FoodList({
     @JsonKey(name: kfood) required List<Food> food,
   }) = _FoodList;
@@ -151,7 +153,7 @@ class FoodList with _$FoodList {
 
 /// FoodForBarcodeProps
 @freezed
-class FoodForBarcodeProps with _$FoodForBarcodeProps {
+abstract class FoodForBarcodeProps with _$FoodForBarcodeProps {
   const factory FoodForBarcodeProps({
     @JsonKey(name: kbarcode) required String barcode,
     @JsonKey(name: kregion) String? region,
@@ -165,7 +167,7 @@ class FoodForBarcodeProps with _$FoodForBarcodeProps {
 
 /// FoodForBarcodeResponse
 @freezed
-class FoodForBarcodeResponse with _$FoodForBarcodeResponse {
+abstract class FoodForBarcodeResponse with _$FoodForBarcodeResponse {
   const factory FoodForBarcodeResponse({
     @JsonKey(name: kfood) required Food food,
   }) = _FoodForBarcodeResponse;
@@ -177,7 +179,7 @@ class FoodForBarcodeResponse with _$FoodForBarcodeResponse {
 /// FoodGetByIdProps
 /// https://platform.fatsecret.com/docs/v4/food.get
 @freezed
-class FoodGetByIdProps with _$FoodGetByIdProps {
+abstract class FoodGetByIdProps with _$FoodGetByIdProps {
   const factory FoodGetByIdProps({
     @JsonKey(name: kfoodId) String? foodId,
     @JsonKey(name: kformat) @Default('json') String? format,
@@ -195,7 +197,7 @@ class FoodGetByIdProps with _$FoodGetByIdProps {
 
 /// FoodGetByIdResponse
 @freezed
-class FoodGetByIdResponse with _$FoodGetByIdResponse {
+abstract class FoodGetByIdResponse with _$FoodGetByIdResponse {
   const factory FoodGetByIdResponse({
     @JsonKey(name: kfood) required Food food,
   }) = _FoodGetV4Response;
@@ -206,7 +208,7 @@ class FoodGetByIdResponse with _$FoodGetByIdResponse {
 
 /// Food
 @freezed
-class Food with _$Food {
+abstract class Food with _$Food {
   const factory Food({
     @JsonKey(name: kfoodId) @StringToIntConverter() int? foodId,
     @JsonKey(name: kfoodName) String? foodName,
@@ -221,7 +223,7 @@ class Food with _$Food {
 
 /// Servings
 @freezed
-class Servings with _$Servings {
+abstract class Servings with _$Servings {
   const factory Servings({
     @JsonKey(name: kserving) required List<Serving> serving,
   }) = _Servings;
@@ -232,7 +234,7 @@ class Servings with _$Servings {
 
 /// Serving
 @freezed
-class Serving with _$Serving {
+abstract class Serving with _$Serving {
   const factory Serving({
     @JsonKey(
       name: kmetricServingAmount,
@@ -355,7 +357,7 @@ class Serving with _$Serving {
 }
 
 @freezed
-class FoodImages with _$FoodImages {
+abstract class FoodImages with _$FoodImages {
   const factory FoodImages({
     @JsonKey(name: kfoodImage) required List<FoodImage> foodImage,
   }) = _FoodImages;
@@ -365,7 +367,7 @@ class FoodImages with _$FoodImages {
 }
 
 @freezed
-class FoodImage with _$FoodImage {
+abstract class FoodImage with _$FoodImage {
   const factory FoodImage({
     @JsonKey(name: kimageUrl) required String imageUrl,
     @JsonKey(name: kimageType) required String imageType,
@@ -378,7 +380,7 @@ class FoodImage with _$FoodImage {
 /// FoodAutoCompleteV2Props
 /// https://platform.fatsecret.com/docs/v2/foods.autocomplete
 @freezed
-class FoodAutoCompleteV2Props with _$FoodAutoCompleteV2Props {
+abstract class FoodAutoCompleteV2Props with _$FoodAutoCompleteV2Props {
   const factory FoodAutoCompleteV2Props({
     @JsonKey(name: kexpression) required String expression,
     @JsonKey(name: kmaxResults) int? maxResults,
@@ -391,7 +393,7 @@ class FoodAutoCompleteV2Props with _$FoodAutoCompleteV2Props {
 }
 
 @freezed
-class FoodAutoCompleteV2Response with _$FoodAutoCompleteV2Response {
+abstract class FoodAutoCompleteV2Response with _$FoodAutoCompleteV2Response {
   const factory FoodAutoCompleteV2Response({
     @JsonKey(name: ksuggestions) required Suggestions suggestions,
   }) = _FoodAutoCompleteV2Response;
@@ -402,7 +404,7 @@ class FoodAutoCompleteV2Response with _$FoodAutoCompleteV2Response {
 
 /// Suggestion
 @freezed
-class Suggestions with _$Suggestions {
+abstract class Suggestions with _$Suggestions {
   const factory Suggestions({
     @JsonKey(name: 'suggestion') required List<String> suggestion,
   }) = _Suggestions;
