@@ -6,7 +6,7 @@ void main() async {
   final fatSecret = FatSecretNutrition(
     clientId: env['CLIENT_ID']!,
     clientSecret: env['CLIENT_SECRET']!,
-  )..init();
+  );
 
   final items = (await fatSecret.autoComplete(
     const FoodAutoCompleteV2Props(

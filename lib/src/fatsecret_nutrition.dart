@@ -15,12 +15,7 @@ class FatSecretNutrition {
   FatSecretNutrition({
     required this.clientId,
     required this.clientSecret,
-  });
-  final String clientId;
-  final String clientSecret;
-  late final ApiService apiService;
-
-  void init() {
+  }) {
     final env = DotEnv(includePlatformEnvironment: true)..load();
     final dio = Dio();
     final authService = AuthService(
@@ -35,6 +30,9 @@ class FatSecretNutrition {
       dio: dio,
     );
   }
+  final String clientId;
+  final String clientSecret;
+  late final ApiService apiService;
 
   /// Foods: Search
   /// https://platform.fatsecret.com/docs/v3/foods.search

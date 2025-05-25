@@ -6,7 +6,7 @@ void main() {
   group('FatsecretNutrition', () {
     test('can be instantiated', () {
       expect(
-        FatsecretNutrition(
+        FatSecretNutrition(
           clientId: 'clientId',
           clientSecret: 'clientSecret',
         ),

@@ -1,3 +1,4 @@
 # 0.1.0+1
-
-- feat: initial commit 🎉
+- feat: add search food
+- feat: add get food by id
+- feat: add find id for barcode
