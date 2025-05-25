@@ -6,6 +6,8 @@ void main() async {
   final fatSecret = FatSecretNutrition(
     clientId: env['CLIENT_ID']!,
     clientSecret: env['CLIENT_SECRET']!,
+    tokenUrl: env['TOKEN_URL']!,
+    apiUrl: env['API_URL']!,
   );
 
   final items = (await fatSecret.autoComplete(

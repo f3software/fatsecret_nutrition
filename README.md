@@ -35,15 +35,18 @@ CLIENT_SECRET=your_client_secret
 ```bash
 export CLIENT_ID=your_client_id
 export CLIENT_SECRET=your_client_secret
+export TOKEN_URL=https://oauth.fatsecret.com/connect/token
+export API_URL=https://platform.fatsecret.com/rest/server.api
 ```
 
 ### Initialize The Client
 
 ```dart
-final env = DotEnv(includePlatformEnvironment: true)..load();
 final fatSecret = FatSecretNutrition(
     clientId: env['CLIENT_ID']!,
     clientSecret: env['CLIENT_SECRET']!,
+    tokenUrl: env['TOKEN_URL']!,
+    apiUrl: env['API_URL']!,
 );
 
 ```

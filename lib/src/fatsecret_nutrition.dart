@@ -1,5 +1,4 @@
 import 'package:dio/dio.dart' show Dio;
-import 'package:dotenv/dotenv.dart' show DotEnv;
 import 'package:fatsecret_nutrition/src/enums/enums.dart';
 import 'package:fatsecret_nutrition/src/models/models.dart';
 import 'package:fatsecret_nutrition/src/service/api_service.dart'
@@ -15,24 +14,27 @@ class FatSecretNutrition {
   FatSecretNutrition({
     required this.clientId,
     required this.clientSecret,
+    required this.tokenUrl,
+    required this.apiUrl,
   }) {
-    final env = DotEnv(includePlatformEnvironment: true)..load();
     final dio = Dio();
     final authService = AuthService(
       clientId: clientId,
       clientSecret: clientSecret,
-      tokenUrl: env['TOKEN_URL']!,
+      tokenUrl: tokenUrl,
       dio: dio,
     );
     apiService = ApiService(
       authService: authService,
-      apiUrl: env['API_URL']!,
+      apiUrl: apiUrl,
       dio: dio,
     );
   }
   final String clientId;
   final String clientSecret;
   late final ApiService apiService;
+  final String tokenUrl;
+  final String apiUrl;
 
   /// Foods: Search
   /// https://platform.fatsecret.com/docs/v3/foods.search
