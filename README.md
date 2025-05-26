@@ -48,14 +48,57 @@ final fatSecret = FatSecretNutrition(
     tokenUrl: env['TOKEN_URL']!,
     apiUrl: env['API_URL']!,
 );
-
 ```
 
-### Search for a Food Item
+### Search for Foods
 
 ```dart
-final foodItem = await fatSecret.searchFood(query: 'apple');
-print(foodItem);
+final foods = await fatSecret.search(
+  FoodSearchV3Props(
+    searchExpression: 'apple',
+    maxResults: 10,
+    pageNumber: 0,
+  ),
+);
+```
+
+### Auto-complete Food Search
+
+```dart
+final suggestions = await fatSecret.autoComplete(
+  const FoodAutoCompleteV2Props(
+    expression: 'apple',
+  ),
+);
+```
+
+### Find Food by Barcode
+
+```dart
+final food = await fatSecret.foodFindIdForBarcode(
+  const FoodForBarcodeProps(
+    barcode: '9300675079655',
+  ),
+);
+```
+
+### Search for Brands
+
+```dart
+final brands = await fatSecret.searchBrands(
+  const FoodBrandsGetAllV2Props(
+    startsWith: 'k',
+    brandType: 'restaurant',
+    language: 'en',
+    region: 'US',
+  ),
+);
+
+if (brands != null) {
+  for (final brand in brands.foodBrands.foodBrand) {
+    print('Brand: $brand');
+  }
+}
 ```
 
 # Features
@@ -66,7 +109,7 @@ print(foodItem);
 | Foods: Find Id For Barcode | ✅ |
 | Foods: Search | ✅ |
 | Foods: Get By Id | ✅ |
-| Food Brands: Get All | ⏳ |
+| Food Brands: Get All | ✅ |
 | Food Categories: Get All | ⏳ |
 | Food Sub Categories: Get All | ⏳ |
 | Recipies: Get By ID | ⏳ |

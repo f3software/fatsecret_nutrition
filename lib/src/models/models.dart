@@ -412,3 +412,37 @@ abstract class Suggestions with _$Suggestions {
   factory Suggestions.fromJson(Map<String, dynamic> json) =>
       _$SuggestionsFromJson(json);
 }
+
+@freezed
+abstract class FoodBrandsGetAllV2Props with _$FoodBrandsGetAllV2Props {
+  const factory FoodBrandsGetAllV2Props({
+    @JsonKey(name: 'starts_with') String? startsWith,
+    @JsonKey(name: 'brand_type') String? brandType,
+    @JsonKey(name: 'language') String? language,
+    @JsonKey(name: 'region') String? region,
+    @JsonKey(name: 'format') @Default('json') String? format,
+  }) = _FoodBrandsGetAllV2Props;
+
+  factory FoodBrandsGetAllV2Props.fromJson(Map<String, dynamic> json) =>
+      _$FoodBrandsGetAllV2PropsFromJson(json);
+}
+
+@freezed
+abstract class FoodBrandsGetAllV2Response with _$FoodBrandsGetAllV2Response {
+  const factory FoodBrandsGetAllV2Response({
+    @JsonKey(name: 'food_brands') required BrandList foodBrands,
+  }) = _FoodBrandsGetAllV2Response;
+
+  factory FoodBrandsGetAllV2Response.fromJson(Map<String, dynamic> json) =>
+      _$FoodBrandsGetAllV2ResponseFromJson(json);
+}
+
+@freezed
+abstract class BrandList with _$BrandList {
+  const factory BrandList({
+    @JsonKey(name: 'food_brand') required List<String> foodBrand,
+  }) = _BrandList;
+
+  factory BrandList.fromJson(Map<String, dynamic> json) =>
+      _$BrandListFromJson(json);
+}

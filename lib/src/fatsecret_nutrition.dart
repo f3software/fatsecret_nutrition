@@ -133,4 +133,26 @@ class FatSecretNutrition {
       return null;
     }
   }
+
+  /// Food Brands: Get All
+  /// https://platform.fatsecret.com/docs/v2/brands.get
+  ///
+  /// This is a utility method, returning the list of food brands.
+  /// The results can be filtered by brand type and starting letter.
+  ///
+  Future<FoodBrandsGetAllV2Response?> searchBrands(
+    FoodBrandsGetAllV2Props props,
+  ) async {
+    try {
+      final response = await apiService.fetchData(
+        Methods.foodBrandsGetAllV2.value,
+        props.toJson(),
+      );
+      if (response == null) return null;
+      if (response.data == null) throw Exception('no data');
+      return FoodBrandsGetAllV2Response.fromJson(response.data!);
+    } catch (e) {
+      return null;
+    }
+  }
 }
