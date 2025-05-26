@@ -340,3 +340,47 @@ Map<String, dynamic> _$SuggestionsToJson(_Suggestions instance) =>
     <String, dynamic>{
       'suggestion': instance.suggestion,
     };
+
+_FoodBrandsGetAllV2Props _$FoodBrandsGetAllV2PropsFromJson(
+        Map<String, dynamic> json) =>
+    _FoodBrandsGetAllV2Props(
+      startsWith: json['starts_with'] as String?,
+      brandType: json['brand_type'] as String?,
+      language: json['language'] as String?,
+      region: json['region'] as String?,
+      format: json['format'] as String? ?? 'json',
+    );
+
+Map<String, dynamic> _$FoodBrandsGetAllV2PropsToJson(
+        _FoodBrandsGetAllV2Props instance) =>
+    <String, dynamic>{
+      'starts_with': instance.startsWith,
+      'brand_type': instance.brandType,
+      'language': instance.language,
+      'region': instance.region,
+      'format': instance.format,
+    };
+
+_FoodBrandsGetAllV2Response _$FoodBrandsGetAllV2ResponseFromJson(
+        Map<String, dynamic> json) =>
+    _FoodBrandsGetAllV2Response(
+      foodBrands:
+          BrandList.fromJson(json['food_brands'] as Map<String, dynamic>),
+    );
+
+Map<String, dynamic> _$FoodBrandsGetAllV2ResponseToJson(
+        _FoodBrandsGetAllV2Response instance) =>
+    <String, dynamic>{
+      'food_brands': instance.foodBrands.toJson(),
+    };
+
+_BrandList _$BrandListFromJson(Map<String, dynamic> json) => _BrandList(
+      foodBrand: (json['food_brand'] as List<dynamic>)
+          .map((e) => e as String)
+          .toList(),
+    );
+
+Map<String, dynamic> _$BrandListToJson(_BrandList instance) =>
+    <String, dynamic>{
+      'food_brand': instance.foodBrand,
+    };

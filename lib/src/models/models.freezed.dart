@@ -4417,4 +4417,571 @@ class __$SuggestionsCopyWithImpl<$Res> implements _$SuggestionsCopyWith<$Res> {
   }
 }
 
+/// @nodoc
+mixin _$FoodBrandsGetAllV2Props {
+  @JsonKey(name: 'starts_with')
+  String? get startsWith;
+  @JsonKey(name: 'brand_type')
+  String? get brandType;
+  @JsonKey(name: 'language')
+  String? get language;
+  @JsonKey(name: 'region')
+  String? get region;
+  @JsonKey(name: 'format')
+  String? get format;
+
+  /// Create a copy of FoodBrandsGetAllV2Props
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $FoodBrandsGetAllV2PropsCopyWith<FoodBrandsGetAllV2Props> get copyWith =>
+      _$FoodBrandsGetAllV2PropsCopyWithImpl<FoodBrandsGetAllV2Props>(
+          this as FoodBrandsGetAllV2Props, _$identity);
+
+  /// Serializes this FoodBrandsGetAllV2Props to a JSON map.
+  Map<String, dynamic> toJson();
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is FoodBrandsGetAllV2Props &&
+            (identical(other.startsWith, startsWith) ||
+                other.startsWith == startsWith) &&
+            (identical(other.brandType, brandType) ||
+                other.brandType == brandType) &&
+            (identical(other.language, language) ||
+                other.language == language) &&
+            (identical(other.region, region) || other.region == region) &&
+            (identical(other.format, format) || other.format == format));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, startsWith, brandType, language, region, format);
+
+  @override
+  String toString() {
+    return 'FoodBrandsGetAllV2Props(startsWith: $startsWith, brandType: $brandType, language: $language, region: $region, format: $format)';
+  }
+}
+
+/// @nodoc
+abstract mixin class $FoodBrandsGetAllV2PropsCopyWith<$Res> {
+  factory $FoodBrandsGetAllV2PropsCopyWith(FoodBrandsGetAllV2Props value,
+          $Res Function(FoodBrandsGetAllV2Props) _then) =
+      _$FoodBrandsGetAllV2PropsCopyWithImpl;
+  @useResult
+  $Res call(
+      {@JsonKey(name: 'starts_with') String? startsWith,
+      @JsonKey(name: 'brand_type') String? brandType,
+      @JsonKey(name: 'language') String? language,
+      @JsonKey(name: 'region') String? region,
+      @JsonKey(name: 'format') String? format});
+}
+
+/// @nodoc
+class _$FoodBrandsGetAllV2PropsCopyWithImpl<$Res>
+    implements $FoodBrandsGetAllV2PropsCopyWith<$Res> {
+  _$FoodBrandsGetAllV2PropsCopyWithImpl(this._self, this._then);
+
+  final FoodBrandsGetAllV2Props _self;
+  final $Res Function(FoodBrandsGetAllV2Props) _then;
+
+  /// Create a copy of FoodBrandsGetAllV2Props
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? startsWith = freezed,
+    Object? brandType = freezed,
+    Object? language = freezed,
+    Object? region = freezed,
+    Object? format = freezed,
+  }) {
+    return _then(_self.copyWith(
+      startsWith: freezed == startsWith
+          ? _self.startsWith
+          : startsWith // ignore: cast_nullable_to_non_nullable
+              as String?,
+      brandType: freezed == brandType
+          ? _self.brandType
+          : brandType // ignore: cast_nullable_to_non_nullable
+              as String?,
+      language: freezed == language
+          ? _self.language
+          : language // ignore: cast_nullable_to_non_nullable
+              as String?,
+      region: freezed == region
+          ? _self.region
+          : region // ignore: cast_nullable_to_non_nullable
+              as String?,
+      format: freezed == format
+          ? _self.format
+          : format // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _FoodBrandsGetAllV2Props implements FoodBrandsGetAllV2Props {
+  const _FoodBrandsGetAllV2Props(
+      {@JsonKey(name: 'starts_with') this.startsWith,
+      @JsonKey(name: 'brand_type') this.brandType,
+      @JsonKey(name: 'language') this.language,
+      @JsonKey(name: 'region') this.region,
+      @JsonKey(name: 'format') this.format = 'json'});
+  factory _FoodBrandsGetAllV2Props.fromJson(Map<String, dynamic> json) =>
+      _$FoodBrandsGetAllV2PropsFromJson(json);
+
+  @override
+  @JsonKey(name: 'starts_with')
+  final String? startsWith;
+  @override
+  @JsonKey(name: 'brand_type')
+  final String? brandType;
+  @override
+  @JsonKey(name: 'language')
+  final String? language;
+  @override
+  @JsonKey(name: 'region')
+  final String? region;
+  @override
+  @JsonKey(name: 'format')
+  final String? format;
+
+  /// Create a copy of FoodBrandsGetAllV2Props
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  _$FoodBrandsGetAllV2PropsCopyWith<_FoodBrandsGetAllV2Props> get copyWith =>
+      __$FoodBrandsGetAllV2PropsCopyWithImpl<_FoodBrandsGetAllV2Props>(
+          this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$FoodBrandsGetAllV2PropsToJson(
+      this,
+    );
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _FoodBrandsGetAllV2Props &&
+            (identical(other.startsWith, startsWith) ||
+                other.startsWith == startsWith) &&
+            (identical(other.brandType, brandType) ||
+                other.brandType == brandType) &&
+            (identical(other.language, language) ||
+                other.language == language) &&
+            (identical(other.region, region) || other.region == region) &&
+            (identical(other.format, format) || other.format == format));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, startsWith, brandType, language, region, format);
+
+  @override
+  String toString() {
+    return 'FoodBrandsGetAllV2Props(startsWith: $startsWith, brandType: $brandType, language: $language, region: $region, format: $format)';
+  }
+}
+
+/// @nodoc
+abstract mixin class _$FoodBrandsGetAllV2PropsCopyWith<$Res>
+    implements $FoodBrandsGetAllV2PropsCopyWith<$Res> {
+  factory _$FoodBrandsGetAllV2PropsCopyWith(_FoodBrandsGetAllV2Props value,
+          $Res Function(_FoodBrandsGetAllV2Props) _then) =
+      __$FoodBrandsGetAllV2PropsCopyWithImpl;
+  @override
+  @useResult
+  $Res call(
+      {@JsonKey(name: 'starts_with') String? startsWith,
+      @JsonKey(name: 'brand_type') String? brandType,
+      @JsonKey(name: 'language') String? language,
+      @JsonKey(name: 'region') String? region,
+      @JsonKey(name: 'format') String? format});
+}
+
+/// @nodoc
+class __$FoodBrandsGetAllV2PropsCopyWithImpl<$Res>
+    implements _$FoodBrandsGetAllV2PropsCopyWith<$Res> {
+  __$FoodBrandsGetAllV2PropsCopyWithImpl(this._self, this._then);
+
+  final _FoodBrandsGetAllV2Props _self;
+  final $Res Function(_FoodBrandsGetAllV2Props) _then;
+
+  /// Create a copy of FoodBrandsGetAllV2Props
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $Res call({
+    Object? startsWith = freezed,
+    Object? brandType = freezed,
+    Object? language = freezed,
+    Object? region = freezed,
+    Object? format = freezed,
+  }) {
+    return _then(_FoodBrandsGetAllV2Props(
+      startsWith: freezed == startsWith
+          ? _self.startsWith
+          : startsWith // ignore: cast_nullable_to_non_nullable
+              as String?,
+      brandType: freezed == brandType
+          ? _self.brandType
+          : brandType // ignore: cast_nullable_to_non_nullable
+              as String?,
+      language: freezed == language
+          ? _self.language
+          : language // ignore: cast_nullable_to_non_nullable
+              as String?,
+      region: freezed == region
+          ? _self.region
+          : region // ignore: cast_nullable_to_non_nullable
+              as String?,
+      format: freezed == format
+          ? _self.format
+          : format // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ));
+  }
+}
+
+/// @nodoc
+mixin _$FoodBrandsGetAllV2Response {
+  @JsonKey(name: 'food_brands')
+  BrandList get foodBrands;
+
+  /// Create a copy of FoodBrandsGetAllV2Response
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $FoodBrandsGetAllV2ResponseCopyWith<FoodBrandsGetAllV2Response>
+      get copyWith =>
+          _$FoodBrandsGetAllV2ResponseCopyWithImpl<FoodBrandsGetAllV2Response>(
+              this as FoodBrandsGetAllV2Response, _$identity);
+
+  /// Serializes this FoodBrandsGetAllV2Response to a JSON map.
+  Map<String, dynamic> toJson();
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is FoodBrandsGetAllV2Response &&
+            (identical(other.foodBrands, foodBrands) ||
+                other.foodBrands == foodBrands));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(runtimeType, foodBrands);
+
+  @override
+  String toString() {
+    return 'FoodBrandsGetAllV2Response(foodBrands: $foodBrands)';
+  }
+}
+
+/// @nodoc
+abstract mixin class $FoodBrandsGetAllV2ResponseCopyWith<$Res> {
+  factory $FoodBrandsGetAllV2ResponseCopyWith(FoodBrandsGetAllV2Response value,
+          $Res Function(FoodBrandsGetAllV2Response) _then) =
+      _$FoodBrandsGetAllV2ResponseCopyWithImpl;
+  @useResult
+  $Res call({@JsonKey(name: 'food_brands') BrandList foodBrands});
+
+  $BrandListCopyWith<$Res> get foodBrands;
+}
+
+/// @nodoc
+class _$FoodBrandsGetAllV2ResponseCopyWithImpl<$Res>
+    implements $FoodBrandsGetAllV2ResponseCopyWith<$Res> {
+  _$FoodBrandsGetAllV2ResponseCopyWithImpl(this._self, this._then);
+
+  final FoodBrandsGetAllV2Response _self;
+  final $Res Function(FoodBrandsGetAllV2Response) _then;
+
+  /// Create a copy of FoodBrandsGetAllV2Response
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? foodBrands = null,
+  }) {
+    return _then(_self.copyWith(
+      foodBrands: null == foodBrands
+          ? _self.foodBrands
+          : foodBrands // ignore: cast_nullable_to_non_nullable
+              as BrandList,
+    ));
+  }
+
+  /// Create a copy of FoodBrandsGetAllV2Response
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $BrandListCopyWith<$Res> get foodBrands {
+    return $BrandListCopyWith<$Res>(_self.foodBrands, (value) {
+      return _then(_self.copyWith(foodBrands: value));
+    });
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _FoodBrandsGetAllV2Response implements FoodBrandsGetAllV2Response {
+  const _FoodBrandsGetAllV2Response(
+      {@JsonKey(name: 'food_brands') required this.foodBrands});
+  factory _FoodBrandsGetAllV2Response.fromJson(Map<String, dynamic> json) =>
+      _$FoodBrandsGetAllV2ResponseFromJson(json);
+
+  @override
+  @JsonKey(name: 'food_brands')
+  final BrandList foodBrands;
+
+  /// Create a copy of FoodBrandsGetAllV2Response
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  _$FoodBrandsGetAllV2ResponseCopyWith<_FoodBrandsGetAllV2Response>
+      get copyWith => __$FoodBrandsGetAllV2ResponseCopyWithImpl<
+          _FoodBrandsGetAllV2Response>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$FoodBrandsGetAllV2ResponseToJson(
+      this,
+    );
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _FoodBrandsGetAllV2Response &&
+            (identical(other.foodBrands, foodBrands) ||
+                other.foodBrands == foodBrands));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(runtimeType, foodBrands);
+
+  @override
+  String toString() {
+    return 'FoodBrandsGetAllV2Response(foodBrands: $foodBrands)';
+  }
+}
+
+/// @nodoc
+abstract mixin class _$FoodBrandsGetAllV2ResponseCopyWith<$Res>
+    implements $FoodBrandsGetAllV2ResponseCopyWith<$Res> {
+  factory _$FoodBrandsGetAllV2ResponseCopyWith(
+          _FoodBrandsGetAllV2Response value,
+          $Res Function(_FoodBrandsGetAllV2Response) _then) =
+      __$FoodBrandsGetAllV2ResponseCopyWithImpl;
+  @override
+  @useResult
+  $Res call({@JsonKey(name: 'food_brands') BrandList foodBrands});
+
+  @override
+  $BrandListCopyWith<$Res> get foodBrands;
+}
+
+/// @nodoc
+class __$FoodBrandsGetAllV2ResponseCopyWithImpl<$Res>
+    implements _$FoodBrandsGetAllV2ResponseCopyWith<$Res> {
+  __$FoodBrandsGetAllV2ResponseCopyWithImpl(this._self, this._then);
+
+  final _FoodBrandsGetAllV2Response _self;
+  final $Res Function(_FoodBrandsGetAllV2Response) _then;
+
+  /// Create a copy of FoodBrandsGetAllV2Response
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $Res call({
+    Object? foodBrands = null,
+  }) {
+    return _then(_FoodBrandsGetAllV2Response(
+      foodBrands: null == foodBrands
+          ? _self.foodBrands
+          : foodBrands // ignore: cast_nullable_to_non_nullable
+              as BrandList,
+    ));
+  }
+
+  /// Create a copy of FoodBrandsGetAllV2Response
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $BrandListCopyWith<$Res> get foodBrands {
+    return $BrandListCopyWith<$Res>(_self.foodBrands, (value) {
+      return _then(_self.copyWith(foodBrands: value));
+    });
+  }
+}
+
+/// @nodoc
+mixin _$BrandList {
+  @JsonKey(name: 'food_brand')
+  List<String> get foodBrand;
+
+  /// Create a copy of BrandList
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $BrandListCopyWith<BrandList> get copyWith =>
+      _$BrandListCopyWithImpl<BrandList>(this as BrandList, _$identity);
+
+  /// Serializes this BrandList to a JSON map.
+  Map<String, dynamic> toJson();
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is BrandList &&
+            const DeepCollectionEquality().equals(other.foodBrand, foodBrand));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(foodBrand));
+
+  @override
+  String toString() {
+    return 'BrandList(foodBrand: $foodBrand)';
+  }
+}
+
+/// @nodoc
+abstract mixin class $BrandListCopyWith<$Res> {
+  factory $BrandListCopyWith(BrandList value, $Res Function(BrandList) _then) =
+      _$BrandListCopyWithImpl;
+  @useResult
+  $Res call({@JsonKey(name: 'food_brand') List<String> foodBrand});
+}
+
+/// @nodoc
+class _$BrandListCopyWithImpl<$Res> implements $BrandListCopyWith<$Res> {
+  _$BrandListCopyWithImpl(this._self, this._then);
+
+  final BrandList _self;
+  final $Res Function(BrandList) _then;
+
+  /// Create a copy of BrandList
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? foodBrand = null,
+  }) {
+    return _then(_self.copyWith(
+      foodBrand: null == foodBrand
+          ? _self.foodBrand
+          : foodBrand // ignore: cast_nullable_to_non_nullable
+              as List<String>,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _BrandList implements BrandList {
+  const _BrandList(
+      {@JsonKey(name: 'food_brand') required final List<String> foodBrand})
+      : _foodBrand = foodBrand;
+  factory _BrandList.fromJson(Map<String, dynamic> json) =>
+      _$BrandListFromJson(json);
+
+  final List<String> _foodBrand;
+  @override
+  @JsonKey(name: 'food_brand')
+  List<String> get foodBrand {
+    if (_foodBrand is EqualUnmodifiableListView) return _foodBrand;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_foodBrand);
+  }
+
+  /// Create a copy of BrandList
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  _$BrandListCopyWith<_BrandList> get copyWith =>
+      __$BrandListCopyWithImpl<_BrandList>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$BrandListToJson(
+      this,
+    );
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _BrandList &&
+            const DeepCollectionEquality()
+                .equals(other._foodBrand, _foodBrand));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(_foodBrand));
+
+  @override
+  String toString() {
+    return 'BrandList(foodBrand: $foodBrand)';
+  }
+}
+
+/// @nodoc
+abstract mixin class _$BrandListCopyWith<$Res>
+    implements $BrandListCopyWith<$Res> {
+  factory _$BrandListCopyWith(
+          _BrandList value, $Res Function(_BrandList) _then) =
+      __$BrandListCopyWithImpl;
+  @override
+  @useResult
+  $Res call({@JsonKey(name: 'food_brand') List<String> foodBrand});
+}
+
+/// @nodoc
+class __$BrandListCopyWithImpl<$Res> implements _$BrandListCopyWith<$Res> {
+  __$BrandListCopyWithImpl(this._self, this._then);
+
+  final _BrandList _self;
+  final $Res Function(_BrandList) _then;
+
+  /// Create a copy of BrandList
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $Res call({
+    Object? foodBrand = null,
+  }) {
+    return _then(_BrandList(
+      foodBrand: null == foodBrand
+          ? _self._foodBrand
+          : foodBrand // ignore: cast_nullable_to_non_nullable
+              as List<String>,
+    ));
+  }
+}
+
 // dart format on
