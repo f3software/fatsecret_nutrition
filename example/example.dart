@@ -10,6 +10,7 @@ void main() async {
     apiUrl: env['API_URL']!,
   );
 
+  // Example 1: Auto-complete food search
   final items = (await fatSecret.autoComplete(
     const FoodAutoCompleteV2Props(
       expression: 'cheese',
@@ -18,8 +19,10 @@ void main() async {
       ?.suggestions
       .suggestion;
 
+  print('Auto-complete results:');
   print(items);
 
+  // Example 2: Search for foods
   final foods2 = await fatSecret.search(
     FoodSearchV3Props(
       searchExpression: items?.isNotEmpty ?? false ? items!.last : 'cheese',
@@ -28,12 +31,33 @@ void main() async {
     ),
   );
 
+  print('\nFood search results:');
   print(foods2);
 
+  // Example 3: Find food by barcode
   final foods3 = await fatSecret.foodFindIdForBarcode(
     const FoodForBarcodeProps(
       barcode: '9300675079655',
     ),
   );
+  print('\nBarcode search result:');
   print(foods3);
+
+  // Example 4: Search for brands
+  final brands = await fatSecret.searchBrands(
+    const FoodBrandsGetAllV2Props(
+      startsWith: 'k',
+      brandType: 'restaurant',
+      language: 'en',
+      region: 'US',
+    ),
+  );
+
+  print('\nBrand search results:');
+  if (brands != null) {
+    for (final brand in brands.foodBrands.foodBrand) {
+      print('Brand: $brand');
+      print('---');
+    }
+  }
 }
