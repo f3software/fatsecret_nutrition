@@ -1,6 +1,7 @@
 import 'package:dio/dio.dart';
 import 'package:fatsecret_nutrition/src/service/auth_service.dart'
     show AuthService;
+import 'package:logging/logging.dart';
 
 class ApiService {
   ApiService({
@@ -12,6 +13,7 @@ class ApiService {
   final Dio dio;
   final AuthService authService;
   final String apiUrl;
+  final _logger = Logger('ApiService');
 
   Future<Response<Map<String, dynamic>>?> fetchData(
       String endpoint, Map<String, dynamic> queryParams,) async {
@@ -38,8 +40,7 @@ class ApiService {
 
       return response;
     } catch (e, s) {
-      print(e);
-      print(s);
+      _logger.severe('API call failed', e, s);
     }
     return null;
   }

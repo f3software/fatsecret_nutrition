@@ -4984,4 +4984,1292 @@ class __$BrandListCopyWithImpl<$Res> implements _$BrandListCopyWith<$Res> {
   }
 }
 
+/// @nodoc
+mixin _$FoodCategoriesResponse {
+  @JsonKey(name: 'food_categories')
+  FoodCategories get foodCategories;
+
+  /// Create a copy of FoodCategoriesResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $FoodCategoriesResponseCopyWith<FoodCategoriesResponse> get copyWith =>
+      _$FoodCategoriesResponseCopyWithImpl<FoodCategoriesResponse>(
+          this as FoodCategoriesResponse, _$identity);
+
+  /// Serializes this FoodCategoriesResponse to a JSON map.
+  Map<String, dynamic> toJson();
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is FoodCategoriesResponse &&
+            (identical(other.foodCategories, foodCategories) ||
+                other.foodCategories == foodCategories));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(runtimeType, foodCategories);
+
+  @override
+  String toString() {
+    return 'FoodCategoriesResponse(foodCategories: $foodCategories)';
+  }
+}
+
+/// @nodoc
+abstract mixin class $FoodCategoriesResponseCopyWith<$Res> {
+  factory $FoodCategoriesResponseCopyWith(FoodCategoriesResponse value,
+          $Res Function(FoodCategoriesResponse) _then) =
+      _$FoodCategoriesResponseCopyWithImpl;
+  @useResult
+  $Res call({@JsonKey(name: 'food_categories') FoodCategories foodCategories});
+
+  $FoodCategoriesCopyWith<$Res> get foodCategories;
+}
+
+/// @nodoc
+class _$FoodCategoriesResponseCopyWithImpl<$Res>
+    implements $FoodCategoriesResponseCopyWith<$Res> {
+  _$FoodCategoriesResponseCopyWithImpl(this._self, this._then);
+
+  final FoodCategoriesResponse _self;
+  final $Res Function(FoodCategoriesResponse) _then;
+
+  /// Create a copy of FoodCategoriesResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? foodCategories = null,
+  }) {
+    return _then(_self.copyWith(
+      foodCategories: null == foodCategories
+          ? _self.foodCategories
+          : foodCategories // ignore: cast_nullable_to_non_nullable
+              as FoodCategories,
+    ));
+  }
+
+  /// Create a copy of FoodCategoriesResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $FoodCategoriesCopyWith<$Res> get foodCategories {
+    return $FoodCategoriesCopyWith<$Res>(_self.foodCategories, (value) {
+      return _then(_self.copyWith(foodCategories: value));
+    });
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _FoodCategoriesResponse implements FoodCategoriesResponse {
+  const _FoodCategoriesResponse(
+      {@JsonKey(name: 'food_categories') required this.foodCategories});
+  factory _FoodCategoriesResponse.fromJson(Map<String, dynamic> json) =>
+      _$FoodCategoriesResponseFromJson(json);
+
+  @override
+  @JsonKey(name: 'food_categories')
+  final FoodCategories foodCategories;
+
+  /// Create a copy of FoodCategoriesResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  _$FoodCategoriesResponseCopyWith<_FoodCategoriesResponse> get copyWith =>
+      __$FoodCategoriesResponseCopyWithImpl<_FoodCategoriesResponse>(
+          this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$FoodCategoriesResponseToJson(
+      this,
+    );
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _FoodCategoriesResponse &&
+            (identical(other.foodCategories, foodCategories) ||
+                other.foodCategories == foodCategories));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(runtimeType, foodCategories);
+
+  @override
+  String toString() {
+    return 'FoodCategoriesResponse(foodCategories: $foodCategories)';
+  }
+}
+
+/// @nodoc
+abstract mixin class _$FoodCategoriesResponseCopyWith<$Res>
+    implements $FoodCategoriesResponseCopyWith<$Res> {
+  factory _$FoodCategoriesResponseCopyWith(_FoodCategoriesResponse value,
+          $Res Function(_FoodCategoriesResponse) _then) =
+      __$FoodCategoriesResponseCopyWithImpl;
+  @override
+  @useResult
+  $Res call({@JsonKey(name: 'food_categories') FoodCategories foodCategories});
+
+  @override
+  $FoodCategoriesCopyWith<$Res> get foodCategories;
+}
+
+/// @nodoc
+class __$FoodCategoriesResponseCopyWithImpl<$Res>
+    implements _$FoodCategoriesResponseCopyWith<$Res> {
+  __$FoodCategoriesResponseCopyWithImpl(this._self, this._then);
+
+  final _FoodCategoriesResponse _self;
+  final $Res Function(_FoodCategoriesResponse) _then;
+
+  /// Create a copy of FoodCategoriesResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $Res call({
+    Object? foodCategories = null,
+  }) {
+    return _then(_FoodCategoriesResponse(
+      foodCategories: null == foodCategories
+          ? _self.foodCategories
+          : foodCategories // ignore: cast_nullable_to_non_nullable
+              as FoodCategories,
+    ));
+  }
+
+  /// Create a copy of FoodCategoriesResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $FoodCategoriesCopyWith<$Res> get foodCategories {
+    return $FoodCategoriesCopyWith<$Res>(_self.foodCategories, (value) {
+      return _then(_self.copyWith(foodCategories: value));
+    });
+  }
+}
+
+/// @nodoc
+mixin _$FoodCategories {
+  @JsonKey(name: 'food_category')
+  List<FoodCategory> get foodCategory;
+
+  /// Create a copy of FoodCategories
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $FoodCategoriesCopyWith<FoodCategories> get copyWith =>
+      _$FoodCategoriesCopyWithImpl<FoodCategories>(
+          this as FoodCategories, _$identity);
+
+  /// Serializes this FoodCategories to a JSON map.
+  Map<String, dynamic> toJson();
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is FoodCategories &&
+            const DeepCollectionEquality()
+                .equals(other.foodCategory, foodCategory));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType, const DeepCollectionEquality().hash(foodCategory));
+
+  @override
+  String toString() {
+    return 'FoodCategories(foodCategory: $foodCategory)';
+  }
+}
+
+/// @nodoc
+abstract mixin class $FoodCategoriesCopyWith<$Res> {
+  factory $FoodCategoriesCopyWith(
+          FoodCategories value, $Res Function(FoodCategories) _then) =
+      _$FoodCategoriesCopyWithImpl;
+  @useResult
+  $Res call({@JsonKey(name: 'food_category') List<FoodCategory> foodCategory});
+}
+
+/// @nodoc
+class _$FoodCategoriesCopyWithImpl<$Res>
+    implements $FoodCategoriesCopyWith<$Res> {
+  _$FoodCategoriesCopyWithImpl(this._self, this._then);
+
+  final FoodCategories _self;
+  final $Res Function(FoodCategories) _then;
+
+  /// Create a copy of FoodCategories
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? foodCategory = null,
+  }) {
+    return _then(_self.copyWith(
+      foodCategory: null == foodCategory
+          ? _self.foodCategory
+          : foodCategory // ignore: cast_nullable_to_non_nullable
+              as List<FoodCategory>,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _FoodCategories implements FoodCategories {
+  const _FoodCategories(
+      {@JsonKey(name: 'food_category')
+      required final List<FoodCategory> foodCategory})
+      : _foodCategory = foodCategory;
+  factory _FoodCategories.fromJson(Map<String, dynamic> json) =>
+      _$FoodCategoriesFromJson(json);
+
+  final List<FoodCategory> _foodCategory;
+  @override
+  @JsonKey(name: 'food_category')
+  List<FoodCategory> get foodCategory {
+    if (_foodCategory is EqualUnmodifiableListView) return _foodCategory;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_foodCategory);
+  }
+
+  /// Create a copy of FoodCategories
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  _$FoodCategoriesCopyWith<_FoodCategories> get copyWith =>
+      __$FoodCategoriesCopyWithImpl<_FoodCategories>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$FoodCategoriesToJson(
+      this,
+    );
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _FoodCategories &&
+            const DeepCollectionEquality()
+                .equals(other._foodCategory, _foodCategory));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType, const DeepCollectionEquality().hash(_foodCategory));
+
+  @override
+  String toString() {
+    return 'FoodCategories(foodCategory: $foodCategory)';
+  }
+}
+
+/// @nodoc
+abstract mixin class _$FoodCategoriesCopyWith<$Res>
+    implements $FoodCategoriesCopyWith<$Res> {
+  factory _$FoodCategoriesCopyWith(
+          _FoodCategories value, $Res Function(_FoodCategories) _then) =
+      __$FoodCategoriesCopyWithImpl;
+  @override
+  @useResult
+  $Res call({@JsonKey(name: 'food_category') List<FoodCategory> foodCategory});
+}
+
+/// @nodoc
+class __$FoodCategoriesCopyWithImpl<$Res>
+    implements _$FoodCategoriesCopyWith<$Res> {
+  __$FoodCategoriesCopyWithImpl(this._self, this._then);
+
+  final _FoodCategories _self;
+  final $Res Function(_FoodCategories) _then;
+
+  /// Create a copy of FoodCategories
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $Res call({
+    Object? foodCategory = null,
+  }) {
+    return _then(_FoodCategories(
+      foodCategory: null == foodCategory
+          ? _self._foodCategory
+          : foodCategory // ignore: cast_nullable_to_non_nullable
+              as List<FoodCategory>,
+    ));
+  }
+}
+
+/// @nodoc
+mixin _$FoodCategory {
+  @JsonKey(name: 'food_category_id')
+  @StringToIntConverter()
+  int get foodCategoryId;
+  @JsonKey(name: 'food_category_name')
+  String get foodCategoryName;
+  @JsonKey(name: 'food_category_description')
+  String get foodCategoryDescription;
+
+  /// Create a copy of FoodCategory
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $FoodCategoryCopyWith<FoodCategory> get copyWith =>
+      _$FoodCategoryCopyWithImpl<FoodCategory>(
+          this as FoodCategory, _$identity);
+
+  /// Serializes this FoodCategory to a JSON map.
+  Map<String, dynamic> toJson();
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is FoodCategory &&
+            (identical(other.foodCategoryId, foodCategoryId) ||
+                other.foodCategoryId == foodCategoryId) &&
+            (identical(other.foodCategoryName, foodCategoryName) ||
+                other.foodCategoryName == foodCategoryName) &&
+            (identical(
+                    other.foodCategoryDescription, foodCategoryDescription) ||
+                other.foodCategoryDescription == foodCategoryDescription));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType, foodCategoryId, foodCategoryName, foodCategoryDescription);
+
+  @override
+  String toString() {
+    return 'FoodCategory(foodCategoryId: $foodCategoryId, foodCategoryName: $foodCategoryName, foodCategoryDescription: $foodCategoryDescription)';
+  }
+}
+
+/// @nodoc
+abstract mixin class $FoodCategoryCopyWith<$Res> {
+  factory $FoodCategoryCopyWith(
+          FoodCategory value, $Res Function(FoodCategory) _then) =
+      _$FoodCategoryCopyWithImpl;
+  @useResult
+  $Res call(
+      {@JsonKey(name: 'food_category_id')
+      @StringToIntConverter()
+      int foodCategoryId,
+      @JsonKey(name: 'food_category_name') String foodCategoryName,
+      @JsonKey(name: 'food_category_description')
+      String foodCategoryDescription});
+}
+
+/// @nodoc
+class _$FoodCategoryCopyWithImpl<$Res> implements $FoodCategoryCopyWith<$Res> {
+  _$FoodCategoryCopyWithImpl(this._self, this._then);
+
+  final FoodCategory _self;
+  final $Res Function(FoodCategory) _then;
+
+  /// Create a copy of FoodCategory
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? foodCategoryId = null,
+    Object? foodCategoryName = null,
+    Object? foodCategoryDescription = null,
+  }) {
+    return _then(_self.copyWith(
+      foodCategoryId: null == foodCategoryId
+          ? _self.foodCategoryId
+          : foodCategoryId // ignore: cast_nullable_to_non_nullable
+              as int,
+      foodCategoryName: null == foodCategoryName
+          ? _self.foodCategoryName
+          : foodCategoryName // ignore: cast_nullable_to_non_nullable
+              as String,
+      foodCategoryDescription: null == foodCategoryDescription
+          ? _self.foodCategoryDescription
+          : foodCategoryDescription // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _FoodCategory implements FoodCategory {
+  const _FoodCategory(
+      {@JsonKey(name: 'food_category_id')
+      @StringToIntConverter()
+      required this.foodCategoryId,
+      @JsonKey(name: 'food_category_name') required this.foodCategoryName,
+      @JsonKey(name: 'food_category_description')
+      required this.foodCategoryDescription});
+  factory _FoodCategory.fromJson(Map<String, dynamic> json) =>
+      _$FoodCategoryFromJson(json);
+
+  @override
+  @JsonKey(name: 'food_category_id')
+  @StringToIntConverter()
+  final int foodCategoryId;
+  @override
+  @JsonKey(name: 'food_category_name')
+  final String foodCategoryName;
+  @override
+  @JsonKey(name: 'food_category_description')
+  final String foodCategoryDescription;
+
+  /// Create a copy of FoodCategory
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  _$FoodCategoryCopyWith<_FoodCategory> get copyWith =>
+      __$FoodCategoryCopyWithImpl<_FoodCategory>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$FoodCategoryToJson(
+      this,
+    );
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _FoodCategory &&
+            (identical(other.foodCategoryId, foodCategoryId) ||
+                other.foodCategoryId == foodCategoryId) &&
+            (identical(other.foodCategoryName, foodCategoryName) ||
+                other.foodCategoryName == foodCategoryName) &&
+            (identical(
+                    other.foodCategoryDescription, foodCategoryDescription) ||
+                other.foodCategoryDescription == foodCategoryDescription));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType, foodCategoryId, foodCategoryName, foodCategoryDescription);
+
+  @override
+  String toString() {
+    return 'FoodCategory(foodCategoryId: $foodCategoryId, foodCategoryName: $foodCategoryName, foodCategoryDescription: $foodCategoryDescription)';
+  }
+}
+
+/// @nodoc
+abstract mixin class _$FoodCategoryCopyWith<$Res>
+    implements $FoodCategoryCopyWith<$Res> {
+  factory _$FoodCategoryCopyWith(
+          _FoodCategory value, $Res Function(_FoodCategory) _then) =
+      __$FoodCategoryCopyWithImpl;
+  @override
+  @useResult
+  $Res call(
+      {@JsonKey(name: 'food_category_id')
+      @StringToIntConverter()
+      int foodCategoryId,
+      @JsonKey(name: 'food_category_name') String foodCategoryName,
+      @JsonKey(name: 'food_category_description')
+      String foodCategoryDescription});
+}
+
+/// @nodoc
+class __$FoodCategoryCopyWithImpl<$Res>
+    implements _$FoodCategoryCopyWith<$Res> {
+  __$FoodCategoryCopyWithImpl(this._self, this._then);
+
+  final _FoodCategory _self;
+  final $Res Function(_FoodCategory) _then;
+
+  /// Create a copy of FoodCategory
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $Res call({
+    Object? foodCategoryId = null,
+    Object? foodCategoryName = null,
+    Object? foodCategoryDescription = null,
+  }) {
+    return _then(_FoodCategory(
+      foodCategoryId: null == foodCategoryId
+          ? _self.foodCategoryId
+          : foodCategoryId // ignore: cast_nullable_to_non_nullable
+              as int,
+      foodCategoryName: null == foodCategoryName
+          ? _self.foodCategoryName
+          : foodCategoryName // ignore: cast_nullable_to_non_nullable
+              as String,
+      foodCategoryDescription: null == foodCategoryDescription
+          ? _self.foodCategoryDescription
+          : foodCategoryDescription // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+mixin _$FoodSubCategoriesResponse {
+  @JsonKey(name: 'food_sub_categories')
+  FoodSubCategories get foodSubCategories;
+
+  /// Create a copy of FoodSubCategoriesResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $FoodSubCategoriesResponseCopyWith<FoodSubCategoriesResponse> get copyWith =>
+      _$FoodSubCategoriesResponseCopyWithImpl<FoodSubCategoriesResponse>(
+          this as FoodSubCategoriesResponse, _$identity);
+
+  /// Serializes this FoodSubCategoriesResponse to a JSON map.
+  Map<String, dynamic> toJson();
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is FoodSubCategoriesResponse &&
+            (identical(other.foodSubCategories, foodSubCategories) ||
+                other.foodSubCategories == foodSubCategories));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(runtimeType, foodSubCategories);
+
+  @override
+  String toString() {
+    return 'FoodSubCategoriesResponse(foodSubCategories: $foodSubCategories)';
+  }
+}
+
+/// @nodoc
+abstract mixin class $FoodSubCategoriesResponseCopyWith<$Res> {
+  factory $FoodSubCategoriesResponseCopyWith(FoodSubCategoriesResponse value,
+          $Res Function(FoodSubCategoriesResponse) _then) =
+      _$FoodSubCategoriesResponseCopyWithImpl;
+  @useResult
+  $Res call(
+      {@JsonKey(name: 'food_sub_categories')
+      FoodSubCategories foodSubCategories});
+
+  $FoodSubCategoriesCopyWith<$Res> get foodSubCategories;
+}
+
+/// @nodoc
+class _$FoodSubCategoriesResponseCopyWithImpl<$Res>
+    implements $FoodSubCategoriesResponseCopyWith<$Res> {
+  _$FoodSubCategoriesResponseCopyWithImpl(this._self, this._then);
+
+  final FoodSubCategoriesResponse _self;
+  final $Res Function(FoodSubCategoriesResponse) _then;
+
+  /// Create a copy of FoodSubCategoriesResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? foodSubCategories = null,
+  }) {
+    return _then(_self.copyWith(
+      foodSubCategories: null == foodSubCategories
+          ? _self.foodSubCategories
+          : foodSubCategories // ignore: cast_nullable_to_non_nullable
+              as FoodSubCategories,
+    ));
+  }
+
+  /// Create a copy of FoodSubCategoriesResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $FoodSubCategoriesCopyWith<$Res> get foodSubCategories {
+    return $FoodSubCategoriesCopyWith<$Res>(_self.foodSubCategories, (value) {
+      return _then(_self.copyWith(foodSubCategories: value));
+    });
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _FoodSubCategoriesResponse implements FoodSubCategoriesResponse {
+  const _FoodSubCategoriesResponse(
+      {@JsonKey(name: 'food_sub_categories') required this.foodSubCategories});
+  factory _FoodSubCategoriesResponse.fromJson(Map<String, dynamic> json) =>
+      _$FoodSubCategoriesResponseFromJson(json);
+
+  @override
+  @JsonKey(name: 'food_sub_categories')
+  final FoodSubCategories foodSubCategories;
+
+  /// Create a copy of FoodSubCategoriesResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  _$FoodSubCategoriesResponseCopyWith<_FoodSubCategoriesResponse>
+      get copyWith =>
+          __$FoodSubCategoriesResponseCopyWithImpl<_FoodSubCategoriesResponse>(
+              this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$FoodSubCategoriesResponseToJson(
+      this,
+    );
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _FoodSubCategoriesResponse &&
+            (identical(other.foodSubCategories, foodSubCategories) ||
+                other.foodSubCategories == foodSubCategories));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(runtimeType, foodSubCategories);
+
+  @override
+  String toString() {
+    return 'FoodSubCategoriesResponse(foodSubCategories: $foodSubCategories)';
+  }
+}
+
+/// @nodoc
+abstract mixin class _$FoodSubCategoriesResponseCopyWith<$Res>
+    implements $FoodSubCategoriesResponseCopyWith<$Res> {
+  factory _$FoodSubCategoriesResponseCopyWith(_FoodSubCategoriesResponse value,
+          $Res Function(_FoodSubCategoriesResponse) _then) =
+      __$FoodSubCategoriesResponseCopyWithImpl;
+  @override
+  @useResult
+  $Res call(
+      {@JsonKey(name: 'food_sub_categories')
+      FoodSubCategories foodSubCategories});
+
+  @override
+  $FoodSubCategoriesCopyWith<$Res> get foodSubCategories;
+}
+
+/// @nodoc
+class __$FoodSubCategoriesResponseCopyWithImpl<$Res>
+    implements _$FoodSubCategoriesResponseCopyWith<$Res> {
+  __$FoodSubCategoriesResponseCopyWithImpl(this._self, this._then);
+
+  final _FoodSubCategoriesResponse _self;
+  final $Res Function(_FoodSubCategoriesResponse) _then;
+
+  /// Create a copy of FoodSubCategoriesResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $Res call({
+    Object? foodSubCategories = null,
+  }) {
+    return _then(_FoodSubCategoriesResponse(
+      foodSubCategories: null == foodSubCategories
+          ? _self.foodSubCategories
+          : foodSubCategories // ignore: cast_nullable_to_non_nullable
+              as FoodSubCategories,
+    ));
+  }
+
+  /// Create a copy of FoodSubCategoriesResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $FoodSubCategoriesCopyWith<$Res> get foodSubCategories {
+    return $FoodSubCategoriesCopyWith<$Res>(_self.foodSubCategories, (value) {
+      return _then(_self.copyWith(foodSubCategories: value));
+    });
+  }
+}
+
+/// @nodoc
+mixin _$FoodSubCategories {
+  @JsonKey(name: 'food_sub_category')
+  List<String> get foodSubCategory;
+
+  /// Create a copy of FoodSubCategories
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $FoodSubCategoriesCopyWith<FoodSubCategories> get copyWith =>
+      _$FoodSubCategoriesCopyWithImpl<FoodSubCategories>(
+          this as FoodSubCategories, _$identity);
+
+  /// Serializes this FoodSubCategories to a JSON map.
+  Map<String, dynamic> toJson();
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is FoodSubCategories &&
+            const DeepCollectionEquality()
+                .equals(other.foodSubCategory, foodSubCategory));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType, const DeepCollectionEquality().hash(foodSubCategory));
+
+  @override
+  String toString() {
+    return 'FoodSubCategories(foodSubCategory: $foodSubCategory)';
+  }
+}
+
+/// @nodoc
+abstract mixin class $FoodSubCategoriesCopyWith<$Res> {
+  factory $FoodSubCategoriesCopyWith(
+          FoodSubCategories value, $Res Function(FoodSubCategories) _then) =
+      _$FoodSubCategoriesCopyWithImpl;
+  @useResult
+  $Res call({@JsonKey(name: 'food_sub_category') List<String> foodSubCategory});
+}
+
+/// @nodoc
+class _$FoodSubCategoriesCopyWithImpl<$Res>
+    implements $FoodSubCategoriesCopyWith<$Res> {
+  _$FoodSubCategoriesCopyWithImpl(this._self, this._then);
+
+  final FoodSubCategories _self;
+  final $Res Function(FoodSubCategories) _then;
+
+  /// Create a copy of FoodSubCategories
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? foodSubCategory = null,
+  }) {
+    return _then(_self.copyWith(
+      foodSubCategory: null == foodSubCategory
+          ? _self.foodSubCategory
+          : foodSubCategory // ignore: cast_nullable_to_non_nullable
+              as List<String>,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _FoodSubCategories implements FoodSubCategories {
+  const _FoodSubCategories(
+      {@JsonKey(name: 'food_sub_category')
+      required final List<String> foodSubCategory})
+      : _foodSubCategory = foodSubCategory;
+  factory _FoodSubCategories.fromJson(Map<String, dynamic> json) =>
+      _$FoodSubCategoriesFromJson(json);
+
+  final List<String> _foodSubCategory;
+  @override
+  @JsonKey(name: 'food_sub_category')
+  List<String> get foodSubCategory {
+    if (_foodSubCategory is EqualUnmodifiableListView) return _foodSubCategory;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_foodSubCategory);
+  }
+
+  /// Create a copy of FoodSubCategories
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  _$FoodSubCategoriesCopyWith<_FoodSubCategories> get copyWith =>
+      __$FoodSubCategoriesCopyWithImpl<_FoodSubCategories>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$FoodSubCategoriesToJson(
+      this,
+    );
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _FoodSubCategories &&
+            const DeepCollectionEquality()
+                .equals(other._foodSubCategory, _foodSubCategory));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType, const DeepCollectionEquality().hash(_foodSubCategory));
+
+  @override
+  String toString() {
+    return 'FoodSubCategories(foodSubCategory: $foodSubCategory)';
+  }
+}
+
+/// @nodoc
+abstract mixin class _$FoodSubCategoriesCopyWith<$Res>
+    implements $FoodSubCategoriesCopyWith<$Res> {
+  factory _$FoodSubCategoriesCopyWith(
+          _FoodSubCategories value, $Res Function(_FoodSubCategories) _then) =
+      __$FoodSubCategoriesCopyWithImpl;
+  @override
+  @useResult
+  $Res call({@JsonKey(name: 'food_sub_category') List<String> foodSubCategory});
+}
+
+/// @nodoc
+class __$FoodSubCategoriesCopyWithImpl<$Res>
+    implements _$FoodSubCategoriesCopyWith<$Res> {
+  __$FoodSubCategoriesCopyWithImpl(this._self, this._then);
+
+  final _FoodSubCategories _self;
+  final $Res Function(_FoodSubCategories) _then;
+
+  /// Create a copy of FoodSubCategories
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $Res call({
+    Object? foodSubCategory = null,
+  }) {
+    return _then(_FoodSubCategories(
+      foodSubCategory: null == foodSubCategory
+          ? _self._foodSubCategory
+          : foodSubCategory // ignore: cast_nullable_to_non_nullable
+              as List<String>,
+    ));
+  }
+}
+
+/// @nodoc
+mixin _$FoodCategoriesProps {
+  @JsonKey(name: kregion)
+  String? get region;
+  @JsonKey(name: klanguage)
+  String? get language;
+  @JsonKey(name: kformat)
+  String? get format;
+
+  /// Create a copy of FoodCategoriesProps
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $FoodCategoriesPropsCopyWith<FoodCategoriesProps> get copyWith =>
+      _$FoodCategoriesPropsCopyWithImpl<FoodCategoriesProps>(
+          this as FoodCategoriesProps, _$identity);
+
+  /// Serializes this FoodCategoriesProps to a JSON map.
+  Map<String, dynamic> toJson();
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is FoodCategoriesProps &&
+            (identical(other.region, region) || other.region == region) &&
+            (identical(other.language, language) ||
+                other.language == language) &&
+            (identical(other.format, format) || other.format == format));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(runtimeType, region, language, format);
+
+  @override
+  String toString() {
+    return 'FoodCategoriesProps(region: $region, language: $language, format: $format)';
+  }
+}
+
+/// @nodoc
+abstract mixin class $FoodCategoriesPropsCopyWith<$Res> {
+  factory $FoodCategoriesPropsCopyWith(
+          FoodCategoriesProps value, $Res Function(FoodCategoriesProps) _then) =
+      _$FoodCategoriesPropsCopyWithImpl;
+  @useResult
+  $Res call(
+      {@JsonKey(name: kregion) String? region,
+      @JsonKey(name: klanguage) String? language,
+      @JsonKey(name: kformat) String? format});
+}
+
+/// @nodoc
+class _$FoodCategoriesPropsCopyWithImpl<$Res>
+    implements $FoodCategoriesPropsCopyWith<$Res> {
+  _$FoodCategoriesPropsCopyWithImpl(this._self, this._then);
+
+  final FoodCategoriesProps _self;
+  final $Res Function(FoodCategoriesProps) _then;
+
+  /// Create a copy of FoodCategoriesProps
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? region = freezed,
+    Object? language = freezed,
+    Object? format = freezed,
+  }) {
+    return _then(_self.copyWith(
+      region: freezed == region
+          ? _self.region
+          : region // ignore: cast_nullable_to_non_nullable
+              as String?,
+      language: freezed == language
+          ? _self.language
+          : language // ignore: cast_nullable_to_non_nullable
+              as String?,
+      format: freezed == format
+          ? _self.format
+          : format // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _FoodCategoriesProps implements FoodCategoriesProps {
+  const _FoodCategoriesProps(
+      {@JsonKey(name: kregion) this.region,
+      @JsonKey(name: klanguage) this.language,
+      @JsonKey(name: kformat) this.format = 'json'});
+  factory _FoodCategoriesProps.fromJson(Map<String, dynamic> json) =>
+      _$FoodCategoriesPropsFromJson(json);
+
+  @override
+  @JsonKey(name: kregion)
+  final String? region;
+  @override
+  @JsonKey(name: klanguage)
+  final String? language;
+  @override
+  @JsonKey(name: kformat)
+  final String? format;
+
+  /// Create a copy of FoodCategoriesProps
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  _$FoodCategoriesPropsCopyWith<_FoodCategoriesProps> get copyWith =>
+      __$FoodCategoriesPropsCopyWithImpl<_FoodCategoriesProps>(
+          this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$FoodCategoriesPropsToJson(
+      this,
+    );
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _FoodCategoriesProps &&
+            (identical(other.region, region) || other.region == region) &&
+            (identical(other.language, language) ||
+                other.language == language) &&
+            (identical(other.format, format) || other.format == format));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(runtimeType, region, language, format);
+
+  @override
+  String toString() {
+    return 'FoodCategoriesProps(region: $region, language: $language, format: $format)';
+  }
+}
+
+/// @nodoc
+abstract mixin class _$FoodCategoriesPropsCopyWith<$Res>
+    implements $FoodCategoriesPropsCopyWith<$Res> {
+  factory _$FoodCategoriesPropsCopyWith(_FoodCategoriesProps value,
+          $Res Function(_FoodCategoriesProps) _then) =
+      __$FoodCategoriesPropsCopyWithImpl;
+  @override
+  @useResult
+  $Res call(
+      {@JsonKey(name: kregion) String? region,
+      @JsonKey(name: klanguage) String? language,
+      @JsonKey(name: kformat) String? format});
+}
+
+/// @nodoc
+class __$FoodCategoriesPropsCopyWithImpl<$Res>
+    implements _$FoodCategoriesPropsCopyWith<$Res> {
+  __$FoodCategoriesPropsCopyWithImpl(this._self, this._then);
+
+  final _FoodCategoriesProps _self;
+  final $Res Function(_FoodCategoriesProps) _then;
+
+  /// Create a copy of FoodCategoriesProps
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $Res call({
+    Object? region = freezed,
+    Object? language = freezed,
+    Object? format = freezed,
+  }) {
+    return _then(_FoodCategoriesProps(
+      region: freezed == region
+          ? _self.region
+          : region // ignore: cast_nullable_to_non_nullable
+              as String?,
+      language: freezed == language
+          ? _self.language
+          : language // ignore: cast_nullable_to_non_nullable
+              as String?,
+      format: freezed == format
+          ? _self.format
+          : format // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ));
+  }
+}
+
+/// @nodoc
+mixin _$FoodSubCategoriesProps {
+  @JsonKey(name: 'food_category_id')
+  int get foodCategoryId;
+  @JsonKey(name: kregion)
+  String? get region;
+  @JsonKey(name: klanguage)
+  String? get language;
+  @JsonKey(name: kformat)
+  String? get format;
+
+  /// Create a copy of FoodSubCategoriesProps
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $FoodSubCategoriesPropsCopyWith<FoodSubCategoriesProps> get copyWith =>
+      _$FoodSubCategoriesPropsCopyWithImpl<FoodSubCategoriesProps>(
+          this as FoodSubCategoriesProps, _$identity);
+
+  /// Serializes this FoodSubCategoriesProps to a JSON map.
+  Map<String, dynamic> toJson();
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is FoodSubCategoriesProps &&
+            (identical(other.foodCategoryId, foodCategoryId) ||
+                other.foodCategoryId == foodCategoryId) &&
+            (identical(other.region, region) || other.region == region) &&
+            (identical(other.language, language) ||
+                other.language == language) &&
+            (identical(other.format, format) || other.format == format));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, foodCategoryId, region, language, format);
+
+  @override
+  String toString() {
+    return 'FoodSubCategoriesProps(foodCategoryId: $foodCategoryId, region: $region, language: $language, format: $format)';
+  }
+}
+
+/// @nodoc
+abstract mixin class $FoodSubCategoriesPropsCopyWith<$Res> {
+  factory $FoodSubCategoriesPropsCopyWith(FoodSubCategoriesProps value,
+          $Res Function(FoodSubCategoriesProps) _then) =
+      _$FoodSubCategoriesPropsCopyWithImpl;
+  @useResult
+  $Res call(
+      {@JsonKey(name: 'food_category_id') int foodCategoryId,
+      @JsonKey(name: kregion) String? region,
+      @JsonKey(name: klanguage) String? language,
+      @JsonKey(name: kformat) String? format});
+}
+
+/// @nodoc
+class _$FoodSubCategoriesPropsCopyWithImpl<$Res>
+    implements $FoodSubCategoriesPropsCopyWith<$Res> {
+  _$FoodSubCategoriesPropsCopyWithImpl(this._self, this._then);
+
+  final FoodSubCategoriesProps _self;
+  final $Res Function(FoodSubCategoriesProps) _then;
+
+  /// Create a copy of FoodSubCategoriesProps
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? foodCategoryId = null,
+    Object? region = freezed,
+    Object? language = freezed,
+    Object? format = freezed,
+  }) {
+    return _then(_self.copyWith(
+      foodCategoryId: null == foodCategoryId
+          ? _self.foodCategoryId
+          : foodCategoryId // ignore: cast_nullable_to_non_nullable
+              as int,
+      region: freezed == region
+          ? _self.region
+          : region // ignore: cast_nullable_to_non_nullable
+              as String?,
+      language: freezed == language
+          ? _self.language
+          : language // ignore: cast_nullable_to_non_nullable
+              as String?,
+      format: freezed == format
+          ? _self.format
+          : format // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _FoodSubCategoriesProps implements FoodSubCategoriesProps {
+  const _FoodSubCategoriesProps(
+      {@JsonKey(name: 'food_category_id') required this.foodCategoryId,
+      @JsonKey(name: kregion) this.region,
+      @JsonKey(name: klanguage) this.language,
+      @JsonKey(name: kformat) this.format = 'json'});
+  factory _FoodSubCategoriesProps.fromJson(Map<String, dynamic> json) =>
+      _$FoodSubCategoriesPropsFromJson(json);
+
+  @override
+  @JsonKey(name: 'food_category_id')
+  final int foodCategoryId;
+  @override
+  @JsonKey(name: kregion)
+  final String? region;
+  @override
+  @JsonKey(name: klanguage)
+  final String? language;
+  @override
+  @JsonKey(name: kformat)
+  final String? format;
+
+  /// Create a copy of FoodSubCategoriesProps
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  _$FoodSubCategoriesPropsCopyWith<_FoodSubCategoriesProps> get copyWith =>
+      __$FoodSubCategoriesPropsCopyWithImpl<_FoodSubCategoriesProps>(
+          this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$FoodSubCategoriesPropsToJson(
+      this,
+    );
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _FoodSubCategoriesProps &&
+            (identical(other.foodCategoryId, foodCategoryId) ||
+                other.foodCategoryId == foodCategoryId) &&
+            (identical(other.region, region) || other.region == region) &&
+            (identical(other.language, language) ||
+                other.language == language) &&
+            (identical(other.format, format) || other.format == format));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, foodCategoryId, region, language, format);
+
+  @override
+  String toString() {
+    return 'FoodSubCategoriesProps(foodCategoryId: $foodCategoryId, region: $region, language: $language, format: $format)';
+  }
+}
+
+/// @nodoc
+abstract mixin class _$FoodSubCategoriesPropsCopyWith<$Res>
+    implements $FoodSubCategoriesPropsCopyWith<$Res> {
+  factory _$FoodSubCategoriesPropsCopyWith(_FoodSubCategoriesProps value,
+          $Res Function(_FoodSubCategoriesProps) _then) =
+      __$FoodSubCategoriesPropsCopyWithImpl;
+  @override
+  @useResult
+  $Res call(
+      {@JsonKey(name: 'food_category_id') int foodCategoryId,
+      @JsonKey(name: kregion) String? region,
+      @JsonKey(name: klanguage) String? language,
+      @JsonKey(name: kformat) String? format});
+}
+
+/// @nodoc
+class __$FoodSubCategoriesPropsCopyWithImpl<$Res>
+    implements _$FoodSubCategoriesPropsCopyWith<$Res> {
+  __$FoodSubCategoriesPropsCopyWithImpl(this._self, this._then);
+
+  final _FoodSubCategoriesProps _self;
+  final $Res Function(_FoodSubCategoriesProps) _then;
+
+  /// Create a copy of FoodSubCategoriesProps
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $Res call({
+    Object? foodCategoryId = null,
+    Object? region = freezed,
+    Object? language = freezed,
+    Object? format = freezed,
+  }) {
+    return _then(_FoodSubCategoriesProps(
+      foodCategoryId: null == foodCategoryId
+          ? _self.foodCategoryId
+          : foodCategoryId // ignore: cast_nullable_to_non_nullable
+              as int,
+      region: freezed == region
+          ? _self.region
+          : region // ignore: cast_nullable_to_non_nullable
+              as String?,
+      language: freezed == language
+          ? _self.language
+          : language // ignore: cast_nullable_to_non_nullable
+              as String?,
+      format: freezed == format
+          ? _self.format
+          : format // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ));
+  }
+}
+
 // dart format on

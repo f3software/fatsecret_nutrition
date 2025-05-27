@@ -11,7 +11,7 @@ A Dart package for interacting with the FatSecret Nutrition API by F3 Software
 ```yaml
 dependencies:
   dotenv: ^4.2.0
-  fatsecret_nutrition: ^0.0.1
+  fatsecret_nutrition: ^0.1.0
 ```
 
 ## Usage 📚
@@ -101,6 +101,43 @@ if (brands != null) {
 }
 ```
 
+### Get Food Categories
+
+```dart
+final categories = await fatSecret.getFoodCategories(
+  props: const FoodCategoriesProps(
+    region: 'US',
+    language: 'en',
+  ),
+);
+
+if (categories != null) {
+  for (final category in categories.foodCategories.foodCategory) {
+    print('Category: ${category.foodCategoryName}');
+    print('ID: ${category.foodCategoryId}');
+    print('Description: ${category.foodCategoryDescription}');
+  }
+}
+```
+
+### Get Food Sub-Categories
+
+```dart
+final subCategories = await fatSecret.getFoodSubCategories(
+  props: const FoodSubCategoriesProps(
+    foodCategoryId: 3, // Breads & Cereals
+    region: 'US',
+    language: 'en',
+  ),
+);
+
+if (subCategories != null) {
+  for (final subCategory in subCategories.foodSubCategories.foodSubCategory) {
+    print('Sub-category: $subCategory');
+  }
+}
+```
+
 # Features
 
 | Feature | Status |
@@ -110,8 +147,8 @@ if (brands != null) {
 | Foods: Search | ✅ |
 | Foods: Get By Id | ✅ |
 | Food Brands: Get All | ✅ |
-| Food Categories: Get All | ⏳ |
-| Food Sub Categories: Get All | ⏳ |
+| Food Categories: Get All | ✅ |
+| Food Sub Categories: Get All | ✅ |
 | Recipies: Get By ID | ⏳ |
 | Recipies: Search | ⏳ |
 | Recipie: Types | ⏳ |

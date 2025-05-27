@@ -1,6 +1,5 @@
 // ignore_for_file: avoid_dynamic_calls
 
-import 'dart:convert';
 import 'package:fatsecret_nutrition/fatsecret_nutrition.dart';
 import 'package:test/test.dart';
 
@@ -99,7 +98,6 @@ void main() {
         brandType: 'restaurant',
         language: 'en',
         region: 'US',
-        format: 'json',
       );
 
       final json = model.toJson();
@@ -119,7 +117,7 @@ void main() {
             'K&W Cafeteria',
             'Kabuki',
             'Kame',
-            'Kelsey\'s',
+            "Kelsey's",
             'Keva Juice',
             'KFC',
             'Kidd Valley',
@@ -133,9 +131,9 @@ void main() {
             'Krispy Krunchy Chicken',
             'Krystal',
             'Kum & Go',
-            'Kwik Trip'
-          ]
-        }
+            'Kwik Trip',
+          ],
+        },
       };
 
       final model = FoodBrandsGetAllV2Response.fromJson(json);
@@ -145,7 +143,7 @@ void main() {
       expect(model.foodBrands.foodBrand[1], 'K&W Cafeteria');
       expect(model.foodBrands.foodBrand[2], 'Kabuki');
       expect(model.foodBrands.foodBrand[3], 'Kame');
-      expect(model.foodBrands.foodBrand[4], 'Kelsey\'s');
+      expect(model.foodBrands.foodBrand[4], "Kelsey's");
       expect(model.foodBrands.foodBrand[5], 'Keva Juice');
       expect(model.foodBrands.foodBrand[6], 'KFC');
       expect(model.foodBrands.foodBrand[7], 'Kidd Valley');
@@ -170,7 +168,7 @@ void main() {
             'K&W Cafeteria',
             'Kabuki',
             'Kame',
-            'Kelsey\'s',
+            "Kelsey's",
             'Keva Juice',
             'KFC',
             'Kidd Valley',
@@ -184,7 +182,7 @@ void main() {
             'Krispy Krunchy Chicken',
             'Krystal',
             'Kum & Go',
-            'Kwik Trip'
+            'Kwik Trip',
           ],
         ),
       );
@@ -196,7 +194,7 @@ void main() {
       expect(json['food_brands']['food_brand'][1], 'K&W Cafeteria');
       expect(json['food_brands']['food_brand'][2], 'Kabuki');
       expect(json['food_brands']['food_brand'][3], 'Kame');
-      expect(json['food_brands']['food_brand'][4], 'Kelsey\'s');
+      expect(json['food_brands']['food_brand'][4], "Kelsey's");
       expect(json['food_brands']['food_brand'][5], 'Keva Juice');
       expect(json['food_brands']['food_brand'][6], 'KFC');
       expect(json['food_brands']['food_brand'][7], 'Kidd Valley');
@@ -211,6 +209,244 @@ void main() {
       expect(json['food_brands']['food_brand'][16], 'Krystal');
       expect(json['food_brands']['food_brand'][17], 'Kum & Go');
       expect(json['food_brands']['food_brand'][18], 'Kwik Trip');
+    });
+  });
+
+  group('Food Categories Models Tests', () {
+    test('should create a valid FoodCategoriesResponse from JSON', () {
+      final json = {
+        'food_categories': {
+          'food_category': [
+            {
+              'food_category_id': '1',
+              'food_category_name': 'Beans & Legumes',
+              'food_category_description': '''
+All types of beans and legumes like baked beans, green beans,\nrefried beans and lentils.''',
+            },
+            {
+              'food_category_id': '2',
+              'food_category_name': 'Beverages',
+              'food_category_description': '''
+Hot and cold drinks like juices, soda, smoothies, coffee, beer, wine\nand cocktails.''',
+            }
+          ],
+        },
+      };
+
+      final model = FoodCategoriesResponse.fromJson(json);
+
+      expect(model.foodCategories.foodCategory.length, 2);
+      expect(model.foodCategories.foodCategory[0].foodCategoryId, 1);
+      expect(
+        model.foodCategories.foodCategory[0].foodCategoryName,
+        'Beans & Legumes',
+      );
+      expect(
+        model.foodCategories.foodCategory[0].foodCategoryDescription,
+        '''
+All types of beans and legumes like baked beans, green beans,
+refried beans and lentils.''',
+      );
+      expect(model.foodCategories.foodCategory[1].foodCategoryId, 2);
+      expect(
+        model.foodCategories.foodCategory[1].foodCategoryName,
+        'Beverages',
+      );
+      expect(
+        model.foodCategories.foodCategory[1].foodCategoryDescription,
+        '''
+Hot and cold drinks like juices, soda, smoothies, coffee, beer, wine
+and cocktails.''',
+      );
+    });
+
+    test('should convert FoodCategoriesResponse to JSON', () {
+      const model = FoodCategoriesResponse(
+        foodCategories: FoodCategories(
+          foodCategory: [
+            FoodCategory(
+              foodCategoryId: 1,
+              foodCategoryName: 'Beans & Legumes',
+              foodCategoryDescription: '''
+All types of beans and legumes like baked beans, green beans,
+refried beans and lentils.''',
+            ),
+            FoodCategory(
+              foodCategoryId: 2,
+              foodCategoryName: 'Beverages',
+              foodCategoryDescription: '''
+Hot and cold drinks like juices, soda, smoothies, coffee, beer, wine
+and cocktails.''',
+            ),
+          ],
+        ),
+      );
+
+      final json = model.toJson();
+
+      expect(json['food_categories']['food_category'].length, 2);
+      expect(
+        json['food_categories']['food_category'][0]['food_category_id'],
+        '1',
+      );
+      expect(
+        json['food_categories']['food_category'][0]['food_category_name'],
+        'Beans & Legumes',
+      );
+      expect(
+        json['food_categories']['food_category'][0]
+            ['food_category_description'],
+        '''
+All types of beans and legumes like baked beans, green beans,
+refried beans and lentils.''',
+      );
+      expect(
+        json['food_categories']['food_category'][1]['food_category_id'],
+        '2',
+      );
+      expect(
+        json['food_categories']['food_category'][1]['food_category_name'],
+        'Beverages',
+      );
+      expect(
+        json['food_categories']['food_category'][1]
+            ['food_category_description'],
+        '''
+Hot and cold drinks like juices, soda, smoothies, coffee, beer, wine
+and cocktails.''',
+      );
+    });
+
+    test('should create a valid FoodCategoriesProps from JSON', () {
+      final json = {
+        'region': 'US',
+        'language': 'en',
+        'format': 'json',
+      };
+
+      final model = FoodCategoriesProps.fromJson(json);
+
+      expect(model.region, 'US');
+      expect(model.language, 'en');
+      expect(model.format, 'json');
+    });
+
+    test('should convert FoodCategoriesProps to JSON', () {
+      const model = FoodCategoriesProps(
+        region: 'US',
+        language: 'en',
+      );
+
+      final json = model.toJson();
+
+      expect(json['region'], 'US');
+      expect(json['language'], 'en');
+      expect(json['format'], 'json');
+    });
+  });
+
+  group('Food Sub Categories Models Tests', () {
+    test('should create a valid FoodSubCategoriesResponse from JSON', () {
+      final json = {
+        'food_sub_categories': {
+          'food_sub_category': [
+            'Bagels',
+            'Biscuits',
+            'Bread',
+            'Breadsticks',
+            'Buns',
+            'Cereal',
+            'Cornbread',
+            'Croissants',
+            'English Muffins',
+            'Flatbread',
+          ],
+        },
+      };
+
+      final model = FoodSubCategoriesResponse.fromJson(json);
+
+      expect(model.foodSubCategories.foodSubCategory.length, 10);
+      expect(model.foodSubCategories.foodSubCategory[0], 'Bagels');
+      expect(model.foodSubCategories.foodSubCategory[1], 'Biscuits');
+      expect(model.foodSubCategories.foodSubCategory[2], 'Bread');
+      expect(model.foodSubCategories.foodSubCategory[3], 'Breadsticks');
+      expect(model.foodSubCategories.foodSubCategory[4], 'Buns');
+      expect(model.foodSubCategories.foodSubCategory[5], 'Cereal');
+      expect(model.foodSubCategories.foodSubCategory[6], 'Cornbread');
+      expect(model.foodSubCategories.foodSubCategory[7], 'Croissants');
+      expect(model.foodSubCategories.foodSubCategory[8], 'English Muffins');
+      expect(model.foodSubCategories.foodSubCategory[9], 'Flatbread');
+    });
+
+    test('should convert FoodSubCategoriesResponse to JSON', () {
+      const model = FoodSubCategoriesResponse(
+        foodSubCategories: FoodSubCategories(
+          foodSubCategory: [
+            'Bagels',
+            'Biscuits',
+            'Bread',
+            'Breadsticks',
+            'Buns',
+            'Cereal',
+            'Cornbread',
+            'Croissants',
+            'English Muffins',
+            'Flatbread',
+          ],
+        ),
+      );
+
+      final json = model.toJson();
+
+      expect(json['food_sub_categories']['food_sub_category'].length, 10);
+      expect(json['food_sub_categories']['food_sub_category'][0], 'Bagels');
+      expect(json['food_sub_categories']['food_sub_category'][1], 'Biscuits');
+      expect(json['food_sub_categories']['food_sub_category'][2], 'Bread');
+      expect(
+        json['food_sub_categories']['food_sub_category'][3],
+        'Breadsticks',
+      );
+      expect(json['food_sub_categories']['food_sub_category'][4], 'Buns');
+      expect(json['food_sub_categories']['food_sub_category'][5], 'Cereal');
+      expect(json['food_sub_categories']['food_sub_category'][6], 'Cornbread');
+      expect(json['food_sub_categories']['food_sub_category'][7], 'Croissants');
+      expect(
+        json['food_sub_categories']['food_sub_category'][8],
+        'English Muffins',
+      );
+      expect(json['food_sub_categories']['food_sub_category'][9], 'Flatbread');
+    });
+
+    test('should create a valid FoodSubCategoriesProps from JSON', () {
+      final json = {
+        'food_category_id': 3,
+        'region': 'US',
+        'language': 'en',
+        'format': 'json',
+      };
+
+      final model = FoodSubCategoriesProps.fromJson(json);
+
+      expect(model.foodCategoryId, 3);
+      expect(model.region, 'US');
+      expect(model.language, 'en');
+      expect(model.format, 'json');
+    });
+
+    test('should convert FoodSubCategoriesProps to JSON', () {
+      const model = FoodSubCategoriesProps(
+        foodCategoryId: 3,
+        region: 'US',
+        language: 'en',
+      );
+
+      final json = model.toJson();
+
+      expect(json['food_category_id'], 3);
+      expect(json['region'], 'US');
+      expect(json['language'], 'en');
+      expect(json['format'], 'json');
     });
   });
 }

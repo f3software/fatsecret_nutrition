@@ -39,8 +39,9 @@ class FatSecretNutrition {
   /// Foods: Search
   /// https://platform.fatsecret.com/docs/v3/foods.search
   ///
-  /// Conducts a search of the food database using the search expression specified.
-  /// The results are paginated according to a zero-based "page" offset.
+  /// Conducts a search of the food database using the search expression
+  /// specified. The results are paginated according to a zero-based "page"
+  /// offset.
   /// Successive pages of results may be retrieved by specifying a starting
   /// page offset value. For instance, specifying a max_results of 10 and
   /// page_number of 4 will return results numbered 41-50.
@@ -84,7 +85,9 @@ class FatSecretNutrition {
       );
       if (response == null) return null;
       if (response.data == null) throw Exception('no data');
-      return FoodFindIdForBarcodeResponse.fromJson(response.data!);
+      return FoodFindIdForBarcodeResponse.fromJson(
+        response.data!,
+      );
     } catch (e) {
       return null;
     }
@@ -106,7 +109,9 @@ class FatSecretNutrition {
       );
       if (response == null) return null;
       if (response.data == null) throw Exception('no data');
-      return FoodGetByIdResponse.fromJson(response.data!);
+      return FoodGetByIdResponse.fromJson(
+        response.data!,
+      );
     } catch (e) {
       return null;
     }
@@ -128,7 +133,9 @@ class FatSecretNutrition {
       );
       if (response == null) return null;
       if (response.data == null) throw Exception('no data');
-      return FoodAutoCompleteV2Response.fromJson(response.data!);
+      return FoodAutoCompleteV2Response.fromJson(
+        response.data!,
+      );
     } catch (e) {
       return null;
     }
@@ -150,7 +157,57 @@ class FatSecretNutrition {
       );
       if (response == null) return null;
       if (response.data == null) throw Exception('no data');
-      return FoodBrandsGetAllV2Response.fromJson(response.data!);
+      return FoodBrandsGetAllV2Response.fromJson(
+        response.data!,
+      );
+    } catch (e) {
+      return null;
+    }
+  }
+
+  /// Food Categories: Get All
+  /// https://platform.fatsecret.com/docs/v2/food_categories.get
+  ///
+  /// This is a utility method, returning the full list of all food categories
+  /// and their associated unique identifiers.
+  ///
+  Future<FoodCategoriesResponse?> getFoodCategories({
+    FoodCategoriesProps? props,
+  }) async {
+    try {
+      final response = await apiService.fetchData(
+        Methods.foodCategoriesGetAllV2.value,
+        props?.toJson() ?? {},
+      );
+      if (response == null) return null;
+      if (response.data == null) throw Exception('no data');
+      return FoodCategoriesResponse.fromJson(
+        response.data!,
+      );
+    } catch (e) {
+      return null;
+    }
+  }
+
+  /// Food Sub Categories: Get All
+  /// https://platform.fatsecret.com/docs/v2/food_sub_categories.get
+  ///
+  /// This is a utility method, returning the full list of all food sub
+  /// categories for a food category.
+  ///
+  Future<FoodSubCategoriesResponse?> getFoodSubCategories({
+    required FoodSubCategoriesProps props,
+  }) async {
+    try {
+      final response = await apiService.fetchData(
+        Methods.foodSubCategoriesGetV2.value,
+        props.toJson(),
+      );
+      if (response == null) return null;
+      if (response.data == null) throw Exception('no data');
+      return FoodSubCategoriesResponse.fromJson(
+        response.data!,
+      );
     } catch (e) {
       return null;
     }

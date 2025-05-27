@@ -1,11 +1,11 @@
 part of 'converters.dart';
 
-class StringToIntConverter implements JsonConverter<int?, String?> {
+class StringToIntConverter implements JsonConverter<int, String> {
   const StringToIntConverter();
 
   @override
-  int? fromJson(String? json) => json == null ? null : int.tryParse(json);
+  int fromJson(String json) => int.parse(json);
 
   @override
-  String? toJson(int? object) => object?.toString();
+  String toJson(int object) => object.toString();
 }

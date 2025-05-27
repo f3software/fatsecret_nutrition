@@ -1,0 +1,96 @@
+{
+    "food_categories": {
+        "food_category": [
+            {
+                "food_category_description": "All types of beans and legumes like baked beans, green beans, refried beans and lentils.",
+                "food_category_id": "1",
+                "food_category_name": "Beans & Legumes"
+            },
+            {
+                "food_category_description": "Hot and cold drinks like juices, soda, smoothies, coffee, beer, wine and cocktails.",
+                "food_category_id": "2",
+                "food_category_name": "Beverages"
+            },
+            {
+                "food_category_description": "Different types of breads and cereals like bagels, tortillas, rye, wheat bread and oatmeal.",
+                "food_category_id": "3",
+                "food_category_name": "Breads & Cereals"
+            },
+            {
+                "food_category_description": "Cheese varieties and dairy products like cheddar, mozzarella, provolone, skim milk and yogurt.",
+                "food_category_id": "4",
+                "food_category_name": "Cheese, Milk & Dairy"
+            },
+            {
+                "food_category_description": "Variety of plain and cooked eggs like, egg whites, hard-boiled, scrambled, fried and poached.",
+                "food_category_id": "5",
+                "food_category_name": "Eggs"
+            },
+            {
+                "food_category_description": "Foods from all your favorite chains like burgers, fries, burritos, tacos, hot dogs and pizza.",
+                "food_category_id": "6",
+                "food_category_name": "Fast Food"
+            },
+            {
+                "food_category_description": "A range of seafood and fish like shrimp, lobster, scallops, tuna, salmon, mahi mahi and tilapia.",
+                "food_category_id": "7",
+                "food_category_name": "Fish & Seafood"
+            },
+            {
+                "food_category_description": "Popular fruits like apples, bananas, strawberries, oranges, grapes, peaches, pears and grapefruit.",
+                "food_category_id": "8",
+                "food_category_name": "Fruit"
+            },
+            {
+                "food_category_description": "Full range of meats and cuts like bacon, ribs, chicken breast, pork chops, corned beef and roast turkey.",
+                "food_category_id": "9",
+                "food_category_name": "Meat"
+            },
+            {
+                "food_category_description": "Popular nuts and seeds like almonds, peanuts, pecans, pistachios, walnuts and sunflower seeds.",
+                "food_category_id": "10",
+                "food_category_name": "Nuts & Seeds"
+            },
+            {
+                "food_category_description": "All types of pasta and rice like spaghetti, macaroni, ravioli, lasagna, white rice and fried rice.",
+                "food_category_id": "11",
+                "food_category_name": "Pasta, Rice & Noodles"
+            },
+            {
+                "food_category_description": "All your favorite salads like coleslaw, potato salad caesar salad, egg salad and chicken salad.",
+                "food_category_id": "12",
+                "food_category_name": "Salads"
+            },
+            {
+                "food_category_description": "All types of sauces and spices like ketchup, applesauce, pasta sauce, salsa, olive oil, mayo, salad dressing, hummus and maple syrup.",
+                "food_category_id": "13",
+                "food_category_name": "Sauces, Spices & Spreads"
+            },
+            {
+                "food_category_description": "Sweet and salty snacks like potato chips, tortilla chips, jerky, popcorn, pretzels, crackers, granola bars, trail mix and rice cakes.",
+                "food_category_id": "14",
+                "food_category_name": "Snacks"
+            },
+            {
+                "food_category_description": "All types of soups like chili, gumbo, bisques, chowders, stews and broths.",
+                "food_category_id": "15",
+                "food_category_name": "Soups"
+            },
+            {
+                "food_category_description": "Sweet treats like candy, chocolate, cake, donuts, ice cream, pastries, muffins, pancakes and brownies.",
+                "food_category_id": "16",
+                "food_category_name": "Sweets, Candy & Desserts"
+            },
+            {
+                "food_category_description": "All vegetables like mushrooms, carrots, potatoes tomatoes, broccoli, lettuce, peas and onions.",
+                "food_category_id": "17",
+                "food_category_name": "Vegetables"
+            },
+            {
+                "food_category_description": "Popular foods like dumplings, croutons, chow mein, french toast, quiche, spring rolls and grits.",
+                "food_category_id": "18",
+                "food_category_name": "Other"
+            }
+        ]
+    }
+}

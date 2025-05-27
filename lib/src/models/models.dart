@@ -446,3 +446,91 @@ abstract class BrandList with _$BrandList {
   factory BrandList.fromJson(Map<String, dynamic> json) =>
       _$BrandListFromJson(json);
 }
+
+/// FoodCategoriesResponse
+@freezed
+abstract class FoodCategoriesResponse with _$FoodCategoriesResponse {
+  const factory FoodCategoriesResponse({
+    @JsonKey(name: 'food_categories') required FoodCategories foodCategories,
+  }) = _FoodCategoriesResponse;
+
+  factory FoodCategoriesResponse.fromJson(Map<String, dynamic> json) =>
+      _$FoodCategoriesResponseFromJson(json);
+}
+
+/// FoodCategories
+@freezed
+abstract class FoodCategories with _$FoodCategories {
+  const factory FoodCategories({
+    @JsonKey(name: 'food_category') required List<FoodCategory> foodCategory,
+  }) = _FoodCategories;
+
+  factory FoodCategories.fromJson(Map<String, dynamic> json) =>
+      _$FoodCategoriesFromJson(json);
+}
+
+/// FoodCategory
+@freezed
+abstract class FoodCategory with _$FoodCategory {
+  const factory FoodCategory({
+    @JsonKey(name: 'food_category_id')
+    @StringToIntConverter()
+    required int foodCategoryId,
+    @JsonKey(name: 'food_category_name') required String foodCategoryName,
+    @JsonKey(name: 'food_category_description')
+    required String foodCategoryDescription,
+  }) = _FoodCategory;
+
+  factory FoodCategory.fromJson(Map<String, dynamic> json) =>
+      _$FoodCategoryFromJson(json);
+}
+
+/// FoodSubCategoriesResponse
+@freezed
+abstract class FoodSubCategoriesResponse with _$FoodSubCategoriesResponse {
+  const factory FoodSubCategoriesResponse({
+    @JsonKey(name: 'food_sub_categories')
+    required FoodSubCategories foodSubCategories,
+  }) = _FoodSubCategoriesResponse;
+
+  factory FoodSubCategoriesResponse.fromJson(Map<String, dynamic> json) =>
+      _$FoodSubCategoriesResponseFromJson(json);
+}
+
+/// FoodSubCategories
+@freezed
+abstract class FoodSubCategories with _$FoodSubCategories {
+  const factory FoodSubCategories({
+    @JsonKey(name: 'food_sub_category') required List<String> foodSubCategory,
+  }) = _FoodSubCategories;
+
+  factory FoodSubCategories.fromJson(Map<String, dynamic> json) =>
+      _$FoodSubCategoriesFromJson(json);
+}
+
+/// FoodCategoriesProps
+@freezed
+abstract class FoodCategoriesProps with _$FoodCategoriesProps {
+  const factory FoodCategoriesProps({
+    @JsonKey(name: kregion) String? region,
+    @JsonKey(name: klanguage) String? language,
+    @JsonKey(name: kformat) @Default('json') String? format,
+  }) = _FoodCategoriesProps;
+
+  factory FoodCategoriesProps.fromJson(Map<String, dynamic> json) =>
+      _$FoodCategoriesPropsFromJson(json);
+}
+
+/// FoodSubCategoriesProps
+@freezed
+abstract class FoodSubCategoriesProps with _$FoodSubCategoriesProps {
+  const factory FoodSubCategoriesProps({
+    @JsonKey(name: 'food_category_id') required int foodCategoryId,
+    @JsonKey(name: kregion) String? region,
+    @JsonKey(name: klanguage) String? language,
+    @JsonKey(name: kformat) @Default('json') String? format,
+  }) = _FoodSubCategoriesProps;
+
+  factory FoodSubCategoriesProps.fromJson(Map<String, dynamic> json) =>
+      _$FoodSubCategoriesPropsFromJson(json);
+}
