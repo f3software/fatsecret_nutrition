@@ -212,4 +212,71 @@ class FatSecretNutrition {
       return null;
     }
   }
+
+  /// Recipes: Get By Id
+  /// https://platform.fatsecret.com/docs/v2/recipe.get
+  ///
+  /// Returns detailed information for the specified recipe for the
+  /// standard serving.
+  ///
+  Future<RecipeGetByIdResponse?> getRecipeById(
+    RecipeGetByIdProps props,
+  ) async {
+    try {
+      final response = await apiService.fetchData(
+        Methods.recipesGetByIdV2.value,
+        props.toJson(),
+      );
+      if (response == null) return null;
+      if (response.data == null) throw Exception('no data');
+      return RecipeGetByIdResponse.fromJson(response.data!);
+    } catch (e) {
+      return null;
+    }
+  }
+
+  /// Recipes: Search
+  /// https://platform.fatsecret.com/docs/v3/recipes.search
+  ///
+  /// Conducts a search of the recipe database using the search expression
+  /// specified. The results are paginated according to a zero-based "page"
+  /// offset.
+  ///
+  Future<RecipeSearchResponse?> searchRecipes(
+    RecipeSearchProps props,
+  ) async {
+    try {
+      final response = await apiService.fetchData(
+        Methods.recipesSearchV3.value,
+        props.toJson(),
+      );
+      if (response == null) return null;
+      if (response.data == null) throw Exception('no data');
+      return RecipeSearchResponse.fromJson(response.data!);
+    } catch (e) {
+      return null;
+    }
+  }
+
+  /// Recipe Types: Get All
+  /// https://platform.fatsecret.com/docs/v2/recipe_types.get
+  ///
+  /// This is a utility method, returning the full list of all supported
+  /// recipe type names. The results can be stored indefinitely per
+  /// localized response.
+  ///
+  Future<RecipeTypes?> getRecipeTypes() async {
+    try {
+      final response = await apiService.fetchData(
+        Methods.recipeTypesGetV2.value,
+        {},
+      );
+      if (response == null) return null;
+      if (response.data == null) throw Exception('no data');
+      final data = response.data!['recipe_types'] as Map<String, dynamic>;
+      return RecipeTypes.fromJson(data);
+    } catch (e) {
+      return null;
+    }
+  }
 }

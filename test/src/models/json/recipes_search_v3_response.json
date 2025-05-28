@@ -1,0 +1,351 @@
+{
+    "recipes": {
+        "max_results": "10",
+        "page_number": "0",
+        "recipe": [
+            {
+                "recipe_description": "A 5-ingredient baked treat for the whole family.",
+                "recipe_id": "52996194",
+                "recipe_image": "https://m.ftscrt.com/static/recipe/ff983b4c-544c-48a3-891c-2067791ecfc0.jpg",
+                "recipe_ingredients": {
+                    "ingredient": [
+                        "1 cup canned pumpkin",
+                        "Cinnamon",
+                        "Yellow Cake (Dry Mix, Enriched)",
+                        "Vanilla Extract",
+                        "Chocolate Chips"
+                    ]
+                },
+                "recipe_name": "Pumpkin Chocolate Chip Muffin",
+                "recipe_nutrition": {
+                    "calories": "266",
+                    "carbohydrate": "45.12",
+                    "fat": "9.28",
+                    "protein": "2.86"
+                },
+                "recipe_types": {
+                    "recipe_type": [
+                        "Baked",
+                        "Dessert",
+                        "Snack",
+                        "Breakfast"
+                    ]
+                }
+            },
+            {
+                "recipe_description": "Low-calorie baked treat ready to grab and go.",
+                "recipe_id": "53912452",
+                "recipe_image": "https://m.ftscrt.com/static/recipe/655e6b3f-29aa-402c-96dd-a4ccfa558ba2.jpg",
+                "recipe_ingredients": {
+                    "ingredient": [
+                        "Bananas",
+                        "170 g 0% greek yogurt",
+                        "2 large eggs",
+                        "Egg White",
+                        "2 scoops zero carb whey protein isolate - cookies & cream",
+                        "Baking Soda",
+                        "Baking Powder (Sodium Aluminum Sulfate, Double Acting)",
+                        "32 g semi-sweet style baking chocolate chips"
+                    ]
+                },
+                "recipe_name": "Chocolate Banana Protein Muffins",
+                "recipe_nutrition": {
+                    "calories": "113",
+                    "carbohydrate": "11.35",
+                    "fat": "2.99",
+                    "protein": "12.72"
+                },
+                "recipe_types": {
+                    "recipe_type": [
+                        "Baked",
+                        "Dessert",
+                        "Snack",
+                        "Breakfast"
+                    ]
+                }
+            },
+            {
+                "recipe_description": "A soft and moist baked treat for the whole family.",
+                "recipe_id": "54208771",
+                "recipe_image": "https://m.ftscrt.com/static/recipe/55d35dae-e52e-47f1-93be-bdd5bfa14dbc.jpg",
+                "recipe_ingredients": {
+                    "ingredient": [
+                        "Oats",
+                        "1 cup almond meal flour",
+                        "2 large eggs",
+                        "Bananas",
+                        "2% Fat Milk",
+                        "Maple Syrup",
+                        "5 1/4 tbsps organic virgin coconut oil",
+                        "Baking Powder (Sodium Aluminum Sulfate, Double Acting)",
+                        "Vanilla Extract",
+                        "Cinnamon",
+                        "Salt",
+                        "126 g semi-sweet mini chocolate chips",
+                        "45 g peanut butter chips"
+                    ]
+                },
+                "recipe_name": "Banana Muffins with Chocolate and Peanut Butter Chips",
+                "recipe_nutrition": {
+                    "calories": "306",
+                    "carbohydrate": "33.43",
+                    "fat": "17.31",
+                    "protein": "7.54"
+                },
+                "recipe_types": {
+                    "recipe_type": [
+                        "Baked",
+                        "Dessert",
+                        "Snack",
+                        "Breakfast"
+                    ]
+                }
+            },
+            {
+                "recipe_description": "A sweet and moist baked good, perfect with coffee or tea.",
+                "recipe_id": "54492103",
+                "recipe_image": "https://m.ftscrt.com/static/recipe/56da5598-5af8-453f-998a-3b58648ee983.jpg",
+                "recipe_ingredients": {
+                    "ingredient": [
+                        "1 3/4 cups all-purpose flour",
+                        "1 cup light brown sugar",
+                        "1/2 cup granulated sugar",
+                        "Baking Powder (Sodium Aluminum Sulfate, Double Acting)",
+                        "2 large eggs",
+                        "Baking Soda",
+                        "Salt",
+                        "1 cup semi-sweet chocolate chips",
+                        "1 cup canned pumpkin",
+                        "Pumpkin Pie Spice",
+                        "Canola Vegetable Oil"
+                    ]
+                },
+                "recipe_name": "Chocolate Chip Pumpkin Bread",
+                "recipe_nutrition": {
+                    "calories": "346",
+                    "carbohydrate": "52.71",
+                    "fat": "15.28",
+                    "protein": "4.48"
+                },
+                "recipe_types": {
+                    "recipe_type": [
+                        "Baked",
+                        "Dessert",
+                        "Snack",
+                        "Breakfast"
+                    ]
+                }
+            },
+            {
+                "recipe_description": "A grab-and-go snack with soft and moist texture.",
+                "recipe_id": "59169299",
+                "recipe_image": "https://m.ftscrt.com/static/recipe/80ca0a4e-08a8-4f73-ba51-72d1eb7db15c.jpg",
+                "recipe_ingredients": {
+                    "ingredient": [
+                        "2 1/2 cups dry whole grain extra thick rolled oats",
+                        "1 scoop whey protein isolate",
+                        "1 tbsp virgin coconut oil",
+                        "Bananas",
+                        "Maple Syrup",
+                        "1/2 cup unsweetened almond vanilla milk",
+                        "2 large eggs",
+                        "5 tbsps mini chocolate chips",
+                        "1 tsp double acting baking powder",
+                        "Cinnamon",
+                        "Sea Salt",
+                        "Vanilla Extract"
+                    ]
+                },
+                "recipe_name": "Banana and Chocolate Chip Oatmeal Cups",
+                "recipe_nutrition": {
+                    "calories": "186",
+                    "carbohydrate": "29.36",
+                    "fat": "6.81",
+                    "protein": "6.01"
+                },
+                "recipe_types": {
+                    "recipe_type": [
+                        "Baked",
+                        "Dessert",
+                        "Snack",
+                        "Breakfast"
+                    ]
+                }
+            },
+            {
+                "recipe_description": "A low-calorie baked treat for any time of the day.",
+                "recipe_id": "61490225",
+                "recipe_image": "https://m.ftscrt.com/static/recipe/8d3ae5b0-77d7-4f7e-b569-6be8ddf2d171.jpg",
+                "recipe_ingredients": {
+                    "ingredient": [
+                        "Vegetable Oil",
+                        "Granulated Sugar",
+                        "Baking Soda",
+                        "Egg",
+                        "2 cups all-purpose flour",
+                        "1 tsp salt",
+                        "Bananas",
+                        "Vanilla Extract",
+                        "84 g semi-sweet mini chocolate chip morsels"
+                    ]
+                },
+                "recipe_name": "Banana Muffins with Chocolate Chips",
+                "recipe_nutrition": {
+                    "calories": "285",
+                    "carbohydrate": "40.25",
+                    "fat": "12.61",
+                    "protein": "2.99"
+                },
+                "recipe_types": {
+                    "recipe_type": [
+                        "Baked",
+                        "Dessert",
+                        "Snack",
+                        "Breakfast"
+                    ]
+                }
+            },
+            {
+                "recipe_description": "Sweet baked treat for snack.",
+                "recipe_id": "64224520",
+                "recipe_image": "https://m.ftscrt.com/static/recipe/a2244dc3-e5e9-4560-bf7f-2c2016c7e63c.jpg",
+                "recipe_ingredients": {
+                    "ingredient": [
+                        "Bananas",
+                        "3 cups almond meal flour",
+                        "Baking Powder (Sodium Aluminum Sulfate, Double Acting)",
+                        "3 large eggs",
+                        "2 tbsps 72% cacao dark chocolate chips",
+                        "Baking Soda",
+                        "Pecans",
+                        "1/4 cup california sun-dried raisins",
+                        "Cinnamon",
+                        "Vanilla Extract",
+                        "Maple Syrup"
+                    ]
+                },
+                "recipe_name": "Banana Pecan Muffins",
+                "recipe_nutrition": {
+                    "calories": "152",
+                    "carbohydrate": "11.45",
+                    "fat": "10.85",
+                    "protein": "5.04"
+                },
+                "recipe_types": {
+                    "recipe_type": [
+                        "Baked",
+                        "Dessert",
+                        "Snack",
+                        "Breakfast"
+                    ]
+                }
+            },
+            {
+                "recipe_description": "Sweet and salty baked treat.",
+                "recipe_id": "68097377",
+                "recipe_image": "https://m.ftscrt.com/static/recipe/4d3f28b5-fd7d-436c-9307-9119ecd84505.jpg",
+                "recipe_ingredients": {
+                    "ingredient": [
+                        "1/4 cup maple syrup",
+                        "Bananas",
+                        "3/4 cup peanut butter",
+                        "2 large eggs",
+                        "14 ml unsweetened vanilla almond milk",
+                        "1 1/4 cup uncooked rolled oats - gluten free",
+                        "Cinnamon",
+                        "Baking Soda",
+                        "Salt",
+                        "5 1/2 tbsps semi-sweet mini chocolate chip morsels"
+                    ]
+                },
+                "recipe_name": "Peanut Butter Banana Chocolate Muffins",
+                "recipe_nutrition": {
+                    "calories": "214",
+                    "carbohydrate": "24.24",
+                    "fat": "11.37",
+                    "protein": "6.64"
+                },
+                "recipe_types": {
+                    "recipe_type": [
+                        "Baked",
+                        "Dessert",
+                        "Snack",
+                        "Breakfast"
+                    ]
+                }
+            },
+            {
+                "recipe_description": "Moist baked treat for any time of the day.",
+                "recipe_id": "75050099",
+                "recipe_image": "https://m.ftscrt.com/static/recipe/8fa80359-30df-4ac9-8fd7-77b95eef3435.jpg",
+                "recipe_ingredients": {
+                    "ingredient": [
+                        "Egg",
+                        "Bananas",
+                        "1/4 cup honey",
+                        "1/4 cup virgin coconut oil",
+                        "3/4 cup dry old fashioned oats",
+                        "4 scoops zero carb creamy vanilla protein powder",
+                        "15 g dark chocolate chips",
+                        "Baking Powder (Sodium Aluminum Sulfate, Double Acting)",
+                        "Baking Soda",
+                        "Cinnamon",
+                        "Ginger (Ground)",
+                        "Pumpkin Pie Spice"
+                    ]
+                },
+                "recipe_name": "Pumpkin Protein Muffins",
+                "recipe_nutrition": {
+                    "calories": "145",
+                    "carbohydrate": "14.59",
+                    "fat": "6.05",
+                    "protein": "9.82"
+                },
+                "recipe_types": {
+                    "recipe_type": [
+                        "Baked",
+                        "Dessert",
+                        "Snack",
+                        "Breakfast"
+                    ]
+                }
+            },
+            {
+                "recipe_description": "Delicious post-workout snack fresh from the oven.",
+                "recipe_id": "78404629",
+                "recipe_image": "https://m.ftscrt.com/static/recipe/bd7d1e92-5d79-4ef1-8ad5-55bc5b12b995.jpg",
+                "recipe_ingredients": {
+                    "ingredient": [
+                        "Bananas",
+                        "2 cups dry old fashioned oats",
+                        "2 tsps baking powder",
+                        "Baking Soda",
+                        "1/4 tsp salt",
+                        "2/3 cup dry vanilla protein powder",
+                        "1 cup greek yogurt lowfat plain",
+                        "2 large eggs",
+                        "Vanilla Extract",
+                        "160 g semi sweet chocolate chips",
+                        "1/4 cup walnuts halves & pieces"
+                    ]
+                },
+                "recipe_name": "Banana Protein Oat Muffins",
+                "recipe_nutrition": {
+                    "calories": "159",
+                    "carbohydrate": "20.12",
+                    "fat": "5.87",
+                    "protein": "6.99"
+                },
+                "recipe_types": {
+                    "recipe_type": [
+                        "Baked",
+                        "Breakfast",
+                        "Snack",
+                        "Dessert"
+                    ]
+                }
+            }
+        ],
+        "total_results": "12"
+    }
+}

@@ -170,4 +170,114 @@ void main() {
       });
     });
   });
+
+  group('Recipe Methods', () {
+    test('getRecipeById returns recipe details', () async {
+      final response = await sdk.getRecipeById(
+        const RecipeGetByIdProps(
+          recipeId: '91', // Baked Lemon Snapper recipe
+        ),
+      );
+
+      expect(response, isNotNull);
+      expect(response?.recipe.recipeId, '91');
+      expect(response?.recipe.recipeName, 'Baked Lemon Snapper');
+      expect(response?.recipe.recipeDescription, isNotEmpty);
+      expect(response?.recipe.numberOfServings, isNotEmpty);
+      expect(response?.recipe.gramsPerPortion, isNotEmpty);
+      expect(response?.recipe.recipeTypes.recipeType, isNotEmpty);
+      expect(response?.recipe.recipeCategories.recipeCategory, isNotEmpty);
+      expect(response?.recipe.ingredients.ingredient, isNotEmpty);
+      expect(response?.recipe.directions.direction, isNotEmpty);
+      expect(response?.recipe.servingSizes.serving.calories, isNotNull);
+    });
+
+    test('searchRecipes returns recipe search results', () async {
+      final response = await sdk.searchRecipes(
+        const RecipeSearchProps(
+          searchExpression: 'chocolate',
+          maxResults: 5,
+          pageNumber: 0,
+          mustHaveImages: true,
+        ),
+      );
+
+      expect(response, isNotNull);
+      expect(response?.recipes.recipe, isNotEmpty);
+      expect(response?.recipes.maxResults, '5');
+      expect(response?.recipes.pageNumber, '0');
+      expect(response?.recipes.totalResults, isNotEmpty);
+
+      final recipe = response!.recipes.recipe[0];
+      expect(recipe.recipeId, isNotEmpty);
+      expect(recipe.recipeName, isNotEmpty);
+      expect(recipe.recipeDescription, isNotEmpty);
+      expect(recipe.recipeImage, isNotEmpty);
+      expect(recipe.recipeIngredients.ingredient, isNotEmpty);
+      expect(recipe.recipeNutrition.calories, isNotEmpty);
+      expect(recipe.recipeTypes.recipeType, isNotEmpty);
+    });
+
+    test('searchRecipes with filters returns filtered results', () async {
+      final response = await sdk.searchRecipes(
+        const RecipeSearchProps(
+          searchExpression: 'chicken',
+          maxResults: 3,
+          pageNumber: 0,
+          mustHaveImages: true,
+          caloriesFrom: 200,
+          caloriesTo: 500,
+          proteinPercentageFrom: 20,
+          proteinPercentageTo: 40,
+        ),
+      );
+
+      expect(response, isNotNull);
+      expect(response?.recipes.recipe, isNotEmpty);
+      expect(response?.recipes.maxResults, '3');
+
+      for (final recipe in response!.recipes.recipe) {
+        final calories = double.tryParse(recipe.recipeNutrition.calories) ?? 0;
+        expect(calories, greaterThanOrEqualTo(200));
+        expect(calories, lessThanOrEqualTo(500));
+      }
+    });
+
+    group('getRecipeTypes', () {
+      late FatSecretNutrition localSdk;
+      setUp(() {
+        localSdk = FatSecretNutrition(
+          clientId: 'BAD_CLIENT_ID',
+          clientSecret: 'BAD_CLIENT_SECRET',
+          tokenUrl: 'BAD_TOKEN_URL',
+          apiUrl: 'BAD_API_URL',
+        );
+      });
+
+      test('should return null when API call fails', () async {
+        final result = await localSdk.getRecipeTypes();
+        expect(result, isNull);
+      });
+
+      test('should return recipe types when API call succeeds', () async {
+        final result = await sdk.getRecipeTypes();
+
+        expect(result, isNotNull);
+        expect(result?.recipeType, isNotEmpty);
+        expect(result?.recipeType, contains('Appetizer'));
+        expect(result?.recipeType, contains('Soup'));
+        expect(result?.recipeType, contains('Main Dish'));
+        expect(result?.recipeType, contains('Side Dish'));
+        expect(result?.recipeType, contains('Baked'));
+        expect(result?.recipeType, contains('Salad and Salad Dressing'));
+        expect(result?.recipeType, contains('Sauce and Condiment'));
+        expect(result?.recipeType, contains('Dessert'));
+        expect(result?.recipeType, contains('Snack'));
+        expect(result?.recipeType, contains('Beverage'));
+        expect(result?.recipeType, contains('Other'));
+        expect(result?.recipeType, contains('Breakfast'));
+        expect(result?.recipeType, contains('Lunch'));
+      });
+    });
+  });
 }

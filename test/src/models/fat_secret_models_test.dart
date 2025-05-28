@@ -449,4 +449,166 @@ and cocktails.''',
       expect(json['format'], 'json');
     });
   });
+
+  group('Recipe Models', () {
+    test('RecipeGetByIdResponse fromJson', () {
+      final json = {
+        'recipe': {
+          'recipe_id': '91',
+          'recipe_name': 'Baked Lemon Snapper',
+          'recipe_url':
+              'https://www.fatsecret.com/recipes/baked-lemon-snapper/Default.aspx',
+          'recipe_description': 'Healthy fish with a tasty sauce.',
+          'number_of_servings': '4',
+          'grams_per_portion': '194.225',
+          'preparation_time_min': '5',
+          'cooking_time_min': '15',
+          'rating': '4',
+          'recipe_types': {
+            'recipe_type': ['Main Dish'],
+          },
+          'recipe_categories': {
+            'recipe_category': [
+              {
+                'recipe_category_name': 'Seafood',
+                'recipe_category_url':
+                    'https://www.fatsecret.com/recipes/collections/ingredients/seafood/Default.aspx',
+              }
+            ],
+          },
+          'recipe_images': {
+            'recipe_image': [
+              'https://www.fatsecret.com/static/recipe/bf0c5912-9cf8-4e7a-b07a-6703c4b77082.jpg',
+            ],
+          },
+          'ingredients': {
+            'ingredient': [
+              {
+                'food_id': '38065',
+                'food_name': 'Snapper (Fish) (Mixed Species)',
+                'serving_id': '47968',
+                'number_of_units': '1.500',
+                'measurement_description': 'lb',
+                'ingredient_url':
+                    'https://www.fatsecret.com/calories-nutrition/usda/snapper-(fish)-(mixed-species)?portionid=47968&portionamount=1.500',
+                'ingredient_description': '1 1/2 lbs snapper fillets',
+              }
+            ],
+          },
+          'directions': {
+            'direction': [
+              {
+                'direction_number': '1',
+                'direction_description': 'Preheat oven to 390 °F (200 °C).',
+              }
+            ],
+          },
+          'serving_sizes': {
+            'serving': {
+              'calcium': '6',
+              'calories': '177',
+              'carbohydrate': '2.23',
+              'cholesterol': '63',
+              'fat': '2.32',
+              'fiber': '0.6',
+              'iron': '3',
+              'monounsaturated_fat': '0.436',
+              'polyunsaturated_fat': '0.788',
+              'potassium': '752',
+              'protein': '35.10',
+              'saturated_fat': '0.490',
+              'serving_size': '1 serving',
+              'sodium': '692',
+              'sugar': '0.58',
+              'trans_fat': '0',
+              'vitamin_a': '8',
+              'vitamin_c': '32',
+            },
+          },
+        },
+      };
+
+      final response = RecipeGetByIdResponse.fromJson(json);
+      expect(response.recipe.recipeId, '91');
+      expect(response.recipe.recipeName, 'Baked Lemon Snapper');
+      expect(response.recipe.recipeDescription,
+          'Healthy fish with a tasty sauce.',);
+      expect(response.recipe.numberOfServings, '4');
+      expect(response.recipe.gramsPerPortion, '194.225');
+      expect(response.recipe.preparationTimeMin, '5');
+      expect(response.recipe.cookingTimeMin, '15');
+      expect(response.recipe.rating, '4');
+      expect(response.recipe.recipeTypes.recipeType, ['Main Dish']);
+      expect(response.recipe.recipeCategories.recipeCategory.length, 1);
+      expect(
+          response.recipe.recipeCategories.recipeCategory[0].recipeCategoryName,
+          'Seafood',);
+      expect(response.recipe.ingredients.ingredient.length, 1);
+      expect(response.recipe.ingredients.ingredient[0].foodName,
+          'Snapper (Fish) (Mixed Species)',);
+      expect(response.recipe.directions.direction.length, 1);
+      expect(response.recipe.directions.direction[0].directionNumber, '1');
+      expect(response.recipe.servingSizes.serving.calories, 177.0);
+    });
+
+    test('RecipeSearchResponse fromJson', () {
+      final json = {
+        'recipes': {
+          'max_results': '10',
+          'page_number': '0',
+          'recipe': [
+            {
+              'recipe_description':
+                  'A 5-ingredient baked treat for the whole family.',
+              'recipe_id': '52996194',
+              'recipe_image':
+                  'https://m.ftscrt.com/static/recipe/ff983b4c-544c-48a3-891c-2067791ecfc0.jpg',
+              'recipe_ingredients': {
+                'ingredient': [
+                  '1 cup canned pumpkin',
+                  'Cinnamon',
+                  'Yellow Cake (Dry Mix, Enriched)',
+                  'Vanilla Extract',
+                  'Chocolate Chips',
+                ],
+              },
+              'recipe_name': 'Pumpkin Chocolate Chip Muffin',
+              'recipe_nutrition': {
+                'calories': '266',
+                'carbohydrate': '45.12',
+                'fat': '9.28',
+                'protein': '2.86',
+              },
+              'recipe_types': {
+                'recipe_type': ['Baked', 'Dessert', 'Snack', 'Breakfast'],
+              },
+            }
+          ],
+          'total_results': '12',
+        },
+      };
+
+      final response = RecipeSearchResponse.fromJson(json);
+      expect(response.recipes.maxResults, '10');
+      expect(response.recipes.pageNumber, '0');
+      expect(response.recipes.totalResults, '12');
+      expect(response.recipes.recipe.length, 1);
+
+      final recipe = response.recipes.recipe[0];
+      expect(recipe.recipeId, '52996194');
+      expect(recipe.recipeName, 'Pumpkin Chocolate Chip Muffin');
+      expect(recipe.recipeDescription,
+          'A 5-ingredient baked treat for the whole family.',);
+      expect(recipe.recipeImage,
+          'https://m.ftscrt.com/static/recipe/ff983b4c-544c-48a3-891c-2067791ecfc0.jpg',);
+      expect(recipe.recipeIngredients.ingredient.length, 5);
+      expect(recipe.recipeNutrition.calories, '266');
+      expect(recipe.recipeNutrition.carbohydrate, '45.12');
+      expect(recipe.recipeNutrition.fat, '9.28');
+      expect(recipe.recipeNutrition.protein, '2.86');
+      expect(recipe.recipeTypes.recipeType.length, 4);
+      expect(recipe.recipeTypes.recipeType,
+          ['Baked', 'Dessert', 'Snack', 'Breakfast'],);
+    });
+  });
 }

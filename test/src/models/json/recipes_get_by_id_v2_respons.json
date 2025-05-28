@@ -1,0 +1,213 @@
+{
+    "recipe": {
+        "directions": {
+            "direction": [
+                {
+                    "direction_description": "Heat margarine in a pot.  Cook onion and garlic until glassy.  Add cauliflower and potato.  Cook for 1 minute.",
+                    "direction_number": "1"
+                },
+                {
+                    "direction_description": "Add asparagus, asparagus juice, stock and milk.",
+                    "direction_number": "2"
+                },
+                {
+                    "direction_description": "Bring to the boil.  Reduce heat, cover and simmer for 45 minutes.  Blend until smooth. Season with salt and pepper. Garnish with chives and serve.",
+                    "direction_number": "3"
+                }
+            ]
+        },
+        "grams_per_portion": "268.653",
+        "ingredients": {
+            "ingredient": [
+                {
+                    "food_id": "33770",
+                    "food_name": "Evaporated Milk (Nonfat)",
+                    "ingredient_description": "2/3 cup milk evaporated",
+                    "ingredient_url": "https://www.fatsecret.com/calories-nutrition/usda/evaporated-milk-(nonfat)?portionid=29380&portionamount=0.660",
+                    "measurement_description": "cup",
+                    "number_of_units": "0.660",
+                    "serving_id": "29380"
+                },
+                {
+                    "food_id": "33892",
+                    "food_name": "Black Pepper",
+                    "ingredient_description": "1 dash pepper to taste",
+                    "ingredient_url": "https://www.fatsecret.com/calories-nutrition/usda/black-pepper?portionid=29616&portionamount=1.000",
+                    "measurement_description": "dash",
+                    "number_of_units": "1.000",
+                    "serving_id": "29616"
+                },
+                {
+                    "food_id": "33908",
+                    "food_name": "Salt",
+                    "ingredient_description": "1 dash salt to taste",
+                    "ingredient_url": "https://www.fatsecret.com/calories-nutrition/usda/salt?portionid=29654&portionamount=1.000",
+                    "measurement_description": "dash",
+                    "number_of_units": "1.000",
+                    "serving_id": "29654"
+                },
+                {
+                    "food_id": "34325",
+                    "food_name": "Margarine (Regular, 80% Fat with Salt, Tub)",
+                    "ingredient_description": "1 tbsp margarine",
+                    "ingredient_url": "https://www.fatsecret.com/calories-nutrition/usda/margarine-(regular-80%25-fat-with-salt-tub)?portionid=30719&portionamount=1.000",
+                    "measurement_description": "tbsp",
+                    "number_of_units": "1.000",
+                    "serving_id": "30719"
+                },
+                {
+                    "food_id": "34792",
+                    "food_name": "Chicken Stock Cubes (Dry, Dehydrated)",
+                    "ingredient_description": "1 1/2 cubes chicken powder with 3 cups of water",
+                    "ingredient_url": "https://www.fatsecret.com/calories-nutrition/usda/chicken-stock-cubes-(dry-dehydrated)?portionid=31642&portionamount=1.500",
+                    "measurement_description": "cube",
+                    "number_of_units": "1.500",
+                    "serving_id": "31642"
+                },
+                {
+                    "food_id": "36248",
+                    "food_name": "Asparagus (Solids and Liquids, Canned)",
+                    "ingredient_description": "1 can asparagus canned",
+                    "ingredient_url": "https://www.fatsecret.com/calories-nutrition/usda/asparagus-(solids-and-liquids-canned)?portionid=33896&portionamount=1.000",
+                    "measurement_description": "can (300 x 407)",
+                    "number_of_units": "1.000",
+                    "serving_id": "33896"
+                },
+                {
+                    "food_id": "36327",
+                    "food_name": "Cauliflower",
+                    "ingredient_description": "1/4 head medium cauliflower roughly chopped",
+                    "ingredient_url": "https://www.fatsecret.com/calories-nutrition/usda/cauliflower?portionid=34060&portionamount=0.250",
+                    "measurement_description": "head, medium (5-6\" dia)",
+                    "number_of_units": "0.250",
+                    "serving_id": "34060"
+                },
+                {
+                    "food_id": "36343",
+                    "food_name": "Chives",
+                    "ingredient_description": "1 tbsp chopped chives",
+                    "ingredient_url": "https://www.fatsecret.com/calories-nutrition/usda/chives?portionid=34090&portionamount=1.000",
+                    "measurement_description": "tbsp chopped",
+                    "number_of_units": "1.000",
+                    "serving_id": "34090"
+                },
+                {
+                    "food_id": "36383",
+                    "food_name": "Garlic",
+                    "ingredient_description": "1 clove garlic crushed",
+                    "ingredient_url": "https://www.fatsecret.com/calories-nutrition/usda/garlic?portionid=34170&portionamount=1.000",
+                    "measurement_description": "clove",
+                    "number_of_units": "1.000",
+                    "serving_id": "34170"
+                },
+                {
+                    "food_id": "36442",
+                    "food_name": "Onions",
+                    "ingredient_description": "1 medium onion chopped",
+                    "ingredient_url": "https://www.fatsecret.com/calories-nutrition/usda/onions?portionid=34294&portionamount=1.000",
+                    "measurement_description": "medium (2-1/2\" dia)",
+                    "number_of_units": "1.000",
+                    "serving_id": "34294"
+                },
+                {
+                    "food_id": "36493",
+                    "food_name": "White Potatoes (Flesh and Skin)",
+                    "ingredient_description": "1 medium potato diced",
+                    "ingredient_url": "https://www.fatsecret.com/calories-nutrition/usda/white-potatoes-(flesh-and-skin)?portionid=34396&portionamount=1.000",
+                    "measurement_description": "potato medium (2-1/4\" to 3-1/4\" dia)",
+                    "number_of_units": "1.000",
+                    "serving_id": "34396"
+                }
+            ]
+        },
+        "number_of_servings": "4",
+        "rating": "2",
+        "recipe_categories": {
+            "recipe_category": [
+                {
+                    "recipe_category_name": "Vegetable",
+                    "recipe_category_url": "https://www.fatsecret.com/recipes/collections/ingredients/vegetable/Default.aspx"
+                },
+                {
+                    "recipe_category_name": "Asparagus",
+                    "recipe_category_url": "https://www.fatsecret.com/recipes/collections/ingredients/vegetable/asparagus/Default.aspx"
+                },
+                {
+                    "recipe_category_name": "Cauliflower",
+                    "recipe_category_url": "https://www.fatsecret.com/recipes/collections/ingredients/vegetable/cauliflower/Default.aspx"
+                },
+                {
+                    "recipe_category_name": "Lunch",
+                    "recipe_category_url": "https://www.fatsecret.com/recipes/collections/meal/lunch/Default.aspx"
+                },
+                {
+                    "recipe_category_name": "Soup Lunch",
+                    "recipe_category_url": "https://www.fatsecret.com/recipes/collections/meal/lunch/soup/Default.aspx"
+                },
+                {
+                    "recipe_category_name": "Soup",
+                    "recipe_category_url": "https://www.fatsecret.com/recipes/collections/meal/soup/Default.aspx"
+                },
+                {
+                    "recipe_category_name": "Low Calorie",
+                    "recipe_category_url": "https://www.fatsecret.com/recipes/collections/nutrition/low-calorie/Default.aspx"
+                },
+                {
+                    "recipe_category_name": "100-200 Calorie",
+                    "recipe_category_url": "https://www.fatsecret.com/recipes/collections/nutrition/low-calorie/100-200-calorie/Default.aspx"
+                },
+                {
+                    "recipe_category_name": "Low Cholesterol",
+                    "recipe_category_url": "https://www.fatsecret.com/recipes/collections/nutrition/low-cholesterol/Default.aspx"
+                },
+                {
+                    "recipe_category_name": "3-5 grams Fat",
+                    "recipe_category_url": "https://www.fatsecret.com/recipes/collections/nutrition/low-fat/3-5-grams-fat/Default.aspx"
+                },
+                {
+                    "recipe_category_name": "Weight Watchers Points",
+                    "recipe_category_url": "https://www.fatsecret.com/recipes/collections/nutrition/weight-watchers-points/Default.aspx"
+                },
+                {
+                    "recipe_category_name": "2 Point",
+                    "recipe_category_url": "https://www.fatsecret.com/recipes/collections/nutrition/weight-watchers-points/2-point/Default.aspx"
+                },
+                {
+                    "recipe_category_name": "Low Point",
+                    "recipe_category_url": "https://www.fatsecret.com/recipes/collections/nutrition/weight-watchers-points/low-point/Default.aspx"
+                }
+            ]
+        },
+        "recipe_description": "Tasty cauliflower and asparagus soup.",
+        "recipe_id": "5",
+        "recipe_name": "Cauliflower and Asparagus Soup",
+        "recipe_types": {
+            "recipe_type": [
+                "Soup"
+            ]
+        },
+        "recipe_url": "https://www.fatsecret.com/recipes/cauliflower-and-asparagus-soup/Default.aspx",
+        "serving_sizes": {
+            "serving": {
+                "calcium": "13",
+                "calories": "136",
+                "carbohydrate": "21.12",
+                "cholesterol": "2",
+                "fat": "3.33",
+                "fiber": "3.6",
+                "iron": "7",
+                "monounsaturated_fat": "1.361",
+                "polyunsaturated_fat": "1.186",
+                "potassium": "696",
+                "protein": "7.26",
+                "saturated_fat": "0.614",
+                "serving_size": "1 serving",
+                "sodium": "864",
+                "sugar": "7.47",
+                "trans_fat": "0",
+                "vitamin_a": "12",
+                "vitamin_c": "52"
+            }
+        }
+    }
+}

@@ -1,0 +1,19 @@
+{
+    "recipe_types": {
+        "recipe_type": [
+            "Appetizer",
+            "Soup",
+            "Main Dish",
+            "Side Dish",
+            "Baked",
+            "Salad and Salad Dressing",
+            "Sauce and Condiment",
+            "Dessert",
+            "Snack",
+            "Beverage",
+            "Other",
+            "Breakfast",
+            "Lunch"
+        ]
+    }
+}

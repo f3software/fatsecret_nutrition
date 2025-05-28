@@ -137,8 +137,6 @@ abstract class FoodsSearchResponse with _$FoodsSearchResponse {
 
   factory FoodsSearchResponse.fromJson(Map<String, dynamic> json) =>
       _$FoodsSearchResponseFromJson(json);
-
-
 }
 
 @freezed
@@ -533,4 +531,261 @@ abstract class FoodSubCategoriesProps with _$FoodSubCategoriesProps {
 
   factory FoodSubCategoriesProps.fromJson(Map<String, dynamic> json) =>
       _$FoodSubCategoriesPropsFromJson(json);
+}
+
+/// RecipeGetByIdProps
+@freezed
+abstract class RecipeGetByIdProps with _$RecipeGetByIdProps {
+  const factory RecipeGetByIdProps({
+    @JsonKey(name: 'recipe_id') required String recipeId,
+    @JsonKey(name: kformat) @Default('json') String? format,
+    @JsonKey(name: kregion) String? region,
+  }) = _RecipeGetByIdProps;
+
+  factory RecipeGetByIdProps.fromJson(Map<String, dynamic> json) =>
+      _$RecipeGetByIdPropsFromJson(json);
+}
+
+/// RecipeGetByIdResponse
+@freezed
+abstract class RecipeGetByIdResponse with _$RecipeGetByIdResponse {
+  const factory RecipeGetByIdResponse({
+    @JsonKey(name: 'recipe') required Recipe recipe,
+  }) = _RecipeGetByIdResponse;
+
+  factory RecipeGetByIdResponse.fromJson(Map<String, dynamic> json) =>
+      _$RecipeGetByIdResponseFromJson(json);
+}
+
+/// Recipe
+@freezed
+abstract class Recipe with _$Recipe {
+  const factory Recipe({
+    @JsonKey(name: 'recipe_id') required String recipeId,
+    @JsonKey(name: 'recipe_name') required String recipeName,
+    @JsonKey(name: 'recipe_url') required String recipeUrl,
+    @JsonKey(name: 'recipe_description') required String recipeDescription,
+    @JsonKey(name: 'number_of_servings') required String numberOfServings,
+    @JsonKey(name: 'grams_per_portion') required String gramsPerPortion,
+    @JsonKey(name: 'recipe_types') required RecipeTypes recipeTypes,
+    @JsonKey(name: 'recipe_categories')
+    required RecipeCategories recipeCategories,
+    @JsonKey(name: 'recipe_images') required RecipeImages recipeImages,
+    @JsonKey(name: 'ingredients') required Ingredients ingredients,
+    @JsonKey(name: 'directions') required Directions directions,
+    @JsonKey(name: 'serving_sizes') required ServingSizes servingSizes,
+    @JsonKey(name: 'preparation_time_min') String? preparationTimeMin,
+    @JsonKey(name: 'cooking_time_min') String? cookingTimeMin,
+    @JsonKey(name: 'rating') String? rating,
+  }) = _Recipe;
+
+  factory Recipe.fromJson(Map<String, dynamic> json) => _$RecipeFromJson(json);
+}
+
+/// RecipeTypes
+@freezed
+abstract class RecipeTypes with _$RecipeTypes {
+  const factory RecipeTypes({
+    @JsonKey(name: 'recipe_type') required List<String> recipeType,
+  }) = _RecipeTypes;
+
+  factory RecipeTypes.fromJson(Map<String, dynamic> json) =>
+      _$RecipeTypesFromJson(json);
+}
+
+/// RecipeCategories
+@freezed
+abstract class RecipeCategories with _$RecipeCategories {
+  const factory RecipeCategories({
+    @JsonKey(name: 'recipe_category')
+    required List<RecipeCategory> recipeCategory,
+  }) = _RecipeCategories;
+
+  factory RecipeCategories.fromJson(Map<String, dynamic> json) =>
+      _$RecipeCategoriesFromJson(json);
+}
+
+/// RecipeCategory
+@freezed
+abstract class RecipeCategory with _$RecipeCategory {
+  const factory RecipeCategory({
+    @JsonKey(name: 'recipe_category_name') required String recipeCategoryName,
+    @JsonKey(name: 'recipe_category_url') required String recipeCategoryUrl,
+  }) = _RecipeCategory;
+
+  factory RecipeCategory.fromJson(Map<String, dynamic> json) =>
+      _$RecipeCategoryFromJson(json);
+}
+
+/// RecipeImages
+@freezed
+abstract class RecipeImages with _$RecipeImages {
+  const factory RecipeImages({
+    @JsonKey(name: 'recipe_image') required List<String> recipeImage,
+  }) = _RecipeImages;
+
+  factory RecipeImages.fromJson(Map<String, dynamic> json) =>
+      _$RecipeImagesFromJson(json);
+}
+
+/// Ingredients
+@freezed
+abstract class Ingredients with _$Ingredients {
+  const factory Ingredients({
+    @JsonKey(name: 'ingredient') required List<Ingredient> ingredient,
+  }) = _Ingredients;
+
+  factory Ingredients.fromJson(Map<String, dynamic> json) =>
+      _$IngredientsFromJson(json);
+}
+
+/// Ingredient
+@freezed
+abstract class Ingredient with _$Ingredient {
+  const factory Ingredient({
+    @JsonKey(name: 'food_id') required String foodId,
+    @JsonKey(name: 'food_name') required String foodName,
+    @JsonKey(name: 'serving_id') required String servingId,
+    @JsonKey(name: 'number_of_units') required String numberOfUnits,
+    @JsonKey(name: 'measurement_description')
+    required String measurementDescription,
+    @JsonKey(name: 'ingredient_url') required String ingredientUrl,
+    @JsonKey(name: 'ingredient_description')
+    required String ingredientDescription,
+  }) = _Ingredient;
+
+  factory Ingredient.fromJson(Map<String, dynamic> json) =>
+      _$IngredientFromJson(json);
+}
+
+/// Directions
+@freezed
+abstract class Directions with _$Directions {
+  const factory Directions({
+    @JsonKey(name: 'direction') required List<Direction> direction,
+  }) = _Directions;
+
+  factory Directions.fromJson(Map<String, dynamic> json) =>
+      _$DirectionsFromJson(json);
+}
+
+/// Direction
+@freezed
+abstract class Direction with _$Direction {
+  const factory Direction({
+    @JsonKey(name: 'direction_number') required String directionNumber,
+    @JsonKey(name: 'direction_description')
+    required String directionDescription,
+  }) = _Direction;
+
+  factory Direction.fromJson(Map<String, dynamic> json) =>
+      _$DirectionFromJson(json);
+}
+
+/// ServingSizes
+@freezed
+abstract class ServingSizes with _$ServingSizes {
+  const factory ServingSizes({
+    @JsonKey(name: 'serving') required Serving serving,
+  }) = _ServingSizes;
+
+  factory ServingSizes.fromJson(Map<String, dynamic> json) =>
+      _$ServingSizesFromJson(json);
+}
+
+/// RecipeSearchProps
+@freezed
+abstract class RecipeSearchProps with _$RecipeSearchProps {
+  const factory RecipeSearchProps({
+    @JsonKey(name: 'search_expression') String? searchExpression,
+    @JsonKey(name: 'recipe_types') String? recipeTypes,
+    @JsonKey(name: 'recipe_types_matchall') bool? recipeTypesMatchall,
+    @JsonKey(name: 'must_have_images') bool? mustHaveImages,
+    @JsonKey(name: 'calories.from') int? caloriesFrom,
+    @JsonKey(name: 'calories.to') int? caloriesTo,
+    @JsonKey(name: 'carb_percentage.from') int? carbPercentageFrom,
+    @JsonKey(name: 'carb_percentage.to') int? carbPercentageTo,
+    @JsonKey(name: 'protein_percentage.from') int? proteinPercentageFrom,
+    @JsonKey(name: 'protein_percentage.to') int? proteinPercentageTo,
+    @JsonKey(name: 'fat_percentage.from') int? fatPercentageFrom,
+    @JsonKey(name: 'fat_percentage.to') int? fatPercentageTo,
+    @JsonKey(name: 'prep_time.from') int? prepTimeFrom,
+    @JsonKey(name: 'prep_time.to') int? prepTimeTo,
+    @JsonKey(name: kpageNumber) int? pageNumber,
+    @JsonKey(name: kmaxResults) int? maxResults,
+    @JsonKey(name: 'sort_by') String? sortBy,
+    @JsonKey(name: kformat) @Default('json') String? format,
+    @JsonKey(name: kregion) String? region,
+  }) = _RecipeSearchProps;
+
+  factory RecipeSearchProps.fromJson(Map<String, dynamic> json) =>
+      _$RecipeSearchPropsFromJson(json);
+}
+
+/// RecipeSearchResponse
+@freezed
+abstract class RecipeSearchResponse with _$RecipeSearchResponse {
+  const factory RecipeSearchResponse({
+    @JsonKey(name: 'recipes') required Recipes recipes,
+  }) = _RecipeSearchResponse;
+
+  factory RecipeSearchResponse.fromJson(Map<String, dynamic> json) =>
+      _$RecipeSearchResponseFromJson(json);
+}
+
+/// Recipes
+@freezed
+abstract class Recipes with _$Recipes {
+  const factory Recipes({
+    @JsonKey(name: kmaxResults) required String maxResults,
+    @JsonKey(name: ktotalResults) required String totalResults,
+    @JsonKey(name: kpageNumber) required String pageNumber,
+    @JsonKey(name: 'recipe') required List<RecipeSearchResult> recipe,
+  }) = _Recipes;
+
+  factory Recipes.fromJson(Map<String, dynamic> json) =>
+      _$RecipesFromJson(json);
+}
+
+/// RecipeSearchResult
+@freezed
+abstract class RecipeSearchResult with _$RecipeSearchResult {
+  const factory RecipeSearchResult({
+    @JsonKey(name: 'recipe_id') required String recipeId,
+    @JsonKey(name: 'recipe_name') required String recipeName,
+    @JsonKey(name: 'recipe_description') required String recipeDescription,
+    @JsonKey(name: 'recipe_image') required String recipeImage,
+    @JsonKey(name: 'recipe_ingredients')
+    required RecipeIngredients recipeIngredients,
+    @JsonKey(name: 'recipe_nutrition') required RecipeNutrition recipeNutrition,
+    @JsonKey(name: 'recipe_types') required RecipeTypes recipeTypes,
+  }) = _RecipeSearchResult;
+
+  factory RecipeSearchResult.fromJson(Map<String, dynamic> json) =>
+      _$RecipeSearchResultFromJson(json);
+}
+
+/// RecipeIngredients
+@freezed
+abstract class RecipeIngredients with _$RecipeIngredients {
+  const factory RecipeIngredients({
+    @JsonKey(name: 'ingredient') required List<String> ingredient,
+  }) = _RecipeIngredients;
+
+  factory RecipeIngredients.fromJson(Map<String, dynamic> json) =>
+      _$RecipeIngredientsFromJson(json);
+}
+
+/// RecipeNutrition
+@freezed
+abstract class RecipeNutrition with _$RecipeNutrition {
+  const factory RecipeNutrition({
+    @JsonKey(name: kcalories) required String calories,
+    @JsonKey(name: kcarbohydrate) required String carbohydrate,
+    @JsonKey(name: kprotein) required String protein,
+    @JsonKey(name: kfat) required String fat,
+  }) = _RecipeNutrition;
+
+  factory RecipeNutrition.fromJson(Map<String, dynamic> json) =>
+      _$RecipeNutritionFromJson(json);
 }

@@ -6272,4 +6272,4294 @@ class __$FoodSubCategoriesPropsCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
+mixin _$RecipeGetByIdProps {
+  @JsonKey(name: 'recipe_id')
+  String get recipeId;
+  @JsonKey(name: kformat)
+  String? get format;
+  @JsonKey(name: kregion)
+  String? get region;
+
+  /// Create a copy of RecipeGetByIdProps
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $RecipeGetByIdPropsCopyWith<RecipeGetByIdProps> get copyWith =>
+      _$RecipeGetByIdPropsCopyWithImpl<RecipeGetByIdProps>(
+          this as RecipeGetByIdProps, _$identity);
+
+  /// Serializes this RecipeGetByIdProps to a JSON map.
+  Map<String, dynamic> toJson();
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is RecipeGetByIdProps &&
+            (identical(other.recipeId, recipeId) ||
+                other.recipeId == recipeId) &&
+            (identical(other.format, format) || other.format == format) &&
+            (identical(other.region, region) || other.region == region));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(runtimeType, recipeId, format, region);
+
+  @override
+  String toString() {
+    return 'RecipeGetByIdProps(recipeId: $recipeId, format: $format, region: $region)';
+  }
+}
+
+/// @nodoc
+abstract mixin class $RecipeGetByIdPropsCopyWith<$Res> {
+  factory $RecipeGetByIdPropsCopyWith(
+          RecipeGetByIdProps value, $Res Function(RecipeGetByIdProps) _then) =
+      _$RecipeGetByIdPropsCopyWithImpl;
+  @useResult
+  $Res call(
+      {@JsonKey(name: 'recipe_id') String recipeId,
+      @JsonKey(name: kformat) String? format,
+      @JsonKey(name: kregion) String? region});
+}
+
+/// @nodoc
+class _$RecipeGetByIdPropsCopyWithImpl<$Res>
+    implements $RecipeGetByIdPropsCopyWith<$Res> {
+  _$RecipeGetByIdPropsCopyWithImpl(this._self, this._then);
+
+  final RecipeGetByIdProps _self;
+  final $Res Function(RecipeGetByIdProps) _then;
+
+  /// Create a copy of RecipeGetByIdProps
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? recipeId = null,
+    Object? format = freezed,
+    Object? region = freezed,
+  }) {
+    return _then(_self.copyWith(
+      recipeId: null == recipeId
+          ? _self.recipeId
+          : recipeId // ignore: cast_nullable_to_non_nullable
+              as String,
+      format: freezed == format
+          ? _self.format
+          : format // ignore: cast_nullable_to_non_nullable
+              as String?,
+      region: freezed == region
+          ? _self.region
+          : region // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _RecipeGetByIdProps implements RecipeGetByIdProps {
+  const _RecipeGetByIdProps(
+      {@JsonKey(name: 'recipe_id') required this.recipeId,
+      @JsonKey(name: kformat) this.format = 'json',
+      @JsonKey(name: kregion) this.region});
+  factory _RecipeGetByIdProps.fromJson(Map<String, dynamic> json) =>
+      _$RecipeGetByIdPropsFromJson(json);
+
+  @override
+  @JsonKey(name: 'recipe_id')
+  final String recipeId;
+  @override
+  @JsonKey(name: kformat)
+  final String? format;
+  @override
+  @JsonKey(name: kregion)
+  final String? region;
+
+  /// Create a copy of RecipeGetByIdProps
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  _$RecipeGetByIdPropsCopyWith<_RecipeGetByIdProps> get copyWith =>
+      __$RecipeGetByIdPropsCopyWithImpl<_RecipeGetByIdProps>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$RecipeGetByIdPropsToJson(
+      this,
+    );
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _RecipeGetByIdProps &&
+            (identical(other.recipeId, recipeId) ||
+                other.recipeId == recipeId) &&
+            (identical(other.format, format) || other.format == format) &&
+            (identical(other.region, region) || other.region == region));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(runtimeType, recipeId, format, region);
+
+  @override
+  String toString() {
+    return 'RecipeGetByIdProps(recipeId: $recipeId, format: $format, region: $region)';
+  }
+}
+
+/// @nodoc
+abstract mixin class _$RecipeGetByIdPropsCopyWith<$Res>
+    implements $RecipeGetByIdPropsCopyWith<$Res> {
+  factory _$RecipeGetByIdPropsCopyWith(
+          _RecipeGetByIdProps value, $Res Function(_RecipeGetByIdProps) _then) =
+      __$RecipeGetByIdPropsCopyWithImpl;
+  @override
+  @useResult
+  $Res call(
+      {@JsonKey(name: 'recipe_id') String recipeId,
+      @JsonKey(name: kformat) String? format,
+      @JsonKey(name: kregion) String? region});
+}
+
+/// @nodoc
+class __$RecipeGetByIdPropsCopyWithImpl<$Res>
+    implements _$RecipeGetByIdPropsCopyWith<$Res> {
+  __$RecipeGetByIdPropsCopyWithImpl(this._self, this._then);
+
+  final _RecipeGetByIdProps _self;
+  final $Res Function(_RecipeGetByIdProps) _then;
+
+  /// Create a copy of RecipeGetByIdProps
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $Res call({
+    Object? recipeId = null,
+    Object? format = freezed,
+    Object? region = freezed,
+  }) {
+    return _then(_RecipeGetByIdProps(
+      recipeId: null == recipeId
+          ? _self.recipeId
+          : recipeId // ignore: cast_nullable_to_non_nullable
+              as String,
+      format: freezed == format
+          ? _self.format
+          : format // ignore: cast_nullable_to_non_nullable
+              as String?,
+      region: freezed == region
+          ? _self.region
+          : region // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ));
+  }
+}
+
+/// @nodoc
+mixin _$RecipeGetByIdResponse {
+  @JsonKey(name: 'recipe')
+  Recipe get recipe;
+
+  /// Create a copy of RecipeGetByIdResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $RecipeGetByIdResponseCopyWith<RecipeGetByIdResponse> get copyWith =>
+      _$RecipeGetByIdResponseCopyWithImpl<RecipeGetByIdResponse>(
+          this as RecipeGetByIdResponse, _$identity);
+
+  /// Serializes this RecipeGetByIdResponse to a JSON map.
+  Map<String, dynamic> toJson();
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is RecipeGetByIdResponse &&
+            (identical(other.recipe, recipe) || other.recipe == recipe));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(runtimeType, recipe);
+
+  @override
+  String toString() {
+    return 'RecipeGetByIdResponse(recipe: $recipe)';
+  }
+}
+
+/// @nodoc
+abstract mixin class $RecipeGetByIdResponseCopyWith<$Res> {
+  factory $RecipeGetByIdResponseCopyWith(RecipeGetByIdResponse value,
+          $Res Function(RecipeGetByIdResponse) _then) =
+      _$RecipeGetByIdResponseCopyWithImpl;
+  @useResult
+  $Res call({@JsonKey(name: 'recipe') Recipe recipe});
+
+  $RecipeCopyWith<$Res> get recipe;
+}
+
+/// @nodoc
+class _$RecipeGetByIdResponseCopyWithImpl<$Res>
+    implements $RecipeGetByIdResponseCopyWith<$Res> {
+  _$RecipeGetByIdResponseCopyWithImpl(this._self, this._then);
+
+  final RecipeGetByIdResponse _self;
+  final $Res Function(RecipeGetByIdResponse) _then;
+
+  /// Create a copy of RecipeGetByIdResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? recipe = null,
+  }) {
+    return _then(_self.copyWith(
+      recipe: null == recipe
+          ? _self.recipe
+          : recipe // ignore: cast_nullable_to_non_nullable
+              as Recipe,
+    ));
+  }
+
+  /// Create a copy of RecipeGetByIdResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $RecipeCopyWith<$Res> get recipe {
+    return $RecipeCopyWith<$Res>(_self.recipe, (value) {
+      return _then(_self.copyWith(recipe: value));
+    });
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _RecipeGetByIdResponse implements RecipeGetByIdResponse {
+  const _RecipeGetByIdResponse({@JsonKey(name: 'recipe') required this.recipe});
+  factory _RecipeGetByIdResponse.fromJson(Map<String, dynamic> json) =>
+      _$RecipeGetByIdResponseFromJson(json);
+
+  @override
+  @JsonKey(name: 'recipe')
+  final Recipe recipe;
+
+  /// Create a copy of RecipeGetByIdResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  _$RecipeGetByIdResponseCopyWith<_RecipeGetByIdResponse> get copyWith =>
+      __$RecipeGetByIdResponseCopyWithImpl<_RecipeGetByIdResponse>(
+          this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$RecipeGetByIdResponseToJson(
+      this,
+    );
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _RecipeGetByIdResponse &&
+            (identical(other.recipe, recipe) || other.recipe == recipe));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(runtimeType, recipe);
+
+  @override
+  String toString() {
+    return 'RecipeGetByIdResponse(recipe: $recipe)';
+  }
+}
+
+/// @nodoc
+abstract mixin class _$RecipeGetByIdResponseCopyWith<$Res>
+    implements $RecipeGetByIdResponseCopyWith<$Res> {
+  factory _$RecipeGetByIdResponseCopyWith(_RecipeGetByIdResponse value,
+          $Res Function(_RecipeGetByIdResponse) _then) =
+      __$RecipeGetByIdResponseCopyWithImpl;
+  @override
+  @useResult
+  $Res call({@JsonKey(name: 'recipe') Recipe recipe});
+
+  @override
+  $RecipeCopyWith<$Res> get recipe;
+}
+
+/// @nodoc
+class __$RecipeGetByIdResponseCopyWithImpl<$Res>
+    implements _$RecipeGetByIdResponseCopyWith<$Res> {
+  __$RecipeGetByIdResponseCopyWithImpl(this._self, this._then);
+
+  final _RecipeGetByIdResponse _self;
+  final $Res Function(_RecipeGetByIdResponse) _then;
+
+  /// Create a copy of RecipeGetByIdResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $Res call({
+    Object? recipe = null,
+  }) {
+    return _then(_RecipeGetByIdResponse(
+      recipe: null == recipe
+          ? _self.recipe
+          : recipe // ignore: cast_nullable_to_non_nullable
+              as Recipe,
+    ));
+  }
+
+  /// Create a copy of RecipeGetByIdResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $RecipeCopyWith<$Res> get recipe {
+    return $RecipeCopyWith<$Res>(_self.recipe, (value) {
+      return _then(_self.copyWith(recipe: value));
+    });
+  }
+}
+
+/// @nodoc
+mixin _$Recipe {
+  @JsonKey(name: 'recipe_id')
+  String get recipeId;
+  @JsonKey(name: 'recipe_name')
+  String get recipeName;
+  @JsonKey(name: 'recipe_url')
+  String get recipeUrl;
+  @JsonKey(name: 'recipe_description')
+  String get recipeDescription;
+  @JsonKey(name: 'number_of_servings')
+  String get numberOfServings;
+  @JsonKey(name: 'grams_per_portion')
+  String get gramsPerPortion;
+  @JsonKey(name: 'preparation_time_min')
+  String? get preparationTimeMin;
+  @JsonKey(name: 'cooking_time_min')
+  String? get cookingTimeMin;
+  @JsonKey(name: 'rating')
+  String? get rating;
+  @JsonKey(name: 'recipe_types')
+  RecipeTypes get recipeTypes;
+  @JsonKey(name: 'recipe_categories')
+  RecipeCategories get recipeCategories;
+  @JsonKey(name: 'recipe_images')
+  RecipeImages get recipeImages;
+  @JsonKey(name: 'ingredients')
+  Ingredients get ingredients;
+  @JsonKey(name: 'directions')
+  Directions get directions;
+  @JsonKey(name: 'serving_sizes')
+  ServingSizes get servingSizes;
+
+  /// Create a copy of Recipe
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $RecipeCopyWith<Recipe> get copyWith =>
+      _$RecipeCopyWithImpl<Recipe>(this as Recipe, _$identity);
+
+  /// Serializes this Recipe to a JSON map.
+  Map<String, dynamic> toJson();
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is Recipe &&
+            (identical(other.recipeId, recipeId) ||
+                other.recipeId == recipeId) &&
+            (identical(other.recipeName, recipeName) ||
+                other.recipeName == recipeName) &&
+            (identical(other.recipeUrl, recipeUrl) ||
+                other.recipeUrl == recipeUrl) &&
+            (identical(other.recipeDescription, recipeDescription) ||
+                other.recipeDescription == recipeDescription) &&
+            (identical(other.numberOfServings, numberOfServings) ||
+                other.numberOfServings == numberOfServings) &&
+            (identical(other.gramsPerPortion, gramsPerPortion) ||
+                other.gramsPerPortion == gramsPerPortion) &&
+            (identical(other.preparationTimeMin, preparationTimeMin) ||
+                other.preparationTimeMin == preparationTimeMin) &&
+            (identical(other.cookingTimeMin, cookingTimeMin) ||
+                other.cookingTimeMin == cookingTimeMin) &&
+            (identical(other.rating, rating) || other.rating == rating) &&
+            (identical(other.recipeTypes, recipeTypes) ||
+                other.recipeTypes == recipeTypes) &&
+            (identical(other.recipeCategories, recipeCategories) ||
+                other.recipeCategories == recipeCategories) &&
+            (identical(other.recipeImages, recipeImages) ||
+                other.recipeImages == recipeImages) &&
+            (identical(other.ingredients, ingredients) ||
+                other.ingredients == ingredients) &&
+            (identical(other.directions, directions) ||
+                other.directions == directions) &&
+            (identical(other.servingSizes, servingSizes) ||
+                other.servingSizes == servingSizes));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      recipeId,
+      recipeName,
+      recipeUrl,
+      recipeDescription,
+      numberOfServings,
+      gramsPerPortion,
+      preparationTimeMin,
+      cookingTimeMin,
+      rating,
+      recipeTypes,
+      recipeCategories,
+      recipeImages,
+      ingredients,
+      directions,
+      servingSizes);
+
+  @override
+  String toString() {
+    return 'Recipe(recipeId: $recipeId, recipeName: $recipeName, recipeUrl: $recipeUrl, recipeDescription: $recipeDescription, numberOfServings: $numberOfServings, gramsPerPortion: $gramsPerPortion, preparationTimeMin: $preparationTimeMin, cookingTimeMin: $cookingTimeMin, rating: $rating, recipeTypes: $recipeTypes, recipeCategories: $recipeCategories, recipeImages: $recipeImages, ingredients: $ingredients, directions: $directions, servingSizes: $servingSizes)';
+  }
+}
+
+/// @nodoc
+abstract mixin class $RecipeCopyWith<$Res> {
+  factory $RecipeCopyWith(Recipe value, $Res Function(Recipe) _then) =
+      _$RecipeCopyWithImpl;
+  @useResult
+  $Res call(
+      {@JsonKey(name: 'recipe_id') String recipeId,
+      @JsonKey(name: 'recipe_name') String recipeName,
+      @JsonKey(name: 'recipe_url') String recipeUrl,
+      @JsonKey(name: 'recipe_description') String recipeDescription,
+      @JsonKey(name: 'number_of_servings') String numberOfServings,
+      @JsonKey(name: 'grams_per_portion') String gramsPerPortion,
+      @JsonKey(name: 'preparation_time_min') String? preparationTimeMin,
+      @JsonKey(name: 'cooking_time_min') String? cookingTimeMin,
+      @JsonKey(name: 'rating') String? rating,
+      @JsonKey(name: 'recipe_types') RecipeTypes recipeTypes,
+      @JsonKey(name: 'recipe_categories') RecipeCategories recipeCategories,
+      @JsonKey(name: 'recipe_images') RecipeImages recipeImages,
+      @JsonKey(name: 'ingredients') Ingredients ingredients,
+      @JsonKey(name: 'directions') Directions directions,
+      @JsonKey(name: 'serving_sizes') ServingSizes servingSizes});
+
+  $RecipeTypesCopyWith<$Res> get recipeTypes;
+  $RecipeCategoriesCopyWith<$Res> get recipeCategories;
+  $RecipeImagesCopyWith<$Res> get recipeImages;
+  $IngredientsCopyWith<$Res> get ingredients;
+  $DirectionsCopyWith<$Res> get directions;
+  $ServingSizesCopyWith<$Res> get servingSizes;
+}
+
+/// @nodoc
+class _$RecipeCopyWithImpl<$Res> implements $RecipeCopyWith<$Res> {
+  _$RecipeCopyWithImpl(this._self, this._then);
+
+  final Recipe _self;
+  final $Res Function(Recipe) _then;
+
+  /// Create a copy of Recipe
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? recipeId = null,
+    Object? recipeName = null,
+    Object? recipeUrl = null,
+    Object? recipeDescription = null,
+    Object? numberOfServings = null,
+    Object? gramsPerPortion = null,
+    Object? preparationTimeMin = freezed,
+    Object? cookingTimeMin = freezed,
+    Object? rating = freezed,
+    Object? recipeTypes = null,
+    Object? recipeCategories = null,
+    Object? recipeImages = null,
+    Object? ingredients = null,
+    Object? directions = null,
+    Object? servingSizes = null,
+  }) {
+    return _then(_self.copyWith(
+      recipeId: null == recipeId
+          ? _self.recipeId
+          : recipeId // ignore: cast_nullable_to_non_nullable
+              as String,
+      recipeName: null == recipeName
+          ? _self.recipeName
+          : recipeName // ignore: cast_nullable_to_non_nullable
+              as String,
+      recipeUrl: null == recipeUrl
+          ? _self.recipeUrl
+          : recipeUrl // ignore: cast_nullable_to_non_nullable
+              as String,
+      recipeDescription: null == recipeDescription
+          ? _self.recipeDescription
+          : recipeDescription // ignore: cast_nullable_to_non_nullable
+              as String,
+      numberOfServings: null == numberOfServings
+          ? _self.numberOfServings
+          : numberOfServings // ignore: cast_nullable_to_non_nullable
+              as String,
+      gramsPerPortion: null == gramsPerPortion
+          ? _self.gramsPerPortion
+          : gramsPerPortion // ignore: cast_nullable_to_non_nullable
+              as String,
+      preparationTimeMin: freezed == preparationTimeMin
+          ? _self.preparationTimeMin
+          : preparationTimeMin // ignore: cast_nullable_to_non_nullable
+              as String?,
+      cookingTimeMin: freezed == cookingTimeMin
+          ? _self.cookingTimeMin
+          : cookingTimeMin // ignore: cast_nullable_to_non_nullable
+              as String?,
+      rating: freezed == rating
+          ? _self.rating
+          : rating // ignore: cast_nullable_to_non_nullable
+              as String?,
+      recipeTypes: null == recipeTypes
+          ? _self.recipeTypes
+          : recipeTypes // ignore: cast_nullable_to_non_nullable
+              as RecipeTypes,
+      recipeCategories: null == recipeCategories
+          ? _self.recipeCategories
+          : recipeCategories // ignore: cast_nullable_to_non_nullable
+              as RecipeCategories,
+      recipeImages: null == recipeImages
+          ? _self.recipeImages
+          : recipeImages // ignore: cast_nullable_to_non_nullable
+              as RecipeImages,
+      ingredients: null == ingredients
+          ? _self.ingredients
+          : ingredients // ignore: cast_nullable_to_non_nullable
+              as Ingredients,
+      directions: null == directions
+          ? _self.directions
+          : directions // ignore: cast_nullable_to_non_nullable
+              as Directions,
+      servingSizes: null == servingSizes
+          ? _self.servingSizes
+          : servingSizes // ignore: cast_nullable_to_non_nullable
+              as ServingSizes,
+    ));
+  }
+
+  /// Create a copy of Recipe
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $RecipeTypesCopyWith<$Res> get recipeTypes {
+    return $RecipeTypesCopyWith<$Res>(_self.recipeTypes, (value) {
+      return _then(_self.copyWith(recipeTypes: value));
+    });
+  }
+
+  /// Create a copy of Recipe
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $RecipeCategoriesCopyWith<$Res> get recipeCategories {
+    return $RecipeCategoriesCopyWith<$Res>(_self.recipeCategories, (value) {
+      return _then(_self.copyWith(recipeCategories: value));
+    });
+  }
+
+  /// Create a copy of Recipe
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $RecipeImagesCopyWith<$Res> get recipeImages {
+    return $RecipeImagesCopyWith<$Res>(_self.recipeImages, (value) {
+      return _then(_self.copyWith(recipeImages: value));
+    });
+  }
+
+  /// Create a copy of Recipe
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $IngredientsCopyWith<$Res> get ingredients {
+    return $IngredientsCopyWith<$Res>(_self.ingredients, (value) {
+      return _then(_self.copyWith(ingredients: value));
+    });
+  }
+
+  /// Create a copy of Recipe
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $DirectionsCopyWith<$Res> get directions {
+    return $DirectionsCopyWith<$Res>(_self.directions, (value) {
+      return _then(_self.copyWith(directions: value));
+    });
+  }
+
+  /// Create a copy of Recipe
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $ServingSizesCopyWith<$Res> get servingSizes {
+    return $ServingSizesCopyWith<$Res>(_self.servingSizes, (value) {
+      return _then(_self.copyWith(servingSizes: value));
+    });
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _Recipe implements Recipe {
+  const _Recipe(
+      {@JsonKey(name: 'recipe_id') required this.recipeId,
+      @JsonKey(name: 'recipe_name') required this.recipeName,
+      @JsonKey(name: 'recipe_url') required this.recipeUrl,
+      @JsonKey(name: 'recipe_description') required this.recipeDescription,
+      @JsonKey(name: 'number_of_servings') required this.numberOfServings,
+      @JsonKey(name: 'grams_per_portion') required this.gramsPerPortion,
+      @JsonKey(name: 'preparation_time_min') this.preparationTimeMin,
+      @JsonKey(name: 'cooking_time_min') this.cookingTimeMin,
+      @JsonKey(name: 'rating') this.rating,
+      @JsonKey(name: 'recipe_types') required this.recipeTypes,
+      @JsonKey(name: 'recipe_categories') required this.recipeCategories,
+      @JsonKey(name: 'recipe_images') required this.recipeImages,
+      @JsonKey(name: 'ingredients') required this.ingredients,
+      @JsonKey(name: 'directions') required this.directions,
+      @JsonKey(name: 'serving_sizes') required this.servingSizes});
+  factory _Recipe.fromJson(Map<String, dynamic> json) => _$RecipeFromJson(json);
+
+  @override
+  @JsonKey(name: 'recipe_id')
+  final String recipeId;
+  @override
+  @JsonKey(name: 'recipe_name')
+  final String recipeName;
+  @override
+  @JsonKey(name: 'recipe_url')
+  final String recipeUrl;
+  @override
+  @JsonKey(name: 'recipe_description')
+  final String recipeDescription;
+  @override
+  @JsonKey(name: 'number_of_servings')
+  final String numberOfServings;
+  @override
+  @JsonKey(name: 'grams_per_portion')
+  final String gramsPerPortion;
+  @override
+  @JsonKey(name: 'preparation_time_min')
+  final String? preparationTimeMin;
+  @override
+  @JsonKey(name: 'cooking_time_min')
+  final String? cookingTimeMin;
+  @override
+  @JsonKey(name: 'rating')
+  final String? rating;
+  @override
+  @JsonKey(name: 'recipe_types')
+  final RecipeTypes recipeTypes;
+  @override
+  @JsonKey(name: 'recipe_categories')
+  final RecipeCategories recipeCategories;
+  @override
+  @JsonKey(name: 'recipe_images')
+  final RecipeImages recipeImages;
+  @override
+  @JsonKey(name: 'ingredients')
+  final Ingredients ingredients;
+  @override
+  @JsonKey(name: 'directions')
+  final Directions directions;
+  @override
+  @JsonKey(name: 'serving_sizes')
+  final ServingSizes servingSizes;
+
+  /// Create a copy of Recipe
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  _$RecipeCopyWith<_Recipe> get copyWith =>
+      __$RecipeCopyWithImpl<_Recipe>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$RecipeToJson(
+      this,
+    );
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _Recipe &&
+            (identical(other.recipeId, recipeId) ||
+                other.recipeId == recipeId) &&
+            (identical(other.recipeName, recipeName) ||
+                other.recipeName == recipeName) &&
+            (identical(other.recipeUrl, recipeUrl) ||
+                other.recipeUrl == recipeUrl) &&
+            (identical(other.recipeDescription, recipeDescription) ||
+                other.recipeDescription == recipeDescription) &&
+            (identical(other.numberOfServings, numberOfServings) ||
+                other.numberOfServings == numberOfServings) &&
+            (identical(other.gramsPerPortion, gramsPerPortion) ||
+                other.gramsPerPortion == gramsPerPortion) &&
+            (identical(other.preparationTimeMin, preparationTimeMin) ||
+                other.preparationTimeMin == preparationTimeMin) &&
+            (identical(other.cookingTimeMin, cookingTimeMin) ||
+                other.cookingTimeMin == cookingTimeMin) &&
+            (identical(other.rating, rating) || other.rating == rating) &&
+            (identical(other.recipeTypes, recipeTypes) ||
+                other.recipeTypes == recipeTypes) &&
+            (identical(other.recipeCategories, recipeCategories) ||
+                other.recipeCategories == recipeCategories) &&
+            (identical(other.recipeImages, recipeImages) ||
+                other.recipeImages == recipeImages) &&
+            (identical(other.ingredients, ingredients) ||
+                other.ingredients == ingredients) &&
+            (identical(other.directions, directions) ||
+                other.directions == directions) &&
+            (identical(other.servingSizes, servingSizes) ||
+                other.servingSizes == servingSizes));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      recipeId,
+      recipeName,
+      recipeUrl,
+      recipeDescription,
+      numberOfServings,
+      gramsPerPortion,
+      preparationTimeMin,
+      cookingTimeMin,
+      rating,
+      recipeTypes,
+      recipeCategories,
+      recipeImages,
+      ingredients,
+      directions,
+      servingSizes);
+
+  @override
+  String toString() {
+    return 'Recipe(recipeId: $recipeId, recipeName: $recipeName, recipeUrl: $recipeUrl, recipeDescription: $recipeDescription, numberOfServings: $numberOfServings, gramsPerPortion: $gramsPerPortion, preparationTimeMin: $preparationTimeMin, cookingTimeMin: $cookingTimeMin, rating: $rating, recipeTypes: $recipeTypes, recipeCategories: $recipeCategories, recipeImages: $recipeImages, ingredients: $ingredients, directions: $directions, servingSizes: $servingSizes)';
+  }
+}
+
+/// @nodoc
+abstract mixin class _$RecipeCopyWith<$Res> implements $RecipeCopyWith<$Res> {
+  factory _$RecipeCopyWith(_Recipe value, $Res Function(_Recipe) _then) =
+      __$RecipeCopyWithImpl;
+  @override
+  @useResult
+  $Res call(
+      {@JsonKey(name: 'recipe_id') String recipeId,
+      @JsonKey(name: 'recipe_name') String recipeName,
+      @JsonKey(name: 'recipe_url') String recipeUrl,
+      @JsonKey(name: 'recipe_description') String recipeDescription,
+      @JsonKey(name: 'number_of_servings') String numberOfServings,
+      @JsonKey(name: 'grams_per_portion') String gramsPerPortion,
+      @JsonKey(name: 'preparation_time_min') String? preparationTimeMin,
+      @JsonKey(name: 'cooking_time_min') String? cookingTimeMin,
+      @JsonKey(name: 'rating') String? rating,
+      @JsonKey(name: 'recipe_types') RecipeTypes recipeTypes,
+      @JsonKey(name: 'recipe_categories') RecipeCategories recipeCategories,
+      @JsonKey(name: 'recipe_images') RecipeImages recipeImages,
+      @JsonKey(name: 'ingredients') Ingredients ingredients,
+      @JsonKey(name: 'directions') Directions directions,
+      @JsonKey(name: 'serving_sizes') ServingSizes servingSizes});
+
+  @override
+  $RecipeTypesCopyWith<$Res> get recipeTypes;
+  @override
+  $RecipeCategoriesCopyWith<$Res> get recipeCategories;
+  @override
+  $RecipeImagesCopyWith<$Res> get recipeImages;
+  @override
+  $IngredientsCopyWith<$Res> get ingredients;
+  @override
+  $DirectionsCopyWith<$Res> get directions;
+  @override
+  $ServingSizesCopyWith<$Res> get servingSizes;
+}
+
+/// @nodoc
+class __$RecipeCopyWithImpl<$Res> implements _$RecipeCopyWith<$Res> {
+  __$RecipeCopyWithImpl(this._self, this._then);
+
+  final _Recipe _self;
+  final $Res Function(_Recipe) _then;
+
+  /// Create a copy of Recipe
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $Res call({
+    Object? recipeId = null,
+    Object? recipeName = null,
+    Object? recipeUrl = null,
+    Object? recipeDescription = null,
+    Object? numberOfServings = null,
+    Object? gramsPerPortion = null,
+    Object? preparationTimeMin = freezed,
+    Object? cookingTimeMin = freezed,
+    Object? rating = freezed,
+    Object? recipeTypes = null,
+    Object? recipeCategories = null,
+    Object? recipeImages = null,
+    Object? ingredients = null,
+    Object? directions = null,
+    Object? servingSizes = null,
+  }) {
+    return _then(_Recipe(
+      recipeId: null == recipeId
+          ? _self.recipeId
+          : recipeId // ignore: cast_nullable_to_non_nullable
+              as String,
+      recipeName: null == recipeName
+          ? _self.recipeName
+          : recipeName // ignore: cast_nullable_to_non_nullable
+              as String,
+      recipeUrl: null == recipeUrl
+          ? _self.recipeUrl
+          : recipeUrl // ignore: cast_nullable_to_non_nullable
+              as String,
+      recipeDescription: null == recipeDescription
+          ? _self.recipeDescription
+          : recipeDescription // ignore: cast_nullable_to_non_nullable
+              as String,
+      numberOfServings: null == numberOfServings
+          ? _self.numberOfServings
+          : numberOfServings // ignore: cast_nullable_to_non_nullable
+              as String,
+      gramsPerPortion: null == gramsPerPortion
+          ? _self.gramsPerPortion
+          : gramsPerPortion // ignore: cast_nullable_to_non_nullable
+              as String,
+      preparationTimeMin: freezed == preparationTimeMin
+          ? _self.preparationTimeMin
+          : preparationTimeMin // ignore: cast_nullable_to_non_nullable
+              as String?,
+      cookingTimeMin: freezed == cookingTimeMin
+          ? _self.cookingTimeMin
+          : cookingTimeMin // ignore: cast_nullable_to_non_nullable
+              as String?,
+      rating: freezed == rating
+          ? _self.rating
+          : rating // ignore: cast_nullable_to_non_nullable
+              as String?,
+      recipeTypes: null == recipeTypes
+          ? _self.recipeTypes
+          : recipeTypes // ignore: cast_nullable_to_non_nullable
+              as RecipeTypes,
+      recipeCategories: null == recipeCategories
+          ? _self.recipeCategories
+          : recipeCategories // ignore: cast_nullable_to_non_nullable
+              as RecipeCategories,
+      recipeImages: null == recipeImages
+          ? _self.recipeImages
+          : recipeImages // ignore: cast_nullable_to_non_nullable
+              as RecipeImages,
+      ingredients: null == ingredients
+          ? _self.ingredients
+          : ingredients // ignore: cast_nullable_to_non_nullable
+              as Ingredients,
+      directions: null == directions
+          ? _self.directions
+          : directions // ignore: cast_nullable_to_non_nullable
+              as Directions,
+      servingSizes: null == servingSizes
+          ? _self.servingSizes
+          : servingSizes // ignore: cast_nullable_to_non_nullable
+              as ServingSizes,
+    ));
+  }
+
+  /// Create a copy of Recipe
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $RecipeTypesCopyWith<$Res> get recipeTypes {
+    return $RecipeTypesCopyWith<$Res>(_self.recipeTypes, (value) {
+      return _then(_self.copyWith(recipeTypes: value));
+    });
+  }
+
+  /// Create a copy of Recipe
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $RecipeCategoriesCopyWith<$Res> get recipeCategories {
+    return $RecipeCategoriesCopyWith<$Res>(_self.recipeCategories, (value) {
+      return _then(_self.copyWith(recipeCategories: value));
+    });
+  }
+
+  /// Create a copy of Recipe
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $RecipeImagesCopyWith<$Res> get recipeImages {
+    return $RecipeImagesCopyWith<$Res>(_self.recipeImages, (value) {
+      return _then(_self.copyWith(recipeImages: value));
+    });
+  }
+
+  /// Create a copy of Recipe
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $IngredientsCopyWith<$Res> get ingredients {
+    return $IngredientsCopyWith<$Res>(_self.ingredients, (value) {
+      return _then(_self.copyWith(ingredients: value));
+    });
+  }
+
+  /// Create a copy of Recipe
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $DirectionsCopyWith<$Res> get directions {
+    return $DirectionsCopyWith<$Res>(_self.directions, (value) {
+      return _then(_self.copyWith(directions: value));
+    });
+  }
+
+  /// Create a copy of Recipe
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $ServingSizesCopyWith<$Res> get servingSizes {
+    return $ServingSizesCopyWith<$Res>(_self.servingSizes, (value) {
+      return _then(_self.copyWith(servingSizes: value));
+    });
+  }
+}
+
+/// @nodoc
+mixin _$RecipeTypes {
+  @JsonKey(name: 'recipe_type')
+  List<String> get recipeType;
+
+  /// Create a copy of RecipeTypes
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $RecipeTypesCopyWith<RecipeTypes> get copyWith =>
+      _$RecipeTypesCopyWithImpl<RecipeTypes>(this as RecipeTypes, _$identity);
+
+  /// Serializes this RecipeTypes to a JSON map.
+  Map<String, dynamic> toJson();
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is RecipeTypes &&
+            const DeepCollectionEquality()
+                .equals(other.recipeType, recipeType));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(recipeType));
+
+  @override
+  String toString() {
+    return 'RecipeTypes(recipeType: $recipeType)';
+  }
+}
+
+/// @nodoc
+abstract mixin class $RecipeTypesCopyWith<$Res> {
+  factory $RecipeTypesCopyWith(
+          RecipeTypes value, $Res Function(RecipeTypes) _then) =
+      _$RecipeTypesCopyWithImpl;
+  @useResult
+  $Res call({@JsonKey(name: 'recipe_type') List<String> recipeType});
+}
+
+/// @nodoc
+class _$RecipeTypesCopyWithImpl<$Res> implements $RecipeTypesCopyWith<$Res> {
+  _$RecipeTypesCopyWithImpl(this._self, this._then);
+
+  final RecipeTypes _self;
+  final $Res Function(RecipeTypes) _then;
+
+  /// Create a copy of RecipeTypes
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? recipeType = null,
+  }) {
+    return _then(_self.copyWith(
+      recipeType: null == recipeType
+          ? _self.recipeType
+          : recipeType // ignore: cast_nullable_to_non_nullable
+              as List<String>,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _RecipeTypes implements RecipeTypes {
+  const _RecipeTypes(
+      {@JsonKey(name: 'recipe_type') required final List<String> recipeType})
+      : _recipeType = recipeType;
+  factory _RecipeTypes.fromJson(Map<String, dynamic> json) =>
+      _$RecipeTypesFromJson(json);
+
+  final List<String> _recipeType;
+  @override
+  @JsonKey(name: 'recipe_type')
+  List<String> get recipeType {
+    if (_recipeType is EqualUnmodifiableListView) return _recipeType;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_recipeType);
+  }
+
+  /// Create a copy of RecipeTypes
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  _$RecipeTypesCopyWith<_RecipeTypes> get copyWith =>
+      __$RecipeTypesCopyWithImpl<_RecipeTypes>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$RecipeTypesToJson(
+      this,
+    );
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _RecipeTypes &&
+            const DeepCollectionEquality()
+                .equals(other._recipeType, _recipeType));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType, const DeepCollectionEquality().hash(_recipeType));
+
+  @override
+  String toString() {
+    return 'RecipeTypes(recipeType: $recipeType)';
+  }
+}
+
+/// @nodoc
+abstract mixin class _$RecipeTypesCopyWith<$Res>
+    implements $RecipeTypesCopyWith<$Res> {
+  factory _$RecipeTypesCopyWith(
+          _RecipeTypes value, $Res Function(_RecipeTypes) _then) =
+      __$RecipeTypesCopyWithImpl;
+  @override
+  @useResult
+  $Res call({@JsonKey(name: 'recipe_type') List<String> recipeType});
+}
+
+/// @nodoc
+class __$RecipeTypesCopyWithImpl<$Res> implements _$RecipeTypesCopyWith<$Res> {
+  __$RecipeTypesCopyWithImpl(this._self, this._then);
+
+  final _RecipeTypes _self;
+  final $Res Function(_RecipeTypes) _then;
+
+  /// Create a copy of RecipeTypes
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $Res call({
+    Object? recipeType = null,
+  }) {
+    return _then(_RecipeTypes(
+      recipeType: null == recipeType
+          ? _self._recipeType
+          : recipeType // ignore: cast_nullable_to_non_nullable
+              as List<String>,
+    ));
+  }
+}
+
+/// @nodoc
+mixin _$RecipeCategories {
+  @JsonKey(name: 'recipe_category')
+  List<RecipeCategory> get recipeCategory;
+
+  /// Create a copy of RecipeCategories
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $RecipeCategoriesCopyWith<RecipeCategories> get copyWith =>
+      _$RecipeCategoriesCopyWithImpl<RecipeCategories>(
+          this as RecipeCategories, _$identity);
+
+  /// Serializes this RecipeCategories to a JSON map.
+  Map<String, dynamic> toJson();
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is RecipeCategories &&
+            const DeepCollectionEquality()
+                .equals(other.recipeCategory, recipeCategory));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType, const DeepCollectionEquality().hash(recipeCategory));
+
+  @override
+  String toString() {
+    return 'RecipeCategories(recipeCategory: $recipeCategory)';
+  }
+}
+
+/// @nodoc
+abstract mixin class $RecipeCategoriesCopyWith<$Res> {
+  factory $RecipeCategoriesCopyWith(
+          RecipeCategories value, $Res Function(RecipeCategories) _then) =
+      _$RecipeCategoriesCopyWithImpl;
+  @useResult
+  $Res call(
+      {@JsonKey(name: 'recipe_category') List<RecipeCategory> recipeCategory});
+}
+
+/// @nodoc
+class _$RecipeCategoriesCopyWithImpl<$Res>
+    implements $RecipeCategoriesCopyWith<$Res> {
+  _$RecipeCategoriesCopyWithImpl(this._self, this._then);
+
+  final RecipeCategories _self;
+  final $Res Function(RecipeCategories) _then;
+
+  /// Create a copy of RecipeCategories
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? recipeCategory = null,
+  }) {
+    return _then(_self.copyWith(
+      recipeCategory: null == recipeCategory
+          ? _self.recipeCategory
+          : recipeCategory // ignore: cast_nullable_to_non_nullable
+              as List<RecipeCategory>,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _RecipeCategories implements RecipeCategories {
+  const _RecipeCategories(
+      {@JsonKey(name: 'recipe_category')
+      required final List<RecipeCategory> recipeCategory})
+      : _recipeCategory = recipeCategory;
+  factory _RecipeCategories.fromJson(Map<String, dynamic> json) =>
+      _$RecipeCategoriesFromJson(json);
+
+  final List<RecipeCategory> _recipeCategory;
+  @override
+  @JsonKey(name: 'recipe_category')
+  List<RecipeCategory> get recipeCategory {
+    if (_recipeCategory is EqualUnmodifiableListView) return _recipeCategory;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_recipeCategory);
+  }
+
+  /// Create a copy of RecipeCategories
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  _$RecipeCategoriesCopyWith<_RecipeCategories> get copyWith =>
+      __$RecipeCategoriesCopyWithImpl<_RecipeCategories>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$RecipeCategoriesToJson(
+      this,
+    );
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _RecipeCategories &&
+            const DeepCollectionEquality()
+                .equals(other._recipeCategory, _recipeCategory));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType, const DeepCollectionEquality().hash(_recipeCategory));
+
+  @override
+  String toString() {
+    return 'RecipeCategories(recipeCategory: $recipeCategory)';
+  }
+}
+
+/// @nodoc
+abstract mixin class _$RecipeCategoriesCopyWith<$Res>
+    implements $RecipeCategoriesCopyWith<$Res> {
+  factory _$RecipeCategoriesCopyWith(
+          _RecipeCategories value, $Res Function(_RecipeCategories) _then) =
+      __$RecipeCategoriesCopyWithImpl;
+  @override
+  @useResult
+  $Res call(
+      {@JsonKey(name: 'recipe_category') List<RecipeCategory> recipeCategory});
+}
+
+/// @nodoc
+class __$RecipeCategoriesCopyWithImpl<$Res>
+    implements _$RecipeCategoriesCopyWith<$Res> {
+  __$RecipeCategoriesCopyWithImpl(this._self, this._then);
+
+  final _RecipeCategories _self;
+  final $Res Function(_RecipeCategories) _then;
+
+  /// Create a copy of RecipeCategories
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $Res call({
+    Object? recipeCategory = null,
+  }) {
+    return _then(_RecipeCategories(
+      recipeCategory: null == recipeCategory
+          ? _self._recipeCategory
+          : recipeCategory // ignore: cast_nullable_to_non_nullable
+              as List<RecipeCategory>,
+    ));
+  }
+}
+
+/// @nodoc
+mixin _$RecipeCategory {
+  @JsonKey(name: 'recipe_category_name')
+  String get recipeCategoryName;
+  @JsonKey(name: 'recipe_category_url')
+  String get recipeCategoryUrl;
+
+  /// Create a copy of RecipeCategory
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $RecipeCategoryCopyWith<RecipeCategory> get copyWith =>
+      _$RecipeCategoryCopyWithImpl<RecipeCategory>(
+          this as RecipeCategory, _$identity);
+
+  /// Serializes this RecipeCategory to a JSON map.
+  Map<String, dynamic> toJson();
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is RecipeCategory &&
+            (identical(other.recipeCategoryName, recipeCategoryName) ||
+                other.recipeCategoryName == recipeCategoryName) &&
+            (identical(other.recipeCategoryUrl, recipeCategoryUrl) ||
+                other.recipeCategoryUrl == recipeCategoryUrl));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, recipeCategoryName, recipeCategoryUrl);
+
+  @override
+  String toString() {
+    return 'RecipeCategory(recipeCategoryName: $recipeCategoryName, recipeCategoryUrl: $recipeCategoryUrl)';
+  }
+}
+
+/// @nodoc
+abstract mixin class $RecipeCategoryCopyWith<$Res> {
+  factory $RecipeCategoryCopyWith(
+          RecipeCategory value, $Res Function(RecipeCategory) _then) =
+      _$RecipeCategoryCopyWithImpl;
+  @useResult
+  $Res call(
+      {@JsonKey(name: 'recipe_category_name') String recipeCategoryName,
+      @JsonKey(name: 'recipe_category_url') String recipeCategoryUrl});
+}
+
+/// @nodoc
+class _$RecipeCategoryCopyWithImpl<$Res>
+    implements $RecipeCategoryCopyWith<$Res> {
+  _$RecipeCategoryCopyWithImpl(this._self, this._then);
+
+  final RecipeCategory _self;
+  final $Res Function(RecipeCategory) _then;
+
+  /// Create a copy of RecipeCategory
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? recipeCategoryName = null,
+    Object? recipeCategoryUrl = null,
+  }) {
+    return _then(_self.copyWith(
+      recipeCategoryName: null == recipeCategoryName
+          ? _self.recipeCategoryName
+          : recipeCategoryName // ignore: cast_nullable_to_non_nullable
+              as String,
+      recipeCategoryUrl: null == recipeCategoryUrl
+          ? _self.recipeCategoryUrl
+          : recipeCategoryUrl // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _RecipeCategory implements RecipeCategory {
+  const _RecipeCategory(
+      {@JsonKey(name: 'recipe_category_name') required this.recipeCategoryName,
+      @JsonKey(name: 'recipe_category_url') required this.recipeCategoryUrl});
+  factory _RecipeCategory.fromJson(Map<String, dynamic> json) =>
+      _$RecipeCategoryFromJson(json);
+
+  @override
+  @JsonKey(name: 'recipe_category_name')
+  final String recipeCategoryName;
+  @override
+  @JsonKey(name: 'recipe_category_url')
+  final String recipeCategoryUrl;
+
+  /// Create a copy of RecipeCategory
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  _$RecipeCategoryCopyWith<_RecipeCategory> get copyWith =>
+      __$RecipeCategoryCopyWithImpl<_RecipeCategory>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$RecipeCategoryToJson(
+      this,
+    );
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _RecipeCategory &&
+            (identical(other.recipeCategoryName, recipeCategoryName) ||
+                other.recipeCategoryName == recipeCategoryName) &&
+            (identical(other.recipeCategoryUrl, recipeCategoryUrl) ||
+                other.recipeCategoryUrl == recipeCategoryUrl));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, recipeCategoryName, recipeCategoryUrl);
+
+  @override
+  String toString() {
+    return 'RecipeCategory(recipeCategoryName: $recipeCategoryName, recipeCategoryUrl: $recipeCategoryUrl)';
+  }
+}
+
+/// @nodoc
+abstract mixin class _$RecipeCategoryCopyWith<$Res>
+    implements $RecipeCategoryCopyWith<$Res> {
+  factory _$RecipeCategoryCopyWith(
+          _RecipeCategory value, $Res Function(_RecipeCategory) _then) =
+      __$RecipeCategoryCopyWithImpl;
+  @override
+  @useResult
+  $Res call(
+      {@JsonKey(name: 'recipe_category_name') String recipeCategoryName,
+      @JsonKey(name: 'recipe_category_url') String recipeCategoryUrl});
+}
+
+/// @nodoc
+class __$RecipeCategoryCopyWithImpl<$Res>
+    implements _$RecipeCategoryCopyWith<$Res> {
+  __$RecipeCategoryCopyWithImpl(this._self, this._then);
+
+  final _RecipeCategory _self;
+  final $Res Function(_RecipeCategory) _then;
+
+  /// Create a copy of RecipeCategory
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $Res call({
+    Object? recipeCategoryName = null,
+    Object? recipeCategoryUrl = null,
+  }) {
+    return _then(_RecipeCategory(
+      recipeCategoryName: null == recipeCategoryName
+          ? _self.recipeCategoryName
+          : recipeCategoryName // ignore: cast_nullable_to_non_nullable
+              as String,
+      recipeCategoryUrl: null == recipeCategoryUrl
+          ? _self.recipeCategoryUrl
+          : recipeCategoryUrl // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+mixin _$RecipeImages {
+  @JsonKey(name: 'recipe_image')
+  List<String> get recipeImage;
+
+  /// Create a copy of RecipeImages
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $RecipeImagesCopyWith<RecipeImages> get copyWith =>
+      _$RecipeImagesCopyWithImpl<RecipeImages>(
+          this as RecipeImages, _$identity);
+
+  /// Serializes this RecipeImages to a JSON map.
+  Map<String, dynamic> toJson();
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is RecipeImages &&
+            const DeepCollectionEquality()
+                .equals(other.recipeImage, recipeImage));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType, const DeepCollectionEquality().hash(recipeImage));
+
+  @override
+  String toString() {
+    return 'RecipeImages(recipeImage: $recipeImage)';
+  }
+}
+
+/// @nodoc
+abstract mixin class $RecipeImagesCopyWith<$Res> {
+  factory $RecipeImagesCopyWith(
+          RecipeImages value, $Res Function(RecipeImages) _then) =
+      _$RecipeImagesCopyWithImpl;
+  @useResult
+  $Res call({@JsonKey(name: 'recipe_image') List<String> recipeImage});
+}
+
+/// @nodoc
+class _$RecipeImagesCopyWithImpl<$Res> implements $RecipeImagesCopyWith<$Res> {
+  _$RecipeImagesCopyWithImpl(this._self, this._then);
+
+  final RecipeImages _self;
+  final $Res Function(RecipeImages) _then;
+
+  /// Create a copy of RecipeImages
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? recipeImage = null,
+  }) {
+    return _then(_self.copyWith(
+      recipeImage: null == recipeImage
+          ? _self.recipeImage
+          : recipeImage // ignore: cast_nullable_to_non_nullable
+              as List<String>,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _RecipeImages implements RecipeImages {
+  const _RecipeImages(
+      {@JsonKey(name: 'recipe_image') required final List<String> recipeImage})
+      : _recipeImage = recipeImage;
+  factory _RecipeImages.fromJson(Map<String, dynamic> json) =>
+      _$RecipeImagesFromJson(json);
+
+  final List<String> _recipeImage;
+  @override
+  @JsonKey(name: 'recipe_image')
+  List<String> get recipeImage {
+    if (_recipeImage is EqualUnmodifiableListView) return _recipeImage;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_recipeImage);
+  }
+
+  /// Create a copy of RecipeImages
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  _$RecipeImagesCopyWith<_RecipeImages> get copyWith =>
+      __$RecipeImagesCopyWithImpl<_RecipeImages>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$RecipeImagesToJson(
+      this,
+    );
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _RecipeImages &&
+            const DeepCollectionEquality()
+                .equals(other._recipeImage, _recipeImage));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType, const DeepCollectionEquality().hash(_recipeImage));
+
+  @override
+  String toString() {
+    return 'RecipeImages(recipeImage: $recipeImage)';
+  }
+}
+
+/// @nodoc
+abstract mixin class _$RecipeImagesCopyWith<$Res>
+    implements $RecipeImagesCopyWith<$Res> {
+  factory _$RecipeImagesCopyWith(
+          _RecipeImages value, $Res Function(_RecipeImages) _then) =
+      __$RecipeImagesCopyWithImpl;
+  @override
+  @useResult
+  $Res call({@JsonKey(name: 'recipe_image') List<String> recipeImage});
+}
+
+/// @nodoc
+class __$RecipeImagesCopyWithImpl<$Res>
+    implements _$RecipeImagesCopyWith<$Res> {
+  __$RecipeImagesCopyWithImpl(this._self, this._then);
+
+  final _RecipeImages _self;
+  final $Res Function(_RecipeImages) _then;
+
+  /// Create a copy of RecipeImages
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $Res call({
+    Object? recipeImage = null,
+  }) {
+    return _then(_RecipeImages(
+      recipeImage: null == recipeImage
+          ? _self._recipeImage
+          : recipeImage // ignore: cast_nullable_to_non_nullable
+              as List<String>,
+    ));
+  }
+}
+
+/// @nodoc
+mixin _$Ingredients {
+  @JsonKey(name: 'ingredient')
+  List<Ingredient> get ingredient;
+
+  /// Create a copy of Ingredients
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $IngredientsCopyWith<Ingredients> get copyWith =>
+      _$IngredientsCopyWithImpl<Ingredients>(this as Ingredients, _$identity);
+
+  /// Serializes this Ingredients to a JSON map.
+  Map<String, dynamic> toJson();
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is Ingredients &&
+            const DeepCollectionEquality()
+                .equals(other.ingredient, ingredient));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(ingredient));
+
+  @override
+  String toString() {
+    return 'Ingredients(ingredient: $ingredient)';
+  }
+}
+
+/// @nodoc
+abstract mixin class $IngredientsCopyWith<$Res> {
+  factory $IngredientsCopyWith(
+          Ingredients value, $Res Function(Ingredients) _then) =
+      _$IngredientsCopyWithImpl;
+  @useResult
+  $Res call({@JsonKey(name: 'ingredient') List<Ingredient> ingredient});
+}
+
+/// @nodoc
+class _$IngredientsCopyWithImpl<$Res> implements $IngredientsCopyWith<$Res> {
+  _$IngredientsCopyWithImpl(this._self, this._then);
+
+  final Ingredients _self;
+  final $Res Function(Ingredients) _then;
+
+  /// Create a copy of Ingredients
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? ingredient = null,
+  }) {
+    return _then(_self.copyWith(
+      ingredient: null == ingredient
+          ? _self.ingredient
+          : ingredient // ignore: cast_nullable_to_non_nullable
+              as List<Ingredient>,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _Ingredients implements Ingredients {
+  const _Ingredients(
+      {@JsonKey(name: 'ingredient') required final List<Ingredient> ingredient})
+      : _ingredient = ingredient;
+  factory _Ingredients.fromJson(Map<String, dynamic> json) =>
+      _$IngredientsFromJson(json);
+
+  final List<Ingredient> _ingredient;
+  @override
+  @JsonKey(name: 'ingredient')
+  List<Ingredient> get ingredient {
+    if (_ingredient is EqualUnmodifiableListView) return _ingredient;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_ingredient);
+  }
+
+  /// Create a copy of Ingredients
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  _$IngredientsCopyWith<_Ingredients> get copyWith =>
+      __$IngredientsCopyWithImpl<_Ingredients>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$IngredientsToJson(
+      this,
+    );
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _Ingredients &&
+            const DeepCollectionEquality()
+                .equals(other._ingredient, _ingredient));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType, const DeepCollectionEquality().hash(_ingredient));
+
+  @override
+  String toString() {
+    return 'Ingredients(ingredient: $ingredient)';
+  }
+}
+
+/// @nodoc
+abstract mixin class _$IngredientsCopyWith<$Res>
+    implements $IngredientsCopyWith<$Res> {
+  factory _$IngredientsCopyWith(
+          _Ingredients value, $Res Function(_Ingredients) _then) =
+      __$IngredientsCopyWithImpl;
+  @override
+  @useResult
+  $Res call({@JsonKey(name: 'ingredient') List<Ingredient> ingredient});
+}
+
+/// @nodoc
+class __$IngredientsCopyWithImpl<$Res> implements _$IngredientsCopyWith<$Res> {
+  __$IngredientsCopyWithImpl(this._self, this._then);
+
+  final _Ingredients _self;
+  final $Res Function(_Ingredients) _then;
+
+  /// Create a copy of Ingredients
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $Res call({
+    Object? ingredient = null,
+  }) {
+    return _then(_Ingredients(
+      ingredient: null == ingredient
+          ? _self._ingredient
+          : ingredient // ignore: cast_nullable_to_non_nullable
+              as List<Ingredient>,
+    ));
+  }
+}
+
+/// @nodoc
+mixin _$Ingredient {
+  @JsonKey(name: 'food_id')
+  String get foodId;
+  @JsonKey(name: 'food_name')
+  String get foodName;
+  @JsonKey(name: 'serving_id')
+  String get servingId;
+  @JsonKey(name: 'number_of_units')
+  String get numberOfUnits;
+  @JsonKey(name: 'measurement_description')
+  String get measurementDescription;
+  @JsonKey(name: 'ingredient_url')
+  String get ingredientUrl;
+  @JsonKey(name: 'ingredient_description')
+  String get ingredientDescription;
+
+  /// Create a copy of Ingredient
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $IngredientCopyWith<Ingredient> get copyWith =>
+      _$IngredientCopyWithImpl<Ingredient>(this as Ingredient, _$identity);
+
+  /// Serializes this Ingredient to a JSON map.
+  Map<String, dynamic> toJson();
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is Ingredient &&
+            (identical(other.foodId, foodId) || other.foodId == foodId) &&
+            (identical(other.foodName, foodName) ||
+                other.foodName == foodName) &&
+            (identical(other.servingId, servingId) ||
+                other.servingId == servingId) &&
+            (identical(other.numberOfUnits, numberOfUnits) ||
+                other.numberOfUnits == numberOfUnits) &&
+            (identical(other.measurementDescription, measurementDescription) ||
+                other.measurementDescription == measurementDescription) &&
+            (identical(other.ingredientUrl, ingredientUrl) ||
+                other.ingredientUrl == ingredientUrl) &&
+            (identical(other.ingredientDescription, ingredientDescription) ||
+                other.ingredientDescription == ingredientDescription));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      foodId,
+      foodName,
+      servingId,
+      numberOfUnits,
+      measurementDescription,
+      ingredientUrl,
+      ingredientDescription);
+
+  @override
+  String toString() {
+    return 'Ingredient(foodId: $foodId, foodName: $foodName, servingId: $servingId, numberOfUnits: $numberOfUnits, measurementDescription: $measurementDescription, ingredientUrl: $ingredientUrl, ingredientDescription: $ingredientDescription)';
+  }
+}
+
+/// @nodoc
+abstract mixin class $IngredientCopyWith<$Res> {
+  factory $IngredientCopyWith(
+          Ingredient value, $Res Function(Ingredient) _then) =
+      _$IngredientCopyWithImpl;
+  @useResult
+  $Res call(
+      {@JsonKey(name: 'food_id') String foodId,
+      @JsonKey(name: 'food_name') String foodName,
+      @JsonKey(name: 'serving_id') String servingId,
+      @JsonKey(name: 'number_of_units') String numberOfUnits,
+      @JsonKey(name: 'measurement_description') String measurementDescription,
+      @JsonKey(name: 'ingredient_url') String ingredientUrl,
+      @JsonKey(name: 'ingredient_description') String ingredientDescription});
+}
+
+/// @nodoc
+class _$IngredientCopyWithImpl<$Res> implements $IngredientCopyWith<$Res> {
+  _$IngredientCopyWithImpl(this._self, this._then);
+
+  final Ingredient _self;
+  final $Res Function(Ingredient) _then;
+
+  /// Create a copy of Ingredient
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? foodId = null,
+    Object? foodName = null,
+    Object? servingId = null,
+    Object? numberOfUnits = null,
+    Object? measurementDescription = null,
+    Object? ingredientUrl = null,
+    Object? ingredientDescription = null,
+  }) {
+    return _then(_self.copyWith(
+      foodId: null == foodId
+          ? _self.foodId
+          : foodId // ignore: cast_nullable_to_non_nullable
+              as String,
+      foodName: null == foodName
+          ? _self.foodName
+          : foodName // ignore: cast_nullable_to_non_nullable
+              as String,
+      servingId: null == servingId
+          ? _self.servingId
+          : servingId // ignore: cast_nullable_to_non_nullable
+              as String,
+      numberOfUnits: null == numberOfUnits
+          ? _self.numberOfUnits
+          : numberOfUnits // ignore: cast_nullable_to_non_nullable
+              as String,
+      measurementDescription: null == measurementDescription
+          ? _self.measurementDescription
+          : measurementDescription // ignore: cast_nullable_to_non_nullable
+              as String,
+      ingredientUrl: null == ingredientUrl
+          ? _self.ingredientUrl
+          : ingredientUrl // ignore: cast_nullable_to_non_nullable
+              as String,
+      ingredientDescription: null == ingredientDescription
+          ? _self.ingredientDescription
+          : ingredientDescription // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _Ingredient implements Ingredient {
+  const _Ingredient(
+      {@JsonKey(name: 'food_id') required this.foodId,
+      @JsonKey(name: 'food_name') required this.foodName,
+      @JsonKey(name: 'serving_id') required this.servingId,
+      @JsonKey(name: 'number_of_units') required this.numberOfUnits,
+      @JsonKey(name: 'measurement_description')
+      required this.measurementDescription,
+      @JsonKey(name: 'ingredient_url') required this.ingredientUrl,
+      @JsonKey(name: 'ingredient_description')
+      required this.ingredientDescription});
+  factory _Ingredient.fromJson(Map<String, dynamic> json) =>
+      _$IngredientFromJson(json);
+
+  @override
+  @JsonKey(name: 'food_id')
+  final String foodId;
+  @override
+  @JsonKey(name: 'food_name')
+  final String foodName;
+  @override
+  @JsonKey(name: 'serving_id')
+  final String servingId;
+  @override
+  @JsonKey(name: 'number_of_units')
+  final String numberOfUnits;
+  @override
+  @JsonKey(name: 'measurement_description')
+  final String measurementDescription;
+  @override
+  @JsonKey(name: 'ingredient_url')
+  final String ingredientUrl;
+  @override
+  @JsonKey(name: 'ingredient_description')
+  final String ingredientDescription;
+
+  /// Create a copy of Ingredient
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  _$IngredientCopyWith<_Ingredient> get copyWith =>
+      __$IngredientCopyWithImpl<_Ingredient>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$IngredientToJson(
+      this,
+    );
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _Ingredient &&
+            (identical(other.foodId, foodId) || other.foodId == foodId) &&
+            (identical(other.foodName, foodName) ||
+                other.foodName == foodName) &&
+            (identical(other.servingId, servingId) ||
+                other.servingId == servingId) &&
+            (identical(other.numberOfUnits, numberOfUnits) ||
+                other.numberOfUnits == numberOfUnits) &&
+            (identical(other.measurementDescription, measurementDescription) ||
+                other.measurementDescription == measurementDescription) &&
+            (identical(other.ingredientUrl, ingredientUrl) ||
+                other.ingredientUrl == ingredientUrl) &&
+            (identical(other.ingredientDescription, ingredientDescription) ||
+                other.ingredientDescription == ingredientDescription));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      foodId,
+      foodName,
+      servingId,
+      numberOfUnits,
+      measurementDescription,
+      ingredientUrl,
+      ingredientDescription);
+
+  @override
+  String toString() {
+    return 'Ingredient(foodId: $foodId, foodName: $foodName, servingId: $servingId, numberOfUnits: $numberOfUnits, measurementDescription: $measurementDescription, ingredientUrl: $ingredientUrl, ingredientDescription: $ingredientDescription)';
+  }
+}
+
+/// @nodoc
+abstract mixin class _$IngredientCopyWith<$Res>
+    implements $IngredientCopyWith<$Res> {
+  factory _$IngredientCopyWith(
+          _Ingredient value, $Res Function(_Ingredient) _then) =
+      __$IngredientCopyWithImpl;
+  @override
+  @useResult
+  $Res call(
+      {@JsonKey(name: 'food_id') String foodId,
+      @JsonKey(name: 'food_name') String foodName,
+      @JsonKey(name: 'serving_id') String servingId,
+      @JsonKey(name: 'number_of_units') String numberOfUnits,
+      @JsonKey(name: 'measurement_description') String measurementDescription,
+      @JsonKey(name: 'ingredient_url') String ingredientUrl,
+      @JsonKey(name: 'ingredient_description') String ingredientDescription});
+}
+
+/// @nodoc
+class __$IngredientCopyWithImpl<$Res> implements _$IngredientCopyWith<$Res> {
+  __$IngredientCopyWithImpl(this._self, this._then);
+
+  final _Ingredient _self;
+  final $Res Function(_Ingredient) _then;
+
+  /// Create a copy of Ingredient
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $Res call({
+    Object? foodId = null,
+    Object? foodName = null,
+    Object? servingId = null,
+    Object? numberOfUnits = null,
+    Object? measurementDescription = null,
+    Object? ingredientUrl = null,
+    Object? ingredientDescription = null,
+  }) {
+    return _then(_Ingredient(
+      foodId: null == foodId
+          ? _self.foodId
+          : foodId // ignore: cast_nullable_to_non_nullable
+              as String,
+      foodName: null == foodName
+          ? _self.foodName
+          : foodName // ignore: cast_nullable_to_non_nullable
+              as String,
+      servingId: null == servingId
+          ? _self.servingId
+          : servingId // ignore: cast_nullable_to_non_nullable
+              as String,
+      numberOfUnits: null == numberOfUnits
+          ? _self.numberOfUnits
+          : numberOfUnits // ignore: cast_nullable_to_non_nullable
+              as String,
+      measurementDescription: null == measurementDescription
+          ? _self.measurementDescription
+          : measurementDescription // ignore: cast_nullable_to_non_nullable
+              as String,
+      ingredientUrl: null == ingredientUrl
+          ? _self.ingredientUrl
+          : ingredientUrl // ignore: cast_nullable_to_non_nullable
+              as String,
+      ingredientDescription: null == ingredientDescription
+          ? _self.ingredientDescription
+          : ingredientDescription // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+mixin _$Directions {
+  @JsonKey(name: 'direction')
+  List<Direction> get direction;
+
+  /// Create a copy of Directions
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $DirectionsCopyWith<Directions> get copyWith =>
+      _$DirectionsCopyWithImpl<Directions>(this as Directions, _$identity);
+
+  /// Serializes this Directions to a JSON map.
+  Map<String, dynamic> toJson();
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is Directions &&
+            const DeepCollectionEquality().equals(other.direction, direction));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(direction));
+
+  @override
+  String toString() {
+    return 'Directions(direction: $direction)';
+  }
+}
+
+/// @nodoc
+abstract mixin class $DirectionsCopyWith<$Res> {
+  factory $DirectionsCopyWith(
+          Directions value, $Res Function(Directions) _then) =
+      _$DirectionsCopyWithImpl;
+  @useResult
+  $Res call({@JsonKey(name: 'direction') List<Direction> direction});
+}
+
+/// @nodoc
+class _$DirectionsCopyWithImpl<$Res> implements $DirectionsCopyWith<$Res> {
+  _$DirectionsCopyWithImpl(this._self, this._then);
+
+  final Directions _self;
+  final $Res Function(Directions) _then;
+
+  /// Create a copy of Directions
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? direction = null,
+  }) {
+    return _then(_self.copyWith(
+      direction: null == direction
+          ? _self.direction
+          : direction // ignore: cast_nullable_to_non_nullable
+              as List<Direction>,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _Directions implements Directions {
+  const _Directions(
+      {@JsonKey(name: 'direction') required final List<Direction> direction})
+      : _direction = direction;
+  factory _Directions.fromJson(Map<String, dynamic> json) =>
+      _$DirectionsFromJson(json);
+
+  final List<Direction> _direction;
+  @override
+  @JsonKey(name: 'direction')
+  List<Direction> get direction {
+    if (_direction is EqualUnmodifiableListView) return _direction;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_direction);
+  }
+
+  /// Create a copy of Directions
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  _$DirectionsCopyWith<_Directions> get copyWith =>
+      __$DirectionsCopyWithImpl<_Directions>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$DirectionsToJson(
+      this,
+    );
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _Directions &&
+            const DeepCollectionEquality()
+                .equals(other._direction, _direction));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(_direction));
+
+  @override
+  String toString() {
+    return 'Directions(direction: $direction)';
+  }
+}
+
+/// @nodoc
+abstract mixin class _$DirectionsCopyWith<$Res>
+    implements $DirectionsCopyWith<$Res> {
+  factory _$DirectionsCopyWith(
+          _Directions value, $Res Function(_Directions) _then) =
+      __$DirectionsCopyWithImpl;
+  @override
+  @useResult
+  $Res call({@JsonKey(name: 'direction') List<Direction> direction});
+}
+
+/// @nodoc
+class __$DirectionsCopyWithImpl<$Res> implements _$DirectionsCopyWith<$Res> {
+  __$DirectionsCopyWithImpl(this._self, this._then);
+
+  final _Directions _self;
+  final $Res Function(_Directions) _then;
+
+  /// Create a copy of Directions
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $Res call({
+    Object? direction = null,
+  }) {
+    return _then(_Directions(
+      direction: null == direction
+          ? _self._direction
+          : direction // ignore: cast_nullable_to_non_nullable
+              as List<Direction>,
+    ));
+  }
+}
+
+/// @nodoc
+mixin _$Direction {
+  @JsonKey(name: 'direction_number')
+  String get directionNumber;
+  @JsonKey(name: 'direction_description')
+  String get directionDescription;
+
+  /// Create a copy of Direction
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $DirectionCopyWith<Direction> get copyWith =>
+      _$DirectionCopyWithImpl<Direction>(this as Direction, _$identity);
+
+  /// Serializes this Direction to a JSON map.
+  Map<String, dynamic> toJson();
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is Direction &&
+            (identical(other.directionNumber, directionNumber) ||
+                other.directionNumber == directionNumber) &&
+            (identical(other.directionDescription, directionDescription) ||
+                other.directionDescription == directionDescription));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, directionNumber, directionDescription);
+
+  @override
+  String toString() {
+    return 'Direction(directionNumber: $directionNumber, directionDescription: $directionDescription)';
+  }
+}
+
+/// @nodoc
+abstract mixin class $DirectionCopyWith<$Res> {
+  factory $DirectionCopyWith(Direction value, $Res Function(Direction) _then) =
+      _$DirectionCopyWithImpl;
+  @useResult
+  $Res call(
+      {@JsonKey(name: 'direction_number') String directionNumber,
+      @JsonKey(name: 'direction_description') String directionDescription});
+}
+
+/// @nodoc
+class _$DirectionCopyWithImpl<$Res> implements $DirectionCopyWith<$Res> {
+  _$DirectionCopyWithImpl(this._self, this._then);
+
+  final Direction _self;
+  final $Res Function(Direction) _then;
+
+  /// Create a copy of Direction
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? directionNumber = null,
+    Object? directionDescription = null,
+  }) {
+    return _then(_self.copyWith(
+      directionNumber: null == directionNumber
+          ? _self.directionNumber
+          : directionNumber // ignore: cast_nullable_to_non_nullable
+              as String,
+      directionDescription: null == directionDescription
+          ? _self.directionDescription
+          : directionDescription // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _Direction implements Direction {
+  const _Direction(
+      {@JsonKey(name: 'direction_number') required this.directionNumber,
+      @JsonKey(name: 'direction_description')
+      required this.directionDescription});
+  factory _Direction.fromJson(Map<String, dynamic> json) =>
+      _$DirectionFromJson(json);
+
+  @override
+  @JsonKey(name: 'direction_number')
+  final String directionNumber;
+  @override
+  @JsonKey(name: 'direction_description')
+  final String directionDescription;
+
+  /// Create a copy of Direction
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  _$DirectionCopyWith<_Direction> get copyWith =>
+      __$DirectionCopyWithImpl<_Direction>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$DirectionToJson(
+      this,
+    );
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _Direction &&
+            (identical(other.directionNumber, directionNumber) ||
+                other.directionNumber == directionNumber) &&
+            (identical(other.directionDescription, directionDescription) ||
+                other.directionDescription == directionDescription));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, directionNumber, directionDescription);
+
+  @override
+  String toString() {
+    return 'Direction(directionNumber: $directionNumber, directionDescription: $directionDescription)';
+  }
+}
+
+/// @nodoc
+abstract mixin class _$DirectionCopyWith<$Res>
+    implements $DirectionCopyWith<$Res> {
+  factory _$DirectionCopyWith(
+          _Direction value, $Res Function(_Direction) _then) =
+      __$DirectionCopyWithImpl;
+  @override
+  @useResult
+  $Res call(
+      {@JsonKey(name: 'direction_number') String directionNumber,
+      @JsonKey(name: 'direction_description') String directionDescription});
+}
+
+/// @nodoc
+class __$DirectionCopyWithImpl<$Res> implements _$DirectionCopyWith<$Res> {
+  __$DirectionCopyWithImpl(this._self, this._then);
+
+  final _Direction _self;
+  final $Res Function(_Direction) _then;
+
+  /// Create a copy of Direction
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $Res call({
+    Object? directionNumber = null,
+    Object? directionDescription = null,
+  }) {
+    return _then(_Direction(
+      directionNumber: null == directionNumber
+          ? _self.directionNumber
+          : directionNumber // ignore: cast_nullable_to_non_nullable
+              as String,
+      directionDescription: null == directionDescription
+          ? _self.directionDescription
+          : directionDescription // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+mixin _$ServingSizes {
+  @JsonKey(name: 'serving')
+  Serving get serving;
+
+  /// Create a copy of ServingSizes
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $ServingSizesCopyWith<ServingSizes> get copyWith =>
+      _$ServingSizesCopyWithImpl<ServingSizes>(
+          this as ServingSizes, _$identity);
+
+  /// Serializes this ServingSizes to a JSON map.
+  Map<String, dynamic> toJson();
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is ServingSizes &&
+            (identical(other.serving, serving) || other.serving == serving));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(runtimeType, serving);
+
+  @override
+  String toString() {
+    return 'ServingSizes(serving: $serving)';
+  }
+}
+
+/// @nodoc
+abstract mixin class $ServingSizesCopyWith<$Res> {
+  factory $ServingSizesCopyWith(
+          ServingSizes value, $Res Function(ServingSizes) _then) =
+      _$ServingSizesCopyWithImpl;
+  @useResult
+  $Res call({@JsonKey(name: 'serving') Serving serving});
+
+  $ServingCopyWith<$Res> get serving;
+}
+
+/// @nodoc
+class _$ServingSizesCopyWithImpl<$Res> implements $ServingSizesCopyWith<$Res> {
+  _$ServingSizesCopyWithImpl(this._self, this._then);
+
+  final ServingSizes _self;
+  final $Res Function(ServingSizes) _then;
+
+  /// Create a copy of ServingSizes
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? serving = null,
+  }) {
+    return _then(_self.copyWith(
+      serving: null == serving
+          ? _self.serving
+          : serving // ignore: cast_nullable_to_non_nullable
+              as Serving,
+    ));
+  }
+
+  /// Create a copy of ServingSizes
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $ServingCopyWith<$Res> get serving {
+    return $ServingCopyWith<$Res>(_self.serving, (value) {
+      return _then(_self.copyWith(serving: value));
+    });
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _ServingSizes implements ServingSizes {
+  const _ServingSizes({@JsonKey(name: 'serving') required this.serving});
+  factory _ServingSizes.fromJson(Map<String, dynamic> json) =>
+      _$ServingSizesFromJson(json);
+
+  @override
+  @JsonKey(name: 'serving')
+  final Serving serving;
+
+  /// Create a copy of ServingSizes
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  _$ServingSizesCopyWith<_ServingSizes> get copyWith =>
+      __$ServingSizesCopyWithImpl<_ServingSizes>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$ServingSizesToJson(
+      this,
+    );
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _ServingSizes &&
+            (identical(other.serving, serving) || other.serving == serving));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(runtimeType, serving);
+
+  @override
+  String toString() {
+    return 'ServingSizes(serving: $serving)';
+  }
+}
+
+/// @nodoc
+abstract mixin class _$ServingSizesCopyWith<$Res>
+    implements $ServingSizesCopyWith<$Res> {
+  factory _$ServingSizesCopyWith(
+          _ServingSizes value, $Res Function(_ServingSizes) _then) =
+      __$ServingSizesCopyWithImpl;
+  @override
+  @useResult
+  $Res call({@JsonKey(name: 'serving') Serving serving});
+
+  @override
+  $ServingCopyWith<$Res> get serving;
+}
+
+/// @nodoc
+class __$ServingSizesCopyWithImpl<$Res>
+    implements _$ServingSizesCopyWith<$Res> {
+  __$ServingSizesCopyWithImpl(this._self, this._then);
+
+  final _ServingSizes _self;
+  final $Res Function(_ServingSizes) _then;
+
+  /// Create a copy of ServingSizes
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $Res call({
+    Object? serving = null,
+  }) {
+    return _then(_ServingSizes(
+      serving: null == serving
+          ? _self.serving
+          : serving // ignore: cast_nullable_to_non_nullable
+              as Serving,
+    ));
+  }
+
+  /// Create a copy of ServingSizes
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $ServingCopyWith<$Res> get serving {
+    return $ServingCopyWith<$Res>(_self.serving, (value) {
+      return _then(_self.copyWith(serving: value));
+    });
+  }
+}
+
+/// @nodoc
+mixin _$RecipeSearchProps {
+  @JsonKey(name: 'search_expression')
+  String? get searchExpression;
+  @JsonKey(name: 'recipe_types')
+  String? get recipeTypes;
+  @JsonKey(name: 'recipe_types_matchall')
+  bool? get recipeTypesMatchall;
+  @JsonKey(name: 'must_have_images')
+  bool? get mustHaveImages;
+  @JsonKey(name: 'calories.from')
+  int? get caloriesFrom;
+  @JsonKey(name: 'calories.to')
+  int? get caloriesTo;
+  @JsonKey(name: 'carb_percentage.from')
+  int? get carbPercentageFrom;
+  @JsonKey(name: 'carb_percentage.to')
+  int? get carbPercentageTo;
+  @JsonKey(name: 'protein_percentage.from')
+  int? get proteinPercentageFrom;
+  @JsonKey(name: 'protein_percentage.to')
+  int? get proteinPercentageTo;
+  @JsonKey(name: 'fat_percentage.from')
+  int? get fatPercentageFrom;
+  @JsonKey(name: 'fat_percentage.to')
+  int? get fatPercentageTo;
+  @JsonKey(name: 'prep_time.from')
+  int? get prepTimeFrom;
+  @JsonKey(name: 'prep_time.to')
+  int? get prepTimeTo;
+  @JsonKey(name: kpageNumber)
+  int? get pageNumber;
+  @JsonKey(name: kmaxResults)
+  int? get maxResults;
+  @JsonKey(name: 'sort_by')
+  String? get sortBy;
+  @JsonKey(name: kformat)
+  String? get format;
+  @JsonKey(name: kregion)
+  String? get region;
+
+  /// Create a copy of RecipeSearchProps
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $RecipeSearchPropsCopyWith<RecipeSearchProps> get copyWith =>
+      _$RecipeSearchPropsCopyWithImpl<RecipeSearchProps>(
+          this as RecipeSearchProps, _$identity);
+
+  /// Serializes this RecipeSearchProps to a JSON map.
+  Map<String, dynamic> toJson();
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is RecipeSearchProps &&
+            (identical(other.searchExpression, searchExpression) ||
+                other.searchExpression == searchExpression) &&
+            (identical(other.recipeTypes, recipeTypes) ||
+                other.recipeTypes == recipeTypes) &&
+            (identical(other.recipeTypesMatchall, recipeTypesMatchall) ||
+                other.recipeTypesMatchall == recipeTypesMatchall) &&
+            (identical(other.mustHaveImages, mustHaveImages) ||
+                other.mustHaveImages == mustHaveImages) &&
+            (identical(other.caloriesFrom, caloriesFrom) ||
+                other.caloriesFrom == caloriesFrom) &&
+            (identical(other.caloriesTo, caloriesTo) ||
+                other.caloriesTo == caloriesTo) &&
+            (identical(other.carbPercentageFrom, carbPercentageFrom) ||
+                other.carbPercentageFrom == carbPercentageFrom) &&
+            (identical(other.carbPercentageTo, carbPercentageTo) ||
+                other.carbPercentageTo == carbPercentageTo) &&
+            (identical(other.proteinPercentageFrom, proteinPercentageFrom) ||
+                other.proteinPercentageFrom == proteinPercentageFrom) &&
+            (identical(other.proteinPercentageTo, proteinPercentageTo) ||
+                other.proteinPercentageTo == proteinPercentageTo) &&
+            (identical(other.fatPercentageFrom, fatPercentageFrom) ||
+                other.fatPercentageFrom == fatPercentageFrom) &&
+            (identical(other.fatPercentageTo, fatPercentageTo) ||
+                other.fatPercentageTo == fatPercentageTo) &&
+            (identical(other.prepTimeFrom, prepTimeFrom) ||
+                other.prepTimeFrom == prepTimeFrom) &&
+            (identical(other.prepTimeTo, prepTimeTo) ||
+                other.prepTimeTo == prepTimeTo) &&
+            (identical(other.pageNumber, pageNumber) ||
+                other.pageNumber == pageNumber) &&
+            (identical(other.maxResults, maxResults) ||
+                other.maxResults == maxResults) &&
+            (identical(other.sortBy, sortBy) || other.sortBy == sortBy) &&
+            (identical(other.format, format) || other.format == format) &&
+            (identical(other.region, region) || other.region == region));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hashAll([
+        runtimeType,
+        searchExpression,
+        recipeTypes,
+        recipeTypesMatchall,
+        mustHaveImages,
+        caloriesFrom,
+        caloriesTo,
+        carbPercentageFrom,
+        carbPercentageTo,
+        proteinPercentageFrom,
+        proteinPercentageTo,
+        fatPercentageFrom,
+        fatPercentageTo,
+        prepTimeFrom,
+        prepTimeTo,
+        pageNumber,
+        maxResults,
+        sortBy,
+        format,
+        region
+      ]);
+
+  @override
+  String toString() {
+    return 'RecipeSearchProps(searchExpression: $searchExpression, recipeTypes: $recipeTypes, recipeTypesMatchall: $recipeTypesMatchall, mustHaveImages: $mustHaveImages, caloriesFrom: $caloriesFrom, caloriesTo: $caloriesTo, carbPercentageFrom: $carbPercentageFrom, carbPercentageTo: $carbPercentageTo, proteinPercentageFrom: $proteinPercentageFrom, proteinPercentageTo: $proteinPercentageTo, fatPercentageFrom: $fatPercentageFrom, fatPercentageTo: $fatPercentageTo, prepTimeFrom: $prepTimeFrom, prepTimeTo: $prepTimeTo, pageNumber: $pageNumber, maxResults: $maxResults, sortBy: $sortBy, format: $format, region: $region)';
+  }
+}
+
+/// @nodoc
+abstract mixin class $RecipeSearchPropsCopyWith<$Res> {
+  factory $RecipeSearchPropsCopyWith(
+          RecipeSearchProps value, $Res Function(RecipeSearchProps) _then) =
+      _$RecipeSearchPropsCopyWithImpl;
+  @useResult
+  $Res call(
+      {@JsonKey(name: 'search_expression') String? searchExpression,
+      @JsonKey(name: 'recipe_types') String? recipeTypes,
+      @JsonKey(name: 'recipe_types_matchall') bool? recipeTypesMatchall,
+      @JsonKey(name: 'must_have_images') bool? mustHaveImages,
+      @JsonKey(name: 'calories.from') int? caloriesFrom,
+      @JsonKey(name: 'calories.to') int? caloriesTo,
+      @JsonKey(name: 'carb_percentage.from') int? carbPercentageFrom,
+      @JsonKey(name: 'carb_percentage.to') int? carbPercentageTo,
+      @JsonKey(name: 'protein_percentage.from') int? proteinPercentageFrom,
+      @JsonKey(name: 'protein_percentage.to') int? proteinPercentageTo,
+      @JsonKey(name: 'fat_percentage.from') int? fatPercentageFrom,
+      @JsonKey(name: 'fat_percentage.to') int? fatPercentageTo,
+      @JsonKey(name: 'prep_time.from') int? prepTimeFrom,
+      @JsonKey(name: 'prep_time.to') int? prepTimeTo,
+      @JsonKey(name: kpageNumber) int? pageNumber,
+      @JsonKey(name: kmaxResults) int? maxResults,
+      @JsonKey(name: 'sort_by') String? sortBy,
+      @JsonKey(name: kformat) String? format,
+      @JsonKey(name: kregion) String? region});
+}
+
+/// @nodoc
+class _$RecipeSearchPropsCopyWithImpl<$Res>
+    implements $RecipeSearchPropsCopyWith<$Res> {
+  _$RecipeSearchPropsCopyWithImpl(this._self, this._then);
+
+  final RecipeSearchProps _self;
+  final $Res Function(RecipeSearchProps) _then;
+
+  /// Create a copy of RecipeSearchProps
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? searchExpression = freezed,
+    Object? recipeTypes = freezed,
+    Object? recipeTypesMatchall = freezed,
+    Object? mustHaveImages = freezed,
+    Object? caloriesFrom = freezed,
+    Object? caloriesTo = freezed,
+    Object? carbPercentageFrom = freezed,
+    Object? carbPercentageTo = freezed,
+    Object? proteinPercentageFrom = freezed,
+    Object? proteinPercentageTo = freezed,
+    Object? fatPercentageFrom = freezed,
+    Object? fatPercentageTo = freezed,
+    Object? prepTimeFrom = freezed,
+    Object? prepTimeTo = freezed,
+    Object? pageNumber = freezed,
+    Object? maxResults = freezed,
+    Object? sortBy = freezed,
+    Object? format = freezed,
+    Object? region = freezed,
+  }) {
+    return _then(_self.copyWith(
+      searchExpression: freezed == searchExpression
+          ? _self.searchExpression
+          : searchExpression // ignore: cast_nullable_to_non_nullable
+              as String?,
+      recipeTypes: freezed == recipeTypes
+          ? _self.recipeTypes
+          : recipeTypes // ignore: cast_nullable_to_non_nullable
+              as String?,
+      recipeTypesMatchall: freezed == recipeTypesMatchall
+          ? _self.recipeTypesMatchall
+          : recipeTypesMatchall // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      mustHaveImages: freezed == mustHaveImages
+          ? _self.mustHaveImages
+          : mustHaveImages // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      caloriesFrom: freezed == caloriesFrom
+          ? _self.caloriesFrom
+          : caloriesFrom // ignore: cast_nullable_to_non_nullable
+              as int?,
+      caloriesTo: freezed == caloriesTo
+          ? _self.caloriesTo
+          : caloriesTo // ignore: cast_nullable_to_non_nullable
+              as int?,
+      carbPercentageFrom: freezed == carbPercentageFrom
+          ? _self.carbPercentageFrom
+          : carbPercentageFrom // ignore: cast_nullable_to_non_nullable
+              as int?,
+      carbPercentageTo: freezed == carbPercentageTo
+          ? _self.carbPercentageTo
+          : carbPercentageTo // ignore: cast_nullable_to_non_nullable
+              as int?,
+      proteinPercentageFrom: freezed == proteinPercentageFrom
+          ? _self.proteinPercentageFrom
+          : proteinPercentageFrom // ignore: cast_nullable_to_non_nullable
+              as int?,
+      proteinPercentageTo: freezed == proteinPercentageTo
+          ? _self.proteinPercentageTo
+          : proteinPercentageTo // ignore: cast_nullable_to_non_nullable
+              as int?,
+      fatPercentageFrom: freezed == fatPercentageFrom
+          ? _self.fatPercentageFrom
+          : fatPercentageFrom // ignore: cast_nullable_to_non_nullable
+              as int?,
+      fatPercentageTo: freezed == fatPercentageTo
+          ? _self.fatPercentageTo
+          : fatPercentageTo // ignore: cast_nullable_to_non_nullable
+              as int?,
+      prepTimeFrom: freezed == prepTimeFrom
+          ? _self.prepTimeFrom
+          : prepTimeFrom // ignore: cast_nullable_to_non_nullable
+              as int?,
+      prepTimeTo: freezed == prepTimeTo
+          ? _self.prepTimeTo
+          : prepTimeTo // ignore: cast_nullable_to_non_nullable
+              as int?,
+      pageNumber: freezed == pageNumber
+          ? _self.pageNumber
+          : pageNumber // ignore: cast_nullable_to_non_nullable
+              as int?,
+      maxResults: freezed == maxResults
+          ? _self.maxResults
+          : maxResults // ignore: cast_nullable_to_non_nullable
+              as int?,
+      sortBy: freezed == sortBy
+          ? _self.sortBy
+          : sortBy // ignore: cast_nullable_to_non_nullable
+              as String?,
+      format: freezed == format
+          ? _self.format
+          : format // ignore: cast_nullable_to_non_nullable
+              as String?,
+      region: freezed == region
+          ? _self.region
+          : region // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _RecipeSearchProps implements RecipeSearchProps {
+  const _RecipeSearchProps(
+      {@JsonKey(name: 'search_expression') this.searchExpression,
+      @JsonKey(name: 'recipe_types') this.recipeTypes,
+      @JsonKey(name: 'recipe_types_matchall') this.recipeTypesMatchall,
+      @JsonKey(name: 'must_have_images') this.mustHaveImages,
+      @JsonKey(name: 'calories.from') this.caloriesFrom,
+      @JsonKey(name: 'calories.to') this.caloriesTo,
+      @JsonKey(name: 'carb_percentage.from') this.carbPercentageFrom,
+      @JsonKey(name: 'carb_percentage.to') this.carbPercentageTo,
+      @JsonKey(name: 'protein_percentage.from') this.proteinPercentageFrom,
+      @JsonKey(name: 'protein_percentage.to') this.proteinPercentageTo,
+      @JsonKey(name: 'fat_percentage.from') this.fatPercentageFrom,
+      @JsonKey(name: 'fat_percentage.to') this.fatPercentageTo,
+      @JsonKey(name: 'prep_time.from') this.prepTimeFrom,
+      @JsonKey(name: 'prep_time.to') this.prepTimeTo,
+      @JsonKey(name: kpageNumber) this.pageNumber,
+      @JsonKey(name: kmaxResults) this.maxResults,
+      @JsonKey(name: 'sort_by') this.sortBy,
+      @JsonKey(name: kformat) this.format = 'json',
+      @JsonKey(name: kregion) this.region});
+  factory _RecipeSearchProps.fromJson(Map<String, dynamic> json) =>
+      _$RecipeSearchPropsFromJson(json);
+
+  @override
+  @JsonKey(name: 'search_expression')
+  final String? searchExpression;
+  @override
+  @JsonKey(name: 'recipe_types')
+  final String? recipeTypes;
+  @override
+  @JsonKey(name: 'recipe_types_matchall')
+  final bool? recipeTypesMatchall;
+  @override
+  @JsonKey(name: 'must_have_images')
+  final bool? mustHaveImages;
+  @override
+  @JsonKey(name: 'calories.from')
+  final int? caloriesFrom;
+  @override
+  @JsonKey(name: 'calories.to')
+  final int? caloriesTo;
+  @override
+  @JsonKey(name: 'carb_percentage.from')
+  final int? carbPercentageFrom;
+  @override
+  @JsonKey(name: 'carb_percentage.to')
+  final int? carbPercentageTo;
+  @override
+  @JsonKey(name: 'protein_percentage.from')
+  final int? proteinPercentageFrom;
+  @override
+  @JsonKey(name: 'protein_percentage.to')
+  final int? proteinPercentageTo;
+  @override
+  @JsonKey(name: 'fat_percentage.from')
+  final int? fatPercentageFrom;
+  @override
+  @JsonKey(name: 'fat_percentage.to')
+  final int? fatPercentageTo;
+  @override
+  @JsonKey(name: 'prep_time.from')
+  final int? prepTimeFrom;
+  @override
+  @JsonKey(name: 'prep_time.to')
+  final int? prepTimeTo;
+  @override
+  @JsonKey(name: kpageNumber)
+  final int? pageNumber;
+  @override
+  @JsonKey(name: kmaxResults)
+  final int? maxResults;
+  @override
+  @JsonKey(name: 'sort_by')
+  final String? sortBy;
+  @override
+  @JsonKey(name: kformat)
+  final String? format;
+  @override
+  @JsonKey(name: kregion)
+  final String? region;
+
+  /// Create a copy of RecipeSearchProps
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  _$RecipeSearchPropsCopyWith<_RecipeSearchProps> get copyWith =>
+      __$RecipeSearchPropsCopyWithImpl<_RecipeSearchProps>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$RecipeSearchPropsToJson(
+      this,
+    );
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _RecipeSearchProps &&
+            (identical(other.searchExpression, searchExpression) ||
+                other.searchExpression == searchExpression) &&
+            (identical(other.recipeTypes, recipeTypes) ||
+                other.recipeTypes == recipeTypes) &&
+            (identical(other.recipeTypesMatchall, recipeTypesMatchall) ||
+                other.recipeTypesMatchall == recipeTypesMatchall) &&
+            (identical(other.mustHaveImages, mustHaveImages) ||
+                other.mustHaveImages == mustHaveImages) &&
+            (identical(other.caloriesFrom, caloriesFrom) ||
+                other.caloriesFrom == caloriesFrom) &&
+            (identical(other.caloriesTo, caloriesTo) ||
+                other.caloriesTo == caloriesTo) &&
+            (identical(other.carbPercentageFrom, carbPercentageFrom) ||
+                other.carbPercentageFrom == carbPercentageFrom) &&
+            (identical(other.carbPercentageTo, carbPercentageTo) ||
+                other.carbPercentageTo == carbPercentageTo) &&
+            (identical(other.proteinPercentageFrom, proteinPercentageFrom) ||
+                other.proteinPercentageFrom == proteinPercentageFrom) &&
+            (identical(other.proteinPercentageTo, proteinPercentageTo) ||
+                other.proteinPercentageTo == proteinPercentageTo) &&
+            (identical(other.fatPercentageFrom, fatPercentageFrom) ||
+                other.fatPercentageFrom == fatPercentageFrom) &&
+            (identical(other.fatPercentageTo, fatPercentageTo) ||
+                other.fatPercentageTo == fatPercentageTo) &&
+            (identical(other.prepTimeFrom, prepTimeFrom) ||
+                other.prepTimeFrom == prepTimeFrom) &&
+            (identical(other.prepTimeTo, prepTimeTo) ||
+                other.prepTimeTo == prepTimeTo) &&
+            (identical(other.pageNumber, pageNumber) ||
+                other.pageNumber == pageNumber) &&
+            (identical(other.maxResults, maxResults) ||
+                other.maxResults == maxResults) &&
+            (identical(other.sortBy, sortBy) || other.sortBy == sortBy) &&
+            (identical(other.format, format) || other.format == format) &&
+            (identical(other.region, region) || other.region == region));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hashAll([
+        runtimeType,
+        searchExpression,
+        recipeTypes,
+        recipeTypesMatchall,
+        mustHaveImages,
+        caloriesFrom,
+        caloriesTo,
+        carbPercentageFrom,
+        carbPercentageTo,
+        proteinPercentageFrom,
+        proteinPercentageTo,
+        fatPercentageFrom,
+        fatPercentageTo,
+        prepTimeFrom,
+        prepTimeTo,
+        pageNumber,
+        maxResults,
+        sortBy,
+        format,
+        region
+      ]);
+
+  @override
+  String toString() {
+    return 'RecipeSearchProps(searchExpression: $searchExpression, recipeTypes: $recipeTypes, recipeTypesMatchall: $recipeTypesMatchall, mustHaveImages: $mustHaveImages, caloriesFrom: $caloriesFrom, caloriesTo: $caloriesTo, carbPercentageFrom: $carbPercentageFrom, carbPercentageTo: $carbPercentageTo, proteinPercentageFrom: $proteinPercentageFrom, proteinPercentageTo: $proteinPercentageTo, fatPercentageFrom: $fatPercentageFrom, fatPercentageTo: $fatPercentageTo, prepTimeFrom: $prepTimeFrom, prepTimeTo: $prepTimeTo, pageNumber: $pageNumber, maxResults: $maxResults, sortBy: $sortBy, format: $format, region: $region)';
+  }
+}
+
+/// @nodoc
+abstract mixin class _$RecipeSearchPropsCopyWith<$Res>
+    implements $RecipeSearchPropsCopyWith<$Res> {
+  factory _$RecipeSearchPropsCopyWith(
+          _RecipeSearchProps value, $Res Function(_RecipeSearchProps) _then) =
+      __$RecipeSearchPropsCopyWithImpl;
+  @override
+  @useResult
+  $Res call(
+      {@JsonKey(name: 'search_expression') String? searchExpression,
+      @JsonKey(name: 'recipe_types') String? recipeTypes,
+      @JsonKey(name: 'recipe_types_matchall') bool? recipeTypesMatchall,
+      @JsonKey(name: 'must_have_images') bool? mustHaveImages,
+      @JsonKey(name: 'calories.from') int? caloriesFrom,
+      @JsonKey(name: 'calories.to') int? caloriesTo,
+      @JsonKey(name: 'carb_percentage.from') int? carbPercentageFrom,
+      @JsonKey(name: 'carb_percentage.to') int? carbPercentageTo,
+      @JsonKey(name: 'protein_percentage.from') int? proteinPercentageFrom,
+      @JsonKey(name: 'protein_percentage.to') int? proteinPercentageTo,
+      @JsonKey(name: 'fat_percentage.from') int? fatPercentageFrom,
+      @JsonKey(name: 'fat_percentage.to') int? fatPercentageTo,
+      @JsonKey(name: 'prep_time.from') int? prepTimeFrom,
+      @JsonKey(name: 'prep_time.to') int? prepTimeTo,
+      @JsonKey(name: kpageNumber) int? pageNumber,
+      @JsonKey(name: kmaxResults) int? maxResults,
+      @JsonKey(name: 'sort_by') String? sortBy,
+      @JsonKey(name: kformat) String? format,
+      @JsonKey(name: kregion) String? region});
+}
+
+/// @nodoc
+class __$RecipeSearchPropsCopyWithImpl<$Res>
+    implements _$RecipeSearchPropsCopyWith<$Res> {
+  __$RecipeSearchPropsCopyWithImpl(this._self, this._then);
+
+  final _RecipeSearchProps _self;
+  final $Res Function(_RecipeSearchProps) _then;
+
+  /// Create a copy of RecipeSearchProps
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $Res call({
+    Object? searchExpression = freezed,
+    Object? recipeTypes = freezed,
+    Object? recipeTypesMatchall = freezed,
+    Object? mustHaveImages = freezed,
+    Object? caloriesFrom = freezed,
+    Object? caloriesTo = freezed,
+    Object? carbPercentageFrom = freezed,
+    Object? carbPercentageTo = freezed,
+    Object? proteinPercentageFrom = freezed,
+    Object? proteinPercentageTo = freezed,
+    Object? fatPercentageFrom = freezed,
+    Object? fatPercentageTo = freezed,
+    Object? prepTimeFrom = freezed,
+    Object? prepTimeTo = freezed,
+    Object? pageNumber = freezed,
+    Object? maxResults = freezed,
+    Object? sortBy = freezed,
+    Object? format = freezed,
+    Object? region = freezed,
+  }) {
+    return _then(_RecipeSearchProps(
+      searchExpression: freezed == searchExpression
+          ? _self.searchExpression
+          : searchExpression // ignore: cast_nullable_to_non_nullable
+              as String?,
+      recipeTypes: freezed == recipeTypes
+          ? _self.recipeTypes
+          : recipeTypes // ignore: cast_nullable_to_non_nullable
+              as String?,
+      recipeTypesMatchall: freezed == recipeTypesMatchall
+          ? _self.recipeTypesMatchall
+          : recipeTypesMatchall // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      mustHaveImages: freezed == mustHaveImages
+          ? _self.mustHaveImages
+          : mustHaveImages // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      caloriesFrom: freezed == caloriesFrom
+          ? _self.caloriesFrom
+          : caloriesFrom // ignore: cast_nullable_to_non_nullable
+              as int?,
+      caloriesTo: freezed == caloriesTo
+          ? _self.caloriesTo
+          : caloriesTo // ignore: cast_nullable_to_non_nullable
+              as int?,
+      carbPercentageFrom: freezed == carbPercentageFrom
+          ? _self.carbPercentageFrom
+          : carbPercentageFrom // ignore: cast_nullable_to_non_nullable
+              as int?,
+      carbPercentageTo: freezed == carbPercentageTo
+          ? _self.carbPercentageTo
+          : carbPercentageTo // ignore: cast_nullable_to_non_nullable
+              as int?,
+      proteinPercentageFrom: freezed == proteinPercentageFrom
+          ? _self.proteinPercentageFrom
+          : proteinPercentageFrom // ignore: cast_nullable_to_non_nullable
+              as int?,
+      proteinPercentageTo: freezed == proteinPercentageTo
+          ? _self.proteinPercentageTo
+          : proteinPercentageTo // ignore: cast_nullable_to_non_nullable
+              as int?,
+      fatPercentageFrom: freezed == fatPercentageFrom
+          ? _self.fatPercentageFrom
+          : fatPercentageFrom // ignore: cast_nullable_to_non_nullable
+              as int?,
+      fatPercentageTo: freezed == fatPercentageTo
+          ? _self.fatPercentageTo
+          : fatPercentageTo // ignore: cast_nullable_to_non_nullable
+              as int?,
+      prepTimeFrom: freezed == prepTimeFrom
+          ? _self.prepTimeFrom
+          : prepTimeFrom // ignore: cast_nullable_to_non_nullable
+              as int?,
+      prepTimeTo: freezed == prepTimeTo
+          ? _self.prepTimeTo
+          : prepTimeTo // ignore: cast_nullable_to_non_nullable
+              as int?,
+      pageNumber: freezed == pageNumber
+          ? _self.pageNumber
+          : pageNumber // ignore: cast_nullable_to_non_nullable
+              as int?,
+      maxResults: freezed == maxResults
+          ? _self.maxResults
+          : maxResults // ignore: cast_nullable_to_non_nullable
+              as int?,
+      sortBy: freezed == sortBy
+          ? _self.sortBy
+          : sortBy // ignore: cast_nullable_to_non_nullable
+              as String?,
+      format: freezed == format
+          ? _self.format
+          : format // ignore: cast_nullable_to_non_nullable
+              as String?,
+      region: freezed == region
+          ? _self.region
+          : region // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ));
+  }
+}
+
+/// @nodoc
+mixin _$RecipeSearchResponse {
+  @JsonKey(name: 'recipes')
+  Recipes get recipes;
+
+  /// Create a copy of RecipeSearchResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $RecipeSearchResponseCopyWith<RecipeSearchResponse> get copyWith =>
+      _$RecipeSearchResponseCopyWithImpl<RecipeSearchResponse>(
+          this as RecipeSearchResponse, _$identity);
+
+  /// Serializes this RecipeSearchResponse to a JSON map.
+  Map<String, dynamic> toJson();
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is RecipeSearchResponse &&
+            (identical(other.recipes, recipes) || other.recipes == recipes));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(runtimeType, recipes);
+
+  @override
+  String toString() {
+    return 'RecipeSearchResponse(recipes: $recipes)';
+  }
+}
+
+/// @nodoc
+abstract mixin class $RecipeSearchResponseCopyWith<$Res> {
+  factory $RecipeSearchResponseCopyWith(RecipeSearchResponse value,
+          $Res Function(RecipeSearchResponse) _then) =
+      _$RecipeSearchResponseCopyWithImpl;
+  @useResult
+  $Res call({@JsonKey(name: 'recipes') Recipes recipes});
+
+  $RecipesCopyWith<$Res> get recipes;
+}
+
+/// @nodoc
+class _$RecipeSearchResponseCopyWithImpl<$Res>
+    implements $RecipeSearchResponseCopyWith<$Res> {
+  _$RecipeSearchResponseCopyWithImpl(this._self, this._then);
+
+  final RecipeSearchResponse _self;
+  final $Res Function(RecipeSearchResponse) _then;
+
+  /// Create a copy of RecipeSearchResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? recipes = null,
+  }) {
+    return _then(_self.copyWith(
+      recipes: null == recipes
+          ? _self.recipes
+          : recipes // ignore: cast_nullable_to_non_nullable
+              as Recipes,
+    ));
+  }
+
+  /// Create a copy of RecipeSearchResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $RecipesCopyWith<$Res> get recipes {
+    return $RecipesCopyWith<$Res>(_self.recipes, (value) {
+      return _then(_self.copyWith(recipes: value));
+    });
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _RecipeSearchResponse implements RecipeSearchResponse {
+  const _RecipeSearchResponse(
+      {@JsonKey(name: 'recipes') required this.recipes});
+  factory _RecipeSearchResponse.fromJson(Map<String, dynamic> json) =>
+      _$RecipeSearchResponseFromJson(json);
+
+  @override
+  @JsonKey(name: 'recipes')
+  final Recipes recipes;
+
+  /// Create a copy of RecipeSearchResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  _$RecipeSearchResponseCopyWith<_RecipeSearchResponse> get copyWith =>
+      __$RecipeSearchResponseCopyWithImpl<_RecipeSearchResponse>(
+          this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$RecipeSearchResponseToJson(
+      this,
+    );
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _RecipeSearchResponse &&
+            (identical(other.recipes, recipes) || other.recipes == recipes));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(runtimeType, recipes);
+
+  @override
+  String toString() {
+    return 'RecipeSearchResponse(recipes: $recipes)';
+  }
+}
+
+/// @nodoc
+abstract mixin class _$RecipeSearchResponseCopyWith<$Res>
+    implements $RecipeSearchResponseCopyWith<$Res> {
+  factory _$RecipeSearchResponseCopyWith(_RecipeSearchResponse value,
+          $Res Function(_RecipeSearchResponse) _then) =
+      __$RecipeSearchResponseCopyWithImpl;
+  @override
+  @useResult
+  $Res call({@JsonKey(name: 'recipes') Recipes recipes});
+
+  @override
+  $RecipesCopyWith<$Res> get recipes;
+}
+
+/// @nodoc
+class __$RecipeSearchResponseCopyWithImpl<$Res>
+    implements _$RecipeSearchResponseCopyWith<$Res> {
+  __$RecipeSearchResponseCopyWithImpl(this._self, this._then);
+
+  final _RecipeSearchResponse _self;
+  final $Res Function(_RecipeSearchResponse) _then;
+
+  /// Create a copy of RecipeSearchResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $Res call({
+    Object? recipes = null,
+  }) {
+    return _then(_RecipeSearchResponse(
+      recipes: null == recipes
+          ? _self.recipes
+          : recipes // ignore: cast_nullable_to_non_nullable
+              as Recipes,
+    ));
+  }
+
+  /// Create a copy of RecipeSearchResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $RecipesCopyWith<$Res> get recipes {
+    return $RecipesCopyWith<$Res>(_self.recipes, (value) {
+      return _then(_self.copyWith(recipes: value));
+    });
+  }
+}
+
+/// @nodoc
+mixin _$Recipes {
+  @JsonKey(name: kmaxResults)
+  String get maxResults;
+  @JsonKey(name: ktotalResults)
+  String get totalResults;
+  @JsonKey(name: kpageNumber)
+  String get pageNumber;
+  @JsonKey(name: 'recipe')
+  List<RecipeSearchResult> get recipe;
+
+  /// Create a copy of Recipes
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $RecipesCopyWith<Recipes> get copyWith =>
+      _$RecipesCopyWithImpl<Recipes>(this as Recipes, _$identity);
+
+  /// Serializes this Recipes to a JSON map.
+  Map<String, dynamic> toJson();
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is Recipes &&
+            (identical(other.maxResults, maxResults) ||
+                other.maxResults == maxResults) &&
+            (identical(other.totalResults, totalResults) ||
+                other.totalResults == totalResults) &&
+            (identical(other.pageNumber, pageNumber) ||
+                other.pageNumber == pageNumber) &&
+            const DeepCollectionEquality().equals(other.recipe, recipe));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(runtimeType, maxResults, totalResults,
+      pageNumber, const DeepCollectionEquality().hash(recipe));
+
+  @override
+  String toString() {
+    return 'Recipes(maxResults: $maxResults, totalResults: $totalResults, pageNumber: $pageNumber, recipe: $recipe)';
+  }
+}
+
+/// @nodoc
+abstract mixin class $RecipesCopyWith<$Res> {
+  factory $RecipesCopyWith(Recipes value, $Res Function(Recipes) _then) =
+      _$RecipesCopyWithImpl;
+  @useResult
+  $Res call(
+      {@JsonKey(name: kmaxResults) String maxResults,
+      @JsonKey(name: ktotalResults) String totalResults,
+      @JsonKey(name: kpageNumber) String pageNumber,
+      @JsonKey(name: 'recipe') List<RecipeSearchResult> recipe});
+}
+
+/// @nodoc
+class _$RecipesCopyWithImpl<$Res> implements $RecipesCopyWith<$Res> {
+  _$RecipesCopyWithImpl(this._self, this._then);
+
+  final Recipes _self;
+  final $Res Function(Recipes) _then;
+
+  /// Create a copy of Recipes
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? maxResults = null,
+    Object? totalResults = null,
+    Object? pageNumber = null,
+    Object? recipe = null,
+  }) {
+    return _then(_self.copyWith(
+      maxResults: null == maxResults
+          ? _self.maxResults
+          : maxResults // ignore: cast_nullable_to_non_nullable
+              as String,
+      totalResults: null == totalResults
+          ? _self.totalResults
+          : totalResults // ignore: cast_nullable_to_non_nullable
+              as String,
+      pageNumber: null == pageNumber
+          ? _self.pageNumber
+          : pageNumber // ignore: cast_nullable_to_non_nullable
+              as String,
+      recipe: null == recipe
+          ? _self.recipe
+          : recipe // ignore: cast_nullable_to_non_nullable
+              as List<RecipeSearchResult>,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _Recipes implements Recipes {
+  const _Recipes(
+      {@JsonKey(name: kmaxResults) required this.maxResults,
+      @JsonKey(name: ktotalResults) required this.totalResults,
+      @JsonKey(name: kpageNumber) required this.pageNumber,
+      @JsonKey(name: 'recipe') required final List<RecipeSearchResult> recipe})
+      : _recipe = recipe;
+  factory _Recipes.fromJson(Map<String, dynamic> json) =>
+      _$RecipesFromJson(json);
+
+  @override
+  @JsonKey(name: kmaxResults)
+  final String maxResults;
+  @override
+  @JsonKey(name: ktotalResults)
+  final String totalResults;
+  @override
+  @JsonKey(name: kpageNumber)
+  final String pageNumber;
+  final List<RecipeSearchResult> _recipe;
+  @override
+  @JsonKey(name: 'recipe')
+  List<RecipeSearchResult> get recipe {
+    if (_recipe is EqualUnmodifiableListView) return _recipe;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_recipe);
+  }
+
+  /// Create a copy of Recipes
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  _$RecipesCopyWith<_Recipes> get copyWith =>
+      __$RecipesCopyWithImpl<_Recipes>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$RecipesToJson(
+      this,
+    );
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _Recipes &&
+            (identical(other.maxResults, maxResults) ||
+                other.maxResults == maxResults) &&
+            (identical(other.totalResults, totalResults) ||
+                other.totalResults == totalResults) &&
+            (identical(other.pageNumber, pageNumber) ||
+                other.pageNumber == pageNumber) &&
+            const DeepCollectionEquality().equals(other._recipe, _recipe));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(runtimeType, maxResults, totalResults,
+      pageNumber, const DeepCollectionEquality().hash(_recipe));
+
+  @override
+  String toString() {
+    return 'Recipes(maxResults: $maxResults, totalResults: $totalResults, pageNumber: $pageNumber, recipe: $recipe)';
+  }
+}
+
+/// @nodoc
+abstract mixin class _$RecipesCopyWith<$Res> implements $RecipesCopyWith<$Res> {
+  factory _$RecipesCopyWith(_Recipes value, $Res Function(_Recipes) _then) =
+      __$RecipesCopyWithImpl;
+  @override
+  @useResult
+  $Res call(
+      {@JsonKey(name: kmaxResults) String maxResults,
+      @JsonKey(name: ktotalResults) String totalResults,
+      @JsonKey(name: kpageNumber) String pageNumber,
+      @JsonKey(name: 'recipe') List<RecipeSearchResult> recipe});
+}
+
+/// @nodoc
+class __$RecipesCopyWithImpl<$Res> implements _$RecipesCopyWith<$Res> {
+  __$RecipesCopyWithImpl(this._self, this._then);
+
+  final _Recipes _self;
+  final $Res Function(_Recipes) _then;
+
+  /// Create a copy of Recipes
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $Res call({
+    Object? maxResults = null,
+    Object? totalResults = null,
+    Object? pageNumber = null,
+    Object? recipe = null,
+  }) {
+    return _then(_Recipes(
+      maxResults: null == maxResults
+          ? _self.maxResults
+          : maxResults // ignore: cast_nullable_to_non_nullable
+              as String,
+      totalResults: null == totalResults
+          ? _self.totalResults
+          : totalResults // ignore: cast_nullable_to_non_nullable
+              as String,
+      pageNumber: null == pageNumber
+          ? _self.pageNumber
+          : pageNumber // ignore: cast_nullable_to_non_nullable
+              as String,
+      recipe: null == recipe
+          ? _self._recipe
+          : recipe // ignore: cast_nullable_to_non_nullable
+              as List<RecipeSearchResult>,
+    ));
+  }
+}
+
+/// @nodoc
+mixin _$RecipeSearchResult {
+  @JsonKey(name: 'recipe_id')
+  String get recipeId;
+  @JsonKey(name: 'recipe_name')
+  String get recipeName;
+  @JsonKey(name: 'recipe_description')
+  String get recipeDescription;
+  @JsonKey(name: 'recipe_image')
+  String get recipeImage;
+  @JsonKey(name: 'recipe_ingredients')
+  RecipeIngredients get recipeIngredients;
+  @JsonKey(name: 'recipe_nutrition')
+  RecipeNutrition get recipeNutrition;
+  @JsonKey(name: 'recipe_types')
+  RecipeTypes get recipeTypes;
+
+  /// Create a copy of RecipeSearchResult
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $RecipeSearchResultCopyWith<RecipeSearchResult> get copyWith =>
+      _$RecipeSearchResultCopyWithImpl<RecipeSearchResult>(
+          this as RecipeSearchResult, _$identity);
+
+  /// Serializes this RecipeSearchResult to a JSON map.
+  Map<String, dynamic> toJson();
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is RecipeSearchResult &&
+            (identical(other.recipeId, recipeId) ||
+                other.recipeId == recipeId) &&
+            (identical(other.recipeName, recipeName) ||
+                other.recipeName == recipeName) &&
+            (identical(other.recipeDescription, recipeDescription) ||
+                other.recipeDescription == recipeDescription) &&
+            (identical(other.recipeImage, recipeImage) ||
+                other.recipeImage == recipeImage) &&
+            (identical(other.recipeIngredients, recipeIngredients) ||
+                other.recipeIngredients == recipeIngredients) &&
+            (identical(other.recipeNutrition, recipeNutrition) ||
+                other.recipeNutrition == recipeNutrition) &&
+            (identical(other.recipeTypes, recipeTypes) ||
+                other.recipeTypes == recipeTypes));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      recipeId,
+      recipeName,
+      recipeDescription,
+      recipeImage,
+      recipeIngredients,
+      recipeNutrition,
+      recipeTypes);
+
+  @override
+  String toString() {
+    return 'RecipeSearchResult(recipeId: $recipeId, recipeName: $recipeName, recipeDescription: $recipeDescription, recipeImage: $recipeImage, recipeIngredients: $recipeIngredients, recipeNutrition: $recipeNutrition, recipeTypes: $recipeTypes)';
+  }
+}
+
+/// @nodoc
+abstract mixin class $RecipeSearchResultCopyWith<$Res> {
+  factory $RecipeSearchResultCopyWith(
+          RecipeSearchResult value, $Res Function(RecipeSearchResult) _then) =
+      _$RecipeSearchResultCopyWithImpl;
+  @useResult
+  $Res call(
+      {@JsonKey(name: 'recipe_id') String recipeId,
+      @JsonKey(name: 'recipe_name') String recipeName,
+      @JsonKey(name: 'recipe_description') String recipeDescription,
+      @JsonKey(name: 'recipe_image') String recipeImage,
+      @JsonKey(name: 'recipe_ingredients') RecipeIngredients recipeIngredients,
+      @JsonKey(name: 'recipe_nutrition') RecipeNutrition recipeNutrition,
+      @JsonKey(name: 'recipe_types') RecipeTypes recipeTypes});
+
+  $RecipeIngredientsCopyWith<$Res> get recipeIngredients;
+  $RecipeNutritionCopyWith<$Res> get recipeNutrition;
+  $RecipeTypesCopyWith<$Res> get recipeTypes;
+}
+
+/// @nodoc
+class _$RecipeSearchResultCopyWithImpl<$Res>
+    implements $RecipeSearchResultCopyWith<$Res> {
+  _$RecipeSearchResultCopyWithImpl(this._self, this._then);
+
+  final RecipeSearchResult _self;
+  final $Res Function(RecipeSearchResult) _then;
+
+  /// Create a copy of RecipeSearchResult
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? recipeId = null,
+    Object? recipeName = null,
+    Object? recipeDescription = null,
+    Object? recipeImage = null,
+    Object? recipeIngredients = null,
+    Object? recipeNutrition = null,
+    Object? recipeTypes = null,
+  }) {
+    return _then(_self.copyWith(
+      recipeId: null == recipeId
+          ? _self.recipeId
+          : recipeId // ignore: cast_nullable_to_non_nullable
+              as String,
+      recipeName: null == recipeName
+          ? _self.recipeName
+          : recipeName // ignore: cast_nullable_to_non_nullable
+              as String,
+      recipeDescription: null == recipeDescription
+          ? _self.recipeDescription
+          : recipeDescription // ignore: cast_nullable_to_non_nullable
+              as String,
+      recipeImage: null == recipeImage
+          ? _self.recipeImage
+          : recipeImage // ignore: cast_nullable_to_non_nullable
+              as String,
+      recipeIngredients: null == recipeIngredients
+          ? _self.recipeIngredients
+          : recipeIngredients // ignore: cast_nullable_to_non_nullable
+              as RecipeIngredients,
+      recipeNutrition: null == recipeNutrition
+          ? _self.recipeNutrition
+          : recipeNutrition // ignore: cast_nullable_to_non_nullable
+              as RecipeNutrition,
+      recipeTypes: null == recipeTypes
+          ? _self.recipeTypes
+          : recipeTypes // ignore: cast_nullable_to_non_nullable
+              as RecipeTypes,
+    ));
+  }
+
+  /// Create a copy of RecipeSearchResult
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $RecipeIngredientsCopyWith<$Res> get recipeIngredients {
+    return $RecipeIngredientsCopyWith<$Res>(_self.recipeIngredients, (value) {
+      return _then(_self.copyWith(recipeIngredients: value));
+    });
+  }
+
+  /// Create a copy of RecipeSearchResult
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $RecipeNutritionCopyWith<$Res> get recipeNutrition {
+    return $RecipeNutritionCopyWith<$Res>(_self.recipeNutrition, (value) {
+      return _then(_self.copyWith(recipeNutrition: value));
+    });
+  }
+
+  /// Create a copy of RecipeSearchResult
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $RecipeTypesCopyWith<$Res> get recipeTypes {
+    return $RecipeTypesCopyWith<$Res>(_self.recipeTypes, (value) {
+      return _then(_self.copyWith(recipeTypes: value));
+    });
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _RecipeSearchResult implements RecipeSearchResult {
+  const _RecipeSearchResult(
+      {@JsonKey(name: 'recipe_id') required this.recipeId,
+      @JsonKey(name: 'recipe_name') required this.recipeName,
+      @JsonKey(name: 'recipe_description') required this.recipeDescription,
+      @JsonKey(name: 'recipe_image') required this.recipeImage,
+      @JsonKey(name: 'recipe_ingredients') required this.recipeIngredients,
+      @JsonKey(name: 'recipe_nutrition') required this.recipeNutrition,
+      @JsonKey(name: 'recipe_types') required this.recipeTypes});
+  factory _RecipeSearchResult.fromJson(Map<String, dynamic> json) =>
+      _$RecipeSearchResultFromJson(json);
+
+  @override
+  @JsonKey(name: 'recipe_id')
+  final String recipeId;
+  @override
+  @JsonKey(name: 'recipe_name')
+  final String recipeName;
+  @override
+  @JsonKey(name: 'recipe_description')
+  final String recipeDescription;
+  @override
+  @JsonKey(name: 'recipe_image')
+  final String recipeImage;
+  @override
+  @JsonKey(name: 'recipe_ingredients')
+  final RecipeIngredients recipeIngredients;
+  @override
+  @JsonKey(name: 'recipe_nutrition')
+  final RecipeNutrition recipeNutrition;
+  @override
+  @JsonKey(name: 'recipe_types')
+  final RecipeTypes recipeTypes;
+
+  /// Create a copy of RecipeSearchResult
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  _$RecipeSearchResultCopyWith<_RecipeSearchResult> get copyWith =>
+      __$RecipeSearchResultCopyWithImpl<_RecipeSearchResult>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$RecipeSearchResultToJson(
+      this,
+    );
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _RecipeSearchResult &&
+            (identical(other.recipeId, recipeId) ||
+                other.recipeId == recipeId) &&
+            (identical(other.recipeName, recipeName) ||
+                other.recipeName == recipeName) &&
+            (identical(other.recipeDescription, recipeDescription) ||
+                other.recipeDescription == recipeDescription) &&
+            (identical(other.recipeImage, recipeImage) ||
+                other.recipeImage == recipeImage) &&
+            (identical(other.recipeIngredients, recipeIngredients) ||
+                other.recipeIngredients == recipeIngredients) &&
+            (identical(other.recipeNutrition, recipeNutrition) ||
+                other.recipeNutrition == recipeNutrition) &&
+            (identical(other.recipeTypes, recipeTypes) ||
+                other.recipeTypes == recipeTypes));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      recipeId,
+      recipeName,
+      recipeDescription,
+      recipeImage,
+      recipeIngredients,
+      recipeNutrition,
+      recipeTypes);
+
+  @override
+  String toString() {
+    return 'RecipeSearchResult(recipeId: $recipeId, recipeName: $recipeName, recipeDescription: $recipeDescription, recipeImage: $recipeImage, recipeIngredients: $recipeIngredients, recipeNutrition: $recipeNutrition, recipeTypes: $recipeTypes)';
+  }
+}
+
+/// @nodoc
+abstract mixin class _$RecipeSearchResultCopyWith<$Res>
+    implements $RecipeSearchResultCopyWith<$Res> {
+  factory _$RecipeSearchResultCopyWith(
+          _RecipeSearchResult value, $Res Function(_RecipeSearchResult) _then) =
+      __$RecipeSearchResultCopyWithImpl;
+  @override
+  @useResult
+  $Res call(
+      {@JsonKey(name: 'recipe_id') String recipeId,
+      @JsonKey(name: 'recipe_name') String recipeName,
+      @JsonKey(name: 'recipe_description') String recipeDescription,
+      @JsonKey(name: 'recipe_image') String recipeImage,
+      @JsonKey(name: 'recipe_ingredients') RecipeIngredients recipeIngredients,
+      @JsonKey(name: 'recipe_nutrition') RecipeNutrition recipeNutrition,
+      @JsonKey(name: 'recipe_types') RecipeTypes recipeTypes});
+
+  @override
+  $RecipeIngredientsCopyWith<$Res> get recipeIngredients;
+  @override
+  $RecipeNutritionCopyWith<$Res> get recipeNutrition;
+  @override
+  $RecipeTypesCopyWith<$Res> get recipeTypes;
+}
+
+/// @nodoc
+class __$RecipeSearchResultCopyWithImpl<$Res>
+    implements _$RecipeSearchResultCopyWith<$Res> {
+  __$RecipeSearchResultCopyWithImpl(this._self, this._then);
+
+  final _RecipeSearchResult _self;
+  final $Res Function(_RecipeSearchResult) _then;
+
+  /// Create a copy of RecipeSearchResult
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $Res call({
+    Object? recipeId = null,
+    Object? recipeName = null,
+    Object? recipeDescription = null,
+    Object? recipeImage = null,
+    Object? recipeIngredients = null,
+    Object? recipeNutrition = null,
+    Object? recipeTypes = null,
+  }) {
+    return _then(_RecipeSearchResult(
+      recipeId: null == recipeId
+          ? _self.recipeId
+          : recipeId // ignore: cast_nullable_to_non_nullable
+              as String,
+      recipeName: null == recipeName
+          ? _self.recipeName
+          : recipeName // ignore: cast_nullable_to_non_nullable
+              as String,
+      recipeDescription: null == recipeDescription
+          ? _self.recipeDescription
+          : recipeDescription // ignore: cast_nullable_to_non_nullable
+              as String,
+      recipeImage: null == recipeImage
+          ? _self.recipeImage
+          : recipeImage // ignore: cast_nullable_to_non_nullable
+              as String,
+      recipeIngredients: null == recipeIngredients
+          ? _self.recipeIngredients
+          : recipeIngredients // ignore: cast_nullable_to_non_nullable
+              as RecipeIngredients,
+      recipeNutrition: null == recipeNutrition
+          ? _self.recipeNutrition
+          : recipeNutrition // ignore: cast_nullable_to_non_nullable
+              as RecipeNutrition,
+      recipeTypes: null == recipeTypes
+          ? _self.recipeTypes
+          : recipeTypes // ignore: cast_nullable_to_non_nullable
+              as RecipeTypes,
+    ));
+  }
+
+  /// Create a copy of RecipeSearchResult
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $RecipeIngredientsCopyWith<$Res> get recipeIngredients {
+    return $RecipeIngredientsCopyWith<$Res>(_self.recipeIngredients, (value) {
+      return _then(_self.copyWith(recipeIngredients: value));
+    });
+  }
+
+  /// Create a copy of RecipeSearchResult
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $RecipeNutritionCopyWith<$Res> get recipeNutrition {
+    return $RecipeNutritionCopyWith<$Res>(_self.recipeNutrition, (value) {
+      return _then(_self.copyWith(recipeNutrition: value));
+    });
+  }
+
+  /// Create a copy of RecipeSearchResult
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $RecipeTypesCopyWith<$Res> get recipeTypes {
+    return $RecipeTypesCopyWith<$Res>(_self.recipeTypes, (value) {
+      return _then(_self.copyWith(recipeTypes: value));
+    });
+  }
+}
+
+/// @nodoc
+mixin _$RecipeIngredients {
+  @JsonKey(name: 'ingredient')
+  List<String> get ingredient;
+
+  /// Create a copy of RecipeIngredients
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $RecipeIngredientsCopyWith<RecipeIngredients> get copyWith =>
+      _$RecipeIngredientsCopyWithImpl<RecipeIngredients>(
+          this as RecipeIngredients, _$identity);
+
+  /// Serializes this RecipeIngredients to a JSON map.
+  Map<String, dynamic> toJson();
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is RecipeIngredients &&
+            const DeepCollectionEquality()
+                .equals(other.ingredient, ingredient));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(ingredient));
+
+  @override
+  String toString() {
+    return 'RecipeIngredients(ingredient: $ingredient)';
+  }
+}
+
+/// @nodoc
+abstract mixin class $RecipeIngredientsCopyWith<$Res> {
+  factory $RecipeIngredientsCopyWith(
+          RecipeIngredients value, $Res Function(RecipeIngredients) _then) =
+      _$RecipeIngredientsCopyWithImpl;
+  @useResult
+  $Res call({@JsonKey(name: 'ingredient') List<String> ingredient});
+}
+
+/// @nodoc
+class _$RecipeIngredientsCopyWithImpl<$Res>
+    implements $RecipeIngredientsCopyWith<$Res> {
+  _$RecipeIngredientsCopyWithImpl(this._self, this._then);
+
+  final RecipeIngredients _self;
+  final $Res Function(RecipeIngredients) _then;
+
+  /// Create a copy of RecipeIngredients
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? ingredient = null,
+  }) {
+    return _then(_self.copyWith(
+      ingredient: null == ingredient
+          ? _self.ingredient
+          : ingredient // ignore: cast_nullable_to_non_nullable
+              as List<String>,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _RecipeIngredients implements RecipeIngredients {
+  const _RecipeIngredients(
+      {@JsonKey(name: 'ingredient') required final List<String> ingredient})
+      : _ingredient = ingredient;
+  factory _RecipeIngredients.fromJson(Map<String, dynamic> json) =>
+      _$RecipeIngredientsFromJson(json);
+
+  final List<String> _ingredient;
+  @override
+  @JsonKey(name: 'ingredient')
+  List<String> get ingredient {
+    if (_ingredient is EqualUnmodifiableListView) return _ingredient;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_ingredient);
+  }
+
+  /// Create a copy of RecipeIngredients
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  _$RecipeIngredientsCopyWith<_RecipeIngredients> get copyWith =>
+      __$RecipeIngredientsCopyWithImpl<_RecipeIngredients>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$RecipeIngredientsToJson(
+      this,
+    );
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _RecipeIngredients &&
+            const DeepCollectionEquality()
+                .equals(other._ingredient, _ingredient));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType, const DeepCollectionEquality().hash(_ingredient));
+
+  @override
+  String toString() {
+    return 'RecipeIngredients(ingredient: $ingredient)';
+  }
+}
+
+/// @nodoc
+abstract mixin class _$RecipeIngredientsCopyWith<$Res>
+    implements $RecipeIngredientsCopyWith<$Res> {
+  factory _$RecipeIngredientsCopyWith(
+          _RecipeIngredients value, $Res Function(_RecipeIngredients) _then) =
+      __$RecipeIngredientsCopyWithImpl;
+  @override
+  @useResult
+  $Res call({@JsonKey(name: 'ingredient') List<String> ingredient});
+}
+
+/// @nodoc
+class __$RecipeIngredientsCopyWithImpl<$Res>
+    implements _$RecipeIngredientsCopyWith<$Res> {
+  __$RecipeIngredientsCopyWithImpl(this._self, this._then);
+
+  final _RecipeIngredients _self;
+  final $Res Function(_RecipeIngredients) _then;
+
+  /// Create a copy of RecipeIngredients
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $Res call({
+    Object? ingredient = null,
+  }) {
+    return _then(_RecipeIngredients(
+      ingredient: null == ingredient
+          ? _self._ingredient
+          : ingredient // ignore: cast_nullable_to_non_nullable
+              as List<String>,
+    ));
+  }
+}
+
+/// @nodoc
+mixin _$RecipeNutrition {
+  @JsonKey(name: kcalories)
+  String get calories;
+  @JsonKey(name: kcarbohydrate)
+  String get carbohydrate;
+  @JsonKey(name: kprotein)
+  String get protein;
+  @JsonKey(name: kfat)
+  String get fat;
+
+  /// Create a copy of RecipeNutrition
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $RecipeNutritionCopyWith<RecipeNutrition> get copyWith =>
+      _$RecipeNutritionCopyWithImpl<RecipeNutrition>(
+          this as RecipeNutrition, _$identity);
+
+  /// Serializes this RecipeNutrition to a JSON map.
+  Map<String, dynamic> toJson();
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is RecipeNutrition &&
+            (identical(other.calories, calories) ||
+                other.calories == calories) &&
+            (identical(other.carbohydrate, carbohydrate) ||
+                other.carbohydrate == carbohydrate) &&
+            (identical(other.protein, protein) || other.protein == protein) &&
+            (identical(other.fat, fat) || other.fat == fat));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, calories, carbohydrate, protein, fat);
+
+  @override
+  String toString() {
+    return 'RecipeNutrition(calories: $calories, carbohydrate: $carbohydrate, protein: $protein, fat: $fat)';
+  }
+}
+
+/// @nodoc
+abstract mixin class $RecipeNutritionCopyWith<$Res> {
+  factory $RecipeNutritionCopyWith(
+          RecipeNutrition value, $Res Function(RecipeNutrition) _then) =
+      _$RecipeNutritionCopyWithImpl;
+  @useResult
+  $Res call(
+      {@JsonKey(name: kcalories) String calories,
+      @JsonKey(name: kcarbohydrate) String carbohydrate,
+      @JsonKey(name: kprotein) String protein,
+      @JsonKey(name: kfat) String fat});
+}
+
+/// @nodoc
+class _$RecipeNutritionCopyWithImpl<$Res>
+    implements $RecipeNutritionCopyWith<$Res> {
+  _$RecipeNutritionCopyWithImpl(this._self, this._then);
+
+  final RecipeNutrition _self;
+  final $Res Function(RecipeNutrition) _then;
+
+  /// Create a copy of RecipeNutrition
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? calories = null,
+    Object? carbohydrate = null,
+    Object? protein = null,
+    Object? fat = null,
+  }) {
+    return _then(_self.copyWith(
+      calories: null == calories
+          ? _self.calories
+          : calories // ignore: cast_nullable_to_non_nullable
+              as String,
+      carbohydrate: null == carbohydrate
+          ? _self.carbohydrate
+          : carbohydrate // ignore: cast_nullable_to_non_nullable
+              as String,
+      protein: null == protein
+          ? _self.protein
+          : protein // ignore: cast_nullable_to_non_nullable
+              as String,
+      fat: null == fat
+          ? _self.fat
+          : fat // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _RecipeNutrition implements RecipeNutrition {
+  const _RecipeNutrition(
+      {@JsonKey(name: kcalories) required this.calories,
+      @JsonKey(name: kcarbohydrate) required this.carbohydrate,
+      @JsonKey(name: kprotein) required this.protein,
+      @JsonKey(name: kfat) required this.fat});
+  factory _RecipeNutrition.fromJson(Map<String, dynamic> json) =>
+      _$RecipeNutritionFromJson(json);
+
+  @override
+  @JsonKey(name: kcalories)
+  final String calories;
+  @override
+  @JsonKey(name: kcarbohydrate)
+  final String carbohydrate;
+  @override
+  @JsonKey(name: kprotein)
+  final String protein;
+  @override
+  @JsonKey(name: kfat)
+  final String fat;
+
+  /// Create a copy of RecipeNutrition
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  _$RecipeNutritionCopyWith<_RecipeNutrition> get copyWith =>
+      __$RecipeNutritionCopyWithImpl<_RecipeNutrition>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$RecipeNutritionToJson(
+      this,
+    );
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _RecipeNutrition &&
+            (identical(other.calories, calories) ||
+                other.calories == calories) &&
+            (identical(other.carbohydrate, carbohydrate) ||
+                other.carbohydrate == carbohydrate) &&
+            (identical(other.protein, protein) || other.protein == protein) &&
+            (identical(other.fat, fat) || other.fat == fat));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, calories, carbohydrate, protein, fat);
+
+  @override
+  String toString() {
+    return 'RecipeNutrition(calories: $calories, carbohydrate: $carbohydrate, protein: $protein, fat: $fat)';
+  }
+}
+
+/// @nodoc
+abstract mixin class _$RecipeNutritionCopyWith<$Res>
+    implements $RecipeNutritionCopyWith<$Res> {
+  factory _$RecipeNutritionCopyWith(
+          _RecipeNutrition value, $Res Function(_RecipeNutrition) _then) =
+      __$RecipeNutritionCopyWithImpl;
+  @override
+  @useResult
+  $Res call(
+      {@JsonKey(name: kcalories) String calories,
+      @JsonKey(name: kcarbohydrate) String carbohydrate,
+      @JsonKey(name: kprotein) String protein,
+      @JsonKey(name: kfat) String fat});
+}
+
+/// @nodoc
+class __$RecipeNutritionCopyWithImpl<$Res>
+    implements _$RecipeNutritionCopyWith<$Res> {
+  __$RecipeNutritionCopyWithImpl(this._self, this._then);
+
+  final _RecipeNutrition _self;
+  final $Res Function(_RecipeNutrition) _then;
+
+  /// Create a copy of RecipeNutrition
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $Res call({
+    Object? calories = null,
+    Object? carbohydrate = null,
+    Object? protein = null,
+    Object? fat = null,
+  }) {
+    return _then(_RecipeNutrition(
+      calories: null == calories
+          ? _self.calories
+          : calories // ignore: cast_nullable_to_non_nullable
+              as String,
+      carbohydrate: null == carbohydrate
+          ? _self.carbohydrate
+          : carbohydrate // ignore: cast_nullable_to_non_nullable
+              as String,
+      protein: null == protein
+          ? _self.protein
+          : protein // ignore: cast_nullable_to_non_nullable
+              as String,
+      fat: null == fat
+          ? _self.fat
+          : fat // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
 // dart format on

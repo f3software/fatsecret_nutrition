@@ -146,4 +146,107 @@ void main() async {
         ..info('---');
     }
   }
+
+  // Example 7: Get recipe by ID
+  final recipeResponse = await fatSecret.getRecipeById(
+    const RecipeGetByIdProps(
+      recipeId: '91', // Baked Lemon Snapper recipe
+    ),
+  );
+
+  if (recipeResponse != null) {
+    logger.info('\nRecipe details:');
+    final recipe = recipeResponse.recipe;
+    logger
+      ..info('Name: ${recipe.recipeName}')
+      ..info('Description: ${recipe.recipeDescription}')
+      ..info('Servings: ${recipe.numberOfServings}')
+      ..info('Grams per portion: ${recipe.gramsPerPortion}');
+
+    if (recipe.preparationTimeMin != null) {
+      logger.info('Prep time: ${recipe.preparationTimeMin} minutes');
+    }
+    if (recipe.cookingTimeMin != null) {
+      logger.info('Cook time: ${recipe.cookingTimeMin} minutes');
+    }
+    if (recipe.rating != null) {
+      logger.info('Rating: ${recipe.rating}/5');
+    }
+
+    logger.info('\nRecipe types:');
+    for (final type in recipe.recipeTypes.recipeType) {
+      logger.info('- $type');
+    }
+
+    logger.info('\nRecipe categories:');
+    for (final category in recipe.recipeCategories.recipeCategory) {
+      logger.info('- ${category.recipeCategoryName}');
+    }
+
+    logger.info('\nIngredients:');
+    for (final ingredient in recipe.ingredients.ingredient) {
+      logger.info('- ${ingredient.ingredientDescription}');
+    }
+
+    logger.info('\nDirections:');
+    for (final direction in recipe.directions.direction) {
+      logger.info(
+        '${direction.directionNumber}. ${direction.directionDescription}',
+      );
+    }
+
+    logger.info('\nNutrition per serving:');
+    final serving = recipe.servingSizes.serving;
+    logger
+      ..info('Calories: ${serving.calories}')
+      ..info('Protein: ${serving.protein}g')
+      ..info('Carbs: ${serving.carbohydrate}g')
+      ..info('Fat: ${serving.fat}g');
+  }
+
+  // Example 8: Search recipes
+  final recipesResponse = await fatSecret.searchRecipes(
+    const RecipeSearchProps(
+      searchExpression: 'chocolate',
+      maxResults: 5,
+      pageNumber: 0,
+      mustHaveImages: true,
+    ),
+  );
+
+  if (recipesResponse != null) {
+    logger.info('\nRecipe search results:');
+    for (final recipe in recipesResponse.recipes.recipe) {
+      logger
+        ..info('\nRecipe: ${recipe.recipeName}')
+        ..info('Description: ${recipe.recipeDescription}')
+        ..info('Image: ${recipe.recipeImage}')
+        ..info('Ingredients:');
+      for (final ingredient in recipe.recipeIngredients.ingredient) {
+        logger.info('- $ingredient');
+      }
+
+      logger.info('Nutrition:');
+      final nutrition = recipe.recipeNutrition;
+      logger
+        ..info('Calories: ${nutrition.calories}')
+        ..info('Protein: ${nutrition.protein}g')
+        ..info('Carbs: ${nutrition.carbohydrate}g')
+        ..info('Fat: ${nutrition.fat}g')
+        ..info('Types:');
+      for (final type in recipe.recipeTypes.recipeType) {
+        logger.info('- $type');
+      }
+    }
+  }
+
+  // Example 9: Get all recipe types
+  final recipeTypesResponse = await fatSecret.getRecipeTypes();
+
+  if (recipeTypesResponse != null) {
+    logger.info('\nAvailable recipe types:');
+    for (final type in recipeTypesResponse.recipeType) {
+      logger.info('- $type');
+    }
+  }
 }

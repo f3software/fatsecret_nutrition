@@ -529,3 +529,317 @@ Map<String, dynamic> _$FoodSubCategoriesPropsToJson(
       'language': instance.language,
       'format': instance.format,
     };
+
+_RecipeGetByIdProps _$RecipeGetByIdPropsFromJson(Map<String, dynamic> json) =>
+    _RecipeGetByIdProps(
+      recipeId: json['recipe_id'] as String,
+      format: json['format'] as String? ?? 'json',
+      region: json['region'] as String?,
+    );
+
+Map<String, dynamic> _$RecipeGetByIdPropsToJson(_RecipeGetByIdProps instance) =>
+    <String, dynamic>{
+      'recipe_id': instance.recipeId,
+      'format': instance.format,
+      'region': instance.region,
+    };
+
+_RecipeGetByIdResponse _$RecipeGetByIdResponseFromJson(
+  Map<String, dynamic> json,
+) =>
+    _RecipeGetByIdResponse(
+      recipe: Recipe.fromJson(json['recipe'] as Map<String, dynamic>),
+    );
+
+Map<String, dynamic> _$RecipeGetByIdResponseToJson(
+  _RecipeGetByIdResponse instance,
+) =>
+    <String, dynamic>{
+      'recipe': instance.recipe.toJson(),
+    };
+
+_Recipe _$RecipeFromJson(Map<String, dynamic> json) => _Recipe(
+      recipeId: json['recipe_id'] as String,
+      recipeName: json['recipe_name'] as String,
+      recipeUrl: json['recipe_url'] as String,
+      recipeDescription: json['recipe_description'] as String,
+      numberOfServings: json['number_of_servings'] as String,
+      gramsPerPortion: json['grams_per_portion'] as String,
+      preparationTimeMin: json['preparation_time_min'] as String?,
+      cookingTimeMin: json['cooking_time_min'] as String?,
+      rating: json['rating'] as String?,
+      recipeTypes:
+          RecipeTypes.fromJson(json['recipe_types'] as Map<String, dynamic>),
+      recipeCategories: RecipeCategories.fromJson(
+        json['recipe_categories'] as Map<String, dynamic>,
+      ),
+      recipeImages:
+          RecipeImages.fromJson(json['recipe_images'] as Map<String, dynamic>),
+      ingredients:
+          Ingredients.fromJson(json['ingredients'] as Map<String, dynamic>),
+      directions:
+          Directions.fromJson(json['directions'] as Map<String, dynamic>),
+      servingSizes:
+          ServingSizes.fromJson(json['serving_sizes'] as Map<String, dynamic>),
+    );
+
+Map<String, dynamic> _$RecipeToJson(_Recipe instance) => <String, dynamic>{
+      'recipe_id': instance.recipeId,
+      'recipe_name': instance.recipeName,
+      'recipe_url': instance.recipeUrl,
+      'recipe_description': instance.recipeDescription,
+      'number_of_servings': instance.numberOfServings,
+      'grams_per_portion': instance.gramsPerPortion,
+      'preparation_time_min': instance.preparationTimeMin,
+      'cooking_time_min': instance.cookingTimeMin,
+      'rating': instance.rating,
+      'recipe_types': instance.recipeTypes.toJson(),
+      'recipe_categories': instance.recipeCategories.toJson(),
+      'recipe_images': instance.recipeImages.toJson(),
+      'ingredients': instance.ingredients.toJson(),
+      'directions': instance.directions.toJson(),
+      'serving_sizes': instance.servingSizes.toJson(),
+    };
+
+_RecipeTypes _$RecipeTypesFromJson(Map<String, dynamic> json) => _RecipeTypes(
+      recipeType: (json['recipe_type'] as List<dynamic>)
+          .map((e) => e as String)
+          .toList(),
+    );
+
+Map<String, dynamic> _$RecipeTypesToJson(_RecipeTypes instance) =>
+    <String, dynamic>{
+      'recipe_type': instance.recipeType,
+    };
+
+_RecipeCategories _$RecipeCategoriesFromJson(Map<String, dynamic> json) =>
+    _RecipeCategories(
+      recipeCategory: (json['recipe_category'] as List<dynamic>)
+          .map((e) => RecipeCategory.fromJson(e as Map<String, dynamic>))
+          .toList(),
+    );
+
+Map<String, dynamic> _$RecipeCategoriesToJson(_RecipeCategories instance) =>
+    <String, dynamic>{
+      'recipe_category':
+          instance.recipeCategory.map((e) => e.toJson()).toList(),
+    };
+
+_RecipeCategory _$RecipeCategoryFromJson(Map<String, dynamic> json) =>
+    _RecipeCategory(
+      recipeCategoryName: json['recipe_category_name'] as String,
+      recipeCategoryUrl: json['recipe_category_url'] as String,
+    );
+
+Map<String, dynamic> _$RecipeCategoryToJson(_RecipeCategory instance) =>
+    <String, dynamic>{
+      'recipe_category_name': instance.recipeCategoryName,
+      'recipe_category_url': instance.recipeCategoryUrl,
+    };
+
+_RecipeImages _$RecipeImagesFromJson(Map<String, dynamic> json) =>
+    _RecipeImages(
+      recipeImage: (json['recipe_image'] as List<dynamic>)
+          .map((e) => e as String)
+          .toList(),
+    );
+
+Map<String, dynamic> _$RecipeImagesToJson(_RecipeImages instance) =>
+    <String, dynamic>{
+      'recipe_image': instance.recipeImage,
+    };
+
+_Ingredients _$IngredientsFromJson(Map<String, dynamic> json) => _Ingredients(
+      ingredient: (json['ingredient'] as List<dynamic>)
+          .map((e) => Ingredient.fromJson(e as Map<String, dynamic>))
+          .toList(),
+    );
+
+Map<String, dynamic> _$IngredientsToJson(_Ingredients instance) =>
+    <String, dynamic>{
+      'ingredient': instance.ingredient.map((e) => e.toJson()).toList(),
+    };
+
+_Ingredient _$IngredientFromJson(Map<String, dynamic> json) => _Ingredient(
+      foodId: json['food_id'] as String,
+      foodName: json['food_name'] as String,
+      servingId: json['serving_id'] as String,
+      numberOfUnits: json['number_of_units'] as String,
+      measurementDescription: json['measurement_description'] as String,
+      ingredientUrl: json['ingredient_url'] as String,
+      ingredientDescription: json['ingredient_description'] as String,
+    );
+
+Map<String, dynamic> _$IngredientToJson(_Ingredient instance) =>
+    <String, dynamic>{
+      'food_id': instance.foodId,
+      'food_name': instance.foodName,
+      'serving_id': instance.servingId,
+      'number_of_units': instance.numberOfUnits,
+      'measurement_description': instance.measurementDescription,
+      'ingredient_url': instance.ingredientUrl,
+      'ingredient_description': instance.ingredientDescription,
+    };
+
+_Directions _$DirectionsFromJson(Map<String, dynamic> json) => _Directions(
+      direction: (json['direction'] as List<dynamic>)
+          .map((e) => Direction.fromJson(e as Map<String, dynamic>))
+          .toList(),
+    );
+
+Map<String, dynamic> _$DirectionsToJson(_Directions instance) =>
+    <String, dynamic>{
+      'direction': instance.direction.map((e) => e.toJson()).toList(),
+    };
+
+_Direction _$DirectionFromJson(Map<String, dynamic> json) => _Direction(
+      directionNumber: json['direction_number'] as String,
+      directionDescription: json['direction_description'] as String,
+    );
+
+Map<String, dynamic> _$DirectionToJson(_Direction instance) =>
+    <String, dynamic>{
+      'direction_number': instance.directionNumber,
+      'direction_description': instance.directionDescription,
+    };
+
+_ServingSizes _$ServingSizesFromJson(Map<String, dynamic> json) =>
+    _ServingSizes(
+      serving: Serving.fromJson(json['serving'] as Map<String, dynamic>),
+    );
+
+Map<String, dynamic> _$ServingSizesToJson(_ServingSizes instance) =>
+    <String, dynamic>{
+      'serving': instance.serving.toJson(),
+    };
+
+_RecipeSearchProps _$RecipeSearchPropsFromJson(Map<String, dynamic> json) =>
+    _RecipeSearchProps(
+      searchExpression: json['search_expression'] as String?,
+      recipeTypes: json['recipe_types'] as String?,
+      recipeTypesMatchall: json['recipe_types_matchall'] as bool?,
+      mustHaveImages: json['must_have_images'] as bool?,
+      caloriesFrom: (json['calories.from'] as num?)?.toInt(),
+      caloriesTo: (json['calories.to'] as num?)?.toInt(),
+      carbPercentageFrom: (json['carb_percentage.from'] as num?)?.toInt(),
+      carbPercentageTo: (json['carb_percentage.to'] as num?)?.toInt(),
+      proteinPercentageFrom: (json['protein_percentage.from'] as num?)?.toInt(),
+      proteinPercentageTo: (json['protein_percentage.to'] as num?)?.toInt(),
+      fatPercentageFrom: (json['fat_percentage.from'] as num?)?.toInt(),
+      fatPercentageTo: (json['fat_percentage.to'] as num?)?.toInt(),
+      prepTimeFrom: (json['prep_time.from'] as num?)?.toInt(),
+      prepTimeTo: (json['prep_time.to'] as num?)?.toInt(),
+      pageNumber: (json['page_number'] as num?)?.toInt(),
+      maxResults: (json['max_results'] as num?)?.toInt(),
+      sortBy: json['sort_by'] as String?,
+      format: json['format'] as String? ?? 'json',
+      region: json['region'] as String?,
+    );
+
+Map<String, dynamic> _$RecipeSearchPropsToJson(_RecipeSearchProps instance) =>
+    <String, dynamic>{
+      'search_expression': instance.searchExpression,
+      'recipe_types': instance.recipeTypes,
+      'recipe_types_matchall': instance.recipeTypesMatchall,
+      'must_have_images': instance.mustHaveImages,
+      'calories.from': instance.caloriesFrom,
+      'calories.to': instance.caloriesTo,
+      'carb_percentage.from': instance.carbPercentageFrom,
+      'carb_percentage.to': instance.carbPercentageTo,
+      'protein_percentage.from': instance.proteinPercentageFrom,
+      'protein_percentage.to': instance.proteinPercentageTo,
+      'fat_percentage.from': instance.fatPercentageFrom,
+      'fat_percentage.to': instance.fatPercentageTo,
+      'prep_time.from': instance.prepTimeFrom,
+      'prep_time.to': instance.prepTimeTo,
+      'page_number': instance.pageNumber,
+      'max_results': instance.maxResults,
+      'sort_by': instance.sortBy,
+      'format': instance.format,
+      'region': instance.region,
+    };
+
+_RecipeSearchResponse _$RecipeSearchResponseFromJson(
+  Map<String, dynamic> json,
+) =>
+    _RecipeSearchResponse(
+      recipes: Recipes.fromJson(json['recipes'] as Map<String, dynamic>),
+    );
+
+Map<String, dynamic> _$RecipeSearchResponseToJson(
+  _RecipeSearchResponse instance,
+) =>
+    <String, dynamic>{
+      'recipes': instance.recipes.toJson(),
+    };
+
+_Recipes _$RecipesFromJson(Map<String, dynamic> json) => _Recipes(
+      maxResults: json['max_results'] as String,
+      totalResults: json['total_results'] as String,
+      pageNumber: json['page_number'] as String,
+      recipe: (json['recipe'] as List<dynamic>)
+          .map((e) => RecipeSearchResult.fromJson(e as Map<String, dynamic>))
+          .toList(),
+    );
+
+Map<String, dynamic> _$RecipesToJson(_Recipes instance) => <String, dynamic>{
+      'max_results': instance.maxResults,
+      'total_results': instance.totalResults,
+      'page_number': instance.pageNumber,
+      'recipe': instance.recipe.map((e) => e.toJson()).toList(),
+    };
+
+_RecipeSearchResult _$RecipeSearchResultFromJson(Map<String, dynamic> json) =>
+    _RecipeSearchResult(
+      recipeId: json['recipe_id'] as String,
+      recipeName: json['recipe_name'] as String,
+      recipeDescription: json['recipe_description'] as String,
+      recipeImage: json['recipe_image'] as String,
+      recipeIngredients: RecipeIngredients.fromJson(
+        json['recipe_ingredients'] as Map<String, dynamic>,
+      ),
+      recipeNutrition: RecipeNutrition.fromJson(
+        json['recipe_nutrition'] as Map<String, dynamic>,
+      ),
+      recipeTypes:
+          RecipeTypes.fromJson(json['recipe_types'] as Map<String, dynamic>),
+    );
+
+Map<String, dynamic> _$RecipeSearchResultToJson(_RecipeSearchResult instance) =>
+    <String, dynamic>{
+      'recipe_id': instance.recipeId,
+      'recipe_name': instance.recipeName,
+      'recipe_description': instance.recipeDescription,
+      'recipe_image': instance.recipeImage,
+      'recipe_ingredients': instance.recipeIngredients.toJson(),
+      'recipe_nutrition': instance.recipeNutrition.toJson(),
+      'recipe_types': instance.recipeTypes.toJson(),
+    };
+
+_RecipeIngredients _$RecipeIngredientsFromJson(Map<String, dynamic> json) =>
+    _RecipeIngredients(
+      ingredient: (json['ingredient'] as List<dynamic>)
+          .map((e) => e as String)
+          .toList(),
+    );
+
+Map<String, dynamic> _$RecipeIngredientsToJson(_RecipeIngredients instance) =>
+    <String, dynamic>{
+      'ingredient': instance.ingredient,
+    };
+
+_RecipeNutrition _$RecipeNutritionFromJson(Map<String, dynamic> json) =>
+    _RecipeNutrition(
+      calories: json['calories'] as String,
+      carbohydrate: json['carbohydrate'] as String,
+      protein: json['protein'] as String,
+      fat: json['fat'] as String,
+    );
+
+Map<String, dynamic> _$RecipeNutritionToJson(_RecipeNutrition instance) =>
+    <String, dynamic>{
+      'calories': instance.calories,
+      'carbohydrate': instance.carbohydrate,
+      'protein': instance.protein,
+      'fat': instance.fat,
+    };

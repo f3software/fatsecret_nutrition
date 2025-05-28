@@ -4,7 +4,7 @@ Developed by [F3 Software][f3_software_link] 🚀
 
 A Dart package for interacting with the FatSecret Nutrition API by F3 Software
 
-[![License: MIT][license_badge]][license_link]
+[![License: MIT][license_badge]][license_link] [![Coverage][coverage_badge]][coverage_link]
 
 ## Installation 📦
 
@@ -138,6 +138,60 @@ if (subCategories != null) {
 }
 ```
 
+### Get Recipe by ID
+
+```dart
+final recipe = await fatSecret.getRecipeById(
+  const RecipeGetByIdProps(
+    recipeId: '91', // Baked Lemon Snapper recipe
+  ),
+);
+
+if (recipe != null) {
+  print('Recipe: ${recipe.recipe.recipeName}');
+  print('Description: ${recipe.recipe.recipeDescription}');
+  print('Servings: ${recipe.recipe.numberOfServings}');
+  print('Grams per portion: ${recipe.recipe.gramsPerPortion}');
+  
+  // Print ingredients
+  for (final ingredient in recipe.recipe.ingredients.ingredient) {
+    print('- ${ingredient.ingredientDescription}');
+  }
+  
+  // Print directions
+  for (final direction in recipe.recipe.directions.direction) {
+    print('${direction.directionNumber}. ${direction.directionDescription}');
+  }
+}
+```
+
+### Search Recipes
+
+```dart
+final recipes = await fatSecret.searchRecipes(
+  const RecipeSearchProps(
+    searchExpression: 'chocolate',
+    maxResults: 5,
+    pageNumber: 0,
+    mustHaveImages: true,
+  ),
+);
+
+if (recipes != null) {
+  for (final recipe in recipes.recipes.recipe) {
+    print('Recipe: ${recipe.recipeName}');
+    print('Description: ${recipe.recipeDescription}');
+    print('Image: ${recipe.recipeImage}');
+    
+    // Print nutrition
+    print('Calories: ${recipe.recipeNutrition.calories}');
+    print('Protein: ${recipe.recipeNutrition.protein}g');
+    print('Carbs: ${recipe.recipeNutrition.carbohydrate}g');
+    print('Fat: ${recipe.recipeNutrition.fat}g');
+  }
+}
+```
+
 # Features
 
 | Feature | Status |
@@ -149,9 +203,9 @@ if (subCategories != null) {
 | Food Brands: Get All | ✅ |
 | Food Categories: Get All | ✅ |
 | Food Sub Categories: Get All | ✅ |
-| Recipies: Get By ID | ⏳ |
-| Recipies: Search | ⏳ |
-| Recipie: Types | ⏳ |
+| Recipes: Get By ID | ✅ |
+| Recipes: Search | ✅ |
+| Recipe Types | ⏳ |
 | Profile: Foods | ⏳ |
 | Profile: Recipes | ⏳ |
 | Profile: Saved Meals | ⏳ |
@@ -167,3 +221,5 @@ This project is licensed under the MIT License.
 [f3_software_link]: https://www.f3software.com?ref=fatsecret_nutrition&utm_source=fatsecret_nutrition&utm_medium=readme&utm_campaign=fatsecret_nutrition
 [license_badge]: https://img.shields.io/badge/license-MIT-blue.svg
 [license_link]: https://opensource.org/licenses/MIT
+[coverage_badge]: https://img.shields.io/badge/coverage-100%25-brightgreen.svg
+[coverage_link]: https://github.com/your-project/actions
