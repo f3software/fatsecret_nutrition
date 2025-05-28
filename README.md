@@ -192,6 +192,43 @@ if (recipes != null) {
 }
 ```
 
+### Process Natural Language Input
+
+```dart
+final nlpResponse = await fatSecret.processNaturalLanguage(
+  'A toast with ham and cheese',
+  includeFoodData: true,
+  region: 'US',
+  language: 'en',
+);
+
+if (nlpResponse != null) {
+  for (final food in nlpResponse.foodResponse) {
+    print('Food: ${food.foodEntryName}');
+    print('Food ID: ${food.foodId}');
+    
+    // Print eaten food details
+    print('Eaten:');
+    print('- Singular: ${food.eaten.foodNameSingular}');
+    print('- Plural: ${food.eaten.foodNamePlural}');
+    print('- Units: ${food.eaten.units}');
+    print('- Metric Description: ${food.eaten.metricDescription}');
+    
+    // Print nutritional content
+    final nutrition = food.eaten.totalNutritionalContent;
+    print('Calories: ${nutrition.calories}');
+    print('Protein: ${nutrition.protein}g');
+    print('Carbs: ${nutrition.carbohydrate}g');
+    print('Fat: ${nutrition.fat}g');
+    
+    // Print suggested serving
+    final serving = food.suggestedServing;
+    print('Serving: ${serving.servingDescription}');
+    print('Metric Amount: ${serving.metricMeasureAmount}g');
+  }
+}
+```
+
 # Features
 
 | Feature | Status |
@@ -206,6 +243,7 @@ if (recipes != null) {
 | Recipes: Get By ID | ✅ |
 | Recipes: Search | ✅ |
 | Recipe Types | ✅ |
+| Natural Language Processing | ✅ |
 | Profile: Foods | ⏳ |
 | Profile: Recipes | ⏳ |
 | Profile: Saved Meals | ⏳ |
@@ -214,7 +252,6 @@ if (recipes != null) {
 | Profile: Exercise Diary | ⏳ |
 | Profile: Weight Diary | ⏳ |
 | Image Recognition | ⏳ |
-| Natural Language Processing | ⏳ |
 
 ## License 📝
 
