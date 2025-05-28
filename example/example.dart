@@ -249,4 +249,70 @@ void main() async {
       logger.info('- $type');
     }
   }
+
+
+  // Example 10: Process natural language input
+  try {
+    final nlpResponse = await fatSecret.processNaturalLanguage(
+      'A toast with ham and cheese',
+    );
+
+    if (nlpResponse != null) {
+      logger.info('\nNatural Language Processing results:');
+      for (final food in nlpResponse.foodResponse) {
+        logger
+          ..info('\nFood: ${food.foodEntryName}')
+          ..info('Food ID: ${food.foodId}')
+          ..info('Eaten:')
+          ..info('- Singular: ${food.eaten.foodNameSingular}')
+          ..info('- Plural: ${food.eaten.foodNamePlural}')
+          ..info('- Units: ${food.eaten.units}')
+          ..info('- Metric Description: ${food.eaten.metricDescription}')
+          ..info('- Total Metric Amount: ${food.eaten.totalMetricAmount}g')
+          ..info('- Per Unit Metric Amount: ${food.eaten.perUnitMetricAmount}g')
+          ..info('\nNutritional Content:');
+        final nutrition = food.eaten.totalNutritionalContent;
+        logger
+          ..info('Calories: ${nutrition.calories}')
+          ..info('Protein: ${nutrition.protein}g')
+          ..info('Carbs: ${nutrition.carbohydrate}g')
+          ..info('Fat: ${nutrition.fat}g')
+          ..info('Saturated Fat: ${nutrition.saturatedFat}g')
+          ..info('Polyunsaturated Fat: ${nutrition.polyunsaturatedFat}g')
+          ..info('Monounsaturated Fat: ${nutrition.monounsaturatedFat}g')
+          ..info('Cholesterol: ${nutrition.cholesterol}mg')
+          ..info('Sodium: ${nutrition.sodium}mg')
+          ..info('Potassium: ${nutrition.potassium}mg')
+          ..info('Fiber: ${nutrition.fiber}g')
+          ..info('Sugar: ${nutrition.sugar}g')
+          ..info('Vitamin A: ${nutrition.vitaminA}%')
+          ..info('Vitamin C: ${nutrition.vitaminC}%')
+          ..info('Calcium: ${nutrition.calcium}%')
+          ..info('Iron: ${nutrition.iron}%')
+          ..info('\nSuggested Serving:');
+        final serving = food.suggestedServing;
+        logger
+          ..info('Serving ID: ${serving.servingId}')
+          ..info('Description: ${serving.servingDescription}')
+          ..info('Metric Description: ${serving.metricServingDescription}')
+          ..info('Metric Amount: ${serving.metricMeasureAmount}g')
+          ..info('Number of Units: ${serving.numberOfUnits}');
+        if (serving.customServingDescription != null) {
+          logger
+              .info('Custom Description: ${serving.customServingDescription}');
+        }
+
+        if (food.food != null) {
+          logger.info('\nAdditional Food Data:');
+          final foodData = food.food!;
+          logger
+            ..info('Name: ${foodData.foodName}')
+            ..info('Type: ${foodData.foodType}')
+            ..info('URL: ${foodData.foodUrl}');
+        }
+      }
+    }
+  } catch (e) {
+    logger.severe('Error: $e');
+  }
 }

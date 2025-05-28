@@ -6649,12 +6649,6 @@ mixin _$Recipe {
   String get numberOfServings;
   @JsonKey(name: 'grams_per_portion')
   String get gramsPerPortion;
-  @JsonKey(name: 'preparation_time_min')
-  String? get preparationTimeMin;
-  @JsonKey(name: 'cooking_time_min')
-  String? get cookingTimeMin;
-  @JsonKey(name: 'rating')
-  String? get rating;
   @JsonKey(name: 'recipe_types')
   RecipeTypes get recipeTypes;
   @JsonKey(name: 'recipe_categories')
@@ -6667,6 +6661,12 @@ mixin _$Recipe {
   Directions get directions;
   @JsonKey(name: 'serving_sizes')
   ServingSizes get servingSizes;
+  @JsonKey(name: 'preparation_time_min')
+  String? get preparationTimeMin;
+  @JsonKey(name: 'cooking_time_min')
+  String? get cookingTimeMin;
+  @JsonKey(name: 'rating')
+  String? get rating;
 
   /// Create a copy of Recipe
   /// with the given fields replaced by the non-null parameter values.
@@ -6695,11 +6695,6 @@ mixin _$Recipe {
                 other.numberOfServings == numberOfServings) &&
             (identical(other.gramsPerPortion, gramsPerPortion) ||
                 other.gramsPerPortion == gramsPerPortion) &&
-            (identical(other.preparationTimeMin, preparationTimeMin) ||
-                other.preparationTimeMin == preparationTimeMin) &&
-            (identical(other.cookingTimeMin, cookingTimeMin) ||
-                other.cookingTimeMin == cookingTimeMin) &&
-            (identical(other.rating, rating) || other.rating == rating) &&
             (identical(other.recipeTypes, recipeTypes) ||
                 other.recipeTypes == recipeTypes) &&
             (identical(other.recipeCategories, recipeCategories) ||
@@ -6711,7 +6706,12 @@ mixin _$Recipe {
             (identical(other.directions, directions) ||
                 other.directions == directions) &&
             (identical(other.servingSizes, servingSizes) ||
-                other.servingSizes == servingSizes));
+                other.servingSizes == servingSizes) &&
+            (identical(other.preparationTimeMin, preparationTimeMin) ||
+                other.preparationTimeMin == preparationTimeMin) &&
+            (identical(other.cookingTimeMin, cookingTimeMin) ||
+                other.cookingTimeMin == cookingTimeMin) &&
+            (identical(other.rating, rating) || other.rating == rating));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
@@ -6724,19 +6724,19 @@ mixin _$Recipe {
       recipeDescription,
       numberOfServings,
       gramsPerPortion,
-      preparationTimeMin,
-      cookingTimeMin,
-      rating,
       recipeTypes,
       recipeCategories,
       recipeImages,
       ingredients,
       directions,
-      servingSizes);
+      servingSizes,
+      preparationTimeMin,
+      cookingTimeMin,
+      rating);
 
   @override
   String toString() {
-    return 'Recipe(recipeId: $recipeId, recipeName: $recipeName, recipeUrl: $recipeUrl, recipeDescription: $recipeDescription, numberOfServings: $numberOfServings, gramsPerPortion: $gramsPerPortion, preparationTimeMin: $preparationTimeMin, cookingTimeMin: $cookingTimeMin, rating: $rating, recipeTypes: $recipeTypes, recipeCategories: $recipeCategories, recipeImages: $recipeImages, ingredients: $ingredients, directions: $directions, servingSizes: $servingSizes)';
+    return 'Recipe(recipeId: $recipeId, recipeName: $recipeName, recipeUrl: $recipeUrl, recipeDescription: $recipeDescription, numberOfServings: $numberOfServings, gramsPerPortion: $gramsPerPortion, recipeTypes: $recipeTypes, recipeCategories: $recipeCategories, recipeImages: $recipeImages, ingredients: $ingredients, directions: $directions, servingSizes: $servingSizes, preparationTimeMin: $preparationTimeMin, cookingTimeMin: $cookingTimeMin, rating: $rating)';
   }
 }
 
@@ -6752,15 +6752,15 @@ abstract mixin class $RecipeCopyWith<$Res> {
       @JsonKey(name: 'recipe_description') String recipeDescription,
       @JsonKey(name: 'number_of_servings') String numberOfServings,
       @JsonKey(name: 'grams_per_portion') String gramsPerPortion,
-      @JsonKey(name: 'preparation_time_min') String? preparationTimeMin,
-      @JsonKey(name: 'cooking_time_min') String? cookingTimeMin,
-      @JsonKey(name: 'rating') String? rating,
       @JsonKey(name: 'recipe_types') RecipeTypes recipeTypes,
       @JsonKey(name: 'recipe_categories') RecipeCategories recipeCategories,
       @JsonKey(name: 'recipe_images') RecipeImages recipeImages,
       @JsonKey(name: 'ingredients') Ingredients ingredients,
       @JsonKey(name: 'directions') Directions directions,
-      @JsonKey(name: 'serving_sizes') ServingSizes servingSizes});
+      @JsonKey(name: 'serving_sizes') ServingSizes servingSizes,
+      @JsonKey(name: 'preparation_time_min') String? preparationTimeMin,
+      @JsonKey(name: 'cooking_time_min') String? cookingTimeMin,
+      @JsonKey(name: 'rating') String? rating});
 
   $RecipeTypesCopyWith<$Res> get recipeTypes;
   $RecipeCategoriesCopyWith<$Res> get recipeCategories;
@@ -6788,15 +6788,15 @@ class _$RecipeCopyWithImpl<$Res> implements $RecipeCopyWith<$Res> {
     Object? recipeDescription = null,
     Object? numberOfServings = null,
     Object? gramsPerPortion = null,
-    Object? preparationTimeMin = freezed,
-    Object? cookingTimeMin = freezed,
-    Object? rating = freezed,
     Object? recipeTypes = null,
     Object? recipeCategories = null,
     Object? recipeImages = null,
     Object? ingredients = null,
     Object? directions = null,
     Object? servingSizes = null,
+    Object? preparationTimeMin = freezed,
+    Object? cookingTimeMin = freezed,
+    Object? rating = freezed,
   }) {
     return _then(_self.copyWith(
       recipeId: null == recipeId
@@ -6823,18 +6823,6 @@ class _$RecipeCopyWithImpl<$Res> implements $RecipeCopyWith<$Res> {
           ? _self.gramsPerPortion
           : gramsPerPortion // ignore: cast_nullable_to_non_nullable
               as String,
-      preparationTimeMin: freezed == preparationTimeMin
-          ? _self.preparationTimeMin
-          : preparationTimeMin // ignore: cast_nullable_to_non_nullable
-              as String?,
-      cookingTimeMin: freezed == cookingTimeMin
-          ? _self.cookingTimeMin
-          : cookingTimeMin // ignore: cast_nullable_to_non_nullable
-              as String?,
-      rating: freezed == rating
-          ? _self.rating
-          : rating // ignore: cast_nullable_to_non_nullable
-              as String?,
       recipeTypes: null == recipeTypes
           ? _self.recipeTypes
           : recipeTypes // ignore: cast_nullable_to_non_nullable
@@ -6859,6 +6847,18 @@ class _$RecipeCopyWithImpl<$Res> implements $RecipeCopyWith<$Res> {
           ? _self.servingSizes
           : servingSizes // ignore: cast_nullable_to_non_nullable
               as ServingSizes,
+      preparationTimeMin: freezed == preparationTimeMin
+          ? _self.preparationTimeMin
+          : preparationTimeMin // ignore: cast_nullable_to_non_nullable
+              as String?,
+      cookingTimeMin: freezed == cookingTimeMin
+          ? _self.cookingTimeMin
+          : cookingTimeMin // ignore: cast_nullable_to_non_nullable
+              as String?,
+      rating: freezed == rating
+          ? _self.rating
+          : rating // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 
@@ -6933,15 +6933,15 @@ class _Recipe implements Recipe {
       @JsonKey(name: 'recipe_description') required this.recipeDescription,
       @JsonKey(name: 'number_of_servings') required this.numberOfServings,
       @JsonKey(name: 'grams_per_portion') required this.gramsPerPortion,
-      @JsonKey(name: 'preparation_time_min') this.preparationTimeMin,
-      @JsonKey(name: 'cooking_time_min') this.cookingTimeMin,
-      @JsonKey(name: 'rating') this.rating,
       @JsonKey(name: 'recipe_types') required this.recipeTypes,
       @JsonKey(name: 'recipe_categories') required this.recipeCategories,
       @JsonKey(name: 'recipe_images') required this.recipeImages,
       @JsonKey(name: 'ingredients') required this.ingredients,
       @JsonKey(name: 'directions') required this.directions,
-      @JsonKey(name: 'serving_sizes') required this.servingSizes});
+      @JsonKey(name: 'serving_sizes') required this.servingSizes,
+      @JsonKey(name: 'preparation_time_min') this.preparationTimeMin,
+      @JsonKey(name: 'cooking_time_min') this.cookingTimeMin,
+      @JsonKey(name: 'rating') this.rating});
   factory _Recipe.fromJson(Map<String, dynamic> json) => _$RecipeFromJson(json);
 
   @override
@@ -6963,15 +6963,6 @@ class _Recipe implements Recipe {
   @JsonKey(name: 'grams_per_portion')
   final String gramsPerPortion;
   @override
-  @JsonKey(name: 'preparation_time_min')
-  final String? preparationTimeMin;
-  @override
-  @JsonKey(name: 'cooking_time_min')
-  final String? cookingTimeMin;
-  @override
-  @JsonKey(name: 'rating')
-  final String? rating;
-  @override
   @JsonKey(name: 'recipe_types')
   final RecipeTypes recipeTypes;
   @override
@@ -6989,6 +6980,15 @@ class _Recipe implements Recipe {
   @override
   @JsonKey(name: 'serving_sizes')
   final ServingSizes servingSizes;
+  @override
+  @JsonKey(name: 'preparation_time_min')
+  final String? preparationTimeMin;
+  @override
+  @JsonKey(name: 'cooking_time_min')
+  final String? cookingTimeMin;
+  @override
+  @JsonKey(name: 'rating')
+  final String? rating;
 
   /// Create a copy of Recipe
   /// with the given fields replaced by the non-null parameter values.
@@ -7022,11 +7022,6 @@ class _Recipe implements Recipe {
                 other.numberOfServings == numberOfServings) &&
             (identical(other.gramsPerPortion, gramsPerPortion) ||
                 other.gramsPerPortion == gramsPerPortion) &&
-            (identical(other.preparationTimeMin, preparationTimeMin) ||
-                other.preparationTimeMin == preparationTimeMin) &&
-            (identical(other.cookingTimeMin, cookingTimeMin) ||
-                other.cookingTimeMin == cookingTimeMin) &&
-            (identical(other.rating, rating) || other.rating == rating) &&
             (identical(other.recipeTypes, recipeTypes) ||
                 other.recipeTypes == recipeTypes) &&
             (identical(other.recipeCategories, recipeCategories) ||
@@ -7038,7 +7033,12 @@ class _Recipe implements Recipe {
             (identical(other.directions, directions) ||
                 other.directions == directions) &&
             (identical(other.servingSizes, servingSizes) ||
-                other.servingSizes == servingSizes));
+                other.servingSizes == servingSizes) &&
+            (identical(other.preparationTimeMin, preparationTimeMin) ||
+                other.preparationTimeMin == preparationTimeMin) &&
+            (identical(other.cookingTimeMin, cookingTimeMin) ||
+                other.cookingTimeMin == cookingTimeMin) &&
+            (identical(other.rating, rating) || other.rating == rating));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
@@ -7051,19 +7051,19 @@ class _Recipe implements Recipe {
       recipeDescription,
       numberOfServings,
       gramsPerPortion,
-      preparationTimeMin,
-      cookingTimeMin,
-      rating,
       recipeTypes,
       recipeCategories,
       recipeImages,
       ingredients,
       directions,
-      servingSizes);
+      servingSizes,
+      preparationTimeMin,
+      cookingTimeMin,
+      rating);
 
   @override
   String toString() {
-    return 'Recipe(recipeId: $recipeId, recipeName: $recipeName, recipeUrl: $recipeUrl, recipeDescription: $recipeDescription, numberOfServings: $numberOfServings, gramsPerPortion: $gramsPerPortion, preparationTimeMin: $preparationTimeMin, cookingTimeMin: $cookingTimeMin, rating: $rating, recipeTypes: $recipeTypes, recipeCategories: $recipeCategories, recipeImages: $recipeImages, ingredients: $ingredients, directions: $directions, servingSizes: $servingSizes)';
+    return 'Recipe(recipeId: $recipeId, recipeName: $recipeName, recipeUrl: $recipeUrl, recipeDescription: $recipeDescription, numberOfServings: $numberOfServings, gramsPerPortion: $gramsPerPortion, recipeTypes: $recipeTypes, recipeCategories: $recipeCategories, recipeImages: $recipeImages, ingredients: $ingredients, directions: $directions, servingSizes: $servingSizes, preparationTimeMin: $preparationTimeMin, cookingTimeMin: $cookingTimeMin, rating: $rating)';
   }
 }
 
@@ -7080,15 +7080,15 @@ abstract mixin class _$RecipeCopyWith<$Res> implements $RecipeCopyWith<$Res> {
       @JsonKey(name: 'recipe_description') String recipeDescription,
       @JsonKey(name: 'number_of_servings') String numberOfServings,
       @JsonKey(name: 'grams_per_portion') String gramsPerPortion,
-      @JsonKey(name: 'preparation_time_min') String? preparationTimeMin,
-      @JsonKey(name: 'cooking_time_min') String? cookingTimeMin,
-      @JsonKey(name: 'rating') String? rating,
       @JsonKey(name: 'recipe_types') RecipeTypes recipeTypes,
       @JsonKey(name: 'recipe_categories') RecipeCategories recipeCategories,
       @JsonKey(name: 'recipe_images') RecipeImages recipeImages,
       @JsonKey(name: 'ingredients') Ingredients ingredients,
       @JsonKey(name: 'directions') Directions directions,
-      @JsonKey(name: 'serving_sizes') ServingSizes servingSizes});
+      @JsonKey(name: 'serving_sizes') ServingSizes servingSizes,
+      @JsonKey(name: 'preparation_time_min') String? preparationTimeMin,
+      @JsonKey(name: 'cooking_time_min') String? cookingTimeMin,
+      @JsonKey(name: 'rating') String? rating});
 
   @override
   $RecipeTypesCopyWith<$Res> get recipeTypes;
@@ -7122,15 +7122,15 @@ class __$RecipeCopyWithImpl<$Res> implements _$RecipeCopyWith<$Res> {
     Object? recipeDescription = null,
     Object? numberOfServings = null,
     Object? gramsPerPortion = null,
-    Object? preparationTimeMin = freezed,
-    Object? cookingTimeMin = freezed,
-    Object? rating = freezed,
     Object? recipeTypes = null,
     Object? recipeCategories = null,
     Object? recipeImages = null,
     Object? ingredients = null,
     Object? directions = null,
     Object? servingSizes = null,
+    Object? preparationTimeMin = freezed,
+    Object? cookingTimeMin = freezed,
+    Object? rating = freezed,
   }) {
     return _then(_Recipe(
       recipeId: null == recipeId
@@ -7157,18 +7157,6 @@ class __$RecipeCopyWithImpl<$Res> implements _$RecipeCopyWith<$Res> {
           ? _self.gramsPerPortion
           : gramsPerPortion // ignore: cast_nullable_to_non_nullable
               as String,
-      preparationTimeMin: freezed == preparationTimeMin
-          ? _self.preparationTimeMin
-          : preparationTimeMin // ignore: cast_nullable_to_non_nullable
-              as String?,
-      cookingTimeMin: freezed == cookingTimeMin
-          ? _self.cookingTimeMin
-          : cookingTimeMin // ignore: cast_nullable_to_non_nullable
-              as String?,
-      rating: freezed == rating
-          ? _self.rating
-          : rating // ignore: cast_nullable_to_non_nullable
-              as String?,
       recipeTypes: null == recipeTypes
           ? _self.recipeTypes
           : recipeTypes // ignore: cast_nullable_to_non_nullable
@@ -7193,6 +7181,18 @@ class __$RecipeCopyWithImpl<$Res> implements _$RecipeCopyWith<$Res> {
           ? _self.servingSizes
           : servingSizes // ignore: cast_nullable_to_non_nullable
               as ServingSizes,
+      preparationTimeMin: freezed == preparationTimeMin
+          ? _self.preparationTimeMin
+          : preparationTimeMin // ignore: cast_nullable_to_non_nullable
+              as String?,
+      cookingTimeMin: freezed == cookingTimeMin
+          ? _self.cookingTimeMin
+          : cookingTimeMin // ignore: cast_nullable_to_non_nullable
+              as String?,
+      rating: freezed == rating
+          ? _self.rating
+          : rating // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 
@@ -10558,6 +10558,2131 @@ class __$RecipeNutritionCopyWithImpl<$Res>
           ? _self.fat
           : fat // ignore: cast_nullable_to_non_nullable
               as String,
+    ));
+  }
+}
+
+/// @nodoc
+mixin _$NaturalLanguageProcessingRequest {
+  @JsonKey(name: 'user_input')
+  String get userInput;
+  @JsonKey(name: 'include_food_data')
+  bool get includeFoodData;
+  @JsonKey(name: 'eaten_foods')
+  List<EatenFood>? get eatenFoods;
+  @JsonKey(name: 'region')
+  String? get region;
+  @JsonKey(name: 'language')
+  String? get language;
+
+  /// Create a copy of NaturalLanguageProcessingRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $NaturalLanguageProcessingRequestCopyWith<NaturalLanguageProcessingRequest>
+      get copyWith => _$NaturalLanguageProcessingRequestCopyWithImpl<
+              NaturalLanguageProcessingRequest>(
+          this as NaturalLanguageProcessingRequest, _$identity);
+
+  /// Serializes this NaturalLanguageProcessingRequest to a JSON map.
+  Map<String, dynamic> toJson();
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is NaturalLanguageProcessingRequest &&
+            (identical(other.userInput, userInput) ||
+                other.userInput == userInput) &&
+            (identical(other.includeFoodData, includeFoodData) ||
+                other.includeFoodData == includeFoodData) &&
+            const DeepCollectionEquality()
+                .equals(other.eatenFoods, eatenFoods) &&
+            (identical(other.region, region) || other.region == region) &&
+            (identical(other.language, language) ||
+                other.language == language));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(runtimeType, userInput, includeFoodData,
+      const DeepCollectionEquality().hash(eatenFoods), region, language);
+
+  @override
+  String toString() {
+    return 'NaturalLanguageProcessingRequest(userInput: $userInput, includeFoodData: $includeFoodData, eatenFoods: $eatenFoods, region: $region, language: $language)';
+  }
+}
+
+/// @nodoc
+abstract mixin class $NaturalLanguageProcessingRequestCopyWith<$Res> {
+  factory $NaturalLanguageProcessingRequestCopyWith(
+          NaturalLanguageProcessingRequest value,
+          $Res Function(NaturalLanguageProcessingRequest) _then) =
+      _$NaturalLanguageProcessingRequestCopyWithImpl;
+  @useResult
+  $Res call(
+      {@JsonKey(name: 'user_input') String userInput,
+      @JsonKey(name: 'include_food_data') bool includeFoodData,
+      @JsonKey(name: 'eaten_foods') List<EatenFood>? eatenFoods,
+      @JsonKey(name: 'region') String? region,
+      @JsonKey(name: 'language') String? language});
+}
+
+/// @nodoc
+class _$NaturalLanguageProcessingRequestCopyWithImpl<$Res>
+    implements $NaturalLanguageProcessingRequestCopyWith<$Res> {
+  _$NaturalLanguageProcessingRequestCopyWithImpl(this._self, this._then);
+
+  final NaturalLanguageProcessingRequest _self;
+  final $Res Function(NaturalLanguageProcessingRequest) _then;
+
+  /// Create a copy of NaturalLanguageProcessingRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? userInput = null,
+    Object? includeFoodData = null,
+    Object? eatenFoods = freezed,
+    Object? region = freezed,
+    Object? language = freezed,
+  }) {
+    return _then(_self.copyWith(
+      userInput: null == userInput
+          ? _self.userInput
+          : userInput // ignore: cast_nullable_to_non_nullable
+              as String,
+      includeFoodData: null == includeFoodData
+          ? _self.includeFoodData
+          : includeFoodData // ignore: cast_nullable_to_non_nullable
+              as bool,
+      eatenFoods: freezed == eatenFoods
+          ? _self.eatenFoods
+          : eatenFoods // ignore: cast_nullable_to_non_nullable
+              as List<EatenFood>?,
+      region: freezed == region
+          ? _self.region
+          : region // ignore: cast_nullable_to_non_nullable
+              as String?,
+      language: freezed == language
+          ? _self.language
+          : language // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _NaturalLanguageProcessingRequest
+    implements NaturalLanguageProcessingRequest {
+  const _NaturalLanguageProcessingRequest(
+      {@JsonKey(name: 'user_input') required this.userInput,
+      @JsonKey(name: 'include_food_data') this.includeFoodData = false,
+      @JsonKey(name: 'eaten_foods') final List<EatenFood>? eatenFoods,
+      @JsonKey(name: 'region') this.region,
+      @JsonKey(name: 'language') this.language})
+      : _eatenFoods = eatenFoods;
+  factory _NaturalLanguageProcessingRequest.fromJson(
+          Map<String, dynamic> json) =>
+      _$NaturalLanguageProcessingRequestFromJson(json);
+
+  @override
+  @JsonKey(name: 'user_input')
+  final String userInput;
+  @override
+  @JsonKey(name: 'include_food_data')
+  final bool includeFoodData;
+  final List<EatenFood>? _eatenFoods;
+  @override
+  @JsonKey(name: 'eaten_foods')
+  List<EatenFood>? get eatenFoods {
+    final value = _eatenFoods;
+    if (value == null) return null;
+    if (_eatenFoods is EqualUnmodifiableListView) return _eatenFoods;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  @override
+  @JsonKey(name: 'region')
+  final String? region;
+  @override
+  @JsonKey(name: 'language')
+  final String? language;
+
+  /// Create a copy of NaturalLanguageProcessingRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  _$NaturalLanguageProcessingRequestCopyWith<_NaturalLanguageProcessingRequest>
+      get copyWith => __$NaturalLanguageProcessingRequestCopyWithImpl<
+          _NaturalLanguageProcessingRequest>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$NaturalLanguageProcessingRequestToJson(
+      this,
+    );
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _NaturalLanguageProcessingRequest &&
+            (identical(other.userInput, userInput) ||
+                other.userInput == userInput) &&
+            (identical(other.includeFoodData, includeFoodData) ||
+                other.includeFoodData == includeFoodData) &&
+            const DeepCollectionEquality()
+                .equals(other._eatenFoods, _eatenFoods) &&
+            (identical(other.region, region) || other.region == region) &&
+            (identical(other.language, language) ||
+                other.language == language));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(runtimeType, userInput, includeFoodData,
+      const DeepCollectionEquality().hash(_eatenFoods), region, language);
+
+  @override
+  String toString() {
+    return 'NaturalLanguageProcessingRequest(userInput: $userInput, includeFoodData: $includeFoodData, eatenFoods: $eatenFoods, region: $region, language: $language)';
+  }
+}
+
+/// @nodoc
+abstract mixin class _$NaturalLanguageProcessingRequestCopyWith<$Res>
+    implements $NaturalLanguageProcessingRequestCopyWith<$Res> {
+  factory _$NaturalLanguageProcessingRequestCopyWith(
+          _NaturalLanguageProcessingRequest value,
+          $Res Function(_NaturalLanguageProcessingRequest) _then) =
+      __$NaturalLanguageProcessingRequestCopyWithImpl;
+  @override
+  @useResult
+  $Res call(
+      {@JsonKey(name: 'user_input') String userInput,
+      @JsonKey(name: 'include_food_data') bool includeFoodData,
+      @JsonKey(name: 'eaten_foods') List<EatenFood>? eatenFoods,
+      @JsonKey(name: 'region') String? region,
+      @JsonKey(name: 'language') String? language});
+}
+
+/// @nodoc
+class __$NaturalLanguageProcessingRequestCopyWithImpl<$Res>
+    implements _$NaturalLanguageProcessingRequestCopyWith<$Res> {
+  __$NaturalLanguageProcessingRequestCopyWithImpl(this._self, this._then);
+
+  final _NaturalLanguageProcessingRequest _self;
+  final $Res Function(_NaturalLanguageProcessingRequest) _then;
+
+  /// Create a copy of NaturalLanguageProcessingRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $Res call({
+    Object? userInput = null,
+    Object? includeFoodData = null,
+    Object? eatenFoods = freezed,
+    Object? region = freezed,
+    Object? language = freezed,
+  }) {
+    return _then(_NaturalLanguageProcessingRequest(
+      userInput: null == userInput
+          ? _self.userInput
+          : userInput // ignore: cast_nullable_to_non_nullable
+              as String,
+      includeFoodData: null == includeFoodData
+          ? _self.includeFoodData
+          : includeFoodData // ignore: cast_nullable_to_non_nullable
+              as bool,
+      eatenFoods: freezed == eatenFoods
+          ? _self._eatenFoods
+          : eatenFoods // ignore: cast_nullable_to_non_nullable
+              as List<EatenFood>?,
+      region: freezed == region
+          ? _self.region
+          : region // ignore: cast_nullable_to_non_nullable
+              as String?,
+      language: freezed == language
+          ? _self.language
+          : language // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ));
+  }
+}
+
+/// @nodoc
+mixin _$EatenFood {
+  @JsonKey(name: 'food_id')
+  int get foodId;
+  @JsonKey(name: 'food_name')
+  String get foodName;
+  @JsonKey(name: 'food_brand')
+  String? get foodBrand;
+  @JsonKey(name: 'serving_description')
+  String? get servingDescription;
+  @JsonKey(name: 'serving_size')
+  String? get servingSize;
+
+  /// Create a copy of EatenFood
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $EatenFoodCopyWith<EatenFood> get copyWith =>
+      _$EatenFoodCopyWithImpl<EatenFood>(this as EatenFood, _$identity);
+
+  /// Serializes this EatenFood to a JSON map.
+  Map<String, dynamic> toJson();
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is EatenFood &&
+            (identical(other.foodId, foodId) || other.foodId == foodId) &&
+            (identical(other.foodName, foodName) ||
+                other.foodName == foodName) &&
+            (identical(other.foodBrand, foodBrand) ||
+                other.foodBrand == foodBrand) &&
+            (identical(other.servingDescription, servingDescription) ||
+                other.servingDescription == servingDescription) &&
+            (identical(other.servingSize, servingSize) ||
+                other.servingSize == servingSize));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(runtimeType, foodId, foodName, foodBrand,
+      servingDescription, servingSize);
+
+  @override
+  String toString() {
+    return 'EatenFood(foodId: $foodId, foodName: $foodName, foodBrand: $foodBrand, servingDescription: $servingDescription, servingSize: $servingSize)';
+  }
+}
+
+/// @nodoc
+abstract mixin class $EatenFoodCopyWith<$Res> {
+  factory $EatenFoodCopyWith(EatenFood value, $Res Function(EatenFood) _then) =
+      _$EatenFoodCopyWithImpl;
+  @useResult
+  $Res call(
+      {@JsonKey(name: 'food_id') int foodId,
+      @JsonKey(name: 'food_name') String foodName,
+      @JsonKey(name: 'food_brand') String? foodBrand,
+      @JsonKey(name: 'serving_description') String? servingDescription,
+      @JsonKey(name: 'serving_size') String? servingSize});
+}
+
+/// @nodoc
+class _$EatenFoodCopyWithImpl<$Res> implements $EatenFoodCopyWith<$Res> {
+  _$EatenFoodCopyWithImpl(this._self, this._then);
+
+  final EatenFood _self;
+  final $Res Function(EatenFood) _then;
+
+  /// Create a copy of EatenFood
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? foodId = null,
+    Object? foodName = null,
+    Object? foodBrand = freezed,
+    Object? servingDescription = freezed,
+    Object? servingSize = freezed,
+  }) {
+    return _then(_self.copyWith(
+      foodId: null == foodId
+          ? _self.foodId
+          : foodId // ignore: cast_nullable_to_non_nullable
+              as int,
+      foodName: null == foodName
+          ? _self.foodName
+          : foodName // ignore: cast_nullable_to_non_nullable
+              as String,
+      foodBrand: freezed == foodBrand
+          ? _self.foodBrand
+          : foodBrand // ignore: cast_nullable_to_non_nullable
+              as String?,
+      servingDescription: freezed == servingDescription
+          ? _self.servingDescription
+          : servingDescription // ignore: cast_nullable_to_non_nullable
+              as String?,
+      servingSize: freezed == servingSize
+          ? _self.servingSize
+          : servingSize // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _EatenFood implements EatenFood {
+  const _EatenFood(
+      {@JsonKey(name: 'food_id') required this.foodId,
+      @JsonKey(name: 'food_name') required this.foodName,
+      @JsonKey(name: 'food_brand') this.foodBrand,
+      @JsonKey(name: 'serving_description') this.servingDescription,
+      @JsonKey(name: 'serving_size') this.servingSize});
+  factory _EatenFood.fromJson(Map<String, dynamic> json) =>
+      _$EatenFoodFromJson(json);
+
+  @override
+  @JsonKey(name: 'food_id')
+  final int foodId;
+  @override
+  @JsonKey(name: 'food_name')
+  final String foodName;
+  @override
+  @JsonKey(name: 'food_brand')
+  final String? foodBrand;
+  @override
+  @JsonKey(name: 'serving_description')
+  final String? servingDescription;
+  @override
+  @JsonKey(name: 'serving_size')
+  final String? servingSize;
+
+  /// Create a copy of EatenFood
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  _$EatenFoodCopyWith<_EatenFood> get copyWith =>
+      __$EatenFoodCopyWithImpl<_EatenFood>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$EatenFoodToJson(
+      this,
+    );
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _EatenFood &&
+            (identical(other.foodId, foodId) || other.foodId == foodId) &&
+            (identical(other.foodName, foodName) ||
+                other.foodName == foodName) &&
+            (identical(other.foodBrand, foodBrand) ||
+                other.foodBrand == foodBrand) &&
+            (identical(other.servingDescription, servingDescription) ||
+                other.servingDescription == servingDescription) &&
+            (identical(other.servingSize, servingSize) ||
+                other.servingSize == servingSize));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(runtimeType, foodId, foodName, foodBrand,
+      servingDescription, servingSize);
+
+  @override
+  String toString() {
+    return 'EatenFood(foodId: $foodId, foodName: $foodName, foodBrand: $foodBrand, servingDescription: $servingDescription, servingSize: $servingSize)';
+  }
+}
+
+/// @nodoc
+abstract mixin class _$EatenFoodCopyWith<$Res>
+    implements $EatenFoodCopyWith<$Res> {
+  factory _$EatenFoodCopyWith(
+          _EatenFood value, $Res Function(_EatenFood) _then) =
+      __$EatenFoodCopyWithImpl;
+  @override
+  @useResult
+  $Res call(
+      {@JsonKey(name: 'food_id') int foodId,
+      @JsonKey(name: 'food_name') String foodName,
+      @JsonKey(name: 'food_brand') String? foodBrand,
+      @JsonKey(name: 'serving_description') String? servingDescription,
+      @JsonKey(name: 'serving_size') String? servingSize});
+}
+
+/// @nodoc
+class __$EatenFoodCopyWithImpl<$Res> implements _$EatenFoodCopyWith<$Res> {
+  __$EatenFoodCopyWithImpl(this._self, this._then);
+
+  final _EatenFood _self;
+  final $Res Function(_EatenFood) _then;
+
+  /// Create a copy of EatenFood
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $Res call({
+    Object? foodId = null,
+    Object? foodName = null,
+    Object? foodBrand = freezed,
+    Object? servingDescription = freezed,
+    Object? servingSize = freezed,
+  }) {
+    return _then(_EatenFood(
+      foodId: null == foodId
+          ? _self.foodId
+          : foodId // ignore: cast_nullable_to_non_nullable
+              as int,
+      foodName: null == foodName
+          ? _self.foodName
+          : foodName // ignore: cast_nullable_to_non_nullable
+              as String,
+      foodBrand: freezed == foodBrand
+          ? _self.foodBrand
+          : foodBrand // ignore: cast_nullable_to_non_nullable
+              as String?,
+      servingDescription: freezed == servingDescription
+          ? _self.servingDescription
+          : servingDescription // ignore: cast_nullable_to_non_nullable
+              as String?,
+      servingSize: freezed == servingSize
+          ? _self.servingSize
+          : servingSize // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ));
+  }
+}
+
+/// @nodoc
+mixin _$NaturalLanguageProcessingResponse {
+  @JsonKey(name: 'food_response')
+  List<FoodResponse> get foodResponse;
+
+  /// Create a copy of NaturalLanguageProcessingResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $NaturalLanguageProcessingResponseCopyWith<NaturalLanguageProcessingResponse>
+      get copyWith => _$NaturalLanguageProcessingResponseCopyWithImpl<
+              NaturalLanguageProcessingResponse>(
+          this as NaturalLanguageProcessingResponse, _$identity);
+
+  /// Serializes this NaturalLanguageProcessingResponse to a JSON map.
+  Map<String, dynamic> toJson();
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is NaturalLanguageProcessingResponse &&
+            const DeepCollectionEquality()
+                .equals(other.foodResponse, foodResponse));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType, const DeepCollectionEquality().hash(foodResponse));
+
+  @override
+  String toString() {
+    return 'NaturalLanguageProcessingResponse(foodResponse: $foodResponse)';
+  }
+}
+
+/// @nodoc
+abstract mixin class $NaturalLanguageProcessingResponseCopyWith<$Res> {
+  factory $NaturalLanguageProcessingResponseCopyWith(
+          NaturalLanguageProcessingResponse value,
+          $Res Function(NaturalLanguageProcessingResponse) _then) =
+      _$NaturalLanguageProcessingResponseCopyWithImpl;
+  @useResult
+  $Res call({@JsonKey(name: 'food_response') List<FoodResponse> foodResponse});
+}
+
+/// @nodoc
+class _$NaturalLanguageProcessingResponseCopyWithImpl<$Res>
+    implements $NaturalLanguageProcessingResponseCopyWith<$Res> {
+  _$NaturalLanguageProcessingResponseCopyWithImpl(this._self, this._then);
+
+  final NaturalLanguageProcessingResponse _self;
+  final $Res Function(NaturalLanguageProcessingResponse) _then;
+
+  /// Create a copy of NaturalLanguageProcessingResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? foodResponse = null,
+  }) {
+    return _then(_self.copyWith(
+      foodResponse: null == foodResponse
+          ? _self.foodResponse
+          : foodResponse // ignore: cast_nullable_to_non_nullable
+              as List<FoodResponse>,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _NaturalLanguageProcessingResponse
+    implements NaturalLanguageProcessingResponse {
+  const _NaturalLanguageProcessingResponse(
+      {@JsonKey(name: 'food_response')
+      required final List<FoodResponse> foodResponse})
+      : _foodResponse = foodResponse;
+  factory _NaturalLanguageProcessingResponse.fromJson(
+          Map<String, dynamic> json) =>
+      _$NaturalLanguageProcessingResponseFromJson(json);
+
+  final List<FoodResponse> _foodResponse;
+  @override
+  @JsonKey(name: 'food_response')
+  List<FoodResponse> get foodResponse {
+    if (_foodResponse is EqualUnmodifiableListView) return _foodResponse;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_foodResponse);
+  }
+
+  /// Create a copy of NaturalLanguageProcessingResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  _$NaturalLanguageProcessingResponseCopyWith<
+          _NaturalLanguageProcessingResponse>
+      get copyWith => __$NaturalLanguageProcessingResponseCopyWithImpl<
+          _NaturalLanguageProcessingResponse>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$NaturalLanguageProcessingResponseToJson(
+      this,
+    );
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _NaturalLanguageProcessingResponse &&
+            const DeepCollectionEquality()
+                .equals(other._foodResponse, _foodResponse));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType, const DeepCollectionEquality().hash(_foodResponse));
+
+  @override
+  String toString() {
+    return 'NaturalLanguageProcessingResponse(foodResponse: $foodResponse)';
+  }
+}
+
+/// @nodoc
+abstract mixin class _$NaturalLanguageProcessingResponseCopyWith<$Res>
+    implements $NaturalLanguageProcessingResponseCopyWith<$Res> {
+  factory _$NaturalLanguageProcessingResponseCopyWith(
+          _NaturalLanguageProcessingResponse value,
+          $Res Function(_NaturalLanguageProcessingResponse) _then) =
+      __$NaturalLanguageProcessingResponseCopyWithImpl;
+  @override
+  @useResult
+  $Res call({@JsonKey(name: 'food_response') List<FoodResponse> foodResponse});
+}
+
+/// @nodoc
+class __$NaturalLanguageProcessingResponseCopyWithImpl<$Res>
+    implements _$NaturalLanguageProcessingResponseCopyWith<$Res> {
+  __$NaturalLanguageProcessingResponseCopyWithImpl(this._self, this._then);
+
+  final _NaturalLanguageProcessingResponse _self;
+  final $Res Function(_NaturalLanguageProcessingResponse) _then;
+
+  /// Create a copy of NaturalLanguageProcessingResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $Res call({
+    Object? foodResponse = null,
+  }) {
+    return _then(_NaturalLanguageProcessingResponse(
+      foodResponse: null == foodResponse
+          ? _self._foodResponse
+          : foodResponse // ignore: cast_nullable_to_non_nullable
+              as List<FoodResponse>,
+    ));
+  }
+}
+
+/// @nodoc
+mixin _$FoodResponse {
+  @JsonKey(name: 'food_id')
+  int get foodId;
+  @JsonKey(name: 'food_entry_name')
+  String get foodEntryName;
+  @JsonKey(name: 'eaten')
+  Eaten get eaten;
+  @JsonKey(name: 'suggested_serving')
+  SuggestedServing get suggestedServing;
+  @JsonKey(name: 'food')
+  Food? get food;
+
+  /// Create a copy of FoodResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $FoodResponseCopyWith<FoodResponse> get copyWith =>
+      _$FoodResponseCopyWithImpl<FoodResponse>(
+          this as FoodResponse, _$identity);
+
+  /// Serializes this FoodResponse to a JSON map.
+  Map<String, dynamic> toJson();
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is FoodResponse &&
+            (identical(other.foodId, foodId) || other.foodId == foodId) &&
+            (identical(other.foodEntryName, foodEntryName) ||
+                other.foodEntryName == foodEntryName) &&
+            (identical(other.eaten, eaten) || other.eaten == eaten) &&
+            (identical(other.suggestedServing, suggestedServing) ||
+                other.suggestedServing == suggestedServing) &&
+            (identical(other.food, food) || other.food == food));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType, foodId, foodEntryName, eaten, suggestedServing, food);
+
+  @override
+  String toString() {
+    return 'FoodResponse(foodId: $foodId, foodEntryName: $foodEntryName, eaten: $eaten, suggestedServing: $suggestedServing, food: $food)';
+  }
+}
+
+/// @nodoc
+abstract mixin class $FoodResponseCopyWith<$Res> {
+  factory $FoodResponseCopyWith(
+          FoodResponse value, $Res Function(FoodResponse) _then) =
+      _$FoodResponseCopyWithImpl;
+  @useResult
+  $Res call(
+      {@JsonKey(name: 'food_id') int foodId,
+      @JsonKey(name: 'food_entry_name') String foodEntryName,
+      @JsonKey(name: 'eaten') Eaten eaten,
+      @JsonKey(name: 'suggested_serving') SuggestedServing suggestedServing,
+      @JsonKey(name: 'food') Food? food});
+
+  $EatenCopyWith<$Res> get eaten;
+  $SuggestedServingCopyWith<$Res> get suggestedServing;
+  $FoodCopyWith<$Res>? get food;
+}
+
+/// @nodoc
+class _$FoodResponseCopyWithImpl<$Res> implements $FoodResponseCopyWith<$Res> {
+  _$FoodResponseCopyWithImpl(this._self, this._then);
+
+  final FoodResponse _self;
+  final $Res Function(FoodResponse) _then;
+
+  /// Create a copy of FoodResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? foodId = null,
+    Object? foodEntryName = null,
+    Object? eaten = null,
+    Object? suggestedServing = null,
+    Object? food = freezed,
+  }) {
+    return _then(_self.copyWith(
+      foodId: null == foodId
+          ? _self.foodId
+          : foodId // ignore: cast_nullable_to_non_nullable
+              as int,
+      foodEntryName: null == foodEntryName
+          ? _self.foodEntryName
+          : foodEntryName // ignore: cast_nullable_to_non_nullable
+              as String,
+      eaten: null == eaten
+          ? _self.eaten
+          : eaten // ignore: cast_nullable_to_non_nullable
+              as Eaten,
+      suggestedServing: null == suggestedServing
+          ? _self.suggestedServing
+          : suggestedServing // ignore: cast_nullable_to_non_nullable
+              as SuggestedServing,
+      food: freezed == food
+          ? _self.food
+          : food // ignore: cast_nullable_to_non_nullable
+              as Food?,
+    ));
+  }
+
+  /// Create a copy of FoodResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $EatenCopyWith<$Res> get eaten {
+    return $EatenCopyWith<$Res>(_self.eaten, (value) {
+      return _then(_self.copyWith(eaten: value));
+    });
+  }
+
+  /// Create a copy of FoodResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $SuggestedServingCopyWith<$Res> get suggestedServing {
+    return $SuggestedServingCopyWith<$Res>(_self.suggestedServing, (value) {
+      return _then(_self.copyWith(suggestedServing: value));
+    });
+  }
+
+  /// Create a copy of FoodResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $FoodCopyWith<$Res>? get food {
+    if (_self.food == null) {
+      return null;
+    }
+
+    return $FoodCopyWith<$Res>(_self.food!, (value) {
+      return _then(_self.copyWith(food: value));
+    });
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _FoodResponse implements FoodResponse {
+  const _FoodResponse(
+      {@JsonKey(name: 'food_id') required this.foodId,
+      @JsonKey(name: 'food_entry_name') required this.foodEntryName,
+      @JsonKey(name: 'eaten') required this.eaten,
+      @JsonKey(name: 'suggested_serving') required this.suggestedServing,
+      @JsonKey(name: 'food') this.food});
+  factory _FoodResponse.fromJson(Map<String, dynamic> json) =>
+      _$FoodResponseFromJson(json);
+
+  @override
+  @JsonKey(name: 'food_id')
+  final int foodId;
+  @override
+  @JsonKey(name: 'food_entry_name')
+  final String foodEntryName;
+  @override
+  @JsonKey(name: 'eaten')
+  final Eaten eaten;
+  @override
+  @JsonKey(name: 'suggested_serving')
+  final SuggestedServing suggestedServing;
+  @override
+  @JsonKey(name: 'food')
+  final Food? food;
+
+  /// Create a copy of FoodResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  _$FoodResponseCopyWith<_FoodResponse> get copyWith =>
+      __$FoodResponseCopyWithImpl<_FoodResponse>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$FoodResponseToJson(
+      this,
+    );
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _FoodResponse &&
+            (identical(other.foodId, foodId) || other.foodId == foodId) &&
+            (identical(other.foodEntryName, foodEntryName) ||
+                other.foodEntryName == foodEntryName) &&
+            (identical(other.eaten, eaten) || other.eaten == eaten) &&
+            (identical(other.suggestedServing, suggestedServing) ||
+                other.suggestedServing == suggestedServing) &&
+            (identical(other.food, food) || other.food == food));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType, foodId, foodEntryName, eaten, suggestedServing, food);
+
+  @override
+  String toString() {
+    return 'FoodResponse(foodId: $foodId, foodEntryName: $foodEntryName, eaten: $eaten, suggestedServing: $suggestedServing, food: $food)';
+  }
+}
+
+/// @nodoc
+abstract mixin class _$FoodResponseCopyWith<$Res>
+    implements $FoodResponseCopyWith<$Res> {
+  factory _$FoodResponseCopyWith(
+          _FoodResponse value, $Res Function(_FoodResponse) _then) =
+      __$FoodResponseCopyWithImpl;
+  @override
+  @useResult
+  $Res call(
+      {@JsonKey(name: 'food_id') int foodId,
+      @JsonKey(name: 'food_entry_name') String foodEntryName,
+      @JsonKey(name: 'eaten') Eaten eaten,
+      @JsonKey(name: 'suggested_serving') SuggestedServing suggestedServing,
+      @JsonKey(name: 'food') Food? food});
+
+  @override
+  $EatenCopyWith<$Res> get eaten;
+  @override
+  $SuggestedServingCopyWith<$Res> get suggestedServing;
+  @override
+  $FoodCopyWith<$Res>? get food;
+}
+
+/// @nodoc
+class __$FoodResponseCopyWithImpl<$Res>
+    implements _$FoodResponseCopyWith<$Res> {
+  __$FoodResponseCopyWithImpl(this._self, this._then);
+
+  final _FoodResponse _self;
+  final $Res Function(_FoodResponse) _then;
+
+  /// Create a copy of FoodResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $Res call({
+    Object? foodId = null,
+    Object? foodEntryName = null,
+    Object? eaten = null,
+    Object? suggestedServing = null,
+    Object? food = freezed,
+  }) {
+    return _then(_FoodResponse(
+      foodId: null == foodId
+          ? _self.foodId
+          : foodId // ignore: cast_nullable_to_non_nullable
+              as int,
+      foodEntryName: null == foodEntryName
+          ? _self.foodEntryName
+          : foodEntryName // ignore: cast_nullable_to_non_nullable
+              as String,
+      eaten: null == eaten
+          ? _self.eaten
+          : eaten // ignore: cast_nullable_to_non_nullable
+              as Eaten,
+      suggestedServing: null == suggestedServing
+          ? _self.suggestedServing
+          : suggestedServing // ignore: cast_nullable_to_non_nullable
+              as SuggestedServing,
+      food: freezed == food
+          ? _self.food
+          : food // ignore: cast_nullable_to_non_nullable
+              as Food?,
+    ));
+  }
+
+  /// Create a copy of FoodResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $EatenCopyWith<$Res> get eaten {
+    return $EatenCopyWith<$Res>(_self.eaten, (value) {
+      return _then(_self.copyWith(eaten: value));
+    });
+  }
+
+  /// Create a copy of FoodResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $SuggestedServingCopyWith<$Res> get suggestedServing {
+    return $SuggestedServingCopyWith<$Res>(_self.suggestedServing, (value) {
+      return _then(_self.copyWith(suggestedServing: value));
+    });
+  }
+
+  /// Create a copy of FoodResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $FoodCopyWith<$Res>? get food {
+    if (_self.food == null) {
+      return null;
+    }
+
+    return $FoodCopyWith<$Res>(_self.food!, (value) {
+      return _then(_self.copyWith(food: value));
+    });
+  }
+}
+
+/// @nodoc
+mixin _$Eaten {
+  @JsonKey(name: 'food_name_singular')
+  String get foodNameSingular;
+  @JsonKey(name: 'food_name_plural')
+  String get foodNamePlural;
+  @JsonKey(name: 'singular_description')
+  String get singularDescription;
+  @JsonKey(name: 'plural_description')
+  String get pluralDescription;
+  @JsonKey(name: 'units')
+  double get units;
+  @JsonKey(name: 'metric_description')
+  String get metricDescription;
+  @JsonKey(name: 'total_metric_amount')
+  double get totalMetricAmount;
+  @JsonKey(name: 'per_unit_metric_amount')
+  double get perUnitMetricAmount;
+  @JsonKey(name: 'total_nutritional_content')
+  TotalNutritionalContent get totalNutritionalContent;
+
+  /// Create a copy of Eaten
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $EatenCopyWith<Eaten> get copyWith =>
+      _$EatenCopyWithImpl<Eaten>(this as Eaten, _$identity);
+
+  /// Serializes this Eaten to a JSON map.
+  Map<String, dynamic> toJson();
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is Eaten &&
+            (identical(other.foodNameSingular, foodNameSingular) ||
+                other.foodNameSingular == foodNameSingular) &&
+            (identical(other.foodNamePlural, foodNamePlural) ||
+                other.foodNamePlural == foodNamePlural) &&
+            (identical(other.singularDescription, singularDescription) ||
+                other.singularDescription == singularDescription) &&
+            (identical(other.pluralDescription, pluralDescription) ||
+                other.pluralDescription == pluralDescription) &&
+            (identical(other.units, units) || other.units == units) &&
+            (identical(other.metricDescription, metricDescription) ||
+                other.metricDescription == metricDescription) &&
+            (identical(other.totalMetricAmount, totalMetricAmount) ||
+                other.totalMetricAmount == totalMetricAmount) &&
+            (identical(other.perUnitMetricAmount, perUnitMetricAmount) ||
+                other.perUnitMetricAmount == perUnitMetricAmount) &&
+            (identical(
+                    other.totalNutritionalContent, totalNutritionalContent) ||
+                other.totalNutritionalContent == totalNutritionalContent));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      foodNameSingular,
+      foodNamePlural,
+      singularDescription,
+      pluralDescription,
+      units,
+      metricDescription,
+      totalMetricAmount,
+      perUnitMetricAmount,
+      totalNutritionalContent);
+
+  @override
+  String toString() {
+    return 'Eaten(foodNameSingular: $foodNameSingular, foodNamePlural: $foodNamePlural, singularDescription: $singularDescription, pluralDescription: $pluralDescription, units: $units, metricDescription: $metricDescription, totalMetricAmount: $totalMetricAmount, perUnitMetricAmount: $perUnitMetricAmount, totalNutritionalContent: $totalNutritionalContent)';
+  }
+}
+
+/// @nodoc
+abstract mixin class $EatenCopyWith<$Res> {
+  factory $EatenCopyWith(Eaten value, $Res Function(Eaten) _then) =
+      _$EatenCopyWithImpl;
+  @useResult
+  $Res call(
+      {@JsonKey(name: 'food_name_singular') String foodNameSingular,
+      @JsonKey(name: 'food_name_plural') String foodNamePlural,
+      @JsonKey(name: 'singular_description') String singularDescription,
+      @JsonKey(name: 'plural_description') String pluralDescription,
+      @JsonKey(name: 'units') double units,
+      @JsonKey(name: 'metric_description') String metricDescription,
+      @JsonKey(name: 'total_metric_amount') double totalMetricAmount,
+      @JsonKey(name: 'per_unit_metric_amount') double perUnitMetricAmount,
+      @JsonKey(name: 'total_nutritional_content')
+      TotalNutritionalContent totalNutritionalContent});
+
+  $TotalNutritionalContentCopyWith<$Res> get totalNutritionalContent;
+}
+
+/// @nodoc
+class _$EatenCopyWithImpl<$Res> implements $EatenCopyWith<$Res> {
+  _$EatenCopyWithImpl(this._self, this._then);
+
+  final Eaten _self;
+  final $Res Function(Eaten) _then;
+
+  /// Create a copy of Eaten
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? foodNameSingular = null,
+    Object? foodNamePlural = null,
+    Object? singularDescription = null,
+    Object? pluralDescription = null,
+    Object? units = null,
+    Object? metricDescription = null,
+    Object? totalMetricAmount = null,
+    Object? perUnitMetricAmount = null,
+    Object? totalNutritionalContent = null,
+  }) {
+    return _then(_self.copyWith(
+      foodNameSingular: null == foodNameSingular
+          ? _self.foodNameSingular
+          : foodNameSingular // ignore: cast_nullable_to_non_nullable
+              as String,
+      foodNamePlural: null == foodNamePlural
+          ? _self.foodNamePlural
+          : foodNamePlural // ignore: cast_nullable_to_non_nullable
+              as String,
+      singularDescription: null == singularDescription
+          ? _self.singularDescription
+          : singularDescription // ignore: cast_nullable_to_non_nullable
+              as String,
+      pluralDescription: null == pluralDescription
+          ? _self.pluralDescription
+          : pluralDescription // ignore: cast_nullable_to_non_nullable
+              as String,
+      units: null == units
+          ? _self.units
+          : units // ignore: cast_nullable_to_non_nullable
+              as double,
+      metricDescription: null == metricDescription
+          ? _self.metricDescription
+          : metricDescription // ignore: cast_nullable_to_non_nullable
+              as String,
+      totalMetricAmount: null == totalMetricAmount
+          ? _self.totalMetricAmount
+          : totalMetricAmount // ignore: cast_nullable_to_non_nullable
+              as double,
+      perUnitMetricAmount: null == perUnitMetricAmount
+          ? _self.perUnitMetricAmount
+          : perUnitMetricAmount // ignore: cast_nullable_to_non_nullable
+              as double,
+      totalNutritionalContent: null == totalNutritionalContent
+          ? _self.totalNutritionalContent
+          : totalNutritionalContent // ignore: cast_nullable_to_non_nullable
+              as TotalNutritionalContent,
+    ));
+  }
+
+  /// Create a copy of Eaten
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $TotalNutritionalContentCopyWith<$Res> get totalNutritionalContent {
+    return $TotalNutritionalContentCopyWith<$Res>(_self.totalNutritionalContent,
+        (value) {
+      return _then(_self.copyWith(totalNutritionalContent: value));
+    });
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _Eaten implements Eaten {
+  const _Eaten(
+      {@JsonKey(name: 'food_name_singular') required this.foodNameSingular,
+      @JsonKey(name: 'food_name_plural') required this.foodNamePlural,
+      @JsonKey(name: 'singular_description') required this.singularDescription,
+      @JsonKey(name: 'plural_description') required this.pluralDescription,
+      @JsonKey(name: 'units') required this.units,
+      @JsonKey(name: 'metric_description') required this.metricDescription,
+      @JsonKey(name: 'total_metric_amount') required this.totalMetricAmount,
+      @JsonKey(name: 'per_unit_metric_amount')
+      required this.perUnitMetricAmount,
+      @JsonKey(name: 'total_nutritional_content')
+      required this.totalNutritionalContent});
+  factory _Eaten.fromJson(Map<String, dynamic> json) => _$EatenFromJson(json);
+
+  @override
+  @JsonKey(name: 'food_name_singular')
+  final String foodNameSingular;
+  @override
+  @JsonKey(name: 'food_name_plural')
+  final String foodNamePlural;
+  @override
+  @JsonKey(name: 'singular_description')
+  final String singularDescription;
+  @override
+  @JsonKey(name: 'plural_description')
+  final String pluralDescription;
+  @override
+  @JsonKey(name: 'units')
+  final double units;
+  @override
+  @JsonKey(name: 'metric_description')
+  final String metricDescription;
+  @override
+  @JsonKey(name: 'total_metric_amount')
+  final double totalMetricAmount;
+  @override
+  @JsonKey(name: 'per_unit_metric_amount')
+  final double perUnitMetricAmount;
+  @override
+  @JsonKey(name: 'total_nutritional_content')
+  final TotalNutritionalContent totalNutritionalContent;
+
+  /// Create a copy of Eaten
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  _$EatenCopyWith<_Eaten> get copyWith =>
+      __$EatenCopyWithImpl<_Eaten>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$EatenToJson(
+      this,
+    );
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _Eaten &&
+            (identical(other.foodNameSingular, foodNameSingular) ||
+                other.foodNameSingular == foodNameSingular) &&
+            (identical(other.foodNamePlural, foodNamePlural) ||
+                other.foodNamePlural == foodNamePlural) &&
+            (identical(other.singularDescription, singularDescription) ||
+                other.singularDescription == singularDescription) &&
+            (identical(other.pluralDescription, pluralDescription) ||
+                other.pluralDescription == pluralDescription) &&
+            (identical(other.units, units) || other.units == units) &&
+            (identical(other.metricDescription, metricDescription) ||
+                other.metricDescription == metricDescription) &&
+            (identical(other.totalMetricAmount, totalMetricAmount) ||
+                other.totalMetricAmount == totalMetricAmount) &&
+            (identical(other.perUnitMetricAmount, perUnitMetricAmount) ||
+                other.perUnitMetricAmount == perUnitMetricAmount) &&
+            (identical(
+                    other.totalNutritionalContent, totalNutritionalContent) ||
+                other.totalNutritionalContent == totalNutritionalContent));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      foodNameSingular,
+      foodNamePlural,
+      singularDescription,
+      pluralDescription,
+      units,
+      metricDescription,
+      totalMetricAmount,
+      perUnitMetricAmount,
+      totalNutritionalContent);
+
+  @override
+  String toString() {
+    return 'Eaten(foodNameSingular: $foodNameSingular, foodNamePlural: $foodNamePlural, singularDescription: $singularDescription, pluralDescription: $pluralDescription, units: $units, metricDescription: $metricDescription, totalMetricAmount: $totalMetricAmount, perUnitMetricAmount: $perUnitMetricAmount, totalNutritionalContent: $totalNutritionalContent)';
+  }
+}
+
+/// @nodoc
+abstract mixin class _$EatenCopyWith<$Res> implements $EatenCopyWith<$Res> {
+  factory _$EatenCopyWith(_Eaten value, $Res Function(_Eaten) _then) =
+      __$EatenCopyWithImpl;
+  @override
+  @useResult
+  $Res call(
+      {@JsonKey(name: 'food_name_singular') String foodNameSingular,
+      @JsonKey(name: 'food_name_plural') String foodNamePlural,
+      @JsonKey(name: 'singular_description') String singularDescription,
+      @JsonKey(name: 'plural_description') String pluralDescription,
+      @JsonKey(name: 'units') double units,
+      @JsonKey(name: 'metric_description') String metricDescription,
+      @JsonKey(name: 'total_metric_amount') double totalMetricAmount,
+      @JsonKey(name: 'per_unit_metric_amount') double perUnitMetricAmount,
+      @JsonKey(name: 'total_nutritional_content')
+      TotalNutritionalContent totalNutritionalContent});
+
+  @override
+  $TotalNutritionalContentCopyWith<$Res> get totalNutritionalContent;
+}
+
+/// @nodoc
+class __$EatenCopyWithImpl<$Res> implements _$EatenCopyWith<$Res> {
+  __$EatenCopyWithImpl(this._self, this._then);
+
+  final _Eaten _self;
+  final $Res Function(_Eaten) _then;
+
+  /// Create a copy of Eaten
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $Res call({
+    Object? foodNameSingular = null,
+    Object? foodNamePlural = null,
+    Object? singularDescription = null,
+    Object? pluralDescription = null,
+    Object? units = null,
+    Object? metricDescription = null,
+    Object? totalMetricAmount = null,
+    Object? perUnitMetricAmount = null,
+    Object? totalNutritionalContent = null,
+  }) {
+    return _then(_Eaten(
+      foodNameSingular: null == foodNameSingular
+          ? _self.foodNameSingular
+          : foodNameSingular // ignore: cast_nullable_to_non_nullable
+              as String,
+      foodNamePlural: null == foodNamePlural
+          ? _self.foodNamePlural
+          : foodNamePlural // ignore: cast_nullable_to_non_nullable
+              as String,
+      singularDescription: null == singularDescription
+          ? _self.singularDescription
+          : singularDescription // ignore: cast_nullable_to_non_nullable
+              as String,
+      pluralDescription: null == pluralDescription
+          ? _self.pluralDescription
+          : pluralDescription // ignore: cast_nullable_to_non_nullable
+              as String,
+      units: null == units
+          ? _self.units
+          : units // ignore: cast_nullable_to_non_nullable
+              as double,
+      metricDescription: null == metricDescription
+          ? _self.metricDescription
+          : metricDescription // ignore: cast_nullable_to_non_nullable
+              as String,
+      totalMetricAmount: null == totalMetricAmount
+          ? _self.totalMetricAmount
+          : totalMetricAmount // ignore: cast_nullable_to_non_nullable
+              as double,
+      perUnitMetricAmount: null == perUnitMetricAmount
+          ? _self.perUnitMetricAmount
+          : perUnitMetricAmount // ignore: cast_nullable_to_non_nullable
+              as double,
+      totalNutritionalContent: null == totalNutritionalContent
+          ? _self.totalNutritionalContent
+          : totalNutritionalContent // ignore: cast_nullable_to_non_nullable
+              as TotalNutritionalContent,
+    ));
+  }
+
+  /// Create a copy of Eaten
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $TotalNutritionalContentCopyWith<$Res> get totalNutritionalContent {
+    return $TotalNutritionalContentCopyWith<$Res>(_self.totalNutritionalContent,
+        (value) {
+      return _then(_self.copyWith(totalNutritionalContent: value));
+    });
+  }
+}
+
+/// @nodoc
+mixin _$TotalNutritionalContent {
+  @JsonKey(name: 'calories')
+  String get calories;
+  @JsonKey(name: 'carbohydrate')
+  String get carbohydrate;
+  @JsonKey(name: 'protein')
+  String get protein;
+  @JsonKey(name: 'fat')
+  String get fat;
+  @JsonKey(name: 'saturated_fat')
+  String get saturatedFat;
+  @JsonKey(name: 'polyunsaturated_fat')
+  String get polyunsaturatedFat;
+  @JsonKey(name: 'monounsaturated_fat')
+  String get monounsaturatedFat;
+  @JsonKey(name: 'cholesterol')
+  String get cholesterol;
+  @JsonKey(name: 'sodium')
+  String get sodium;
+  @JsonKey(name: 'potassium')
+  String get potassium;
+  @JsonKey(name: 'fiber')
+  String get fiber;
+  @JsonKey(name: 'sugar')
+  String get sugar;
+  @JsonKey(name: 'vitamin_a')
+  String get vitaminA;
+  @JsonKey(name: 'vitamin_c')
+  String get vitaminC;
+  @JsonKey(name: 'calcium')
+  String get calcium;
+  @JsonKey(name: 'iron')
+  String get iron;
+
+  /// Create a copy of TotalNutritionalContent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $TotalNutritionalContentCopyWith<TotalNutritionalContent> get copyWith =>
+      _$TotalNutritionalContentCopyWithImpl<TotalNutritionalContent>(
+          this as TotalNutritionalContent, _$identity);
+
+  /// Serializes this TotalNutritionalContent to a JSON map.
+  Map<String, dynamic> toJson();
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is TotalNutritionalContent &&
+            (identical(other.calories, calories) ||
+                other.calories == calories) &&
+            (identical(other.carbohydrate, carbohydrate) ||
+                other.carbohydrate == carbohydrate) &&
+            (identical(other.protein, protein) || other.protein == protein) &&
+            (identical(other.fat, fat) || other.fat == fat) &&
+            (identical(other.saturatedFat, saturatedFat) ||
+                other.saturatedFat == saturatedFat) &&
+            (identical(other.polyunsaturatedFat, polyunsaturatedFat) ||
+                other.polyunsaturatedFat == polyunsaturatedFat) &&
+            (identical(other.monounsaturatedFat, monounsaturatedFat) ||
+                other.monounsaturatedFat == monounsaturatedFat) &&
+            (identical(other.cholesterol, cholesterol) ||
+                other.cholesterol == cholesterol) &&
+            (identical(other.sodium, sodium) || other.sodium == sodium) &&
+            (identical(other.potassium, potassium) ||
+                other.potassium == potassium) &&
+            (identical(other.fiber, fiber) || other.fiber == fiber) &&
+            (identical(other.sugar, sugar) || other.sugar == sugar) &&
+            (identical(other.vitaminA, vitaminA) ||
+                other.vitaminA == vitaminA) &&
+            (identical(other.vitaminC, vitaminC) ||
+                other.vitaminC == vitaminC) &&
+            (identical(other.calcium, calcium) || other.calcium == calcium) &&
+            (identical(other.iron, iron) || other.iron == iron));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      calories,
+      carbohydrate,
+      protein,
+      fat,
+      saturatedFat,
+      polyunsaturatedFat,
+      monounsaturatedFat,
+      cholesterol,
+      sodium,
+      potassium,
+      fiber,
+      sugar,
+      vitaminA,
+      vitaminC,
+      calcium,
+      iron);
+
+  @override
+  String toString() {
+    return 'TotalNutritionalContent(calories: $calories, carbohydrate: $carbohydrate, protein: $protein, fat: $fat, saturatedFat: $saturatedFat, polyunsaturatedFat: $polyunsaturatedFat, monounsaturatedFat: $monounsaturatedFat, cholesterol: $cholesterol, sodium: $sodium, potassium: $potassium, fiber: $fiber, sugar: $sugar, vitaminA: $vitaminA, vitaminC: $vitaminC, calcium: $calcium, iron: $iron)';
+  }
+}
+
+/// @nodoc
+abstract mixin class $TotalNutritionalContentCopyWith<$Res> {
+  factory $TotalNutritionalContentCopyWith(TotalNutritionalContent value,
+          $Res Function(TotalNutritionalContent) _then) =
+      _$TotalNutritionalContentCopyWithImpl;
+  @useResult
+  $Res call(
+      {@JsonKey(name: 'calories') String calories,
+      @JsonKey(name: 'carbohydrate') String carbohydrate,
+      @JsonKey(name: 'protein') String protein,
+      @JsonKey(name: 'fat') String fat,
+      @JsonKey(name: 'saturated_fat') String saturatedFat,
+      @JsonKey(name: 'polyunsaturated_fat') String polyunsaturatedFat,
+      @JsonKey(name: 'monounsaturated_fat') String monounsaturatedFat,
+      @JsonKey(name: 'cholesterol') String cholesterol,
+      @JsonKey(name: 'sodium') String sodium,
+      @JsonKey(name: 'potassium') String potassium,
+      @JsonKey(name: 'fiber') String fiber,
+      @JsonKey(name: 'sugar') String sugar,
+      @JsonKey(name: 'vitamin_a') String vitaminA,
+      @JsonKey(name: 'vitamin_c') String vitaminC,
+      @JsonKey(name: 'calcium') String calcium,
+      @JsonKey(name: 'iron') String iron});
+}
+
+/// @nodoc
+class _$TotalNutritionalContentCopyWithImpl<$Res>
+    implements $TotalNutritionalContentCopyWith<$Res> {
+  _$TotalNutritionalContentCopyWithImpl(this._self, this._then);
+
+  final TotalNutritionalContent _self;
+  final $Res Function(TotalNutritionalContent) _then;
+
+  /// Create a copy of TotalNutritionalContent
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? calories = null,
+    Object? carbohydrate = null,
+    Object? protein = null,
+    Object? fat = null,
+    Object? saturatedFat = null,
+    Object? polyunsaturatedFat = null,
+    Object? monounsaturatedFat = null,
+    Object? cholesterol = null,
+    Object? sodium = null,
+    Object? potassium = null,
+    Object? fiber = null,
+    Object? sugar = null,
+    Object? vitaminA = null,
+    Object? vitaminC = null,
+    Object? calcium = null,
+    Object? iron = null,
+  }) {
+    return _then(_self.copyWith(
+      calories: null == calories
+          ? _self.calories
+          : calories // ignore: cast_nullable_to_non_nullable
+              as String,
+      carbohydrate: null == carbohydrate
+          ? _self.carbohydrate
+          : carbohydrate // ignore: cast_nullable_to_non_nullable
+              as String,
+      protein: null == protein
+          ? _self.protein
+          : protein // ignore: cast_nullable_to_non_nullable
+              as String,
+      fat: null == fat
+          ? _self.fat
+          : fat // ignore: cast_nullable_to_non_nullable
+              as String,
+      saturatedFat: null == saturatedFat
+          ? _self.saturatedFat
+          : saturatedFat // ignore: cast_nullable_to_non_nullable
+              as String,
+      polyunsaturatedFat: null == polyunsaturatedFat
+          ? _self.polyunsaturatedFat
+          : polyunsaturatedFat // ignore: cast_nullable_to_non_nullable
+              as String,
+      monounsaturatedFat: null == monounsaturatedFat
+          ? _self.monounsaturatedFat
+          : monounsaturatedFat // ignore: cast_nullable_to_non_nullable
+              as String,
+      cholesterol: null == cholesterol
+          ? _self.cholesterol
+          : cholesterol // ignore: cast_nullable_to_non_nullable
+              as String,
+      sodium: null == sodium
+          ? _self.sodium
+          : sodium // ignore: cast_nullable_to_non_nullable
+              as String,
+      potassium: null == potassium
+          ? _self.potassium
+          : potassium // ignore: cast_nullable_to_non_nullable
+              as String,
+      fiber: null == fiber
+          ? _self.fiber
+          : fiber // ignore: cast_nullable_to_non_nullable
+              as String,
+      sugar: null == sugar
+          ? _self.sugar
+          : sugar // ignore: cast_nullable_to_non_nullable
+              as String,
+      vitaminA: null == vitaminA
+          ? _self.vitaminA
+          : vitaminA // ignore: cast_nullable_to_non_nullable
+              as String,
+      vitaminC: null == vitaminC
+          ? _self.vitaminC
+          : vitaminC // ignore: cast_nullable_to_non_nullable
+              as String,
+      calcium: null == calcium
+          ? _self.calcium
+          : calcium // ignore: cast_nullable_to_non_nullable
+              as String,
+      iron: null == iron
+          ? _self.iron
+          : iron // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _TotalNutritionalContent implements TotalNutritionalContent {
+  const _TotalNutritionalContent(
+      {@JsonKey(name: 'calories') required this.calories,
+      @JsonKey(name: 'carbohydrate') required this.carbohydrate,
+      @JsonKey(name: 'protein') required this.protein,
+      @JsonKey(name: 'fat') required this.fat,
+      @JsonKey(name: 'saturated_fat') required this.saturatedFat,
+      @JsonKey(name: 'polyunsaturated_fat') required this.polyunsaturatedFat,
+      @JsonKey(name: 'monounsaturated_fat') required this.monounsaturatedFat,
+      @JsonKey(name: 'cholesterol') required this.cholesterol,
+      @JsonKey(name: 'sodium') required this.sodium,
+      @JsonKey(name: 'potassium') required this.potassium,
+      @JsonKey(name: 'fiber') required this.fiber,
+      @JsonKey(name: 'sugar') required this.sugar,
+      @JsonKey(name: 'vitamin_a') required this.vitaminA,
+      @JsonKey(name: 'vitamin_c') required this.vitaminC,
+      @JsonKey(name: 'calcium') required this.calcium,
+      @JsonKey(name: 'iron') required this.iron});
+  factory _TotalNutritionalContent.fromJson(Map<String, dynamic> json) =>
+      _$TotalNutritionalContentFromJson(json);
+
+  @override
+  @JsonKey(name: 'calories')
+  final String calories;
+  @override
+  @JsonKey(name: 'carbohydrate')
+  final String carbohydrate;
+  @override
+  @JsonKey(name: 'protein')
+  final String protein;
+  @override
+  @JsonKey(name: 'fat')
+  final String fat;
+  @override
+  @JsonKey(name: 'saturated_fat')
+  final String saturatedFat;
+  @override
+  @JsonKey(name: 'polyunsaturated_fat')
+  final String polyunsaturatedFat;
+  @override
+  @JsonKey(name: 'monounsaturated_fat')
+  final String monounsaturatedFat;
+  @override
+  @JsonKey(name: 'cholesterol')
+  final String cholesterol;
+  @override
+  @JsonKey(name: 'sodium')
+  final String sodium;
+  @override
+  @JsonKey(name: 'potassium')
+  final String potassium;
+  @override
+  @JsonKey(name: 'fiber')
+  final String fiber;
+  @override
+  @JsonKey(name: 'sugar')
+  final String sugar;
+  @override
+  @JsonKey(name: 'vitamin_a')
+  final String vitaminA;
+  @override
+  @JsonKey(name: 'vitamin_c')
+  final String vitaminC;
+  @override
+  @JsonKey(name: 'calcium')
+  final String calcium;
+  @override
+  @JsonKey(name: 'iron')
+  final String iron;
+
+  /// Create a copy of TotalNutritionalContent
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  _$TotalNutritionalContentCopyWith<_TotalNutritionalContent> get copyWith =>
+      __$TotalNutritionalContentCopyWithImpl<_TotalNutritionalContent>(
+          this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$TotalNutritionalContentToJson(
+      this,
+    );
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _TotalNutritionalContent &&
+            (identical(other.calories, calories) ||
+                other.calories == calories) &&
+            (identical(other.carbohydrate, carbohydrate) ||
+                other.carbohydrate == carbohydrate) &&
+            (identical(other.protein, protein) || other.protein == protein) &&
+            (identical(other.fat, fat) || other.fat == fat) &&
+            (identical(other.saturatedFat, saturatedFat) ||
+                other.saturatedFat == saturatedFat) &&
+            (identical(other.polyunsaturatedFat, polyunsaturatedFat) ||
+                other.polyunsaturatedFat == polyunsaturatedFat) &&
+            (identical(other.monounsaturatedFat, monounsaturatedFat) ||
+                other.monounsaturatedFat == monounsaturatedFat) &&
+            (identical(other.cholesterol, cholesterol) ||
+                other.cholesterol == cholesterol) &&
+            (identical(other.sodium, sodium) || other.sodium == sodium) &&
+            (identical(other.potassium, potassium) ||
+                other.potassium == potassium) &&
+            (identical(other.fiber, fiber) || other.fiber == fiber) &&
+            (identical(other.sugar, sugar) || other.sugar == sugar) &&
+            (identical(other.vitaminA, vitaminA) ||
+                other.vitaminA == vitaminA) &&
+            (identical(other.vitaminC, vitaminC) ||
+                other.vitaminC == vitaminC) &&
+            (identical(other.calcium, calcium) || other.calcium == calcium) &&
+            (identical(other.iron, iron) || other.iron == iron));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      calories,
+      carbohydrate,
+      protein,
+      fat,
+      saturatedFat,
+      polyunsaturatedFat,
+      monounsaturatedFat,
+      cholesterol,
+      sodium,
+      potassium,
+      fiber,
+      sugar,
+      vitaminA,
+      vitaminC,
+      calcium,
+      iron);
+
+  @override
+  String toString() {
+    return 'TotalNutritionalContent(calories: $calories, carbohydrate: $carbohydrate, protein: $protein, fat: $fat, saturatedFat: $saturatedFat, polyunsaturatedFat: $polyunsaturatedFat, monounsaturatedFat: $monounsaturatedFat, cholesterol: $cholesterol, sodium: $sodium, potassium: $potassium, fiber: $fiber, sugar: $sugar, vitaminA: $vitaminA, vitaminC: $vitaminC, calcium: $calcium, iron: $iron)';
+  }
+}
+
+/// @nodoc
+abstract mixin class _$TotalNutritionalContentCopyWith<$Res>
+    implements $TotalNutritionalContentCopyWith<$Res> {
+  factory _$TotalNutritionalContentCopyWith(_TotalNutritionalContent value,
+          $Res Function(_TotalNutritionalContent) _then) =
+      __$TotalNutritionalContentCopyWithImpl;
+  @override
+  @useResult
+  $Res call(
+      {@JsonKey(name: 'calories') String calories,
+      @JsonKey(name: 'carbohydrate') String carbohydrate,
+      @JsonKey(name: 'protein') String protein,
+      @JsonKey(name: 'fat') String fat,
+      @JsonKey(name: 'saturated_fat') String saturatedFat,
+      @JsonKey(name: 'polyunsaturated_fat') String polyunsaturatedFat,
+      @JsonKey(name: 'monounsaturated_fat') String monounsaturatedFat,
+      @JsonKey(name: 'cholesterol') String cholesterol,
+      @JsonKey(name: 'sodium') String sodium,
+      @JsonKey(name: 'potassium') String potassium,
+      @JsonKey(name: 'fiber') String fiber,
+      @JsonKey(name: 'sugar') String sugar,
+      @JsonKey(name: 'vitamin_a') String vitaminA,
+      @JsonKey(name: 'vitamin_c') String vitaminC,
+      @JsonKey(name: 'calcium') String calcium,
+      @JsonKey(name: 'iron') String iron});
+}
+
+/// @nodoc
+class __$TotalNutritionalContentCopyWithImpl<$Res>
+    implements _$TotalNutritionalContentCopyWith<$Res> {
+  __$TotalNutritionalContentCopyWithImpl(this._self, this._then);
+
+  final _TotalNutritionalContent _self;
+  final $Res Function(_TotalNutritionalContent) _then;
+
+  /// Create a copy of TotalNutritionalContent
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $Res call({
+    Object? calories = null,
+    Object? carbohydrate = null,
+    Object? protein = null,
+    Object? fat = null,
+    Object? saturatedFat = null,
+    Object? polyunsaturatedFat = null,
+    Object? monounsaturatedFat = null,
+    Object? cholesterol = null,
+    Object? sodium = null,
+    Object? potassium = null,
+    Object? fiber = null,
+    Object? sugar = null,
+    Object? vitaminA = null,
+    Object? vitaminC = null,
+    Object? calcium = null,
+    Object? iron = null,
+  }) {
+    return _then(_TotalNutritionalContent(
+      calories: null == calories
+          ? _self.calories
+          : calories // ignore: cast_nullable_to_non_nullable
+              as String,
+      carbohydrate: null == carbohydrate
+          ? _self.carbohydrate
+          : carbohydrate // ignore: cast_nullable_to_non_nullable
+              as String,
+      protein: null == protein
+          ? _self.protein
+          : protein // ignore: cast_nullable_to_non_nullable
+              as String,
+      fat: null == fat
+          ? _self.fat
+          : fat // ignore: cast_nullable_to_non_nullable
+              as String,
+      saturatedFat: null == saturatedFat
+          ? _self.saturatedFat
+          : saturatedFat // ignore: cast_nullable_to_non_nullable
+              as String,
+      polyunsaturatedFat: null == polyunsaturatedFat
+          ? _self.polyunsaturatedFat
+          : polyunsaturatedFat // ignore: cast_nullable_to_non_nullable
+              as String,
+      monounsaturatedFat: null == monounsaturatedFat
+          ? _self.monounsaturatedFat
+          : monounsaturatedFat // ignore: cast_nullable_to_non_nullable
+              as String,
+      cholesterol: null == cholesterol
+          ? _self.cholesterol
+          : cholesterol // ignore: cast_nullable_to_non_nullable
+              as String,
+      sodium: null == sodium
+          ? _self.sodium
+          : sodium // ignore: cast_nullable_to_non_nullable
+              as String,
+      potassium: null == potassium
+          ? _self.potassium
+          : potassium // ignore: cast_nullable_to_non_nullable
+              as String,
+      fiber: null == fiber
+          ? _self.fiber
+          : fiber // ignore: cast_nullable_to_non_nullable
+              as String,
+      sugar: null == sugar
+          ? _self.sugar
+          : sugar // ignore: cast_nullable_to_non_nullable
+              as String,
+      vitaminA: null == vitaminA
+          ? _self.vitaminA
+          : vitaminA // ignore: cast_nullable_to_non_nullable
+              as String,
+      vitaminC: null == vitaminC
+          ? _self.vitaminC
+          : vitaminC // ignore: cast_nullable_to_non_nullable
+              as String,
+      calcium: null == calcium
+          ? _self.calcium
+          : calcium // ignore: cast_nullable_to_non_nullable
+              as String,
+      iron: null == iron
+          ? _self.iron
+          : iron // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+mixin _$SuggestedServing {
+  @JsonKey(name: 'serving_id')
+  int get servingId;
+  @JsonKey(name: 'serving_description')
+  String get servingDescription;
+  @JsonKey(name: 'metric_serving_description')
+  String get metricServingDescription;
+  @JsonKey(name: 'metric_measure_amount')
+  double get metricMeasureAmount;
+  @JsonKey(name: 'number_of_units')
+  String get numberOfUnits;
+  @JsonKey(name: 'custom_serving_description')
+  String? get customServingDescription;
+
+  /// Create a copy of SuggestedServing
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $SuggestedServingCopyWith<SuggestedServing> get copyWith =>
+      _$SuggestedServingCopyWithImpl<SuggestedServing>(
+          this as SuggestedServing, _$identity);
+
+  /// Serializes this SuggestedServing to a JSON map.
+  Map<String, dynamic> toJson();
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is SuggestedServing &&
+            (identical(other.servingId, servingId) ||
+                other.servingId == servingId) &&
+            (identical(other.servingDescription, servingDescription) ||
+                other.servingDescription == servingDescription) &&
+            (identical(
+                    other.metricServingDescription, metricServingDescription) ||
+                other.metricServingDescription == metricServingDescription) &&
+            (identical(other.metricMeasureAmount, metricMeasureAmount) ||
+                other.metricMeasureAmount == metricMeasureAmount) &&
+            (identical(other.numberOfUnits, numberOfUnits) ||
+                other.numberOfUnits == numberOfUnits) &&
+            (identical(
+                    other.customServingDescription, customServingDescription) ||
+                other.customServingDescription == customServingDescription));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      servingId,
+      servingDescription,
+      metricServingDescription,
+      metricMeasureAmount,
+      numberOfUnits,
+      customServingDescription);
+
+  @override
+  String toString() {
+    return 'SuggestedServing(servingId: $servingId, servingDescription: $servingDescription, metricServingDescription: $metricServingDescription, metricMeasureAmount: $metricMeasureAmount, numberOfUnits: $numberOfUnits, customServingDescription: $customServingDescription)';
+  }
+}
+
+/// @nodoc
+abstract mixin class $SuggestedServingCopyWith<$Res> {
+  factory $SuggestedServingCopyWith(
+          SuggestedServing value, $Res Function(SuggestedServing) _then) =
+      _$SuggestedServingCopyWithImpl;
+  @useResult
+  $Res call(
+      {@JsonKey(name: 'serving_id') int servingId,
+      @JsonKey(name: 'serving_description') String servingDescription,
+      @JsonKey(name: 'metric_serving_description')
+      String metricServingDescription,
+      @JsonKey(name: 'metric_measure_amount') double metricMeasureAmount,
+      @JsonKey(name: 'number_of_units') String numberOfUnits,
+      @JsonKey(name: 'custom_serving_description')
+      String? customServingDescription});
+}
+
+/// @nodoc
+class _$SuggestedServingCopyWithImpl<$Res>
+    implements $SuggestedServingCopyWith<$Res> {
+  _$SuggestedServingCopyWithImpl(this._self, this._then);
+
+  final SuggestedServing _self;
+  final $Res Function(SuggestedServing) _then;
+
+  /// Create a copy of SuggestedServing
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? servingId = null,
+    Object? servingDescription = null,
+    Object? metricServingDescription = null,
+    Object? metricMeasureAmount = null,
+    Object? numberOfUnits = null,
+    Object? customServingDescription = freezed,
+  }) {
+    return _then(_self.copyWith(
+      servingId: null == servingId
+          ? _self.servingId
+          : servingId // ignore: cast_nullable_to_non_nullable
+              as int,
+      servingDescription: null == servingDescription
+          ? _self.servingDescription
+          : servingDescription // ignore: cast_nullable_to_non_nullable
+              as String,
+      metricServingDescription: null == metricServingDescription
+          ? _self.metricServingDescription
+          : metricServingDescription // ignore: cast_nullable_to_non_nullable
+              as String,
+      metricMeasureAmount: null == metricMeasureAmount
+          ? _self.metricMeasureAmount
+          : metricMeasureAmount // ignore: cast_nullable_to_non_nullable
+              as double,
+      numberOfUnits: null == numberOfUnits
+          ? _self.numberOfUnits
+          : numberOfUnits // ignore: cast_nullable_to_non_nullable
+              as String,
+      customServingDescription: freezed == customServingDescription
+          ? _self.customServingDescription
+          : customServingDescription // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _SuggestedServing implements SuggestedServing {
+  const _SuggestedServing(
+      {@JsonKey(name: 'serving_id') required this.servingId,
+      @JsonKey(name: 'serving_description') required this.servingDescription,
+      @JsonKey(name: 'metric_serving_description')
+      required this.metricServingDescription,
+      @JsonKey(name: 'metric_measure_amount') required this.metricMeasureAmount,
+      @JsonKey(name: 'number_of_units') required this.numberOfUnits,
+      @JsonKey(name: 'custom_serving_description')
+      this.customServingDescription});
+  factory _SuggestedServing.fromJson(Map<String, dynamic> json) =>
+      _$SuggestedServingFromJson(json);
+
+  @override
+  @JsonKey(name: 'serving_id')
+  final int servingId;
+  @override
+  @JsonKey(name: 'serving_description')
+  final String servingDescription;
+  @override
+  @JsonKey(name: 'metric_serving_description')
+  final String metricServingDescription;
+  @override
+  @JsonKey(name: 'metric_measure_amount')
+  final double metricMeasureAmount;
+  @override
+  @JsonKey(name: 'number_of_units')
+  final String numberOfUnits;
+  @override
+  @JsonKey(name: 'custom_serving_description')
+  final String? customServingDescription;
+
+  /// Create a copy of SuggestedServing
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  _$SuggestedServingCopyWith<_SuggestedServing> get copyWith =>
+      __$SuggestedServingCopyWithImpl<_SuggestedServing>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$SuggestedServingToJson(
+      this,
+    );
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _SuggestedServing &&
+            (identical(other.servingId, servingId) ||
+                other.servingId == servingId) &&
+            (identical(other.servingDescription, servingDescription) ||
+                other.servingDescription == servingDescription) &&
+            (identical(
+                    other.metricServingDescription, metricServingDescription) ||
+                other.metricServingDescription == metricServingDescription) &&
+            (identical(other.metricMeasureAmount, metricMeasureAmount) ||
+                other.metricMeasureAmount == metricMeasureAmount) &&
+            (identical(other.numberOfUnits, numberOfUnits) ||
+                other.numberOfUnits == numberOfUnits) &&
+            (identical(
+                    other.customServingDescription, customServingDescription) ||
+                other.customServingDescription == customServingDescription));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      servingId,
+      servingDescription,
+      metricServingDescription,
+      metricMeasureAmount,
+      numberOfUnits,
+      customServingDescription);
+
+  @override
+  String toString() {
+    return 'SuggestedServing(servingId: $servingId, servingDescription: $servingDescription, metricServingDescription: $metricServingDescription, metricMeasureAmount: $metricMeasureAmount, numberOfUnits: $numberOfUnits, customServingDescription: $customServingDescription)';
+  }
+}
+
+/// @nodoc
+abstract mixin class _$SuggestedServingCopyWith<$Res>
+    implements $SuggestedServingCopyWith<$Res> {
+  factory _$SuggestedServingCopyWith(
+          _SuggestedServing value, $Res Function(_SuggestedServing) _then) =
+      __$SuggestedServingCopyWithImpl;
+  @override
+  @useResult
+  $Res call(
+      {@JsonKey(name: 'serving_id') int servingId,
+      @JsonKey(name: 'serving_description') String servingDescription,
+      @JsonKey(name: 'metric_serving_description')
+      String metricServingDescription,
+      @JsonKey(name: 'metric_measure_amount') double metricMeasureAmount,
+      @JsonKey(name: 'number_of_units') String numberOfUnits,
+      @JsonKey(name: 'custom_serving_description')
+      String? customServingDescription});
+}
+
+/// @nodoc
+class __$SuggestedServingCopyWithImpl<$Res>
+    implements _$SuggestedServingCopyWith<$Res> {
+  __$SuggestedServingCopyWithImpl(this._self, this._then);
+
+  final _SuggestedServing _self;
+  final $Res Function(_SuggestedServing) _then;
+
+  /// Create a copy of SuggestedServing
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $Res call({
+    Object? servingId = null,
+    Object? servingDescription = null,
+    Object? metricServingDescription = null,
+    Object? metricMeasureAmount = null,
+    Object? numberOfUnits = null,
+    Object? customServingDescription = freezed,
+  }) {
+    return _then(_SuggestedServing(
+      servingId: null == servingId
+          ? _self.servingId
+          : servingId // ignore: cast_nullable_to_non_nullable
+              as int,
+      servingDescription: null == servingDescription
+          ? _self.servingDescription
+          : servingDescription // ignore: cast_nullable_to_non_nullable
+              as String,
+      metricServingDescription: null == metricServingDescription
+          ? _self.metricServingDescription
+          : metricServingDescription // ignore: cast_nullable_to_non_nullable
+              as String,
+      metricMeasureAmount: null == metricMeasureAmount
+          ? _self.metricMeasureAmount
+          : metricMeasureAmount // ignore: cast_nullable_to_non_nullable
+              as double,
+      numberOfUnits: null == numberOfUnits
+          ? _self.numberOfUnits
+          : numberOfUnits // ignore: cast_nullable_to_non_nullable
+              as String,
+      customServingDescription: freezed == customServingDescription
+          ? _self.customServingDescription
+          : customServingDescription // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }

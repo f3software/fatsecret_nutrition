@@ -789,3 +789,123 @@ abstract class RecipeNutrition with _$RecipeNutrition {
   factory RecipeNutrition.fromJson(Map<String, dynamic> json) =>
       _$RecipeNutritionFromJson(json);
 }
+
+@freezed
+abstract class NaturalLanguageProcessingRequest
+    with _$NaturalLanguageProcessingRequest {
+  const factory NaturalLanguageProcessingRequest({
+    @JsonKey(name: 'user_input') required String userInput,
+    @JsonKey(name: 'include_food_data') @Default(false) bool includeFoodData,
+    @JsonKey(name: 'eaten_foods') List<EatenFood>? eatenFoods,
+    @JsonKey(name: 'region') String? region,
+    @JsonKey(name: 'language') String? language,
+  }) = _NaturalLanguageProcessingRequest;
+
+  factory NaturalLanguageProcessingRequest.fromJson(
+    Map<String, dynamic> json,
+  ) =>
+      _$NaturalLanguageProcessingRequestFromJson(json);
+}
+
+@freezed
+abstract class EatenFood with _$EatenFood {
+  const factory EatenFood({
+    @JsonKey(name: 'food_id') required int foodId,
+    @JsonKey(name: 'food_name') required String foodName,
+    @JsonKey(name: 'food_brand') String? foodBrand,
+    @JsonKey(name: 'serving_description') String? servingDescription,
+    @JsonKey(name: 'serving_size') String? servingSize,
+  }) = _EatenFood;
+
+  factory EatenFood.fromJson(Map<String, dynamic> json) =>
+      _$EatenFoodFromJson(json);
+}
+
+@freezed
+abstract class NaturalLanguageProcessingResponse
+    with _$NaturalLanguageProcessingResponse {
+  const factory NaturalLanguageProcessingResponse({
+    @JsonKey(name: 'food_response') required List<FoodResponse> foodResponse,
+  }) = _NaturalLanguageProcessingResponse;
+
+  factory NaturalLanguageProcessingResponse.fromJson(
+    Map<String, dynamic> json,
+  ) =>
+      _$NaturalLanguageProcessingResponseFromJson(json);
+}
+
+@freezed
+abstract class FoodResponse with _$FoodResponse {
+  const factory FoodResponse({
+    @JsonKey(name: 'food_id') required int foodId,
+    @JsonKey(name: 'food_entry_name') required String foodEntryName,
+    @JsonKey(name: 'eaten') required Eaten eaten,
+    @JsonKey(name: 'suggested_serving')
+    required SuggestedServing suggestedServing,
+    @JsonKey(name: 'food') Food? food,
+  }) = _FoodResponse;
+
+  factory FoodResponse.fromJson(Map<String, dynamic> json) =>
+      _$FoodResponseFromJson(json);
+}
+
+@freezed
+abstract class Eaten with _$Eaten {
+  const factory Eaten({
+    @JsonKey(name: 'food_name_singular') required String foodNameSingular,
+    @JsonKey(name: 'food_name_plural') required String foodNamePlural,
+    @JsonKey(name: 'singular_description') required String singularDescription,
+    @JsonKey(name: 'plural_description') required String pluralDescription,
+    @JsonKey(name: 'units') required double units,
+    @JsonKey(name: 'metric_description') required String metricDescription,
+    @JsonKey(name: 'total_metric_amount') required double totalMetricAmount,
+    @JsonKey(name: 'per_unit_metric_amount')
+    required double perUnitMetricAmount,
+    @JsonKey(name: 'total_nutritional_content')
+    required TotalNutritionalContent totalNutritionalContent,
+  }) = _Eaten;
+
+  factory Eaten.fromJson(Map<String, dynamic> json) => _$EatenFromJson(json);
+}
+
+@freezed
+abstract class TotalNutritionalContent with _$TotalNutritionalContent {
+  const factory TotalNutritionalContent({
+    @JsonKey(name: 'calories') required String calories,
+    @JsonKey(name: 'carbohydrate') required String carbohydrate,
+    @JsonKey(name: 'protein') required String protein,
+    @JsonKey(name: 'fat') required String fat,
+    @JsonKey(name: 'saturated_fat') required String saturatedFat,
+    @JsonKey(name: 'polyunsaturated_fat') required String polyunsaturatedFat,
+    @JsonKey(name: 'monounsaturated_fat') required String monounsaturatedFat,
+    @JsonKey(name: 'cholesterol') required String cholesterol,
+    @JsonKey(name: 'sodium') required String sodium,
+    @JsonKey(name: 'potassium') required String potassium,
+    @JsonKey(name: 'fiber') required String fiber,
+    @JsonKey(name: 'sugar') required String sugar,
+    @JsonKey(name: 'vitamin_a') required String vitaminA,
+    @JsonKey(name: 'vitamin_c') required String vitaminC,
+    @JsonKey(name: 'calcium') required String calcium,
+    @JsonKey(name: 'iron') required String iron,
+  }) = _TotalNutritionalContent;
+
+  factory TotalNutritionalContent.fromJson(Map<String, dynamic> json) =>
+      _$TotalNutritionalContentFromJson(json);
+}
+
+@freezed
+abstract class SuggestedServing with _$SuggestedServing {
+  const factory SuggestedServing({
+    @JsonKey(name: 'serving_id') required int servingId,
+    @JsonKey(name: 'serving_description') required String servingDescription,
+    @JsonKey(name: 'metric_serving_description')
+    required String metricServingDescription,
+    @JsonKey(name: 'metric_measure_amount') required double metricMeasureAmount,
+    @JsonKey(name: 'number_of_units') required String numberOfUnits,
+    @JsonKey(name: 'custom_serving_description')
+    String? customServingDescription,
+  }) = _SuggestedServing;
+
+  factory SuggestedServing.fromJson(Map<String, dynamic> json) =>
+      _$SuggestedServingFromJson(json);
+}

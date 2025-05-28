@@ -1,4 +1,5 @@
 import 'package:dio/dio.dart';
+import 'package:fatsecret_nutrition/src/enums/enums.dart' show EndPoints;
 import 'package:fatsecret_nutrition/src/service/auth_service.dart'
     show AuthService;
 import 'package:logging/logging.dart';
@@ -25,7 +26,7 @@ class ApiService {
       }
 
       final response = await dio.get<Map<String, dynamic>>(
-        apiUrl,
+        '$apiUrl/server.api',
         queryParameters: {
           'method': endpoint,
           'format': 'json',
@@ -38,10 +39,62 @@ class ApiService {
         ),
       );
 
+      if (response.data!['error'] != null) {
+        _logger.severe(
+          response.data!.map(MapEntry.new).toString(),
+        );
+        throw Exception(
+          response.data!['error'],
+        );
+      }
       return response;
     } catch (e, s) {
       _logger.severe('API call failed', e, s);
+      rethrow;
     }
-    return null;
+  }
+
+  Future<Response<Map<String, dynamic>>?> postData(
+    EndPoints endpoint, {
+    Map<String, dynamic>? data,
+  }) async {
+    try {
+      final token = await authService.getAccessToken();
+
+      if (token == null) {
+        throw Exception('Token is null');
+      }
+
+      final response = await dio.post<Map<String, dynamic>>(
+        '$apiUrl${endpoint.value}',
+        data: data,
+        options: Options(
+          headers: {
+            'Authorization': 'Bearer $token',
+            'Content-Type': 'application/json',
+          },
+        ),
+      );
+
+      if (response.statusCode != 200) {
+        _logger
+            .severe('API call failed with status code: ${response.statusCode}');
+        return null;
+      }
+
+      if (response.data!['error'] != null) {
+        _logger.severe(
+          response.data!.map(MapEntry.new).toString(),
+        );
+        throw Exception(
+          response.data!['error'],
+        );
+      }
+
+      return response;
+    } catch (e, s) {
+      _logger.severe('API call failed', e, s);
+      rethrow;
+    }
   }
 }

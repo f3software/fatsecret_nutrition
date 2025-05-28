@@ -280,4 +280,45 @@ void main() {
       });
     });
   });
+
+  group('Natural Language Processing Tests', () {
+    late FatSecretNutrition localSdk;
+    setUp(() {
+      localSdk = FatSecretNutrition(
+        clientId: 'BAD_CLIENT_ID',
+        clientSecret: 'BAD_CLIENT_SECRET',
+        tokenUrl: 'BAD_TOKEN_URL',
+        apiUrl: 'BAD_API_URL',
+      );
+    });
+
+    test('should return null when API call fails', () async {
+      final result = await localSdk.processNaturalLanguage(
+        'A toast with ham and cheese',
+      );
+
+      expect(result, isNull);
+    });
+
+    test('should process natural language input successfully', () async {
+      final result = await sdk.processNaturalLanguage(
+        'A toast with ham and cheese',
+      );
+
+      expect(result, isNotNull);
+      expect(result?.foodResponse.length, greaterThan(0));
+      expect(result?.foodResponse[0].foodId, isNotNull);
+      expect(result?.foodResponse[0].foodEntryName, isNotNull);
+      expect(result?.foodResponse[0].eaten.foodNameSingular, isNotNull);
+      expect(result?.foodResponse[0].eaten.foodNamePlural, isNotNull);
+      expect(
+        result?.foodResponse[0].eaten.totalNutritionalContent.calories,
+        isNotNull,
+      );
+      expect(
+        result?.foodResponse[0].suggestedServing.servingDescription,
+        isNotNull,
+      );
+    });
+  });
 }

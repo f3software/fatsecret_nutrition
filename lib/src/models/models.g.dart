@@ -565,9 +565,6 @@ _Recipe _$RecipeFromJson(Map<String, dynamic> json) => _Recipe(
       recipeDescription: json['recipe_description'] as String,
       numberOfServings: json['number_of_servings'] as String,
       gramsPerPortion: json['grams_per_portion'] as String,
-      preparationTimeMin: json['preparation_time_min'] as String?,
-      cookingTimeMin: json['cooking_time_min'] as String?,
-      rating: json['rating'] as String?,
       recipeTypes:
           RecipeTypes.fromJson(json['recipe_types'] as Map<String, dynamic>),
       recipeCategories: RecipeCategories.fromJson(
@@ -581,6 +578,9 @@ _Recipe _$RecipeFromJson(Map<String, dynamic> json) => _Recipe(
           Directions.fromJson(json['directions'] as Map<String, dynamic>),
       servingSizes:
           ServingSizes.fromJson(json['serving_sizes'] as Map<String, dynamic>),
+      preparationTimeMin: json['preparation_time_min'] as String?,
+      cookingTimeMin: json['cooking_time_min'] as String?,
+      rating: json['rating'] as String?,
     );
 
 Map<String, dynamic> _$RecipeToJson(_Recipe instance) => <String, dynamic>{
@@ -590,15 +590,15 @@ Map<String, dynamic> _$RecipeToJson(_Recipe instance) => <String, dynamic>{
       'recipe_description': instance.recipeDescription,
       'number_of_servings': instance.numberOfServings,
       'grams_per_portion': instance.gramsPerPortion,
-      'preparation_time_min': instance.preparationTimeMin,
-      'cooking_time_min': instance.cookingTimeMin,
-      'rating': instance.rating,
       'recipe_types': instance.recipeTypes.toJson(),
       'recipe_categories': instance.recipeCategories.toJson(),
       'recipe_images': instance.recipeImages.toJson(),
       'ingredients': instance.ingredients.toJson(),
       'directions': instance.directions.toJson(),
       'serving_sizes': instance.servingSizes.toJson(),
+      'preparation_time_min': instance.preparationTimeMin,
+      'cooking_time_min': instance.cookingTimeMin,
+      'rating': instance.rating,
     };
 
 _RecipeTypes _$RecipeTypesFromJson(Map<String, dynamic> json) => _RecipeTypes(
@@ -842,4 +842,173 @@ Map<String, dynamic> _$RecipeNutritionToJson(_RecipeNutrition instance) =>
       'carbohydrate': instance.carbohydrate,
       'protein': instance.protein,
       'fat': instance.fat,
+    };
+
+_NaturalLanguageProcessingRequest _$NaturalLanguageProcessingRequestFromJson(
+  Map<String, dynamic> json,
+) =>
+    _NaturalLanguageProcessingRequest(
+      userInput: json['user_input'] as String,
+      includeFoodData: json['include_food_data'] as bool? ?? false,
+      eatenFoods: (json['eaten_foods'] as List<dynamic>?)
+          ?.map((e) => EatenFood.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      region: json['region'] as String?,
+      language: json['language'] as String?,
+    );
+
+Map<String, dynamic> _$NaturalLanguageProcessingRequestToJson(
+  _NaturalLanguageProcessingRequest instance,
+) =>
+    <String, dynamic>{
+      'user_input': instance.userInput,
+      'include_food_data': instance.includeFoodData,
+      'eaten_foods': instance.eatenFoods?.map((e) => e.toJson()).toList(),
+      'region': instance.region,
+      'language': instance.language,
+    };
+
+_EatenFood _$EatenFoodFromJson(Map<String, dynamic> json) => _EatenFood(
+      foodId: (json['food_id'] as num).toInt(),
+      foodName: json['food_name'] as String,
+      foodBrand: json['food_brand'] as String?,
+      servingDescription: json['serving_description'] as String?,
+      servingSize: json['serving_size'] as String?,
+    );
+
+Map<String, dynamic> _$EatenFoodToJson(_EatenFood instance) =>
+    <String, dynamic>{
+      'food_id': instance.foodId,
+      'food_name': instance.foodName,
+      'food_brand': instance.foodBrand,
+      'serving_description': instance.servingDescription,
+      'serving_size': instance.servingSize,
+    };
+
+_NaturalLanguageProcessingResponse _$NaturalLanguageProcessingResponseFromJson(
+  Map<String, dynamic> json,
+) =>
+    _NaturalLanguageProcessingResponse(
+      foodResponse: (json['food_response'] as List<dynamic>)
+          .map((e) => FoodResponse.fromJson(e as Map<String, dynamic>))
+          .toList(),
+    );
+
+Map<String, dynamic> _$NaturalLanguageProcessingResponseToJson(
+  _NaturalLanguageProcessingResponse instance,
+) =>
+    <String, dynamic>{
+      'food_response': instance.foodResponse.map((e) => e.toJson()).toList(),
+    };
+
+_FoodResponse _$FoodResponseFromJson(Map<String, dynamic> json) =>
+    _FoodResponse(
+      foodId: (json['food_id'] as num).toInt(),
+      foodEntryName: json['food_entry_name'] as String,
+      eaten: Eaten.fromJson(json['eaten'] as Map<String, dynamic>),
+      suggestedServing: SuggestedServing.fromJson(
+        json['suggested_serving'] as Map<String, dynamic>,
+      ),
+      food: json['food'] == null
+          ? null
+          : Food.fromJson(json['food'] as Map<String, dynamic>),
+    );
+
+Map<String, dynamic> _$FoodResponseToJson(_FoodResponse instance) =>
+    <String, dynamic>{
+      'food_id': instance.foodId,
+      'food_entry_name': instance.foodEntryName,
+      'eaten': instance.eaten.toJson(),
+      'suggested_serving': instance.suggestedServing.toJson(),
+      'food': instance.food?.toJson(),
+    };
+
+_Eaten _$EatenFromJson(Map<String, dynamic> json) => _Eaten(
+      foodNameSingular: json['food_name_singular'] as String,
+      foodNamePlural: json['food_name_plural'] as String,
+      singularDescription: json['singular_description'] as String,
+      pluralDescription: json['plural_description'] as String,
+      units: (json['units'] as num).toDouble(),
+      metricDescription: json['metric_description'] as String,
+      totalMetricAmount: (json['total_metric_amount'] as num).toDouble(),
+      perUnitMetricAmount: (json['per_unit_metric_amount'] as num).toDouble(),
+      totalNutritionalContent: TotalNutritionalContent.fromJson(
+        json['total_nutritional_content'] as Map<String, dynamic>,
+      ),
+    );
+
+Map<String, dynamic> _$EatenToJson(_Eaten instance) => <String, dynamic>{
+      'food_name_singular': instance.foodNameSingular,
+      'food_name_plural': instance.foodNamePlural,
+      'singular_description': instance.singularDescription,
+      'plural_description': instance.pluralDescription,
+      'units': instance.units,
+      'metric_description': instance.metricDescription,
+      'total_metric_amount': instance.totalMetricAmount,
+      'per_unit_metric_amount': instance.perUnitMetricAmount,
+      'total_nutritional_content': instance.totalNutritionalContent.toJson(),
+    };
+
+_TotalNutritionalContent _$TotalNutritionalContentFromJson(
+  Map<String, dynamic> json,
+) =>
+    _TotalNutritionalContent(
+      calories: json['calories'] as String,
+      carbohydrate: json['carbohydrate'] as String,
+      protein: json['protein'] as String,
+      fat: json['fat'] as String,
+      saturatedFat: json['saturated_fat'] as String,
+      polyunsaturatedFat: json['polyunsaturated_fat'] as String,
+      monounsaturatedFat: json['monounsaturated_fat'] as String,
+      cholesterol: json['cholesterol'] as String,
+      sodium: json['sodium'] as String,
+      potassium: json['potassium'] as String,
+      fiber: json['fiber'] as String,
+      sugar: json['sugar'] as String,
+      vitaminA: json['vitamin_a'] as String,
+      vitaminC: json['vitamin_c'] as String,
+      calcium: json['calcium'] as String,
+      iron: json['iron'] as String,
+    );
+
+Map<String, dynamic> _$TotalNutritionalContentToJson(
+  _TotalNutritionalContent instance,
+) =>
+    <String, dynamic>{
+      'calories': instance.calories,
+      'carbohydrate': instance.carbohydrate,
+      'protein': instance.protein,
+      'fat': instance.fat,
+      'saturated_fat': instance.saturatedFat,
+      'polyunsaturated_fat': instance.polyunsaturatedFat,
+      'monounsaturated_fat': instance.monounsaturatedFat,
+      'cholesterol': instance.cholesterol,
+      'sodium': instance.sodium,
+      'potassium': instance.potassium,
+      'fiber': instance.fiber,
+      'sugar': instance.sugar,
+      'vitamin_a': instance.vitaminA,
+      'vitamin_c': instance.vitaminC,
+      'calcium': instance.calcium,
+      'iron': instance.iron,
+    };
+
+_SuggestedServing _$SuggestedServingFromJson(Map<String, dynamic> json) =>
+    _SuggestedServing(
+      servingId: (json['serving_id'] as num).toInt(),
+      servingDescription: json['serving_description'] as String,
+      metricServingDescription: json['metric_serving_description'] as String,
+      metricMeasureAmount: (json['metric_measure_amount'] as num).toDouble(),
+      numberOfUnits: json['number_of_units'] as String,
+      customServingDescription: json['custom_serving_description'] as String?,
+    );
+
+Map<String, dynamic> _$SuggestedServingToJson(_SuggestedServing instance) =>
+    <String, dynamic>{
+      'serving_id': instance.servingId,
+      'serving_description': instance.servingDescription,
+      'metric_serving_description': instance.metricServingDescription,
+      'metric_measure_amount': instance.metricMeasureAmount,
+      'number_of_units': instance.numberOfUnits,
+      'custom_serving_description': instance.customServingDescription,
     };

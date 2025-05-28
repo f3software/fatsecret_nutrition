@@ -611,4 +611,242 @@ and cocktails.''',
           ['Baked', 'Dessert', 'Snack', 'Breakfast'],);
     });
   });
+
+  group('Natural Language Processing Models Tests', () {
+    test('should create a valid NaturalLanguageProcessingRequest from JSON',
+        () {
+      final json = {
+        'user_input':
+            'A toast with ham and cheese, an apple, a banana and a cappuccino',
+        'include_food_data': true,
+        'region': 'US',
+        'language': 'en',
+        'eaten_foods': [
+          {
+            'food_id': 3092,
+            'food_name': 'egg',
+            'food_brand': null,
+            'serving_description': '',
+            'serving_size': '1',
+          }
+        ],
+      };
+
+      final model = NaturalLanguageProcessingRequest.fromJson(json);
+
+      expect(
+        model.userInput,
+        'A toast with ham and cheese, an apple, a banana and a cappuccino',
+      );
+      expect(model.includeFoodData, true);
+      expect(model.region, 'US');
+      expect(model.language, 'en');
+      expect(model.eatenFoods?.length, 1);
+      expect(model.eatenFoods?[0].foodId, 3092);
+      expect(model.eatenFoods?[0].foodName, 'egg');
+      expect(model.eatenFoods?[0].foodBrand, null);
+      expect(model.eatenFoods?[0].servingDescription, '');
+      expect(model.eatenFoods?[0].servingSize, '1');
+    });
+
+    test('should convert NaturalLanguageProcessingRequest to JSON', () {
+      const model = NaturalLanguageProcessingRequest(
+        userInput:
+            'A toast with ham and cheese, an apple, a banana and a cappuccino',
+        includeFoodData: true,
+        region: 'US',
+        language: 'en',
+        eatenFoods: [
+          EatenFood(
+            foodId: 3092,
+            foodName: 'egg',
+            servingDescription: '',
+            servingSize: '1',
+          ),
+        ],
+      );
+
+      final json = model.toJson();
+
+      expect(
+        json['user_input'],
+        'A toast with ham and cheese, an apple, a banana and a cappuccino',
+      );
+      expect(json['include_food_data'], true);
+      expect(json['region'], 'US');
+      expect(json['language'], 'en');
+      expect(json['eaten_foods'].length, 1);
+      expect(json['eaten_foods'][0]['food_id'], 3092);
+      expect(json['eaten_foods'][0]['food_name'], 'egg');
+      expect(json['eaten_foods'][0]['food_brand'], null);
+      expect(json['eaten_foods'][0]['serving_description'], '');
+      expect(json['eaten_foods'][0]['serving_size'], '1');
+    });
+
+    test('should create a valid NaturalLanguageProcessingResponse from JSON',
+        () {
+      final json = {
+        'food_response': [
+          {
+            'food_id': 1234,
+            'food_entry_name': 'Toast with ham and cheese',
+            'eaten': {
+              'food_name_singular': 'toast',
+              'food_name_plural': 'toasts',
+              'singular_description': 'slice',
+              'plural_description': 'slices',
+              'units': 1.0,
+              'metric_description': 'g',
+              'total_metric_amount': 30.0,
+              'per_unit_metric_amount': 30.0,
+              'total_nutritional_content': {
+                'calories': '150',
+                'carbohydrate': '25',
+                'protein': '5',
+                'fat': '3',
+                'saturated_fat': '1',
+                'polyunsaturated_fat': '0.5',
+                'monounsaturated_fat': '1.5',
+                'cholesterol': '10',
+                'sodium': '200',
+                'potassium': '100',
+                'fiber': '2',
+                'sugar': '3',
+                'vitamin_a': '50',
+                'vitamin_c': '0',
+                'calcium': '100',
+                'iron': '2',
+              },
+            },
+            'suggested_serving': {
+              'serving_id': 5678,
+              'serving_description': '1 slice',
+              'custom_serving_description': null,
+              'metric_serving_description': '30g',
+              'metric_measure_amount': 30.0,
+              'number_of_units': '1',
+            },
+          }
+        ],
+      };
+
+      final model = NaturalLanguageProcessingResponse.fromJson(json);
+
+      expect(model.foodResponse.length, 1);
+      expect(model.foodResponse[0].foodId, 1234);
+      expect(model.foodResponse[0].foodEntryName, 'Toast with ham and cheese');
+      expect(model.foodResponse[0].eaten.foodNameSingular, 'toast');
+      expect(model.foodResponse[0].eaten.foodNamePlural, 'toasts');
+      expect(model.foodResponse[0].eaten.singularDescription, 'slice');
+      expect(model.foodResponse[0].eaten.pluralDescription, 'slices');
+      expect(model.foodResponse[0].eaten.units, 1.0);
+      expect(model.foodResponse[0].eaten.metricDescription, 'g');
+      expect(model.foodResponse[0].eaten.totalMetricAmount, 30.0);
+      expect(model.foodResponse[0].eaten.perUnitMetricAmount, 30.0);
+      expect(
+        model.foodResponse[0].eaten.totalNutritionalContent.calories,
+        '150',
+      );
+      expect(model.foodResponse[0].suggestedServing.servingId, 5678);
+      expect(
+        model.foodResponse[0].suggestedServing.servingDescription,
+        '1 slice',
+      );
+      expect(
+        model.foodResponse[0].suggestedServing.metricServingDescription,
+        '30g',
+      );
+      expect(model.foodResponse[0].suggestedServing.metricMeasureAmount, 30.0);
+      expect(model.foodResponse[0].suggestedServing.numberOfUnits, '1');
+    });
+
+    test('should convert NaturalLanguageProcessingResponse to JSON', () {
+      const model = NaturalLanguageProcessingResponse(
+        foodResponse: [
+          FoodResponse(
+            foodId: 1234,
+            foodEntryName: 'Toast with ham and cheese',
+            eaten: Eaten(
+              foodNameSingular: 'toast',
+              foodNamePlural: 'toasts',
+              singularDescription: 'slice',
+              pluralDescription: 'slices',
+              units: 1,
+              metricDescription: 'g',
+              totalMetricAmount: 30,
+              perUnitMetricAmount: 30,
+              totalNutritionalContent: TotalNutritionalContent(
+                calories: '150',
+                carbohydrate: '25',
+                protein: '5',
+                fat: '3',
+                saturatedFat: '1',
+                polyunsaturatedFat: '0.5',
+                monounsaturatedFat: '1.5',
+                cholesterol: '10',
+                sodium: '200',
+                potassium: '100',
+                fiber: '2',
+                sugar: '3',
+                vitaminA: '50',
+                vitaminC: '0',
+                calcium: '100',
+                iron: '2',
+              ),
+            ),
+            suggestedServing: SuggestedServing(
+              servingId: 5678,
+              servingDescription: '1 slice',
+              metricServingDescription: '30g',
+              metricMeasureAmount: 30,
+              numberOfUnits: '1',
+            ),
+          ),
+        ],
+      );
+
+      final json = model.toJson();
+
+      expect(json['food_response'].length, 1);
+      expect(json['food_response'][0]['food_id'], 1234);
+      expect(
+        json['food_response'][0]['food_entry_name'],
+        'Toast with ham and cheese',
+      );
+      expect(json['food_response'][0]['eaten']['food_name_singular'], 'toast');
+      expect(json['food_response'][0]['eaten']['food_name_plural'], 'toasts');
+      expect(
+        json['food_response'][0]['eaten']['singular_description'],
+        'slice',
+      );
+      expect(json['food_response'][0]['eaten']['plural_description'], 'slices');
+      expect(json['food_response'][0]['eaten']['units'], 1.0);
+      expect(json['food_response'][0]['eaten']['metric_description'], 'g');
+      expect(json['food_response'][0]['eaten']['total_metric_amount'], 30.0);
+      expect(json['food_response'][0]['eaten']['per_unit_metric_amount'], 30.0);
+      expect(
+        json['food_response'][0]['eaten']['total_nutritional_content']
+            ['calories'],
+        '150',
+      );
+      expect(json['food_response'][0]['suggested_serving']['serving_id'], 5678);
+      expect(
+        json['food_response'][0]['suggested_serving']['serving_description'],
+        '1 slice',
+      );
+      expect(
+        json['food_response'][0]['suggested_serving']
+            ['metric_serving_description'],
+        '30g',
+      );
+      expect(
+        json['food_response'][0]['suggested_serving']['metric_measure_amount'],
+        30.0,
+      );
+      expect(
+        json['food_response'][0]['suggested_serving']['number_of_units'],
+        '1',
+      );
+    });
+  });
 }

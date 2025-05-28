@@ -5,6 +5,7 @@ import 'package:fatsecret_nutrition/src/service/api_service.dart'
     show ApiService;
 import 'package:fatsecret_nutrition/src/service/auth_service.dart'
     show AuthService;
+import 'package:logging/logging.dart';
 
 /// {@template fatsecret_nutrition}
 /// A Dart package for interacting with the FatSecret Nutrition API
@@ -35,6 +36,7 @@ class FatSecretNutrition {
   late final ApiService apiService;
   final String tokenUrl;
   final String apiUrl;
+  final _logger = Logger('FatSecretNutrition');
 
   /// Foods: Search
   /// https://platform.fatsecret.com/docs/v3/foods.search
@@ -276,6 +278,58 @@ class FatSecretNutrition {
       final data = response.data!['recipe_types'] as Map<String, dynamic>;
       return RecipeTypes.fromJson(data);
     } catch (e) {
+      return null;
+    }
+  }
+
+  /// Natural Language Processing
+  /// https://platform.fatsecret.com/docs/v1/natural-language-processing
+  ///
+  /// Processes natural language input to identify foods and their
+  /// nutritional content.
+  /// Returns detailed information about the foods mentioned in the input text.
+  ///
+  Future<NaturalLanguageProcessingResponse?> processNaturalLanguage(
+    String userInput, {
+    bool includeFoodData = true,
+    String region = 'US',
+    String language = 'en',
+    List<EatenFood>? eatenFoods,
+  }) async {
+    try {
+      final data = NaturalLanguageProcessingRequest(
+        userInput: userInput,
+        includeFoodData: includeFoodData,
+        region: region,
+        language: language,
+        eatenFoods: eatenFoods,
+      ).toJson();
+
+      final response = await apiService.postData(
+        EndPoints.naturalLanguageProcessingV1,
+        data: data,
+      );
+// Map (1 item)
+// "error" -> Map (2 items)
+// "error"
+// Map (2 items)
+// "code" -> "14"
+// "message" -> "Missing scope: scope 'nlp'"
+// "message"
+// "Missing scope: scope 'nlp'"
+      if (response == null) {
+        _logger.severe('NLP API call failed - no response');
+        return null;
+      }
+
+      if (response.data == null) {
+        _logger.severe('NLP API call failed - no data in response');
+        return null;
+      }
+
+      return NaturalLanguageProcessingResponse.fromJson(response.data!);
+    } catch (e, s) {
+      _logger.severe('NLP API call failed', e, s);
       return null;
     }
   }
