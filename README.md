@@ -205,7 +205,7 @@ if (recipes != null) {
 | Food Sub Categories: Get All | ✅ |
 | Recipes: Get By ID | ✅ |
 | Recipes: Search | ✅ |
-| Recipe Types | ⏳ |
+| Recipe Types | ✅ |
 | Profile: Foods | ⏳ |
 | Profile: Recipes | ⏳ |
 | Profile: Saved Meals | ⏳ |
@@ -213,6 +213,8 @@ if (recipes != null) {
 | Profile: Food Diary | ⏳ |
 | Profile: Exercise Diary | ⏳ |
 | Profile: Weight Diary | ⏳ |
+| Image Recognition | ⏳ |
+| Natural Language Processing | ⏳ |
 
 ## License 📝
 
