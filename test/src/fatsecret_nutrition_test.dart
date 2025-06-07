@@ -321,4 +321,41 @@ void main() {
       );
     });
   });
+
+  group('Image Recognition Tests', () {
+    late FatSecretNutrition localSdk;
+    setUp(() {
+      localSdk = FatSecretNutrition(
+        clientId: 'BAD_CLIENT_ID',
+        clientSecret: 'BAD_CLIENT_SECRET',
+        tokenUrl: 'BAD_TOKEN_URL',
+        apiUrl: 'BAD_API_URL',
+      );
+    });
+
+    test('should return null when API call fails', () async {
+      final result = await localSdk.imageRecognitionV2(
+        imageB64: 'invalid_base64',
+      );
+      expect(result, isNull);
+    });
+
+    test('should process image recognition successfully', () async {
+      // This is a 1x1 transparent PNG base64 string (valid, but will not return real food)
+      const base64Image =
+          'iVBORw0KGgoAAAANSUhEUgAAAkQAAAIeCAYAAABa9RDLAAAMSWlDQ1BJQ0MgUHJvZmlsZQAASImVVwdYU8kWnltSIQQIREBK6E0QkRJASggtgPQiiEpIAoQSY0JQsaOLCq5dRLCiqyCKHRCxYVcWxe5aFgsqK+tiwa68CQF02Ve+N983M//958w/55w7twwA9Ha+VJqDagKQK8mTxQT7s8YlJbNInYAANAEFthS+QC7lREWFA1gG+r+XdzcBouyvOSi1/jn+X4uWUCQXAIBEQZwmlAtyIT4IAN4kkMryACBKIW8+NU+qxKsh1pFBByGuUuIMFW5S4jQVvtJnExfDhfgJAGR1Pl+WAYBGN+RZ+YIMqEOH0QIniVAsgdgPYp/c3MlCiOdCbANt4Jp0pT477QedjL9ppg1q8vkZg1gVS18hB4jl0hz+9P8zHf+75OYoBtawhlU9UxYSo4wZ5u1J9uQwJVaH+IMkLSISYm0AUFws7LNXYmamIiReZY/aCORcmDPAhHiMPCeW18/HCPkBYRAbQpwuyYkI77cpTBcHKW1g/tAycR4vDmI9iKtE8sDYfpsTsskxA+veTJdxOf38c76szwel/jdFdjxHpY9pZ4p4/fqYY0FmXCLEVIgD8sUJERBrQBwhz44N67dJKcjkRgzYyBQxylgsIJaJJMH+Kn2sNF0WFNNvvzNXPhA7diJTzIvox1fzMuNCVLnCngj4ff7DWLBukYQTP6Ajko8LH4hFKAoI';
+      final result = await sdk.imageRecognitionV2(
+        imageB64: base64Image,
+        region: 'US',
+        language: 'en',
+        includeFoodData: true,
+      );
+      // The API may return an empty list or error for a blank image, but the call should succeed
+      expect(result, isNotNull);
+      // If the API returns foodResponse, check its type
+      if (result?.foodResponse != null) {
+        expect(result?.foodResponse, isA<List<FoodResponse>>());
+      }
+    });
+  });
 }

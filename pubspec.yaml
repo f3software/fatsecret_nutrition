@@ -1,6 +1,6 @@
 name: fatsecret_nutrition
 description: A Dart package for interacting with the FatSecret Nutrition API
-version: 0.1.2
+version: 0.1.3
 homepage: https://github.com/f3software/fatsecret_nutrition
 
 environment:
@@ -12,7 +12,7 @@ dev_dependencies:
   json_serializable: ^6.8.0
   mocktail: ^1.0.4
   test: ^1.25.8
-  very_good_analysis: ^7.0.0
+  very_good_analysis: ^9.0.0
 
 dependencies:
   dio: ^5.8.0+1

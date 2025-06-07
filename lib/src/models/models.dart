@@ -909,3 +909,27 @@ abstract class SuggestedServing with _$SuggestedServing {
   factory SuggestedServing.fromJson(Map<String, dynamic> json) =>
       _$SuggestedServingFromJson(json);
 }
+
+@freezed
+abstract class ImageRecognitionRequest with _$ImageRecognitionRequest {
+  const factory ImageRecognitionRequest({
+    @JsonKey(name: 'image_b64') required String imageB64,
+    @JsonKey(name: 'region') String? region,
+    @JsonKey(name: 'language') String? language,
+    @JsonKey(name: 'include_food_data') bool? includeFoodData,
+    @JsonKey(name: 'eaten_foods') List<EatenFood>? eatenFoods,
+  }) = _ImageRecognitionRequest;
+
+  factory ImageRecognitionRequest.fromJson(Map<String, dynamic> json) =>
+      _$ImageRecognitionRequestFromJson(json);
+}
+
+@freezed
+abstract class ImageRecognitionResponse with _$ImageRecognitionResponse {
+  const factory ImageRecognitionResponse({
+    @JsonKey(name: 'food_response') required List<FoodResponse> foodResponse,
+  }) = _ImageRecognitionResponse;
+
+  factory ImageRecognitionResponse.fromJson(Map<String, dynamic> json) =>
+      _$ImageRecognitionResponseFromJson(json);
+}

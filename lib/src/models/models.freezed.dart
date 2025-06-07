@@ -12687,4 +12687,411 @@ class __$SuggestedServingCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
+mixin _$ImageRecognitionRequest {
+  @JsonKey(name: 'image_b64')
+  String get imageB64;
+  @JsonKey(name: 'region')
+  String? get region;
+  @JsonKey(name: 'language')
+  String? get language;
+  @JsonKey(name: 'include_food_data')
+  bool? get includeFoodData;
+  @JsonKey(name: 'eaten_foods')
+  List<EatenFood>? get eatenFoods;
+
+  /// Create a copy of ImageRecognitionRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $ImageRecognitionRequestCopyWith<ImageRecognitionRequest> get copyWith =>
+      _$ImageRecognitionRequestCopyWithImpl<ImageRecognitionRequest>(
+          this as ImageRecognitionRequest, _$identity);
+
+  /// Serializes this ImageRecognitionRequest to a JSON map.
+  Map<String, dynamic> toJson();
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is ImageRecognitionRequest &&
+            (identical(other.imageB64, imageB64) ||
+                other.imageB64 == imageB64) &&
+            (identical(other.region, region) || other.region == region) &&
+            (identical(other.language, language) ||
+                other.language == language) &&
+            (identical(other.includeFoodData, includeFoodData) ||
+                other.includeFoodData == includeFoodData) &&
+            const DeepCollectionEquality()
+                .equals(other.eatenFoods, eatenFoods));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(runtimeType, imageB64, region, language,
+      includeFoodData, const DeepCollectionEquality().hash(eatenFoods));
+
+  @override
+  String toString() {
+    return 'ImageRecognitionRequest(imageB64: $imageB64, region: $region, language: $language, includeFoodData: $includeFoodData, eatenFoods: $eatenFoods)';
+  }
+}
+
+/// @nodoc
+abstract mixin class $ImageRecognitionRequestCopyWith<$Res> {
+  factory $ImageRecognitionRequestCopyWith(ImageRecognitionRequest value,
+          $Res Function(ImageRecognitionRequest) _then) =
+      _$ImageRecognitionRequestCopyWithImpl;
+  @useResult
+  $Res call(
+      {@JsonKey(name: 'image_b64') String imageB64,
+      @JsonKey(name: 'region') String? region,
+      @JsonKey(name: 'language') String? language,
+      @JsonKey(name: 'include_food_data') bool? includeFoodData,
+      @JsonKey(name: 'eaten_foods') List<EatenFood>? eatenFoods});
+}
+
+/// @nodoc
+class _$ImageRecognitionRequestCopyWithImpl<$Res>
+    implements $ImageRecognitionRequestCopyWith<$Res> {
+  _$ImageRecognitionRequestCopyWithImpl(this._self, this._then);
+
+  final ImageRecognitionRequest _self;
+  final $Res Function(ImageRecognitionRequest) _then;
+
+  /// Create a copy of ImageRecognitionRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? imageB64 = null,
+    Object? region = freezed,
+    Object? language = freezed,
+    Object? includeFoodData = freezed,
+    Object? eatenFoods = freezed,
+  }) {
+    return _then(_self.copyWith(
+      imageB64: null == imageB64
+          ? _self.imageB64
+          : imageB64 // ignore: cast_nullable_to_non_nullable
+              as String,
+      region: freezed == region
+          ? _self.region
+          : region // ignore: cast_nullable_to_non_nullable
+              as String?,
+      language: freezed == language
+          ? _self.language
+          : language // ignore: cast_nullable_to_non_nullable
+              as String?,
+      includeFoodData: freezed == includeFoodData
+          ? _self.includeFoodData
+          : includeFoodData // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      eatenFoods: freezed == eatenFoods
+          ? _self.eatenFoods
+          : eatenFoods // ignore: cast_nullable_to_non_nullable
+              as List<EatenFood>?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _ImageRecognitionRequest implements ImageRecognitionRequest {
+  const _ImageRecognitionRequest(
+      {@JsonKey(name: 'image_b64') required this.imageB64,
+      @JsonKey(name: 'region') this.region,
+      @JsonKey(name: 'language') this.language,
+      @JsonKey(name: 'include_food_data') this.includeFoodData,
+      @JsonKey(name: 'eaten_foods') final List<EatenFood>? eatenFoods})
+      : _eatenFoods = eatenFoods;
+  factory _ImageRecognitionRequest.fromJson(Map<String, dynamic> json) =>
+      _$ImageRecognitionRequestFromJson(json);
+
+  @override
+  @JsonKey(name: 'image_b64')
+  final String imageB64;
+  @override
+  @JsonKey(name: 'region')
+  final String? region;
+  @override
+  @JsonKey(name: 'language')
+  final String? language;
+  @override
+  @JsonKey(name: 'include_food_data')
+  final bool? includeFoodData;
+  final List<EatenFood>? _eatenFoods;
+  @override
+  @JsonKey(name: 'eaten_foods')
+  List<EatenFood>? get eatenFoods {
+    final value = _eatenFoods;
+    if (value == null) return null;
+    if (_eatenFoods is EqualUnmodifiableListView) return _eatenFoods;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// Create a copy of ImageRecognitionRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  _$ImageRecognitionRequestCopyWith<_ImageRecognitionRequest> get copyWith =>
+      __$ImageRecognitionRequestCopyWithImpl<_ImageRecognitionRequest>(
+          this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$ImageRecognitionRequestToJson(
+      this,
+    );
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _ImageRecognitionRequest &&
+            (identical(other.imageB64, imageB64) ||
+                other.imageB64 == imageB64) &&
+            (identical(other.region, region) || other.region == region) &&
+            (identical(other.language, language) ||
+                other.language == language) &&
+            (identical(other.includeFoodData, includeFoodData) ||
+                other.includeFoodData == includeFoodData) &&
+            const DeepCollectionEquality()
+                .equals(other._eatenFoods, _eatenFoods));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(runtimeType, imageB64, region, language,
+      includeFoodData, const DeepCollectionEquality().hash(_eatenFoods));
+
+  @override
+  String toString() {
+    return 'ImageRecognitionRequest(imageB64: $imageB64, region: $region, language: $language, includeFoodData: $includeFoodData, eatenFoods: $eatenFoods)';
+  }
+}
+
+/// @nodoc
+abstract mixin class _$ImageRecognitionRequestCopyWith<$Res>
+    implements $ImageRecognitionRequestCopyWith<$Res> {
+  factory _$ImageRecognitionRequestCopyWith(_ImageRecognitionRequest value,
+          $Res Function(_ImageRecognitionRequest) _then) =
+      __$ImageRecognitionRequestCopyWithImpl;
+  @override
+  @useResult
+  $Res call(
+      {@JsonKey(name: 'image_b64') String imageB64,
+      @JsonKey(name: 'region') String? region,
+      @JsonKey(name: 'language') String? language,
+      @JsonKey(name: 'include_food_data') bool? includeFoodData,
+      @JsonKey(name: 'eaten_foods') List<EatenFood>? eatenFoods});
+}
+
+/// @nodoc
+class __$ImageRecognitionRequestCopyWithImpl<$Res>
+    implements _$ImageRecognitionRequestCopyWith<$Res> {
+  __$ImageRecognitionRequestCopyWithImpl(this._self, this._then);
+
+  final _ImageRecognitionRequest _self;
+  final $Res Function(_ImageRecognitionRequest) _then;
+
+  /// Create a copy of ImageRecognitionRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $Res call({
+    Object? imageB64 = null,
+    Object? region = freezed,
+    Object? language = freezed,
+    Object? includeFoodData = freezed,
+    Object? eatenFoods = freezed,
+  }) {
+    return _then(_ImageRecognitionRequest(
+      imageB64: null == imageB64
+          ? _self.imageB64
+          : imageB64 // ignore: cast_nullable_to_non_nullable
+              as String,
+      region: freezed == region
+          ? _self.region
+          : region // ignore: cast_nullable_to_non_nullable
+              as String?,
+      language: freezed == language
+          ? _self.language
+          : language // ignore: cast_nullable_to_non_nullable
+              as String?,
+      includeFoodData: freezed == includeFoodData
+          ? _self.includeFoodData
+          : includeFoodData // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      eatenFoods: freezed == eatenFoods
+          ? _self._eatenFoods
+          : eatenFoods // ignore: cast_nullable_to_non_nullable
+              as List<EatenFood>?,
+    ));
+  }
+}
+
+/// @nodoc
+mixin _$ImageRecognitionResponse {
+  @JsonKey(name: 'food_response')
+  List<FoodResponse> get foodResponse;
+
+  /// Create a copy of ImageRecognitionResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $ImageRecognitionResponseCopyWith<ImageRecognitionResponse> get copyWith =>
+      _$ImageRecognitionResponseCopyWithImpl<ImageRecognitionResponse>(
+          this as ImageRecognitionResponse, _$identity);
+
+  /// Serializes this ImageRecognitionResponse to a JSON map.
+  Map<String, dynamic> toJson();
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is ImageRecognitionResponse &&
+            const DeepCollectionEquality()
+                .equals(other.foodResponse, foodResponse));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType, const DeepCollectionEquality().hash(foodResponse));
+
+  @override
+  String toString() {
+    return 'ImageRecognitionResponse(foodResponse: $foodResponse)';
+  }
+}
+
+/// @nodoc
+abstract mixin class $ImageRecognitionResponseCopyWith<$Res> {
+  factory $ImageRecognitionResponseCopyWith(ImageRecognitionResponse value,
+          $Res Function(ImageRecognitionResponse) _then) =
+      _$ImageRecognitionResponseCopyWithImpl;
+  @useResult
+  $Res call({@JsonKey(name: 'food_response') List<FoodResponse> foodResponse});
+}
+
+/// @nodoc
+class _$ImageRecognitionResponseCopyWithImpl<$Res>
+    implements $ImageRecognitionResponseCopyWith<$Res> {
+  _$ImageRecognitionResponseCopyWithImpl(this._self, this._then);
+
+  final ImageRecognitionResponse _self;
+  final $Res Function(ImageRecognitionResponse) _then;
+
+  /// Create a copy of ImageRecognitionResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? foodResponse = null,
+  }) {
+    return _then(_self.copyWith(
+      foodResponse: null == foodResponse
+          ? _self.foodResponse
+          : foodResponse // ignore: cast_nullable_to_non_nullable
+              as List<FoodResponse>,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _ImageRecognitionResponse implements ImageRecognitionResponse {
+  const _ImageRecognitionResponse(
+      {@JsonKey(name: 'food_response')
+      required final List<FoodResponse> foodResponse})
+      : _foodResponse = foodResponse;
+  factory _ImageRecognitionResponse.fromJson(Map<String, dynamic> json) =>
+      _$ImageRecognitionResponseFromJson(json);
+
+  final List<FoodResponse> _foodResponse;
+  @override
+  @JsonKey(name: 'food_response')
+  List<FoodResponse> get foodResponse {
+    if (_foodResponse is EqualUnmodifiableListView) return _foodResponse;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_foodResponse);
+  }
+
+  /// Create a copy of ImageRecognitionResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  _$ImageRecognitionResponseCopyWith<_ImageRecognitionResponse> get copyWith =>
+      __$ImageRecognitionResponseCopyWithImpl<_ImageRecognitionResponse>(
+          this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$ImageRecognitionResponseToJson(
+      this,
+    );
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _ImageRecognitionResponse &&
+            const DeepCollectionEquality()
+                .equals(other._foodResponse, _foodResponse));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType, const DeepCollectionEquality().hash(_foodResponse));
+
+  @override
+  String toString() {
+    return 'ImageRecognitionResponse(foodResponse: $foodResponse)';
+  }
+}
+
+/// @nodoc
+abstract mixin class _$ImageRecognitionResponseCopyWith<$Res>
+    implements $ImageRecognitionResponseCopyWith<$Res> {
+  factory _$ImageRecognitionResponseCopyWith(_ImageRecognitionResponse value,
+          $Res Function(_ImageRecognitionResponse) _then) =
+      __$ImageRecognitionResponseCopyWithImpl;
+  @override
+  @useResult
+  $Res call({@JsonKey(name: 'food_response') List<FoodResponse> foodResponse});
+}
+
+/// @nodoc
+class __$ImageRecognitionResponseCopyWithImpl<$Res>
+    implements _$ImageRecognitionResponseCopyWith<$Res> {
+  __$ImageRecognitionResponseCopyWithImpl(this._self, this._then);
+
+  final _ImageRecognitionResponse _self;
+  final $Res Function(_ImageRecognitionResponse) _then;
+
+  /// Create a copy of ImageRecognitionResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $Res call({
+    Object? foodResponse = null,
+  }) {
+    return _then(_ImageRecognitionResponse(
+      foodResponse: null == foodResponse
+          ? _self._foodResponse
+          : foodResponse // ignore: cast_nullable_to_non_nullable
+              as List<FoodResponse>,
+    ));
+  }
+}
+
 // dart format on

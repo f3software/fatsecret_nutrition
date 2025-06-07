@@ -315,4 +315,36 @@ void main() async {
   } catch (e) {
     logger.severe('Error: $e');
   }
+
+  // Example 11: Image Recognition
+  // NOTE: Replace 'your_base64_image_string_here' with a real base64-encoded image string.
+  const imageB64 = 'your_base64_image_string_here';
+  try {
+    final imageResponse = await fatSecret.imageRecognitionV2(
+      imageB64: imageB64,
+      region: 'US',
+      language: 'en',
+      includeFoodData: true,
+    );
+    if (imageResponse != null) {
+      logger.info('\nImage Recognition results:');
+      for (final food in imageResponse.foodResponse) {
+        logger
+          ..info('Food: ${food.foodEntryName}')
+          ..info('Food ID: ${food.foodId}')
+          ..info('Eaten:')
+          ..info('- Singular: ${food.eaten.foodNameSingular}')
+          ..info('- Plural: ${food.eaten.foodNamePlural}')
+          ..info('- Units: ${food.eaten.units}')
+          ..info('- Metric Description: ${food.eaten.metricDescription}')
+          ..info('- Total Metric Amount: ${food.eaten.totalMetricAmount}g')
+          ..info('- Per Unit Metric Amount: ${food.eaten.perUnitMetricAmount}g')
+          ..info('---');
+      }
+    } else {
+      logger.info('No foods detected in the image.');
+    }
+  } catch (e) {
+    logger.severe('Image recognition error: $e');
+  }
 }

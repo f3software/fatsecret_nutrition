@@ -309,14 +309,6 @@ class FatSecretNutrition {
         EndPoints.naturalLanguageProcessingV1,
         data: data,
       );
-// Map (1 item)
-// "error" -> Map (2 items)
-// "error"
-// Map (2 items)
-// "code" -> "14"
-// "message" -> "Missing scope: scope 'nlp'"
-// "message"
-// "Missing scope: scope 'nlp'"
       if (response == null) {
         _logger.severe('NLP API call failed - no response');
         return null;
@@ -330,6 +322,38 @@ class FatSecretNutrition {
       return NaturalLanguageProcessingResponse.fromJson(response.data!);
     } catch (e, s) {
       _logger.severe('NLP API call failed', e, s);
+      return null;
+    }
+  }
+
+  /// Image Recognition v2
+  /// https://platform.fatsecret.com/docs/v2/image.recognition
+  ///
+  /// Identifies food items and their corresponding portion sizes or weights within an image.
+  Future<ImageRecognitionResponse?> imageRecognitionV2({
+    required String imageB64,
+    String? region,
+    String? language,
+    bool? includeFoodData,
+    List<EatenFood>? eatenFoods,
+  }) async {
+    try {
+      final request = ImageRecognitionRequest(
+        imageB64: imageB64,
+        region: region,
+        language: language,
+        includeFoodData: includeFoodData,
+        eatenFoods: eatenFoods,
+      );
+      final response = await apiService.postData(
+        EndPoints.imageRecognitionV2,
+        data: request.toJson(),
+      );
+      if (response == null) return null;
+      if (response.data == null) throw Exception('no data');
+      return ImageRecognitionResponse.fromJson(response.data!);
+    } catch (e, s) {
+      _logger.severe('Image recognition failed', e, s);
       return null;
     }
   }

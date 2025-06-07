@@ -229,6 +229,33 @@ if (nlpResponse != null) {
 }
 ```
 
+### Image Recognition
+
+```dart
+final imageB64 = '...'; // Your base64-encoded image string
+final imageResponse = await fatSecret.imageRecognitionV2(
+  imageB64: imageB64,
+  region: 'US',
+  language: 'en',
+  includeFoodData: true,
+);
+
+if (imageResponse != null) {
+  for (final food in imageResponse.foodResponse) {
+    print('Food: [1m${food.foodEntryName}[0m');
+    print('Food ID: ${food.foodId}');
+    print('Eaten:');
+    print('- Singular: ${food.eaten.foodNameSingular}');
+    print('- Plural: ${food.eaten.foodNamePlural}');
+    print('- Units: ${food.eaten.units}');
+    print('- Metric Description: ${food.eaten.metricDescription}');
+    print('- Total Metric Amount: ${food.eaten.totalMetricAmount}g');
+    print('- Per Unit Metric Amount: ${food.eaten.perUnitMetricAmount}g');
+    print('---');
+  }
+}
+```
+
 # Features
 
 | Feature | Status |
@@ -244,6 +271,7 @@ if (nlpResponse != null) {
 | Recipes: Search | ✅ |
 | Recipe Types | ✅ |
 | Natural Language Processing | ✅ |
+| Image Recognition | ✅ |
 | Profile: Foods | ⏳ |
 | Profile: Recipes | ⏳ |
 | Profile: Saved Meals | ⏳ |
@@ -251,7 +279,6 @@ if (nlpResponse != null) {
 | Profile: Food Diary | ⏳ |
 | Profile: Exercise Diary | ⏳ |
 | Profile: Weight Diary | ⏳ |
-| Image Recognition | ⏳ |
 
 ## License 📝
 
