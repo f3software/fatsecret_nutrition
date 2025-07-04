@@ -208,7 +208,8 @@ abstract class FoodGetByIdResponse with _$FoodGetByIdResponse {
 @freezed
 abstract class Food with _$Food {
   const factory Food({
-    @JsonKey(name: kfoodId) @StringToIntConverter() int? foodId,
+    // @JsonKey(name: kfoodId) @StringToIntConverter() String? foodId,
+    @JsonKey(name: kfoodId) String? foodId,
     @JsonKey(name: kfoodName) String? foodName,
     @JsonKey(name: kfoodType) String? foodType,
     @JsonKey(name: kfoodUrl) String? foodUrl,
